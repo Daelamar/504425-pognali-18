@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Ilya Samarin](https://up.htmlacademy.ru/adaptive/18/user/504425).
-* Наставник: `Неизвестно`.
+* Наставник: [Анастасия Полозова](https://htmlacademy.ru/profile/id258631).
 
 ---
 
