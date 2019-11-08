@@ -17,9 +17,7 @@
       width="100"
       height="19">
   </a>
-  <button class="main-header__button">
-    Меню
-  </button>
+  <button class="main-header__button">Меню</button>
   <div class="user-menu">
     <a href="mailto:mail@htmlacademy.ru" class="user-item user-item--tel"></a>
     <a href="tel:88005558628" class="user-item user-item--mail"></a>
@@ -28,7 +26,7 @@
   <div class="main-header__submenu">
     <p class="main-header__about">О сервисе направления попутчики</p>
     <a href="#" class="main-header__login">Авторизация</a>
-    <ul class=contact-list">
+    <ul class="contact-list">
       <li class="contact-item">
         <a href="tel:88005558628">8 800 555-86-28</a>
       </li>
@@ -37,9 +35,15 @@
       </li>
     </ul>
     <ul class="social-list">
-      <li class="social-item">Фейсбук</li>
-      <li class="social-item">ВКонтакте</li>
-      <li class="social-item">Инстаграмм</li>
+      <li class="social-item">
+        <a href="https://www.facebook.com/" class="social-link">Фейсбук</a>
+      </li>
+      <li class="social-item">
+        <a href="https://vk.com/" class="social-link">ВКонтакте</a>
+      </li>
+      <li class="social-item">
+        <a href="https://www.instagram.com/" class="social-link">Инстаграм</a>
+      </li>
     </ul>
   </div>
 </header>
@@ -62,10 +66,132 @@
   <section class="info">
     <h2 class="info__title">О сервисе</h2>
     <p class="info__description">Любое путешествие веселее с попутчиками, которые на одной волне с тобой!
-      Делитесь своими идеями путешествий и черпайте вдохновение в чужих. </p>
-    <strong class="info__caption">А если найдете кого-то близкого по духу —
-      скорее зовите в совместный трип!</strong>
+      Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
+    </p>
+    <strong class="info__slogan">А если найдете кого-то близкого по духу —
+      скорее зовите в совместный трип!
+    </strong>
   </section>
+  <section class="destinations">
+    <h2 class="destinations__title">Направления</h2>
+    <p class="destinations__info">Мы не продаем туры и ничего не рекламируем.
+      Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
+    </p>
+    <div class="destinations__wrapper">
+      <a href="#" class="destinations__link">
+        <figure class="destinations__item">
+          <img
+            src="https://via.placeholder.com/270x110"
+            alt="Фото Тайланда"
+            width="270"
+            height="110">
+          <figcaption class="destinations__caption">
+            <h3 class="destinations__name">Таиланд</h3>
+            <p class="destinations__description">Джунгли зовут!</p>
+            <span class="destinations__travelers">18321</span>
+          </figcaption>
+        </figure>
+      </a>
+      <a href="#" class="destinations__link">
+        <figure class="destinations__item">
+          <img
+            src="https://via.placeholder.com/270x110"
+            alt="Фото Франции"
+            width="270"
+            height="110">
+          <figcaption class="destinations__caption">
+            <h3 class="destinations__name">Франция</h3>
+            <p class="destinations__description">Трэ бьен, манифик!</p>
+            <span class="destinations__travelers">12518</span>
+          </figcaption>
+        </figure>
+      </a>
+      <a href="#" class="destinations__link">
+        <figure class="destinations__item">
+          <img
+            src="https://via.placeholder.com/270x110"
+            alt="Фото Чехии"
+            width="270"
+            height="110">
+          <figcaption class="destinations__caption">
+            <h3 class="destinations__name">Чехия</h3>
+            <p class="destinations__description">Трэ бьен, манифик!</p>
+            <span class="destinations__travelers">5326</span>
+          </figcaption>
+        </figure>
+      </a>
+      <a href="#">Показать все</a>
+    </div>
+  </section>
+  <section class="companions">
+    <h2 class="companions__title">Попутчики</h2>
+    <p class="companions__info">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых.
+      Одному нужен пляж и коктейль, а другому маршрут для хайкинга.
+    </p>
+    <strong class="companions__slogan">Теперь можно легко найти единомышленников!</strong>
+  </section>
+  <div class="companions__wrapper">
+    <a href="#" class="companions__link">
+      <figure class="companions__item">
+        <img
+          src="https://via.placeholder.com/270x270"
+          alt="Фото пользователя"
+          width="270"
+          height="270">
+        <figcaption class="companions__caption">
+          <span class="companions__flag"></span>
+          <span class="companions__flag"></span>
+          <span class="companions__flag"></span>
+          <h3 class="companions__name">Таня Фирсова</h3>
+          <p class="companions__tags">#ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи</p>
+          <ul class="companions__list">
+            <li class="companions__list-item">
+              <span class="companions__transport">Автотранспорт</span>
+            </li>
+            <li class="companions__list-item">
+              <span class="companions__transport">Авиаперелет</span>
+            </li>
+            <li class="companions__list-item">
+              <span class="companions__transport">Велосипед</span>
+            </li>
+            <li class="companions__list-item">
+              <span class="companions__transport">Пешком</span>
+            </li>
+          </ul>
+        </figcaption>
+      </figure>
+    </a>
+    <a href="#" class="companions__link">
+      <figure class="companions__item">
+        <img
+          src="https://via.placeholder.com/270x270"
+          alt="Фото пользователя"
+          width="270"
+          height="270">
+        <figcaption class="companions__caption">
+          <span class="companions__flag"></span>
+          <span class="companions__flag"></span>
+          <h3 class="companions__name">Петя Демин</h3>
+          <p class="companions__tags">#бургер #бар #футбол #концерт #крафт</p>
+          <ul class="companions__list">
+            <li class="companions__list-item">
+              <span class="companions__transport">Автотранспорт</span>
+            </li>
+            <li class="companions__list-item">
+              <span class="companions__transport">Авиаперелет</span>
+            </li>
+            <li class="companions__list-item">
+              <span class="companions__transport">Велосипед</span>
+            </li>
+            <li class="companions__list-item">
+              <span class="companions__transport">Пешком</span>
+            </li>
+          </ul>
+        </figcaption>
+      </figure>
+    </a>
+    <a href="#">Показать всех</a>
+  </div>
 </main>
 </body>
 </html>
