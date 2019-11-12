@@ -44,17 +44,109 @@
   </div>
 </header>
 <main>
+  <h1 class="visually-hidden">Страница выбора попутчиков</h1>
+  <section class="countries">
+    <div class="countries__header">
+      <h2 class="countries__title">Фильтрация по странам</h2>
+      <button class="countries__roll">Свернуть</button>
+      <nav class="countries__nav">
+        <ul class="countries__list">
+          <li class="countries__item">
+            <a href="#">Европа</a>
+          </li>
+          <li class="countries__item">
+            <a href="#">Азия</a>
+          </li>
+          <li class="countries__item">
+            <a href="#">Америка</a>
+          </li>
+          <li class="countries__item">
+            <a href="#">Острова</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <table class="countries__table">
+      <tr>
+        <td>А</td>
+        <td>Б</td>
+        <td>В</td>
+        <td>Г</td>
+        <td>Д</td>
+      </tr>
+      <tr>
+        <td>Е</td>
+        <td>З</td>
+        <td>И</td>
+        <td>К</td>
+        <td>Л</td>
+      </tr>
+      <tr>
+        <td>М</td>
+        <td>Н</td>
+        <td>О</td>
+        <td>П</td>
+        <td>Р</td>
+      </tr>
+      <tr>
+        <td>С</td>
+        <td>Т</td>
+        <td>У</td>
+        <td>Ф</td>
+        <td>Х</td>
+      </tr>
+      <tr>
+        <td>Ч</td>
+        <td>Ш</td>
+        <td>Э</td>
+        <td>Ю</td>
+        <td>Я</td>
+      </tr>
+    </table>
+    <div class="countries__ea-container">
+      <ul class="countries__ea-list">
+        <li class="countries__ea-item">
+          <a href="#">Афганистан</a>
+        </li>
+        <li class="countries__ea-item">
+          <a href="#">Албания</a>
+        </li>
+        <li class="countries__ea-item">
+          <a href="#">Алжир</a>
+        </li>
+        <li class="countries__ea-item">
+          <a href="#">Андорра</a>
+        </li>
+        <li class="countries__ea-item">
+          <a href="#">Аргентина</a>
+        </li>
+        <li class="countries__ea-item">
+          <a href="#">Армения</a>
+        </li>
+        <li class="countries__ea-item">
+          <a href="#">Австралия</a>
+        </li>
+        <li class="countries__ea-item">
+          <a href="#">Австрия</a>
+        </li>
+        <li class="countries__ea-item">
+          <a href="#">Азербайджан</a>
+        </li>
+      </ul>
+    </div>
+    <button class="countries__close">Свернуть</button>
+  </section>
   <section class="filter">
-    <h2 class="filter__title">Список попутчиков. Выбирай скорее!</h2>
+    <h2 class="visually-hidden">Список попутчиков. Выбирай скорее!</h2>
     <form class="filter__form"
           method="post"
           action="http://echo.htmlacademy.ru">
       <fieldset class="filter__fieldset">
-        <legend class=filter__legend">Хобби</legend>
+        <legend class="filter__legend">Хобби</legend>
         <!-- Тут будет еще, когда пришлют макет -->
       </fieldset>
       <fieldset class="filter__fieldset">
-        <legend class=filter__legend">Музыка</legend>
+        <legend class="filter__legend">Музыка</legend>
         <ul class="filter__list">
           <li class="filter__item">
             <input type="checkbox"
@@ -77,11 +169,11 @@
         </ul>
       </fieldset>
       <fieldset class="filter__fieldset">
-        <legend class=filter__legend">Еда</legend>
+        <legend class="filter__legend">Еда</legend>
         <!-- Тут будет еще, когда пришлют макет -->
       </fieldset>
       <fieldset class="filter__fieldset">
-        <legend class=filter__legend">Транспорт</legend>
+        <legend class="filter__legend">Транспорт</legend>
         <ul class="filter__list">
           <li class="filter__item">
             <input type="checkbox"
@@ -172,32 +264,16 @@
       <p class="card__transport-title">транспорт:</p>
       <ul class="card__transport-list">
         <li class="card__transport-item">
-          <img
-            src="https://via.placeholder.com/33x32"
-            alt="Авиаперелет"
-            width="33"
-            height="32">
+          <span>Авиаперелет</span>
         </li>
         <li class="card__transport-item">
-          <img
-            src="https://via.placeholder.com/33x32"
-            alt="Автотранспорт"
-            width="33"
-            height="32">
+          <span>Автотранспорт</span>
         </li>
         <li class="card__transport-item">
-          <img
-            src="https://via.placeholder.com/33x32"
-            alt="Велосипед"
-            width="33"
-            height="32">
+          <span>Велосипед</span>
         </li>
         <li class="card__transport-item">
-          <img
-            src="https://via.placeholder.com/33x32"
-            alt="Пешком"
-            width="33"
-            height="32">
+          <span>Пешком</span>
         </li>
       </ul>
       <div class="card__level">
@@ -226,51 +302,25 @@
       <p class="card__flags-title">хочет посетить:</p>
       <ul class="card__flags-list">
         <li class="card__flags-item">
-          <img
-            src="https://via.placeholder.com/26x18"
-            alt="Флаг Бельгии>"
-            width="26"
-            height="18">
-          <p>Бельгия</p>
+          <span>Бельгия</span>
         </li>
         <li class="card__flags-item">
-          <img
-            src="https://via.placeholder.com/26x18"
-            alt="Флаг Чехии"
-            width="26"
-            height="18">
-          <p>Чехия</p>
+          <span>Чехия</span>
         </li>
       </ul>
       <p class="card__transport-title">транспорт:</p>
       <ul class="card__transport-list">
         <li class="card__transport-item">
-          <img
-            src="https://via.placeholder.com/33x32"
-            alt="Авиаперелет"
-            width="33"
-            height="32">
+          <span>Авиаперелет</span>
         </li>
         <li class="card__transport-item">
-          <img
-            src="https://via.placeholder.com/33x32"
-            alt="Автотранспорт"
-            width="33"
-            height="32">
+          <span>Автотранспорт</span>
         </li>
         <li class="card__transport-item">
-          <img
-            src="https://via.placeholder.com/33x32"
-            alt="Велосипед"
-            width="33"
-            height="32">
+          <span>Велосипед</span>
         </li>
         <li class="card__transport-item">
-          <img
-            src="https://via.placeholder.com/33x32"
-            alt="Пешком"
-            width="33"
-            height="32">
+          <span>Пешком</span>
         </li>
       </ul>
       <div class="card__level">
@@ -299,59 +349,28 @@
       <p class="card__flags-title">хочет посетить:</p>
       <ul class="card__flags-list">
         <li class="card__flags-item">
-          <img
-            src="https://via.placeholder.com/26x18"
-            alt="Флаг США"
-            width="26"
-            height="18">
-          <p>США</p>
+          <span>США</span>
         </li>
         <li class="card__flags-item">
-          <img
-            src="https://via.placeholder.com/26x18"
-            alt="Флаг Австралии"
-            width="26"
-            height="18">
-          <p>Австралия</p>
+          <span>Австралия</span>
         </li>
         <li class="card__flags-item">
-          <img
-            src="https://via.placeholder.com/26x18"
-            alt="Флаг Доминиканы"
-            width="26"
-            height="18">
-          <p>Доминикана</p>
+          <span>Доминикана</span>
         </li>
       </ul>
       <p class="card__transport-title">транспорт:</p>
       <ul class="card__transport-list">
         <li class="card__transport-item">
-          <img
-            src="https://via.placeholder.com/33x32"
-            alt="Авиаперелет"
-            width="33"
-            height="32">
+          <span>Авиаперелет</span>
         </li>
         <li class="card__transport-item">
-          <img
-            src="https://via.placeholder.com/33x32"
-            alt="Автотранспорт"
-            width="33"
-            height="32">
+          <span>Автотранспорт</span>
         </li>
         <li class="card__transport-item">
-          <img
-            src="https://via.placeholder.com/33x32"
-            alt="Велосипед"
-            width="33"
-            height="32">
+          <span>Велосипед</span>
         </li>
         <li class="card__transport-item">
-          <img
-            src="https://via.placeholder.com/33x32"
-            alt="Пешком"
-            width="33"
-            height="32">
+          <span>Пешком</span>
         </li>
       </ul>
       <div class="card__level">
@@ -380,51 +399,25 @@
       <p class="card__flags-title">хочет посетить:</p>
       <ul class="card__flags-list">
         <li class="card__flags-item">
-          <img
-            src="https://via.placeholder.com/26x18"
-            alt="Флаг Великобритании"
-            width="26"
-            height="18">
-          <p>Великобритания</p>
+          <span>Великобритания</span>
         </li>
         <li class="card__flags-item">
-          <img
-            src="https://via.placeholder.com/26x18"
-            alt="Флаг Германии"
-            width="26"
-            height="18">
-          <p>Германия</p>
+          <span>Германия</span>
         </li>
       </ul>
       <p class="card__transport-title">транспорт:</p>
       <ul class="card__transport-list">
         <li class="card__transport-item">
-          <img
-            src="https://via.placeholder.com/33x32"
-            alt="Авиаперелет"
-            width="33"
-            height="32">
+          <span>Авиаперелет</span>
         </li>
         <li class="card__transport-item">
-          <img
-            src="https://via.placeholder.com/33x32"
-            alt="Автотранспорт"
-            width="33"
-            height="32">
+          <span>Автотранспорт</span>
         </li>
         <li class="card__transport-item">
-          <img
-            src="https://via.placeholder.com/33x32"
-            alt="Велосипед"
-            width="33"
-            height="32">
+          <span>Велосипед</span>
         </li>
         <li class="card__transport-item">
-          <img
-            src="https://via.placeholder.com/33x32"
-            alt="Пешком"
-            width="33"
-            height="32">
+          <span>Пешком</span>
         </li>
       </ul>
       <div class="card__level">
@@ -463,10 +456,10 @@
     <a href="https://htmlacademy.ru/" class="main-footer__academy-link">
       <img
         class="main-footer__logo-academy"
-        src="https://via.placeholder.com/96x15"
+        src="https://via.placeholder.com/27x34"
         alt="Логотип HTMLAcademy"
-        width="96"
-        height="15">
+        width="27"
+        height="34">
     </a>
   </div>
 </footer>
