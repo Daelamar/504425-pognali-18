@@ -226,20 +226,57 @@
         Это может быть одна или сразу несколько.
       </p>
       <label for="1-country" class="second-step__label">
-        <input type="text" id="1-country" name="1-country" value="Босния и герцегов">
+        <input
+          type="text"
+          id="1-country"
+          name="1-country"
+          value="Босния и Герцегов">
         <span class="second-step__delete"></span>
       </label>
       <label for="2-country" class="second-step__label">
-        <input type="text" id="2-country" name="2-country" value="Чехия">
+        <input
+          type="text"
+          id="2-country"
+          name="2-country"
+          value="Чехия">
         <span class="second-step__delete"></span>
       </label>
       <label for="3-country" class="second-step__label">
-        <input type="text" id="3-country" name="3-country" placeholder="Выберите страну">
+        <input
+          type="text"
+          id="3-country"
+          name="3-country"
+          placeholder="Выберите страну">
         <span class="second-step__delete"></span>
       </label>
       <button type="button">Добавить страну</button>
       <!-- Тут позже будет якоря -->
       <a href="#">Следующий шаг</a>
+      <a href="#">На шаг назад</a>
+    </fieldset>
+    <fieldset class="form__fieldset third-step">
+      <h3 class="third-step__title">Шаг 2.Маршрут</h3>
+      <p class="third-step__description">Укажите страны, которые вы хотели по посетить.
+        Это может быть одна или сразу несколько.
+      </p>
+      <label for="1-comment" class="third-step__label">Босния и герцегови
+        <span class="second-step__flag">Флаг</span>
+      </label>
+      <input
+        type="text"
+        id="1-comment"
+        name="1-comment"
+        placeholder="План действий">
+      <label for="2-comment" class="second-step__label">Чехия
+        <span class="second-step__delete">Флаг</span>
+      </label>
+      <input
+        type="text"
+        id="2-comment"
+        name="2-comment"
+        value="Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.">
+      <!-- Тут позже будет якоря -->
+      <button type="submit">Отправить</button>
       <a href="#">На шаг назад</a>
     </fieldset>
   </form>
@@ -276,5 +313,61 @@
     </a>
   </div>
 </footer>
+<div class="popup">
+  <div class="popup__header">
+    <h3 class="popup__title">Выберите страну</h3>
+    <button class="popup__close">Закрыть</button>
+  </div>
+  <table class="popup__table">
+    <tr>
+      <td>А</td>
+      <td>Б</td>
+      <td>В</td>
+      <td>Г</td>
+      <td>Д</td>
+    </tr>
+    <tr>
+      <td>Е</td>
+      <td>З</td>
+      <td>И</td>
+      <td>К</td>
+      <td>Л</td>
+    </tr>
+    <tr>
+      <td>М</td>
+      <td>Н</td>
+      <td>О</td>
+      <td>П</td>
+      <td>Р</td>
+    </tr>
+    <tr>
+      <td>С</td>
+      <td>Т</td>
+      <td>У</td>
+      <td>Ф</td>
+      <td>Х</td>
+    </tr>
+    <tr>
+      <td>Ч</td>
+      <td>Ш</td>
+      <td>Э</td>
+      <td>Ю</td>
+      <td>Я</td>
+    </tr>
+  </table>
+  <div class="popup__ea-container">
+    <ul class="popup__ea-list">
+      <li class="popup__ea-item">Афганистан</li>
+      <li class="popup__ea-item">Албания</li>
+      <li class="popup__ea-item">Алжир</li>
+      <li class="popup__ea-item">Андорра</li>
+      <li class="popup__ea-item">Аргентина</li>
+      <li class="popup__ea-item">Армения</li>
+      <li class="popup__ea-item">Австралия</li>
+      <li class="popup__ea-item">Австрия</li>
+      <li class="popup__ea-item">Азербайджан</li>
+    </ul>
+  </div>
+</div>
 </body>
 </html>
