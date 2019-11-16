@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
         content="Интернет-сервис и сайт для путешественников Погнали!">
+  <link rel="preload" href="fonts/bloggersans.woff" as="font">
+  <link rel="stylesheet" href="css/style.css">
   <title>Погнали!-Направления</title>
 </head>
 <body>
@@ -68,27 +70,31 @@
         <legend class="user-block__legend">Транспорт</legend>
         <ul class="user-block__list">
           <li class="user-block__item">
-            <input type="checkbox"
-                   id="flight"
-                   name="flight">
+            <input
+              type="checkbox"
+              id="flight"
+              name="flight">
             <label for="flight">Авиаперелет</label>
           </li>
           <li class="user-block__item">
-            <input type="checkbox"
-                   id="transport"
-                   name="transport">
+            <input
+              type="checkbox"
+              id="transport"
+              name="transport">
             <label for="transport">Автотранспорт</label>
           </li>
           <li class="user-block__item">
-            <input type="checkbox"
-                   id="bicycle"
-                   name="bicycle">
+            <input
+              type="checkbox"
+              id="bicycle"
+              name="bicycle">
             <label for="bicycle">Велосипед</label>
           </li>
           <li class="user-block__item">
-            <input type="checkbox"
-                   id="afoot"
-                   name="afoot">
+            <input
+              type="checkbox"
+              id="afoot"
+              name="afoot">
             <label for="afoot">Пешком</label>
           </li>
         </ul>
@@ -114,9 +120,10 @@
       </ul>
     </div>
   </div>
-  <form method="post"
-        action="http://echo.htmlacademy.ru"
-        class="form">
+  <form
+    method="post"
+    action="http://echo.htmlacademy.ru"
+    class="form">
     <h2 class="form__main-title">Добавить план:</h2>
     <fieldset class="form__fieldset first-step">
       <h3 class="first-step__title">Шаг 1.Даты пребывания</h3>
@@ -128,22 +135,25 @@
       <label for="companions" class="first-step__label">
         <span class="first-step__minus">-</span>
         <span class="first-step__plus">+</span>
-        <input type="number"
-               id="companions"
-               name="companions">
+        <input
+          type="number"
+          id="companions"
+          name="companions">
       </label>
       <p class="first-step__legend">Ищу попутчиков:</p>
       <span class="first-step__caption">Чел.</span>
       <label for="days" class="first-step__label">
         <span class="first-step__minus">-</span>
         <span class="first-step__plus">+</span>
-        <input type="number"
-               id="days"
-               name="days">
+        <input
+          type="number"
+          id="days"
+          name="days">
       </label>
-      <input type="checkbox"
-             id="children"
-             name="children">
+      <input
+        type="checkbox"
+        id="children"
+        name="children">
       <label for="children" class="first-step__label">Можно с детьми</label>
       <div class="first-step__date-block">
         <button type="button">Стрелка всево</button>

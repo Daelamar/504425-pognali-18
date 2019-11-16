@@ -1,0 +1,55 @@
+@import "../global/mixins";
+
+.intro {
+  background-color: #161c36;
+}
+
+.intro__container {
+  @include container;
+  padding: 0 25px;
+
+  background: url("../img/traveller-illustration-mobile@1x.png") no-repeat,
+  #161c36 url("../img/globe-back-mobile@1x.jpg") no-repeat;
+}
+
+.intro__slogan {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.intro__cite {
+  font-weight: 700;
+}
+
+.intro__list {
+  @include listStyle;
+}
+
+.intro__item {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+
+  color: #161c35;
+
+  &:first-child {
+    background-color: #ff8d30;
+    border-radius: 10px 10px 0 0;
+  }
+
+  &:nth-child(2) {
+    background-color: #ffa530;
+    border-radius: 10px 10px 0 0;
+  }
+
+  &:nth-child(3) {
+    background-color: #ffbd30;
+    border-radius: 10px 10px 0 0;
+  }
+
+  &:last-child {
+    background-color: #ffd74b;
+    border-radius: 10px;
+  }
+}

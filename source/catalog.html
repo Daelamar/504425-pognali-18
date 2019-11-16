@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
         content="Интернет-сервис и сайт для путешественников Погнали!">
+  <link rel="preload" href="fonts/bloggersans.woff" as="font">
+  <link rel="stylesheet" href="css/style.css">
   <title>Погнали!-Попутчики</title>
 </head>
 <body>
@@ -138,9 +140,10 @@
   </section>
   <section class="filter">
     <h2 class="visually-hidden">Список попутчиков. Выбирай скорее!</h2>
-    <form class="filter__form"
-          method="post"
-          action="http://echo.htmlacademy.ru">
+    <form
+      class="filter__form"
+      method="post"
+      action="http://echo.htmlacademy.ru">
       <fieldset class="filter__fieldset">
         <legend class="filter__legend">Хобби</legend>
         <!-- Тут будет еще, когда пришлют макет -->
@@ -149,21 +152,24 @@
         <legend class="filter__legend">Музыка</legend>
         <ul class="filter__list">
           <li class="filter__item">
-            <input type="checkbox"
-                   id="rock"
-                   name="rock">
+            <input
+              type="checkbox"
+              id="rock"
+              name="rock">
             <label for="rock">Тяжелый рок</label>
           </li>
           <li class="filter__item">
-            <input type="checkbox"
-                   id="rap"
-                   name="rap">
+            <input
+              type="checkbox"
+              id="rap"
+              name="rap">
             <label for="rap">Русский рэп</label>
           </li>
           <li class="filter__item">
-            <input type="checkbox"
-                   id="dance"
-                   name="dance">
+            <input
+              type="checkbox"
+              id="dance"
+              name="dance">
             <label for="dance">Евроденс</label>
           </li>
         </ul>
@@ -176,27 +182,31 @@
         <legend class="filter__legend">Транспорт</legend>
         <ul class="filter__list">
           <li class="filter__item">
-            <input type="checkbox"
-                   id="flight"
-                   name="flight">
+            <input
+              type="checkbox"
+              id="flight"
+              name="flight">
             <label for="flight">Авиаперелет</label>
           </li>
           <li class="filter__item">
-            <input type="checkbox"
-                   id="transport"
-                   name="transport">
+            <input
+              type="checkbox"
+              id="transport"
+              name="transport">
             <label for="transport">Автотранспорт</label>
           </li>
           <li class="filter__item">
-            <input type="checkbox"
-                   id="bicycle"
-                   name="bicycle">
+            <input
+              type="checkbox"
+              id="bicycle"
+              name="bicycle">
             <label for="bicycle">Велосипед</label>
           </li>
           <li class="filter__item">
-            <input type="checkbox"
-                   id="afoot"
-                   name="afoot">
+            <input
+              type="checkbox"
+              id="afoot"
+              name="afoot">
             <label for="afoot">Пешком</label>
           </li>
         </ul>

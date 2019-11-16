@@ -5,131 +5,177 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
         content="Интернет-сервис и сайт для путешественников Погнали!">
+  <link rel="preload" href="fonts/bloggersans.woff" as="font">
+  <link rel="stylesheet" href="css/style.css">
   <title>Погнали!-Главная</title>
 </head>
 <body>
 <header class="main-header">
-  <a>
-    <img
-      class="main-header__logo"
-      src="https://via.placeholder.com/100x19"
-      alt="Логотип сайта Погнали!"
-      width="100"
-      height="19">
-  </a>
-  <button class="main-header__button">Меню</button>
-  <div class="user-menu">
-    <a href="mailto:mail@htmlacademy.ru" class="user-item user-item--tel"></a>
-    <a href="tel:88005558628" class="user-item user-item--mail"></a>
-    <a href="#" class="user-item user-item--enter">Авторизация</a>
-  </div>
-  <div class="main-header__submenu">
-    <p class="main-header__about">О сервисе направления попутчики</p>
-    <a href="#" class="main-header__login">Авторизация</a>
-    <ul class="contact-list">
-      <li class="contact-item">
-        <a href="tel:88005558628">8 800 555-86-28</a>
-      </li>
-      <li class="contact-item">
-        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-      </li>
-    </ul>
-    <ul class="social-list">
-      <li class="social-item">
-        <a href="https://www.facebook.com/" class="social-link">Фейсбук</a>
-      </li>
-      <li class="social-item">
-        <a href="https://vk.com/" class="social-link">ВКонтакте</a>
-      </li>
-      <li class="social-item">
-        <a href="https://www.instagram.com/" class="social-link">Инстаграм</a>
-      </li>
-    </ul>
+  <div class="main-header__container">
+    <a>
+      <img
+        class="main-header__logo"
+        src="img/logo-mobile-white@1x.png"
+        alt="Логотип сайта Погнали!"
+        width="100"
+        height="19">
+    </a>
+    <button class="main-header__button" aria-label="Открыть меню"></button>
+    <div class="user-menu">
+      <a
+        href="mailto:mail@htmlacademy.ru"
+        class="user-menu__item user-menu__item--tel"></a>
+      <a
+        href="tel:88005558628"
+        class="user-menu__item user-menu__item--mail"></a>
+      <a
+        href="#"
+        class="user-menu__item user-menu__item--enter">Авторизация</a>
+    </div>
+    <div class="main-header__submenu">
+      <p class="main-header__about">О сервисе направления попутчики</p>
+      <a href="#" class="main-header__login">Авторизация</a>
+      <ul class="contact-list">
+        <li class="contact-item">
+          <a
+            href="tel:88005558628"
+            class="contact-list__link">8 800 555-86-28</a>
+        </li>
+        <li class="contact-item">
+          <a
+            href="mailto:mail@htmlacademy.ru"
+            class="contact-list__link">mail@htmlacademy.ru</a>
+        </li>
+      </ul>
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a
+            href="https://www.facebook.com/"
+            class="social-list__link social-list__link--facebook"
+            aria-label="Наша страница на Фейсбук">
+            <img
+              src="img/facebook.svg"
+              alt="Наша страница на Фейсбук"
+              width="11"
+              height="21">
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a
+            href="https://vk.com/"
+            class="social-list__link"
+            aria-label="Наша страница во Вконтакте">
+            <img
+              src="img/vk.svg"
+              alt="Наша страница во Вконтакте"
+              width="23"
+              height="12">
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a
+            href="https://www.instagram.com/"
+            class="social-list__link"
+            aria-label="Наша страница в Инстаграм">
+            <img
+              src="img/instagram.svg"
+              alt="Наша страница во Вконтакте"
+              width="23"
+              height="12">
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </header>
 <main>
   <h1 class="visually-hidden">Интернет-сервис и сайт для путешественников Погнали!</h1>
   <section class="intro">
     <h2 class="visually-hidden">Коротко о нашем интернет-сервисе.</h2>
-    <b class="intro__slogan">В путешествие с крутыми попутчиками!</b>
-    <div class="intro__blockquote">
-      <p class="intro__description">«Лучшее приложение, что я видел в жизни!»</p>
-      <b class="intro__cite">Мурат Эльтазин главный редактор газеты «гаджетлайф»</b>
+    <div class="intro__container">
+      <b class="intro__slogan">В путешествие с крутыми попутчиками!</b>
+      <div class="intro__blockquote">
+        <p class="intro__description">«Лучшее приложение, что я видел в жизни!»</p>
+        <b class="intro__cite">Мурат Эльтазин главный редактор газеты «гаджетлайф»</b>
+      </div>
+      <ul class="intro__list">
+        <li class="intro__item">Выберите направление</li>
+        <li class="intro__item">Изучите идеи путешественников</li>
+        <li class="intro__item">Находите тех, кто похож на вас</li>
+        <li class="intro__item">Путешествуйте вместе!</li>
+      </ul>
     </div>
-    <ul class="intro__list">
-      <li class="intro__item">Выберите направление</li>
-      <li class="intro__item">Изучите идеи путешественников</li>
-      <li class="intro__item">Находите тех, кто похож на вас</li>
-      <li class="intro__item">Путешествуйте вместе!</li>
-    </ul>
   </section>
   <section class="info">
-    <h2 class="info__title">О сервисе</h2>
-    <p class="info__description">Любое путешествие веселее с попутчиками, которые на одной волне с тобой!
-      Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
-    </p>
-    <strong class="info__slogan">А если найдете кого-то близкого по духу —
-      скорее зовите в совместный трип!
-    </strong>
+    <div class="info__container">
+      <h2 class="info__title">О сервисе</h2>
+      <p class="info__description">Любое путешествие веселее с попутчиками, которые на одной волне с тобой!
+        Делитесь своими идеями путешествий и черпайте вдохновение в чужих.
+      </p>
+      <strong class="info__slogan">А если найдете кого-то близкого по духу —
+        скорее зовите в совместный трип!
+      </strong>
+    </div>
   </section>
   <section class="destinations">
-    <h2 class="destinations__title">Направления</h2>
-    <p class="destinations__info">Мы не продаем туры и ничего не рекламируем.
-      Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
-    </p>
-    <div class="destinations__wrapper">
-      <div class="destinations__item">
-        <img
-          src="https://via.placeholder.com/270x110"
-          alt="Фото Тайланда"
-          width="270"
-          height="110">
-        <div class="destinations__caption">
+    <div class="destinations__container">
+      <h2 class="destinations__title">Направления</h2>
+      <p class="destinations__info">Мы не продаем туры и ничего не рекламируем.
+        Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.
+      </p>
+      <div class="destinations__wrapper">
+        <div class="destinations__item">
           <img
-            src="https://via.placeholder.com/35x25"
-            alt="Флаг Тайланда"
-            width="35"
-            height="25">
-          <h3 class="destinations__name">Таиланд</h3>
-          <p class="destinations__description">Джунгли зовут!</p>
-          <span class="destinations__travelers">18321</span>
+            class="destinations__img"
+            src="img/thailand-mobile@1x.jpg"
+            alt="Фото Тайланда"
+            width="270"
+            height="110">
+          <div class="destinations__caption">
+            <span
+              class="destinations__flag destinations__flag--thai"
+              aria-label="Флаг Тайланда"></span>
+            <h3 class="destinations__name">Таиланд</h3>
+            <p class="destinations__description">Джунгли зовут!</p>
+            <span class="destinations__travelers">18321</span>
+          </div>
         </div>
-      </div>
-      <div class="destinations__item">
-        <img
-          src="https://via.placeholder.com/270x110"
-          alt="Фото Франции"
-          width="270"
-          height="110">
-        <div class="destinations__caption">
+        <div class="destinations__item">
           <img
-            src="https://via.placeholder.com/35x25"
-            alt="Флаг Франции"
-            width="35"
-            height="25">
-          <h3 class="destinations__name">Франция</h3>
-          <p class="destinations__description">Трэ бьен, манифик!</p>
-          <span class="destinations__travelers">12518</span>
+            class="destinations__img"
+            src="img/france-mobile@1x.jpg"
+            alt="Фото Франции"
+            width="270"
+            height="110">
+          <div class="destinations__caption">
+            <span
+              class="destinations__flag destinations__flag--france"
+              aria-label="Флаг Франции"></span>
+            <h3 class="destinations__name">Франция</h3>
+            <p class="destinations__description">Трэ бьен, манифик!</p>
+            <span class="destinations__travelers">12518</span>
+          </div>
         </div>
-      </div>
-      <div class="destinations__item">
-        <img
-          src="https://via.placeholder.com/270x110"
-          alt="Фото Чехии"
-          width="270"
-          height="110">
-        <div class="destinations__caption">
+        <div class="destinations__item">
           <img
-            src="https://via.placeholder.com/35x25"
-            alt="Флаг Чехии"
-            width="35"
-            height="25">
-          <h3 class="destinations__name">Чехия</h3>
-          <p class="destinations__description">Трэ бьен, манифик!</p>
-          <span class="destinations__travelers">5326</span>
+            class="destinations__img"
+            src="img/czech-mobile@1x.jpg"
+            alt="Фото Чехии"
+            width="270"
+            height="110">
+          <div class="destinations__caption">
+            <span
+              class="destinations__flag destinations__flag--czech"
+              aria-label="Флаг Чехии"></span>
+            <h3 class="destinations__name">Чехия</h3>
+            <p class="destinations__description">Трэ бьен, манифик!</p>
+            <span class="destinations__travelers">5326</span>
+          </div>
         </div>
+        <a
+          class="destinations__all"
+          href="form.html">Показать все</a>
       </div>
-      <a href="form.html">Показать все</a>
     </div>
   </section>
   <section class="companions">
@@ -249,15 +295,17 @@
     <p class="contacts__description">Уже зарегистрированы? Тогда скорее
       <a href="#" class="contacts__link">авторизуйтесь</a>.
     </p>
-    <form class="contacts__form"
-          method="post"
-          action="http://echo.htmlacademy.ru">
+    <form
+      class="contacts__form"
+      method="post"
+      action="http://echo.htmlacademy.ru">
       <label for="register-mail"></label>
-      <input type="email"
-             id="register-mail"
-             name="register-mail"
-             placeholder="E-mail"
-             class="contacts__input">
+      <input
+        type="email"
+        id="register-mail"
+        name="register-mail"
+        placeholder="E-mail"
+        class="contacts__input">
       <button type="submit" class="contacts__submit">Регистрация</button>
     </form>
     <p class="contacts__caption">Остались вопросы? Мы с радостью на них ответим!</p>

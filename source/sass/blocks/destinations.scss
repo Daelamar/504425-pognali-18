@@ -1,0 +1,79 @@
+@import "../global/mixins";
+
+.destinations {
+  background-color: #edeff6;
+}
+
+.destinations__container {
+  @include container;
+  padding: 0 25px;
+
+  background-color: #edeff6;
+}
+
+.destinations__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+
+  color: #ff8d30;
+}
+
+.destinations__info {
+  color: #444444;
+}
+
+.destinations__img {
+  border-radius: 10px 10px 0 0;
+}
+
+.destinations__name {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+
+  color: #161c35;
+}
+
+.destinations__description {
+  font-weight: 500;
+  line-height: 18px;
+
+  color: #444444;
+  opacity: 0.3;
+}
+
+.destinations__travelers {
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  color: #444444;
+  opacity: 0.3;
+}
+
+.destinations__all {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #1d2e5b;
+
+  background-color: #ffd74b;
+  border-radius: 10px;
+}
+
+.destinations__flag {
+  display: block;
+
+  width: 35px;
+  height: 24px;
+
+  border-radius: 4px;
+
+  &--thai {
+    background-color: #61505a;
+    background-image: url("../../img/flags-back@1x.png");
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+  }
+}

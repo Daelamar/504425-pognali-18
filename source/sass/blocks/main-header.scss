@@ -1,0 +1,66 @@
+@import "../global/mixins";
+
+.main-header {
+  background-color: #161c36;
+}
+
+.main-header__container {
+  @include container;
+  padding: 0 25px;
+}
+
+.main-header__submenu {
+  background-color: #ffffff;
+}
+
+.main-header__about {
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 36px;
+  text-transform: uppercase;
+  text-align: center;
+
+  color: #192144;
+}
+
+.main-header__login {
+  margin: 0 auto;
+  display: block;
+
+  color: #161c35;
+
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+
+  border-radius: 25px;
+  background-color: #ffd74b;
+}
+
+.contact-list {
+  @include listStyle;
+}
+
+.contact-list__link {
+  font-weight: 700;
+  text-transform: uppercase;
+
+  color: #192144;
+}
+
+.social-list {
+  @include listStyle;
+  display: flex;
+}
+
+.social-list__link {
+  display: flex;
+  width: 45px;
+  height: 45px;
+
+  justify-content: center;
+  align-items: center;
+}
+
