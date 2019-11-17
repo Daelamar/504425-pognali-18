@@ -1,0 +1,134 @@
+@import "../global/mixins";
+
+.card {
+  background-color: #ffffff;
+  border-radius: 20px;
+}
+
+.card__img {
+  border-radius: 50%;
+}
+
+.card__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #1d2e5b;
+}
+
+.card__like-icon {
+  width: 31px;
+  height: 31px;
+
+  background-color: #edeff6;
+
+  background-image: url("../img/heart.svg");
+  background-size: 13px 11px;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  border-radius: 16px;
+  border: none;
+
+  &--active {
+    background-image: url("../img/heart-active.svg");
+  }
+}
+
+.card__like-sum {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  text-transform: uppercase;
+
+  color: #161c35;
+}
+
+.card__tags {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+
+  color: #444444;
+}
+
+.card__flags-title,
+.card__transport-title,
+.card__level-caption {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+
+  color: #444444;
+}
+
+.card__flags-list {
+  @include listStyle;
+}
+
+.card__flags-caption {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  color: #1d2e5b;
+}
+
+.card__transport-list {
+  @include listStyle;
+  display: flex;
+}
+
+.card__transport-img {
+  display: block;
+  width: 24px;
+  height: 24px;
+
+  &--inactive {
+    opacity: 0.15;
+  }
+
+  &--avia {
+    background-image: url("../img/plane.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--auto {
+    background-image: url("../img/bus.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--bike {
+    background-image: url("../img/bike.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--foot {
+    background-image: url("../img/run.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.card__level-value {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #1d2e5b;
+}
+
+.card__call {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  color: #161c35;
+
+  background-color: #ffd74b;
+  border-radius: 20px;
+}

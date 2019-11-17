@@ -2,6 +2,7 @@
 
 .destinations {
   background-color: #edeff6;
+  border-radius: 0 0 30px 30px;
 }
 
 .destinations__container {
@@ -69,11 +70,4 @@
   height: 24px;
 
   border-radius: 4px;
-
-  &--thai {
-    background-color: #61505a;
-    background-image: url("../../img/flags-back@1x.png");
-    background-repeat: no-repeat;
-    background-position: 10px 10px;
-  }
 }

@@ -1,0 +1,29 @@
+@import "../global/mixins";
+
+.catalog {
+  background-color: #edeff6;
+}
+
+.catalog__container {
+  @include container;
+  padding: 0 25px;
+}
+
+.catalog__show {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  color: #1d2e5b;
+
+  background-color: transparent;
+  border: none;
+}
+
+.catalog__left,
+.catalog__right {
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: none;
+}

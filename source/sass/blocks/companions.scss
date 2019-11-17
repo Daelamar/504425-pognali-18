@@ -1,0 +1,124 @@
+@import "../global/mixins";
+
+.companions {
+  background-color: #192144;
+  border-radius: 0 0 30px 30px;
+}
+
+.companions__container {
+  @include container;
+  padding: 0 25px;
+
+  background: url("../../img/smolov-back-desktop@1x.png") no-repeat,
+  #192144 url("../../img/rogovaya-back-mobile@1x.png") no-repeat;
+}
+
+.companions__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+
+  color: #ff8d30;
+}
+
+.companions__slogan {
+  font-weight: 700;
+}
+
+.companions__item {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.companions__level {
+  width: 60px;
+  height: 60px;
+
+  border-radius: 50%;
+}
+
+.companions__level-value {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.companions__level-caption {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
+.companions__flag-list {
+  @include listStyle;
+  display: flex;
+}
+
+.companions__flag-item {
+  width: 35px;
+  height: 24px;
+}
+
+.companions__name {
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 21px;
+
+  color: #1d2e5b;
+}
+
+.companions__tags {
+  font-weight: 400;
+  line-height: 18px;
+
+  color: #444444;
+}
+
+.companions__transport-list {
+  @include listStyle;
+  display: flex;
+}
+
+.companions__transport-img {
+  display: block;
+  width: 24px;
+  height: 24px;
+
+  &--inactive {
+    opacity: 0.15;
+  }
+
+  &--avia {
+    background-image: url("../img/plane.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--auto {
+    background-image: url("../img/bus.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--bike {
+    background-image: url("../img/bike.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--foot {
+    background-image: url("../img/run.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.companions__all {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  color: #1d2e5b;
+
+  background-color: #ffd74b;
+  border-radius: 10px;
+}
