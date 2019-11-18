@@ -1,0 +1,37 @@
+@import "../global/mixins";
+
+.tariff {
+  background-color: #edeff6;
+  border-radius: 0 0 30px 30px;
+}
+
+.tariff__container {
+  @include container;
+  padding: 0 25px;
+}
+
+.tariff__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+
+  color: #ff8d30;
+}
+
+.tariff__list {
+  @include listStyle;
+}
+
+.tariff__description {
+  color: #444444;
+}
+
+.tariff__button {
+  font-weight: 700;
+  line-height: 16px;
+
+  color: #192144;
+  background-color: transparent;
+
+  border: none;
+}

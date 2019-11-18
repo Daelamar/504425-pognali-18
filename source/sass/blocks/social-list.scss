@@ -1,0 +1,23 @@
+@import "../global/mixins";
+
+.social-list {
+  @include listStyle;
+  display: flex;
+}
+
+.social-list__link {
+  display: flex;
+  width: 45px;
+  height: 45px;
+
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  &--footer {
+    width: 45px;
+    height: 45px;
+    background-color: #ffd74b;
+  }
+}
