@@ -172,107 +172,137 @@
     <button class="countries__close">Свернуть</button>
   </section>
   <section class="filter">
-    <h2 class="visually-hidden">Список попутчиков. Выбирай скорее!</h2>
-    <form
-      class="filter__form"
-      method="post"
-      action="http://echo.htmlacademy.ru">
-      <fieldset class="filter__fieldset">
-        <legend class="filter__legend">Хобби</legend>
-        <!-- Тут будет еще, когда пришлют макет -->
-      </fieldset>
-      <fieldset class="filter__fieldset">
-        <legend class="filter__legend">Музыка</legend>
-        <ul class="filter__list">
-          <li class="filter__item">
-            <input
-              type="checkbox"
-              id="rock"
-              name="rock">
-            <label for="rock">Тяжелый рок</label>
-          </li>
-          <li class="filter__item">
-            <input
-              type="checkbox"
-              id="rap"
-              name="rap">
-            <label for="rap">Русский рэп</label>
-          </li>
-          <li class="filter__item">
-            <input
-              type="checkbox"
-              id="dance"
-              name="dance">
-            <label for="dance">Евроденс</label>
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset class="filter__fieldset">
-        <legend class="filter__legend">Еда</legend>
-        <!-- Тут будет еще, когда пришлют макет -->
-      </fieldset>
-      <fieldset class="filter__fieldset">
-        <legend class="filter__legend">Транспорт</legend>
-        <ul class="filter__list">
-          <li class="filter__item">
-            <input
-              type="checkbox"
-              id="flight"
-              name="flight">
-            <label for="flight">Авиаперелет</label>
-          </li>
-          <li class="filter__item">
-            <input
-              type="checkbox"
-              id="transport"
-              name="transport">
-            <label for="transport">Автотранспорт</label>
-          </li>
-          <li class="filter__item">
-            <input
-              type="checkbox"
-              id="bicycle"
-              name="bicycle">
-            <label for="bicycle">Велосипед</label>
-          </li>
-          <li class="filter__item">
-            <input
-              type="checkbox"
-              id="afoot"
-              name="afoot">
-            <label for="afoot">Пешком</label>
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset class="filter__fieldset">
-        <legend>Левел</legend>
-        <div class="filter__level">
-          <label for="filter-start-level">
-            <input type="text" name="filter-start-level" id="filter-start-level" value="30">
-          </label>
-          <label for="filter-end-level">
-            <input type="text" name="filter-end-level" id="filter-end-level" value="100">
-          </label>
-        </div>
-        <div class="filter__toggle">
-          <div class="filter__slide-wrapper">
-            <!--Контейнер для полозка-->
-            <div class="filter_slide">
-              <button
-                class="filter__slide-button filter__slide-button--left"
-                type="button"
-                aria-label="Значение минимального уровня"><!--Левая туглетка--></button>
-              <button
-                class="filter__slide-button filter__slide-button--right"
-                type="button"
-                aria-label="Значение максимального уровня"><!--Правая туглетка--></button>
-              <!--Сам полозок-->
+    <div class="filter__container">
+      <h2 class="visually-hidden">Список попутчиков. Выбирай скорее!</h2>
+      <form
+        class="filter__form"
+        method="post"
+        action="http://echo.htmlacademy.ru">
+        <h2 class="filter__title">Подберите идеального попутчика</h2>
+        <fieldset class="filter__fieldset">
+          <legend class="filter__legend">Хобби
+            <button class="legend-btn">Стрелка</button>
+          </legend>
+          <!-- Тут будет еще, когда пришлют макет -->
+        </fieldset>
+        <fieldset class="filter__fieldset">
+          <legend class="filter__legend">Музыка
+            <button class="legend-btn">Стрелка</button>
+          </legend>
+          <ul class="filter__list">
+            <li class="filter__item">
+              <input
+                class="filter__input"
+                type="checkbox"
+                id="rock"
+                name="rock">
+              <label class="filter__label" for="rock">Тяжелый рок</label>
+            </li>
+            <li class="filter__item">
+              <input
+                class="filter__input"
+                type="checkbox"
+                id="rap"
+                name="rap">
+              <label class="filter__label" for="rap">Русский рэп</label>
+            </li>
+            <li class="filter__item">
+              <input
+                class="filter__input"
+                type="checkbox"
+                id="dance"
+                name="dance">
+              <label class="filter__label" for="dance">Евроденс</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter__fieldset">
+          <legend class="filter__legend">Еда
+            <button class="legend-btn">Стрелка</button>
+          </legend>
+          <!-- Тут будет еще, когда пришлют макет -->
+        </fieldset>
+        <fieldset class="filter__fieldset">
+          <legend class="filter__legend">Транспорт
+            <button class="legend-btn">Стрелка</button>
+          </legend>
+          <ul class="filter__list">
+            <li class="filter__item">
+              <input
+                class="filter__input"
+                type="checkbox"
+                id="flight"
+                name="flight">
+              <label class="filter__label" for="flight">Авиаперелет</label>
+            </li>
+            <li class="filter__item">
+              <input
+                class="filter__input"
+                type="checkbox"
+                id="transport"
+                name="transport">
+              <label class="filter__label" for="transport">Автотранспорт</label>
+            </li>
+            <li class="filter__item">
+              <input
+                class="filter__input"
+                type="checkbox"
+                id="bicycle"
+                name="bicycle">
+              <label class="filter__label" for="bicycle">Велосипед</label>
+            </li>
+            <li class="filter__item">
+              <input
+                class="filter__input"
+                type="checkbox"
+                id="afoot"
+                name="afoot">
+              <label class="filter__label" for="afoot">Пешком</label>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset class="filter__fieldset">
+          <legend class="filter__legend">Левел
+            <button class="legend-btn">Стрелка</button>
+          </legend>
+          <div class="filter__level">
+            <label class="filter__label" for="filter-start-level">
+              <input
+                class="filter__input"
+                type="text"
+                name="filter-start-level"
+                id="filter-start-level"
+                value="30">
+            </label>
+            <label class="filter__label" for="filter-end-level">
+              <input
+                class="filter__input"
+                type="text"
+                name="filter-end-level"
+                id="filter-end-level"
+                value="100">
+            </label>
+          </div>
+          <div class="filter__toggle">
+            <div class="filter__slide-wrapper">
+              <!--Контейнер для полозка-->
+              <div class="filter_slide">
+                <button
+                  class="filter__slide-button filter__slide-button--left"
+                  type="button"
+                  aria-label="Значение минимального уровня"><!--Левая туглетка--></button>
+                <button
+                  class="filter__slide-button filter__slide-button--right"
+                  type="button"
+                  aria-label="Значение максимального уровня"><!--Правая туглетка--></button>
+                <!--Сам полозок-->
+              </div>
             </div>
           </div>
-        </div>
-      </fieldset>
-      <button type="submit">Показать</button>
-    </form>
+        </fieldset>
+        <button class="filter__submit" type="submit">Показать</button>
+      </form>
+    </div>
   </section>
   <section class="catalog">
     <div class="catalog__container">
