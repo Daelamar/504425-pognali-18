@@ -60,3 +60,16 @@
   border-radius: 20px;
   border: none;
 }
+
+.filter__input--start-level,
+.filter__input--end-level {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 2px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #1d2e5b;
+}

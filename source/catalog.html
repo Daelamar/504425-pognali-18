@@ -81,95 +81,101 @@
 <main>
   <h1 class="visually-hidden">Страница выбора попутчиков</h1>
   <section class="countries">
-    <div class="countries__header">
-      <h2 class="countries__title">Фильтрация по странам</h2>
-      <button class="countries__roll">Свернуть</button>
-      <nav class="countries__nav">
-        <ul class="countries__list">
-          <li class="countries__item">
-            <a href="#">Европа</a>
-          </li>
-          <li class="countries__item">
-            <a href="#">Азия</a>
-          </li>
-          <li class="countries__item">
-            <a href="#">Америка</a>
-          </li>
-          <li class="countries__item">
-            <a href="#">Острова</a>
-          </li>
-        </ul>
-      </nav>
+    <div class="countries__container">
+      <div class="countries__header">
+        <h2 class="countries__title">Фильтрация по странам</h2>
+        <button class="countries__roll">Свернуть</button>
+      </div>
+      <div class="countries__wrapper">
+        <nav class="countries__nav">
+          <ul class="countries__nav-list">
+            <li class="countries__nav-item">
+              <a class="countries__nav-link countries__nav-link--active" href="#">Европа</a>
+            </li>
+            <li class="countries__nav-item">
+              <a class="countries__nav-link" href="#">Азия</a>
+            </li>
+            <li class="countries__nav-item">
+              <a class="countries__nav-link" href="#">Америка</a>
+            </li>
+            <li class="countries__nav-item">
+              <a class="countries__nav-link" href="#">Острова</a>
+            </li>
+          </ul>
+        </nav>
+        <table class="countries__table">
+          <tbody>
+          <tr class="countries__row">
+            <td class="countries__cell countries__cell--active">А</td>
+            <td class="countries__cell">Б</td>
+            <td class="countries__cell">В</td>
+            <td class="countries__cell">Г</td>
+            <td class="countries__cell">Д</td>
+          </tr>
+          <tr>
+            <td class="countries__cell">Е</td>
+            <td class="countries__cell">З</td>
+            <td class="countries__cell">И</td>
+            <td class="countries__cell">К</td>
+            <td class="countries__cell">Л</td>
+          </tr>
+          <tr>
+            <td class="countries__cell">М</td>
+            <td class="countries__cell">Н</td>
+            <td class="countries__cell">О</td>
+            <td class="countries__cell">П</td>
+            <td class="countries__cell">Р</td>
+          </tr>
+          <tr>
+            <td class="countries__cell">С</td>
+            <td class="countries__cell">Т</td>
+            <td class="countries__cell">У</td>
+            <td class="countries__cell">Ф</td>
+            <td class="countries__cell">Х</td>
+          </tr>
+          <tr>
+            <td class="countries__cell">Ч</td>
+            <td class="countries__cell">Ш</td>
+            <td class="countries__cell">Э</td>
+            <td class="countries__cell">Ю</td>
+            <td class="countries__cell">Я</td>
+          </tr>
+          </tbody>
+        </table>
+        <div class="countries__list-container">
+          <ul class="countries__list">
+            <li class="countries__item">
+              <a class="countries__link" href="#">Афганистан</a>
+            </li>
+            <li class="countries__item">
+              <a class="countries__link" href="#">Албания</a>
+            </li>
+            <li class="countries__item">
+              <a class="countries__link" href="#">Алжир</a>
+            </li>
+            <li class="countries__item">
+              <a class="countries__link" href="#">Андорра</a>
+            </li>
+            <li class="countries__item">
+              <a class="countries__link" href="#">Аргентина</a>
+            </li>
+            <li class="countries__item">
+              <a class="countries__link" href="#">Армения</a>
+            </li>
+            <li class="countries__item">
+              <a class="countries__link" href="#">Австралия</a>
+            </li>
+            <li class="countries__item">
+              <a class="countries__link" href="#">Австрия</a>
+            </li>
+            <li class="countries__item">
+              <a class="countries__link" href="#">Азербайджан</a>
+            </li>
+          </ul>
+        </div>
+        <button class="countries__close">Свернуть</button>
+      </div>
     </div>
-    <table class="countries__table">
-      <tr>
-        <td>А</td>
-        <td>Б</td>
-        <td>В</td>
-        <td>Г</td>
-        <td>Д</td>
-      </tr>
-      <tr>
-        <td>Е</td>
-        <td>З</td>
-        <td>И</td>
-        <td>К</td>
-        <td>Л</td>
-      </tr>
-      <tr>
-        <td>М</td>
-        <td>Н</td>
-        <td>О</td>
-        <td>П</td>
-        <td>Р</td>
-      </tr>
-      <tr>
-        <td>С</td>
-        <td>Т</td>
-        <td>У</td>
-        <td>Ф</td>
-        <td>Х</td>
-      </tr>
-      <tr>
-        <td>Ч</td>
-        <td>Ш</td>
-        <td>Э</td>
-        <td>Ю</td>
-        <td>Я</td>
-      </tr>
-    </table>
-    <div class="countries__ea-container">
-      <ul class="countries__ea-list">
-        <li class="countries__ea-item">
-          <a href="#">Афганистан</a>
-        </li>
-        <li class="countries__ea-item">
-          <a href="#">Албания</a>
-        </li>
-        <li class="countries__ea-item">
-          <a href="#">Алжир</a>
-        </li>
-        <li class="countries__ea-item">
-          <a href="#">Андорра</a>
-        </li>
-        <li class="countries__ea-item">
-          <a href="#">Аргентина</a>
-        </li>
-        <li class="countries__ea-item">
-          <a href="#">Армения</a>
-        </li>
-        <li class="countries__ea-item">
-          <a href="#">Австралия</a>
-        </li>
-        <li class="countries__ea-item">
-          <a href="#">Австрия</a>
-        </li>
-        <li class="countries__ea-item">
-          <a href="#">Азербайджан</a>
-        </li>
-      </ul>
-    </div>
-    <button class="countries__close">Свернуть</button>
   </section>
   <section class="filter">
     <div class="filter__container">
@@ -268,7 +274,7 @@
           <div class="filter__level">
             <label class="filter__label" for="filter-start-level">
               <input
-                class="filter__input"
+                class="filter__input filter__input--start-level"
                 type="text"
                 name="filter-start-level"
                 id="filter-start-level"
@@ -276,7 +282,7 @@
             </label>
             <label class="filter__label" for="filter-end-level">
               <input
-                class="filter__input"
+                class="filter__input filter__input--end-level"
                 type="text"
                 name="filter-end-level"
                 id="filter-end-level"
