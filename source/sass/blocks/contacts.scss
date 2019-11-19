@@ -1,0 +1,36 @@
+@import "../global/mixins";
+
+.contacts {
+  background-color: #192144;
+  border-radius: 0 0 30px 30px;
+}
+
+.contacts__container {
+  @include container;
+  padding: 0 25px;
+}
+
+.contacts__title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+
+  color: #ff8d30;
+}
+
+.contacts__link {
+  color: #ffd74b;
+  text-decoration: underline;
+}
+
+.contacts__input {
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.contacts__submit {
+  background-color: #ffd74b;
+  border-radius: 10px;
+  border: none;
+}
+
