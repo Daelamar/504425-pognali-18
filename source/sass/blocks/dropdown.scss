@@ -1,0 +1,54 @@
+@import "../global/mixins";
+
+.dropdown__header {
+  background-color: #1d2e5b;
+  border-radius: 4px 4px 0 0;
+}
+
+.dropdown__title {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  letter-spacing: 1.4px;
+}
+
+.dropdown__table {
+  background-color: #ffffff;
+  border: 1px solid #cbced9;
+  border-collapse: collapse;
+}
+
+.dropdown__cell {
+  width: 44px;
+  height: 42px;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+
+  letter-spacing: 1.4px;
+
+  color: #1d2e5b;
+
+  border: 1px solid #cbced9;
+
+  &--active {
+    background-color: #edeff6;
+  }
+}
+
+.dropdown__link {
+  font-weight: 400;
+
+  color: #444444;
+}
+
+.dropdown__list-container {
+  border-radius: 0 0 10px 10px;
+}

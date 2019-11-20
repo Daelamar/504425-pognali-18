@@ -1,0 +1,76 @@
+@import "../global/mixins";
+
+.user-block {
+  background-color: #edeff6;
+}
+
+.user-block__container {
+  @include container;
+  padding: 0 25px;
+}
+
+.user-block__value {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 38px;
+
+  color: #161c35;
+}
+
+.user-block__caption {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 22.17px;
+
+  color: #444444;
+}
+
+.user-block__img {
+  border-radius: 50%;
+}
+
+.user-block__button {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  color: #161c35;
+
+  background-color: #dfe3f0;
+  border-radius: 20px;
+  border: none;
+}
+
+.user-block__fieldset {
+  background-color: #edeff6;
+
+  border-radius: 10px;
+  border: 1px solid #cbced9;
+}
+
+.user-block__legend {
+  font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  color: #1d2e5b;
+}
+
+.user-block__textarea {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+
+  color: #444444;
+
+  background-color: transparent;
+  border-radius: 10px;
+  border: none;
+  resize: none;
+}
+
+.user-block__list {
+  @include listStyle;
+  display: flex;
+}

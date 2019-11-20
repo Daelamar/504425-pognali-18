@@ -1,0 +1,62 @@
+@import "../global/mixins";
+
+.third-step__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 20px;
+
+  color: #1d2e5b;
+}
+
+.third-step__description {
+  font-weight: 400;
+  color: #444444;
+}
+
+.third-step__label {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+
+  color: #1d2e5b;
+}
+
+.third-step__input {
+  width: 220px;
+  height: 220px;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+
+  color: #444444;
+
+  background-color: #ffffff;
+  border: 1px solid #cbced9;
+  border-radius: 4px;
+  resize: none;
+}
+
+.third-step__submit {
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  color: #161c35;
+
+  background-color: #ffd74b;
+  border-radius: 20px;
+  border: none;
+}
+
+.third-step__previous {
+  display: block;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  color: #161c35;
+  border: none;
+}
