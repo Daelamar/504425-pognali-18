@@ -26,12 +26,12 @@
       <p class="main-header__about">О сервисе направления попутчики</p>
       <a href="#" class="main-header__login">Авторизация</a>
       <ul class="contact-list">
-        <li class="contact-item">
+        <li class="contact-list__item">
           <a
             href="tel:88005558628"
             class="contact-list__link">8 800 555-86-28</a>
         </li>
-        <li class="contact-item">
+        <li class="contact-list__item">
           <a
             href="mailto:mail@htmlacademy.ru"
             class="contact-list__link">mail@htmlacademy.ru</a>
@@ -81,14 +81,14 @@
 <main>
   <h1 class="visually-hidden">Составь свой маршрут</h1>
   <div class="user-block">
-    <div class="user-block__header">
+    <div class="user-block__container">
       <div class="user-block__level">
-        <p>80</p>
-        <p>level:</p>
+        <p class="user-block__value">80</p>
+        <p class="user-block__caption">level:</p>
       </div>
       <img
         class="user-block__img"
-        src="https://via.placeholder.com/100x100"
+        src="img/photo-account-mobile@1x.jpg"
         alt="Ваш аватар"
         width="100"
         height="100">
@@ -96,7 +96,12 @@
       <fieldset class="user-block__fieldset">
         <legend class="user-block__legend">Теги</legend>
         <label for="user-tags">
-          <textarea name="user-tags" id="user-tags" cols="30" rows="3">#бургер #бар #футбол #концерт #крафт</textarea>
+            <textarea
+              class="user-block__textarea"
+              name="user-tags"
+              id="user-tags"
+              cols="30"
+              rows="3">#бургер #бар #футбол #концерт #крафт</textarea>
         </label>
       </fieldset>
       <fieldset class="user-block__fieldset">
@@ -104,48 +109,58 @@
         <ul class="user-block__list">
           <li class="user-block__item">
             <input
+              class="user-block__input"
               type="checkbox"
               id="flight"
               name="flight">
-            <label for="flight">Авиаперелет</label>
+            <label for="flight" aria-label="Авиаперелет"></label>
           </li>
           <li class="user-block__item">
             <input
+              class="user-block__input"
               type="checkbox"
               id="transport"
               name="transport">
-            <label for="transport">Автотранспорт</label>
+            <label for="transport" aria-label="Автотранспорт"></label>
           </li>
           <li class="user-block__item">
             <input
+              class="user-block__input"
               type="checkbox"
               id="bicycle"
               name="bicycle">
-            <label for="bicycle">Велосипед</label>
+            <label for="bicycle" aria-label="Велосипед"></label>
           </li>
           <li class="user-block__item">
             <input
+              class="user-block__input"
               type="checkbox"
               id="afoot"
               name="afoot">
-            <label for="afoot">Пешком</label>
+            <label for="afoot" aria-label="Пешком"></label>
           </li>
         </ul>
       </fieldset>
     </div>
-    <div class="user-block__plans plans">
+  </div>
+  <div class="plans">
+    <div class="plans__container">
       <h2 class="plans__title">Мои планы:</h2>
       <ul class="plans__list">
         <li class="plans__item">
-          <span class="plans__number">1.</span>
-          <h3 class="plans__item-title">Франция, Италия</h3>
+          <h3 class="plans__item-title">
+            <span class="plans__number">1.</span>
+            Франция, Италия
+          </h3>
           <p class="plans__traveler">3 попутчика</p>
           <p class="plans__dates">26 мар — 29 мар</p>
           <a href=" #" class="plans__change">Изменить</a>
         </li>
-        <li class="user-block__item">
-          <span class="plans__number">2.</span>
-          <h3 class="plans__item-title">Таиланд, Индонезия</h3>
+        <li class="plans__item">
+          <h3 class="plans__item-title">
+            <span class="plans__number">2.</span>
+            Таиланд, Индонезия
+          </h3>
           <p class="plans__traveler">1 попутчик</p>
           <p class="plans__dates">1 июл — 15 июл</p>
           <a href=" #" class="plans__change">Изменить</a>
@@ -157,171 +172,266 @@
     method="post"
     action="http://echo.htmlacademy.ru"
     class="form">
-    <h2 class="form__main-title">Добавить план:</h2>
-    <fieldset class="form__fieldset first-step">
-      <h3 class="first-step__title">Шаг 1.Даты пребывания</h3>
-      <p class="first-step__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать
-        в поездку и ее предполагаемую длительность.
-      </p>
-      <p class="first-step__legend">Ищу попутчиков:</p>
-      <span class="first-step__caption">Чел.</span>
-      <label for="companions" class="first-step__label">
-        <span class="first-step__minus">-</span>
-        <span class="first-step__plus">+</span>
+    <div class="form__container">
+      <h2 class="form__main-title">Добавить план:</h2>
+      <fieldset class="form__fieldset first-step">
+        <h3 class="first-step__title">Шаг 1. Даты пребывания</h3>
+        <p class="first-step__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать
+          в поездку и ее предполагаемую длительность.
+        </p>
+        <p class="first-step__legend">Ищу попутчиков:</p>
+        <span class="first-step__caption">Чел.</span>
+        <label for="companions" class="first-step__label">
+          <span class="first-step__minus">-</span>
+          <span class="first-step__plus">+</span>
+          <input
+            class="first-step__input"
+            type="text"
+            id="companions"
+            name="companions"
+            value="2">
+        </label>
+        <p class="first-step__legend">Ищу попутчиков:</p>
+        <span class="first-step__caption">Чел.</span>
+        <label for="days" class="first-step__label">
+          <span class="first-step__minus">-</span>
+          <span class="first-step__plus">+</span>
+          <input
+            class="first-step__input"
+            type="text"
+            id="days"
+            name="days"
+            value="2">
+        </label>
         <input
-          type="number"
-          id="companions"
-          name="companions">
-      </label>
-      <p class="first-step__legend">Ищу попутчиков:</p>
-      <span class="first-step__caption">Чел.</span>
-      <label for="days" class="first-step__label">
-        <span class="first-step__minus">-</span>
-        <span class="first-step__plus">+</span>
-        <input
-          type="number"
-          id="days"
-          name="days">
-      </label>
-      <input
-        type="checkbox"
-        id="children"
-        name="children">
-      <label for="children" class="first-step__label">Можно с детьми</label>
-      <div class="first-step__date-block">
-        <button type="button">Стрелка всево</button>
-        <p class="first-step__date">Март 2019</p>
-        <button type="button">Стрелка вправо</button>
-      </div>
-      <div class="first-step__calendar">
-        <table class="first-step__table">
-          <tr>
-            <th>П</th>
-            <th>В</th>
-            <th>С</th>
-            <th>Ч</th>
-            <th>П</th>
-            <th>С</th>
-            <th>В</th>
-          </tr>
-          <tr>
-            <td>23</td>
-            <td>24</td>
-            <td>25</td>
-            <td>26</td>
-            <td>27</td>
-            <td>28</td>
-            <td>1</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-          </tr>
-          <tr>
-            <td>9</td>
-            <td>10</td>
-            <td>11</td>
-            <td>12</td>
-            <td>13</td>
-            <td>14</td>
-            <td>15</td>
-          </tr>
-          <tr>
-            <td>16</td>
-            <td>17</td>
-            <td>18</td>
-            <td>19</td>
-            <td>20</td>
-            <td>21</td>
-            <td>22</td>
-          </tr>
-          <tr>
-            <td>23</td>
-            <td>24</td>
-            <td>25</td>
-            <td>26</td>
-            <td>27</td>
-            <td>28</td>
-            <td>29</td>
-          </tr>
-          <tr>
-            <td>30</td>
-            <td>31</td>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-          </tr>
-        </table>
-      </div>
-      <!-- Тут позже будет якорь -->
-      <a href="#">Следующий шаг</a>
-    </fieldset>
-    <fieldset class="form__fieldset second-step">
-      <h3 class="second-step__title">Шаг 2.Маршрут</h3>
-      <p class="second-step__description">Укажите страны, которые вы хотели по посетить.
-        Это может быть одна или сразу несколько.
-      </p>
-      <label for="1-country" class="second-step__label">
-        <input
+          class="first-step__input"
+          type="checkbox"
+          id="children"
+          name="children"
+          value="2">
+        <label for="children" class="first-step__label">Можно с детьми</label>
+        <div class="first-step__date-block">
+          <button type="button" aria-label="Предыдущий месяц"></button>
+          <p class="first-step__date">Март 2019</p>
+          <button type="button" aria-label="Следующий месяц"></button>
+        </div>
+        <div class="first-step__calendar">
+          <table class="first-step__table">
+            <tbody>
+            <tr class="first-step__row">
+              <td class="first-step__day">П</td>
+              <td class="first-step__day">В</td>
+              <td class="first-step__day">С</td>
+              <td class="first-step__day">Ч</td>
+              <td class="first-step__day">П</td>
+              <td class="first-step__day first-step__day--red">С</td>
+              <td class="first-step__day first-step__day--red">В</td>
+            </tr>
+            <tr class="first-step__row">
+              <td class="first-step__cell first-step__cell--disabled">23</td>
+              <td class="first-step__cell first-step__cell--disabled">24</td>
+              <td class="first-step__cell first-step__cell--disabled">25</td>
+              <td class="first-step__cell first-step__cell--disabled">26</td>
+              <td class="first-step__cell first-step__cell--disabled">27</td>
+              <td class="first-step__cell first-step__cell--disabled">28</td>
+              <td class="first-step__cell first-step__cell--disabled">1</td>
+            </tr>
+            <tr class="first-step__row">
+              <td class="first-step__cell first-step__cell--disabled">2</td>
+              <td class="first-step__cell first-step__cell--disabled">3</td>
+              <td class="first-step__cell first-step__cell--disabled">4</td>
+              <td class="first-step__cell first-step__cell--disabled">5</td>
+              <td class="first-step__cell first-step__cell--disabled">6</td>
+              <td class="first-step__cell first-step__cell--disabled">7</td>
+              <td class="first-step__cell first-step__cell--disabled">8</td>
+            </tr>
+            <tr class="first-step__row">
+              <td class="first-step__cell first-step__cell--disabled">9</td>
+              <td class="first-step__cell first-step__cell--disabled">10</td>
+              <td class="first-step__cell first-step__cell--disabled">11</td>
+              <td class="first-step__cell first-step__cell--disabled">12</td>
+              <td class="first-step__cell first-step__cell--disabled">13</td>
+              <td class="first-step__cell first-step__cell--disabled">14</td>
+              <td class="first-step__cell first-step__cell--disabled">15</td>
+            </tr>
+            <tr class="first-step__row">
+              <td class="first-step__cell first-step__cell--disabled">16</td>
+              <td class="first-step__cell first-step__cell--disabled">17</td>
+              <td class="first-step__cell first-step__cell--disabled">18</td>
+              <td class="first-step__cell first-step__cell--disabled">19</td>
+              <td class="first-step__cell first-step__cell--disabled">20</td>
+              <td class="first-step__cell first-step__cell--disabled">21</td>
+              <td class="first-step__cell first-step__cell--disabled">22</td>
+            </tr>
+            <tr class="first-step__row">
+              <td class="first-step__cell first-step__cell--disabled">23</td>
+              <td class="first-step__cell first-step__cell--disabled">24</td>
+              <td class="first-step__cell first-step__cell--disabled">25</td>
+              <td
+                class="first-step__cell
+                first-step__cell--selected
+                first-step__cell--active">26
+              </td>
+              <td class="first-step__cell first-step__cell--selected">27</td>
+              <td class="first-step__cell first-step__cell--selected">28</td>
+              <td class="first-step__cell">29</td>
+            </tr>
+            <tr class="first-step__row">
+              <td class="first-step__cell">30</td>
+              <td class="first-step__cell">31</td>
+              <td class="first-step__cell">1</td>
+              <td class="first-step__cell">2</td>
+              <td class="first-step__cell">3</td>
+              <td class="first-step__cell">4</td>
+              <td class="first-step__cell">5</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- Тут позже будет якорь -->
+        <a href="#" class="first-step__next">Следующий шаг</a>
+      </fieldset>
+      <fieldset class="form__fieldset second-step">
+        <h3 class="second-step__title">Шаг 2. Маршрут</h3>
+        <p class="second-step__description">Укажите страны, которые вы хотели по посетить.
+          Это может быть одна или сразу несколько.
+        </p>
+        <label for="1-country" class="second-step__label">
+          <input
+            class="second-step__input"
+            type="text"
+            id="1-country"
+            name="1-country"
+            value="Босния и Герцегов">
+          <span class="second-step__delete"></span>
+        </label>
+        <label for="2-country" class="second-step__label">
+          <input
+            class="second-step__input"
+            type="text"
+            id="2-country"
+            name="2-country"
+            value="Чехия">
+          <span class="second-step__delete"></span>
+        </label>
+        <div class="second-step__wrapper">
+          <label for="3-country" class="second-step__label">
+            <input
+              class="second-step__input"
+              type="text"
+              id="3-country"
+              name="3-country"
+              placeholder="Выберите страну">
+            <span class="second-step__delete"></span>
+          </label>
+          <div class="second-step__dropdown dropdown">
+            <div class="dropdown__header">
+              <h3 class="dropdown__title">Выберите страну</h3>
+              <button class="dropdown__close" aria-label="Кнопка закрыть окно"></button>
+            </div>
+            <table class="dropdown__table">
+              <tbody>
+              <tr class="dropdown__row">
+                <td class="dropdown__cell dropdown__cell--active">А</td>
+                <td class="dropdown__cell">Б</td>
+                <td class="dropdown__cell">В</td>
+                <td class="dropdown__cell">Г</td>
+                <td class="dropdown__cell">Д</td>
+              </tr>
+              <tr>
+                <td class="dropdown__cell">Е</td>
+                <td class="dropdown__cell">З</td>
+                <td class="dropdown__cell">И</td>
+                <td class="dropdown__cell">К</td>
+                <td class="dropdown__cell">Л</td>
+              </tr>
+              <tr class="dropdown__row">
+                <td class="dropdown__cell">М</td>
+                <td class="dropdown__cell">Н</td>
+                <td class="dropdown__cell">О</td>
+                <td class="dropdown__cell">П</td>
+                <td class="dropdown__cell">Р</td>
+              </tr>
+              <tr class="dropdown__row">
+                <td class="dropdown__cell">С</td>
+                <td class="dropdown__cell">Т</td>
+                <td class="dropdown__cell">У</td>
+                <td class="dropdown__cell">Ф</td>
+                <td class="dropdown__cell">Х</td>
+              </tr>
+              <tr class="dropdown__row">
+                <td class="dropdown__cell">Ч</td>
+                <td class="dropdown__cell">Ш</td>
+                <td class="dropdown__cell">Э</td>
+                <td class="dropdown__cell">Ю</td>
+                <td class="dropdown__cell">Я</td>
+              </tr>
+              </tbody>
+            </table>
+            <div class="dropdown__list-container">
+              <ul class="dropdown__list">
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="#">Афганистан</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="#">Албания</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="#">Алжир</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="#">Андорра</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class=dropdown__link" href="#">Аргентина</a>
+                </li>
+                <li class=dropdown__item">
+                  <a class="dropdown__link" href="#">Армения</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="#">Австралия</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="#">Австрия</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown__link" href="#">Азербайджан</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="second-step__add">Добавить страну</button>
+        <!-- Тут позже будет якоря -->
+        <a href="#" class="second-step__next">Следующий шаг</a>
+        <a href="#" class="second-step__previous">На шаг назад</a>
+      </fieldset>
+      <fieldset class="form__fieldset third-step">
+        <h3 class="third-step__title">Шаг 3. Развлечения</h3>
+        <p class="third-step__description">Укажите страны, которые вы хотели по посетить.
+          Это может быть одна или сразу несколько.
+        </p>
+        <label for="1-comment" class="third-step__label">Босния и герцегови
+          <span class="third-step__flag"></span>
+        </label>
+        <textarea
           type="text"
-          id="1-country"
-          name="1-country"
-          value="Босния и Герцегов">
-        <span class="second-step__delete"></span>
-      </label>
-      <label for="2-country" class="second-step__label">
-        <input
-          type="text"
-          id="2-country"
-          name="2-country"
-          value="Чехия">
-        <span class="second-step__delete"></span>
-      </label>
-      <label for="3-country" class="second-step__label">
-        <input
-          type="text"
-          id="3-country"
-          name="3-country"
-          placeholder="Выберите страну">
-        <span class="second-step__delete"></span>
-      </label>
-      <button type="button">Добавить страну</button>
-      <!-- Тут позже будет якоря -->
-      <a href="#">Следующий шаг</a>
-      <a href="#">На шаг назад</a>
-    </fieldset>
-    <fieldset class="form__fieldset third-step">
-      <h3 class="third-step__title">Шаг 2.Маршрут</h3>
-      <p class="third-step__description">Укажите страны, которые вы хотели по посетить.
-        Это может быть одна или сразу несколько.
-      </p>
-      <label for="1-comment" class="third-step__label">Босния и герцегови
-        <span class="second-step__flag">Флаг</span>
-      </label>
-      <input
-        type="text"
-        id="1-comment"
-        name="1-comment"
-        placeholder="План действий">
-      <label for="2-comment" class="second-step__label">Чехия
-        <span class="second-step__delete">Флаг</span>
-      </label>
-      <input
-        type="text"
-        id="2-comment"
-        name="2-comment"
-        value="Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.">
-      <!-- Тут позже будет якоря -->
-      <button type="submit">Отправить</button>
-      <a href="#">На шаг назад</a>
-    </fieldset>
+          id="1-comment"
+          name="1-comment"
+          placeholder="План действий"
+          class="third-step__input"></textarea>
+        <label for="2-comment" class="third-step__label">Чехия
+          <span class="third-step__flag"></span>
+        </label>
+        <textarea
+          id="2-comment"
+          name="2-comment"
+          class="third-step__input">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+        <!-- Тут позже будет якоря -->
+        <button type="submit" class="third-step__submit">Отправить</button>
+        <a href="#" class="third-step__previous">На шаг назад</a>
+      </fieldset>
+    </div>
   </form>
 </main>
 <footer class="main-footer">
@@ -385,61 +495,5 @@
     </div>
   </div>
 </footer>
-<div class="popup">
-  <div class="popup__header">
-    <h3 class="popup__title">Выберите страну</h3>
-    <button class="popup__close">Закрыть</button>
-  </div>
-  <table class="popup__table">
-    <tr>
-      <td>А</td>
-      <td>Б</td>
-      <td>В</td>
-      <td>Г</td>
-      <td>Д</td>
-    </tr>
-    <tr>
-      <td>Е</td>
-      <td>З</td>
-      <td>И</td>
-      <td>К</td>
-      <td>Л</td>
-    </tr>
-    <tr>
-      <td>М</td>
-      <td>Н</td>
-      <td>О</td>
-      <td>П</td>
-      <td>Р</td>
-    </tr>
-    <tr>
-      <td>С</td>
-      <td>Т</td>
-      <td>У</td>
-      <td>Ф</td>
-      <td>Х</td>
-    </tr>
-    <tr>
-      <td>Ч</td>
-      <td>Ш</td>
-      <td>Э</td>
-      <td>Ю</td>
-      <td>Я</td>
-    </tr>
-  </table>
-  <div class="popup__ea-container">
-    <ul class="popup__ea-list">
-      <li class="popup__ea-item">Афганистан</li>
-      <li class="popup__ea-item">Албания</li>
-      <li class="popup__ea-item">Алжир</li>
-      <li class="popup__ea-item">Андорра</li>
-      <li class="popup__ea-item">Аргентина</li>
-      <li class="popup__ea-item">Армения</li>
-      <li class="popup__ea-item">Австралия</li>
-      <li class="popup__ea-item">Австрия</li>
-      <li class="popup__ea-item">Азербайджан</li>
-    </ul>
-  </div>
-</div>
 </body>
 </html>

@@ -12,6 +12,15 @@
   }
 }
 
+.main-header--catalog .main-header__title,
+.main-header--form .main-header__title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+
+  color: #ffffff;
+}
+
 .main-header__container {
   @include container;
   padding: 0 25px;
@@ -46,4 +55,3 @@
   border-radius: 25px;
   background-color: #ffd74b;
 }
-

@@ -1,0 +1,25 @@
+@import "../global/mixins";
+
+.form {
+  background-color: #d4d9eb;
+  border-radius: 30px;
+}
+
+.form__container {
+  @include container;
+  padding: 0 25px;
+}
+
+.form__main-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+
+  color: #1d2e5b;
+}
+
+.form__fieldset {
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: none;
+}

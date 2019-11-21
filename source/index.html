@@ -36,12 +36,12 @@
       <p class="main-header__about">О сервисе направления попутчики</p>
       <a href="#" class="main-header__login">Авторизация</a>
       <ul class="contact-list">
-        <li class="contact-item">
+        <li class="contact-list__item">
           <a
             href="tel:88005558628"
             class="contact-list__link">8 800 555-86-28</a>
         </li>
-        <li class="contact-item">
+        <li class="contact-list__item">
           <a
             href="mailto:mail@htmlacademy.ru"
             class="contact-list__link">mail@htmlacademy.ru</a>
@@ -322,45 +322,56 @@
   </section>
   <section class="contacts">
     <h2 class="visually-hidden">Зарегестрируйтесь или напишите нам!</h2>
-    <b class="contacts__title">Заинтересовались?</b>
-    <p class="contacts__description">Зарегистрируйтесь, это быстро и бесплатно!</p>
-    <p class="contacts__description">Уже зарегистрированы? Тогда скорее
-      <a href="#" class="contacts__link">авторизуйтесь</a>.
-    </p>
-    <form
-      class="contacts__form"
-      method="post"
-      action="http://echo.htmlacademy.ru">
-      <label for="register-mail"></label>
-      <input
-        type="email"
-        id="register-mail"
-        name="register-mail"
-        placeholder="E-mail"
-        class="contacts__input">
-      <button type="submit" class="contacts__submit">Регистрация</button>
-    </form>
-    <p class="contacts__caption">Остались вопросы? Мы с радостью на них ответим!</p>
-    <ul class="contact-list">
-      <li class="contact-item">
-        <a href="tel:88005558628">8 800 555-86-28</a>
-      </li>
-      <li class="contact-item">
-        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-      </li>
-    </ul>
+    <div class="contacts__container">
+      <b class="contacts__title">Заинтересовались?</b>
+      <p class="contacts__description">Зарегистрируйтесь, это быстро и бесплатно!</p>
+      <p class="contacts__description">Уже зарегистрированы? Тогда скорее
+        <a href="#" class="contacts__link">авторизуйтесь</a>.
+      </p>
+      <form
+        class="contacts__form"
+        method="post"
+        action="http://echo.htmlacademy.ru">
+        <label for="register-mail"></label>
+        <input
+          type="email"
+          id="register-mail"
+          name="register-mail"
+          placeholder="E-mail"
+          class="contacts__input">
+        <button type="submit" class="contacts__submit">Регистрация</button>
+      </form>
+      <p class="contacts__caption">Остались вопросы? Мы с радостью на них ответим!</p>
+      <ul class="contact-list">
+        <li class="contact-list__item">
+          <a
+            href="tel:88005558628"
+            class="contact-list__link contact-list__link--orange">8 800 555-86-28</a>
+        </li>
+        <li class="contact-list__item">
+          <a
+            href="mailto:mail@htmlacademy.ru"
+            class="contact-list__link contact-list__link--orange">mail@htmlacademy.ru</a>
+        </li>
+      </ul>
+    </div>
   </section>
   <section class="map-block">
     <h2 class="visually-hidden">Схема проезда: как до нас добраться</h2>
     <div class="map-block__header">
-      <p class="map-block__title">ул. Большая Конюшенная, 19/8</p>
-      <a href="#">Проложить маршрут</a>
+      <div class="map-block__container">
+        <p class="map-block__title">ул. Большая Конюшенная, 19/8</p>
+        <a href="#" class="map-block__link">Проложить маршрут</a>
+      </div>
     </div>
-    <img
-      src="https://via.placeholder.com/320x546"
-      alt="Карта проезда"
-      width="320"
-      height="546">
+    <div class="map-block__wrapper">
+      <iframe
+        class="map-block__map"
+        src="https://yandex.ru/map-widget/v1/-/CGXyJB2x"
+        width="100%"
+        height="546"
+        allowfullscreen="true"></iframe>
+    </div>
   </section>
 </main>
 <footer class="main-footer">
