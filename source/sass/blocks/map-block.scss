@@ -32,7 +32,6 @@
 }
 
 .map-block__wrapper {
-  @include container;
   width: 100vw;
   height: 546px;
   background-image: url("../../img/map.png");

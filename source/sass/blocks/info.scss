@@ -9,10 +9,11 @@
   @include container;
   padding: 0 25px;
 
-  background-color: #192144;
   background-image: url("../img/about-mobile@1x.png");
   background-repeat: no-repeat;
   background-position: center;
+
+  outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .info__title {
@@ -25,4 +26,41 @@
 
 .info__slogan {
   font-weight: 700;
+}
+
+.info__link {
+  display: none;
+
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 24px;
+
+  color: #1d2e5b;
+
+  background-color: #ffd74b;
+  border-radius: 20px;
+}
+
+//Таблет
+
+@media (min-width: $tablet-width) {
+  .info {
+    border-radius: 0 0 60px 60px;
+  }
+
+  .info__container {
+    height: 920px; //todo: Временно для сетки}
+  }
+
+  .info__link {
+    display: block;
+  }
+}
+
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .info__container {
+    height: 840px; //todo: Временно для сетки}
+  }
 }

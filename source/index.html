@@ -21,7 +21,20 @@
         height="19">
     </a>
     <button class="main-header__button" aria-label="Открыть меню"></button>
-    <div class="user-menu">
+    <nav class="main-header__nav main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link">О сервисе</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="form.html" class="main-nav__link">Направления</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="catalog.html" class="main-nav__link">Попутчики</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="main-header__user-menu user-menu">
       <a
         href="mailto:mail@htmlacademy.ru"
         class="user-menu__item user-menu__item--tel"></a>
@@ -35,7 +48,7 @@
     <div class="main-header__submenu">
       <p class="main-header__about">О сервисе направления попутчики</p>
       <a href="#" class="main-header__login">Авторизация</a>
-      <ul class="contact-list">
+      <ul class="main-header__contact-list contact-list">
         <li class="contact-list__item">
           <a
             href="tel:88005558628"
@@ -115,6 +128,7 @@
       <strong class="info__slogan">А если найдете кого-то близкого по духу —
         скорее зовите в совместный трип!
       </strong>
+      <a href="#" class="info__link">Подробнее</a>
     </div>
   </section>
   <section class="destinations">

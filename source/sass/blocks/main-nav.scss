@@ -1,0 +1,30 @@
+@import "../global/mixins";
+@import "../global/variables";
+
+.main-nav {
+  display: none;
+
+  outline: 1px solid yellowgreen; //todo: Временно для сетки
+}
+
+.main-nav__list {
+  @include listStyle;
+  display: flex;
+}
+
+.main-nav__link {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  color: $color-white;
+}
+
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    display: block;
+  }
+}

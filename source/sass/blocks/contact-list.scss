@@ -2,6 +2,8 @@
 
 .contact-list {
   @include listStyle;
+
+  outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .contact-list__link {

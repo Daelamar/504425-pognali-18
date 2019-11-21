@@ -1,7 +1,8 @@
 @import "../global/mixins";
+@import "../global/variables";
 
 .main-header {
-  background-color: #161c36;
+  background-color: $color-header;
 
   &--form {
     border-radius: 0 0 20px 20px;
@@ -18,16 +19,26 @@
   font-weight: 700;
   line-height: 40px;
 
-  color: #ffffff;
+  color: $color-white;
 }
 
 .main-header__container {
   @include container;
-  padding: 0 25px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  padding: 27px 25px;
+
+  outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .main-header__submenu {
-  background-color: #ffffff;
+  display: none;
+  position: absolute;
+
+  padding: 25px;
+  background-color: $color-white;
 }
 
 .main-header__about {
@@ -54,4 +65,41 @@
 
   border-radius: 25px;
   background-color: #ffd74b;
+}
+
+.main-header__user-menu {
+  position: absolute;
+  top: 200px;
+  right: 70px;
+}
+
+//Таблетка
+
+@media (min-width: $tablet-width) {
+  .main-header__container {
+    padding: 40px;
+  }
+
+  .main-header__user-menu {
+    position: inherit;
+    top: auto;
+    right: auto;
+  }
+}
+
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .main-header__container {
+    padding: 45px;
+    justify-content: flex-start;
+  }
+
+  .main-header__button {
+    display: none;
+  }
+
+  .main-header__user-menu {
+    margin-left: auto;
+  }
 }

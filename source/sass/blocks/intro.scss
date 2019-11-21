@@ -7,8 +7,10 @@
 .intro__container {
   @include container;
   padding: 0 25px;
+  height: 980px; //todo: Временно для сетки
 
-  background: url("../img/traveller-illustration-mobile@1x.png") no-repeat, #161c36 url("../img/globe-back-mobile@1x.jpg") no-repeat;
+  background: url("../img/traveller-illustration-mobile@1x.png") no-repeat, url("../img/globe-back-mobile@1x.jpg") no-repeat;
+  outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .intro__slogan {
@@ -50,5 +52,25 @@
   &:last-child {
     background-color: #ffd74b;
     border-radius: 10px;
+  }
+}
+
+//Таблет
+
+@media (min-width: $tablet-width) {
+  .intro__container {
+    height: 980px; //todo: Временно для сетки}
+  }
+}
+
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .intro {
+    border-radius: 0 0 60px 60px;
+  }
+
+  .intro__container {
+    height: 640px; //todo: Временно для сетки}
   }
 }

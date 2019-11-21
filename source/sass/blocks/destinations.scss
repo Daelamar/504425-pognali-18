@@ -9,7 +9,7 @@
   @include container;
   padding: 0 25px;
 
-  background-color: #edeff6;
+  outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .destinations__title {
@@ -70,4 +70,24 @@
   height: 24px;
 
   border-radius: 4px;
+}
+
+//Таблет
+
+@media (min-width: $tablet-width) {
+  .destinations {
+    border-radius: 0 0 60px 60px;
+  }
+
+  .destinations__container {
+    height: 1181px; //todo: Временно для сетки
+  }
+}
+
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .destinations__container {
+    height: 840px; //todo: Временно для сетки
+  }
 }

@@ -2,6 +2,8 @@
 
 .user-menu {
   display: flex;
+
+  outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .user-menu__item {
@@ -44,5 +46,33 @@
     background-color: #ffd74b;
 
     border-radius: 20px;
+  }
+}
+
+//Таблетка
+
+@media (min-width: $tablet-width) {
+  .user-menu__item {
+    &--tel {
+      display: none;
+    }
+
+    &--mail {
+      display: none;
+    }
+  }
+}
+
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .user-menu__item {
+    &--tel {
+      display: block;
+    }
+
+    &--mail {
+      display: block;
+    }
   }
 }
