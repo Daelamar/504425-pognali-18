@@ -1,7 +1,8 @@
 @import "../global/mixins";
+@import "../global/variables";
 
 .info {
-  background-color: #192144;
+  background-color: $color-darkBlue;
   border-radius: 0 0 30px 30px;
 }
 

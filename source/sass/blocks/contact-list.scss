@@ -1,4 +1,5 @@
 @import "../global/mixins";
+@import "../global/variables";
 
 .contact-list {
   @include listStyle;
@@ -14,5 +15,13 @@
 
   &--orange {
     color: #ffd74b;
+  }
+}
+
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .contact-list {
+    display: flex;
   }
 }

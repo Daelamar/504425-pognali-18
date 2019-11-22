@@ -8,9 +8,12 @@
 .map-block__container {
   @include container;
   padding: 0 25px;
+
+  outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .map-block__title {
+  margin: 0;
   font-size: 28px;
   font-weight: 700;
   line-height: 28px;
@@ -35,8 +38,30 @@
   width: 100vw;
   height: 546px;
   background-image: url("../../img/map.png");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .map-block__map {
   border: none;
+}
+
+//Таблет
+
+@media (min-width: $tablet-width) {
+  .map-block__header {
+    border-radius: 0 0 60px 60px;
+  }
+
+  .map-block__wrapper {
+    height: 700px;
+  }
+}
+
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .map-block__wrapper {
+    height: 750px;
+  }
 }

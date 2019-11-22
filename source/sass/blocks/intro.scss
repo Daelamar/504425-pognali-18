@@ -1,7 +1,8 @@
 @import "../global/mixins";
+@import "../global/variables";
 
 .intro {
-  background-color: #161c36;
+  background-color: $color-header;
 }
 
 .intro__container {
