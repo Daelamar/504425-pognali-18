@@ -6,10 +6,18 @@
 
   &--form {
     border-radius: 0 0 20px 20px;
+
+    .main-header__user-menu {
+      display: none;
+    }
   }
 
   &--catalog {
     border-radius: 0 0 20px 20px;
+
+    .main-header__user-menu {
+      display: none;
+    }
   }
 }
 
@@ -19,13 +27,14 @@
   font-weight: 700;
   line-height: 40px;
 
-  color: $color-twilightGray;
+  color: $color-white;
 }
 
 .main-header__container {
   @include container;
   position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 
   padding: 27px 25px;
@@ -73,9 +82,58 @@
   right: 70px;
 }
 
+.main-header__title-link {
+  display: none;
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+
+  color: $color-white;
+}
+
 //Таблетка
 
 @media (min-width: $tablet-width) {
+  .main-header {
+    border-radius: 0 0 60px 60px;
+
+    &--form {
+      .main-header__user-menu {
+        display: flex;
+      }
+
+      .main-header__title {
+        width: 100%;
+      }
+
+      .main-header__container {
+        height: 351px; //todo: Временно для сетки
+      }
+    }
+
+    &--catalog {
+      .main-header__user-menu {
+        display: flex;
+      }
+
+      .main-header__title {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      .main-header__container {
+        height: 351px; //todo: Временно для сетки
+      }
+
+      .main-header__title-link {
+        display: block;
+      }
+    }
+  }
+
   .main-header__container {
     padding: 40px;
   }

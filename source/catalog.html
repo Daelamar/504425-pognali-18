@@ -21,7 +21,33 @@
         height="19">
     </a>
     <button class="main-header__button" aria-label="Открыть меню"></button>
-    <h2 class="main-header__title">Попутчики</h2>
+    <nav class="main-header__nav main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link">О сервисе</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="form.html" class="main-nav__link">Направления</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="catalog.html" class="main-nav__link">Попутчики</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="main-header__user-menu user-menu">
+      <a
+        href="mailto:mail@htmlacademy.ru"
+        class="user-menu__item user-menu__item--tel"></a>
+      <a
+        href="tel:88005558628"
+        class="user-menu__item user-menu__item--mail"></a>
+      <a
+        href="#"
+        class="user-menu__item user-menu__item--enter">Авторизация</a>
+    </div>
+    <h2 class="main-header__title">Попутчики
+      <a href="index.html" class="main-header__title-link">На главную</a>
+    </h2>
     <div class="main-header__submenu">
       <p class="main-header__about">О сервисе направления попутчики</p>
       <a href="#" class="main-header__login">Авторизация</a>
@@ -573,8 +599,26 @@
         <a href="#" class="card__call">Позвать!</a>
       </div>
       <button class="catalog__show">Показать еще</button>
-      <button class="catalog__left">Левый переключатель</button>
-      <button class="catalog__right">Правый переключатель</button>
+      <div class="catalog__crumbs">
+        <ul class="catalog__crumbs-list">
+          <li class="catalog__crumbs-item">
+            <a href="#" class="catalog__crumbs-link">1</a>
+          </li>
+          <li class="catalog__crumbs-item">
+            <a href="#" class="catalog__crumbs-link">2</a>
+          </li>
+          <li class="catalog__crumbs-item">
+            <a href="#" class="catalog__crumbs-link">3</a>
+          </li>
+          <li class="catalog__crumbs-item">
+            <a href="#" class="catalog__crumbs-link">4</a>
+          </li>
+        </ul>
+        <div class="catalog__buttons">
+          <button class="catalog__left">Левый переключатель</button>
+          <button class="catalog__right">Правый переключатель</button>
+        </div>
+      </div>
     </div>
   </section>
 </main>

@@ -1,4 +1,5 @@
 @import "../global/mixins";
+@import "../global/variables";
 
 .countries {
   background-color: #e2e5f2;
@@ -8,6 +9,8 @@
 .countries__container {
   @include container;
   padding: 0 25px;
+
+  outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .countries__title {
@@ -85,4 +88,24 @@
   background-color: #d6daed;
   border-radius: 20px;
   border: none;
+}
+
+//Таблетка
+
+@media (min-width: $tablet-width) {
+  .countries {
+    border-radius: 0 0 60px 60px;
+  }
+
+  .countries__container {
+    height: 932px; //todo: Временно для сетки
+  }
+}
+
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .countries {
+    border-radius: 0;
+  }
 }
