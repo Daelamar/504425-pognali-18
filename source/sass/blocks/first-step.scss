@@ -11,7 +11,7 @@
 .first-step__description {
   font-weight: 400;
 
-  color: #444444;
+  color: $color-twilightGray;
 }
 
 .first-step__legend {
@@ -56,7 +56,7 @@
   font-weight: 400;
   line-height: 15px;
 
-  color: #444444;
+  color: $color-twilightGray;
 }
 
 .first-step__date {
@@ -81,7 +81,7 @@
   text-transform: uppercase;
   text-align: center;
 
-  color: #444444;
+  color: $color-twilightGray;
 
   background-color: #edeff6;
   border: 1px solid #cbced9;
@@ -108,7 +108,7 @@
   text-transform: uppercase;
   text-align: center;
 
-  color: #444444;
+  color: $color-twilightGray;
 
   &--red {
     color: #ff5c23;

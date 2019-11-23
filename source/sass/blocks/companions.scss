@@ -1,7 +1,8 @@
 @import "../global/mixins";
+@import "../global/variables";
 
 .companions {
-  background-color: #192144;
+  background-color: $color-darkBlue;
   border-radius: 0 0 30px 30px;
 }
 
@@ -9,7 +10,8 @@
   @include container;
   padding: 0 25px;
 
-  background: url("../../img/smolov-back-desktop@1x.png") no-repeat, #192144 url("../../img/rogovaya-back-mobile@1x.png") no-repeat;
+  background: url("../img/smolov-back-desktop@1x.png") no-repeat, url("../img/rogovaya-back-mobile@1x.png") no-repeat;
+  outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .companions__title {
@@ -70,7 +72,7 @@
   font-weight: 400;
   line-height: 18px;
 
-  color: #444444;
+  color: $color-twilightGray;
 }
 
 .companions__transport-list {
@@ -120,4 +122,28 @@
 
   background-color: #ffd74b;
   border-radius: 10px;
+}
+
+//Таблет
+
+@media (min-width: $tablet-width) {
+  .companions {
+    border-radius: 0 0 60px 60px;
+  }
+
+  .companions__container {
+    height: 1334px; //todo: Временно для сетки
+  }
+
+  .companions__wrapper {
+    display: flex;
+  }
+}
+
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .companions__container {
+    height: 840px; //todo: Временно для сетки
+  }
 }

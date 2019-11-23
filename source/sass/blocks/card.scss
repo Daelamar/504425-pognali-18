@@ -1,8 +1,11 @@
 @import "../global/mixins";
+@import "../global/variables";
 
 .card {
   background-color: #ffffff;
   border-radius: 20px;
+
+  outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .card__img {
@@ -49,7 +52,7 @@
   font-weight: 400;
   line-height: 18px;
 
-  color: #444444;
+  color: $color-twilightGray;
 }
 
 .card__flags-title,
@@ -59,7 +62,7 @@
   font-weight: 400;
   line-height: 18px;
 
-  color: #444444;
+  color: $color-twilightGray;
 }
 
 .card__flags-list {
@@ -131,4 +134,22 @@
 
   background-color: #ffd74b;
   border-radius: 20px;
+}
+
+//Таблетка
+
+@media (min-width: $tablet-width) {
+  .card {
+    display: flex;
+
+    height: 332px; //todo: Временно для сетки
+  }
+}
+
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .card {
+    height: 285px; //todo: Временно для сетки
+  }
 }

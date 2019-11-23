@@ -1,4 +1,5 @@
 @import "../global/mixins";
+@import "../global/variables";
 
 .catalog {
   background-color: #edeff6;
@@ -7,6 +8,8 @@
 .catalog__container {
   @include container;
   padding: 0 25px;
+
+  outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .catalog__show {
@@ -26,4 +29,38 @@
   background-color: #ffffff;
   border-radius: 20px;
   border: none;
+}
+
+.catalog__crumbs {
+  display: flex;
+
+  background-color: $color-white;
+  border-radius: 20px;
+}
+
+.catalog__crumbs-list {
+  @include listStyle;
+
+  display: none;
+}
+
+.catalog__crumbs-link {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+
+  color: #161c35;
+}
+
+//Таблетка
+
+@media (min-width: $tablet-width) {
+  .catalog__crumbs-list {
+    display: flex;
+  }
+
+  .countries__container {
+    height: 932px; //todo: Временно для сетки
+  }
 }

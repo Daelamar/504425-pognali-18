@@ -1,7 +1,10 @@
 @import "../global/mixins";
+@import "../global/variables";
 
 .contact-list {
   @include listStyle;
+
+  outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .contact-list__link {
@@ -12,5 +15,13 @@
 
   &--orange {
     color: #ffd74b;
+  }
+}
+
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .contact-list {
+    display: flex;
   }
 }
