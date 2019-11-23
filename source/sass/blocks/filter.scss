@@ -4,11 +4,6 @@
   background-color: #edeff6;
 }
 
-.filter__container {
-  @include container;
-  padding: 0 25px;
-}
-
 .filter__form {
   background-color: #ffd74b;
   border-radius: 20px;
