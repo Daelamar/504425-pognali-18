@@ -8,6 +8,8 @@
 .plans__container {
   @include container;
   padding: 0 25px;
+
+  outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .plans__title {
@@ -65,4 +67,23 @@
 
   letter-spacing: 1.4px;
   opacity: 0.3;
+}
+
+//Таблетка
+
+@media (min-width: $tablet-width) {
+  .plans__container {
+    height: 600px; //todo: Временно для сетки
+  }
+}
+
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .plans {
+    border-radius: 60px;
+  }
+  .plans__container {
+    height: 523px; //todo: Временно для сетки
+  }
 }

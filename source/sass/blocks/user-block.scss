@@ -7,6 +7,8 @@
 .user-block__container {
   @include container;
   padding: 0 25px;
+
+  outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .user-block__value {
@@ -73,4 +75,23 @@
 .user-block__list {
   @include listStyle;
   display: flex;
+}
+
+//Таблетка
+
+@media (min-width: $tablet-width) {
+  .user-block__container {
+    display: flex;
+    flex-direction: column;
+    height: 600px; //todo: Временно для сетки
+  }
+}
+
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .user-block__container {
+    flex-direction: row;
+    height: 360px; //todo: Временно для сетки
+  }
 }

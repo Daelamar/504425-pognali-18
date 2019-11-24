@@ -1,5 +1,9 @@
 @import "../global/mixins";
 
+.first-step {
+  outline: 1px solid yellowgreen; //todo: Временно для сетки
+}
+
 .first-step__title {
   font-size: 20px;
   font-weight: 700;

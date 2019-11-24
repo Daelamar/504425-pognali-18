@@ -64,3 +64,16 @@
     height: 932px; //todo: Временно для сетки
   }
 }
+
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .catalog__container {
+    display: flex;
+  }
+
+  .catalog__filter {
+    order: 2;
+  }
+
+}
