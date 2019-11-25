@@ -42,6 +42,29 @@
   outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
+.main-header__button {
+  position: relative;
+
+  width: 40px;
+  height: 19px;
+
+  background-color: transparent;
+  border: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 15px;
+
+    width: 25px;
+    height: 3px;
+
+    background-color: $color-white;
+    box-shadow: 0 8px 0 0 $color-white;
+  }
+}
+
 .main-header__submenu {
   display: none;
   position: absolute;
@@ -77,9 +100,10 @@
 }
 
 .main-header__user-menu {
+  max-width: 270px;
   position: absolute;
-  top: 200px;
-  right: 70px;
+  top: 458px;
+  right: 25px;
 }
 
 .main-header__title-link {

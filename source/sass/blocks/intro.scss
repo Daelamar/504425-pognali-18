@@ -7,17 +7,35 @@
 
 .intro__container {
   @include container;
-  padding: 0 25px;
+  padding: 0 25px 39px;
+
+  display: flex;
+  flex-direction: column;
+
   height: 980px; //todo: Временно для сетки
 
-  background: url("../img/traveller-illustration-mobile@1x.png") no-repeat, url("../img/globe-back-mobile@1x.jpg") no-repeat;
+  background: url("../img/traveller-illustration-mobile@1x.png") no-repeat 79px 142px, url("../img/globe-back-mobile@1x.jpg") no-repeat 0 -80px;
+
+
   outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .intro__slogan {
+  margin: 0 0 311px 0;
+  padding: 14px 16px 0;
   font-size: 36px;
   font-weight: 700;
   line-height: 40px;
+  text-align: center;
+}
+
+.intro__blockquote {
+  margin: 0 0 30px 0;
+  padding: 0 90px 0 25px;
+}
+
+.intro__description {
+  margin: 0 0 18px 0;
 }
 
 .intro__cite {
@@ -29,30 +47,38 @@
 }
 
 .intro__item {
+  padding: 22px 60px 22px 25px;
+
+  min-height: 160px;
+
   font-size: 18px;
   font-weight: 700;
   line-height: 18px;
 
   color: #161c35;
 
+  border-radius: 10px;
+
+  &:not(:first-child) {
+    margin: -80px 0 0 0;
+  }
+
   &:first-child {
     background-color: #ff8d30;
-    border-radius: 10px 10px 0 0;
   }
 
   &:nth-child(2) {
     background-color: #ffa530;
-    border-radius: 10px 10px 0 0;
   }
 
   &:nth-child(3) {
     background-color: #ffbd30;
-    border-radius: 10px 10px 0 0;
+
   }
 
   &:last-child {
+    min-height: 80px;
     background-color: #ffd74b;
-    border-radius: 10px;
   }
 }
 
