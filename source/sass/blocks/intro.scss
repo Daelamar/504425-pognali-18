@@ -2,27 +2,28 @@
 @import "../global/variables";
 
 .intro {
-  background-color: $color-header;
+  background: $color-header;
 }
 
 .intro__container {
   @include container;
-  padding: 0 25px 39px;
 
   display: flex;
   flex-direction: column;
 
-  height: 980px; //todo: Временно для сетки
-
   background: url("../img/traveller-illustration-mobile@1x.png") no-repeat 79px 142px, url("../img/globe-back-mobile@1x.jpg") no-repeat 0 -80px;
-
 
   outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
+.intro__wrapper {
+  padding: 47px 25px 0;
+  background: $color-header;
+}
+
 .intro__slogan {
-  margin: 0 0 311px 0;
-  padding: 14px 16px 0;
+  margin: 0 0 264px 0;
+  padding: 14px 30px 0;
   font-size: 36px;
   font-weight: 700;
   line-height: 40px;
@@ -44,9 +45,14 @@
 
 .intro__list {
   @include listStyle;
+  margin: 0 0 -238px 0;
+  padding: 0 25px;
+
+  z-index: 8;
 }
 
 .intro__item {
+  position: relative;
   padding: 22px 60px 22px 25px;
 
   min-height: 160px;
@@ -79,6 +85,22 @@
   &:last-child {
     min-height: 80px;
     background-color: #ffd74b;
+  }
+
+  .intro__point {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+
+    width: 10px;
+    height: 18px;
+
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: center;
+
+    color: $color-white;
   }
 }
 
