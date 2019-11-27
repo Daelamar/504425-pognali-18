@@ -8,13 +8,16 @@
 
 .companions__container {
   @include container;
-  padding: 0 25px;
+  padding: 131px 25px 0;
 
   background: url("../img/smolov-back-desktop@1x.png") no-repeat, url("../img/rogovaya-back-mobile@1x.png") no-repeat;
   outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .companions__title {
+  margin: 0 0 19px 0;
+  padding: 0 0 0 24px;
+
   font-size: 24px;
   font-weight: 700;
   line-height: 24px;
@@ -22,29 +25,50 @@
   color: #ff8d30;
 }
 
+.companions__info {
+  margin: 0 0 21px 0;
+  padding: 0 25px 0 24px;
+}
+
 .companions__slogan {
+  margin: 0 0 56px 0;
+  padding: 0 34px 0 24px;
+  display: block;
+
   font-weight: 700;
 }
 
 .companions__item {
+  position: relative;
+
   background-color: #ffffff;
   border-radius: 10px;
+
+  overflow: hidden;
 }
 
 .companions__level {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 60px;
   height: 60px;
 
   border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .companions__level-value {
+  margin: 0;
   font-size: 24px;
   font-weight: 700;
   line-height: 24px;
 }
 
 .companions__level-caption {
+  margin: 0;
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
