@@ -1,0 +1,28 @@
+@import "../global/mixins";
+@import "../global/variables";
+
+.button-arrow {
+  padding: 23px 24px 22px;
+  position: relative;
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+
+  color: #1d2e5b;
+
+  background-color: $color-lightAmber;
+  border-radius: 10px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    right: 23px;
+
+    width: 10px;
+    height: 14px;
+    background-image: url("../img/triangle-arrow-right.svg");
+    background-repeat: no-repeat;
+  }
+}

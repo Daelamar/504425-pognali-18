@@ -8,10 +8,21 @@
 
 .companions__container {
   @include container;
-  padding: 131px 25px 0;
+  padding: 131px 25px 30px;
 
-  background: url("../img/smolov-back-desktop@1x.png") no-repeat, url("../img/rogovaya-back-mobile@1x.png") no-repeat;
+  background: url("../img/smolov-back-desktop@1x.png") no-repeat, url("../img/rogovaya-back-mobile@1x.png") no-repeat, url("../img/blue_back_mobile.png") no-repeat;
+  background-position: 152px 98px, -11px 370px, -18px 98px;
+
   outline: 1px solid yellowgreen; //todo: Временно для сетки
+}
+
+.companions__wrapper {
+  padding: 0 0 20px 0;
+}
+
+.companions__link {
+  display: block;
+  line-height: 0;
 }
 
 .companions__title {
@@ -33,6 +44,7 @@
 .companions__slogan {
   margin: 0 0 56px 0;
   padding: 0 34px 0 24px;
+
   display: block;
 
   font-weight: 700;
@@ -41,14 +53,40 @@
 .companions__item {
   position: relative;
 
-  background-color: #ffffff;
   border-radius: 10px;
 
   overflow: hidden;
+
+  &:not(:last-of-type) {
+    margin: 0 0 10px 0;
+  }
+
+  &:last-of-type {
+    .companions__tags {
+      padding: 0 0 0 15px;
+    }
+  }
+}
+
+.companions__caption {
+  padding: 26px 45px 23px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: $color-white;
 }
 
 .companions__level {
   position: absolute;
+  top: 16px;
+  left: 17px;
+
+  padding: 6px 0 0 0;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,13 +100,28 @@
 
 .companions__level-value {
   margin: 0;
+  position: relative;
   font-size: 24px;
   font-weight: 700;
   line-height: 24px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 21px;
+    left: -2px;
+
+    width: 31px;
+    height: 1px;
+
+    background-color: $color-white;
+    opacity: 0.4;
+  }
 }
 
 .companions__level-caption {
   margin: 0;
+
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
@@ -76,15 +129,32 @@
 
 .companions__flag-list {
   @include listStyle;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+
   display: flex;
+
+  transform: translateX(-50%);
 }
 
 .companions__flag-item {
   width: 35px;
   height: 24px;
+
+  background-color: #4758a9; //todo: Временно до нарезки флажков
+  border-radius: 4px;
+
+  &:not(:last-of-type) {
+    margin: 0 19px 0 0;
+  }
 }
 
 .companions__name {
+  position: relative;
+
+  margin: 0 0 16px 0;
+
   font-size: 21px;
   font-weight: 700;
   line-height: 21px;
@@ -92,9 +162,30 @@
   color: #1d2e5b;
 }
 
+.companions__status {
+  position: absolute;
+  top: 7px;
+  left: -16px;
+
+  width: 5px;
+  height: 5px;
+  border-radius: 3px;
+
+  &--offline {
+    background-color: #f97676;
+  }
+
+  &--online {
+    background-color: #81e31e;
+  }
+}
+
 .companions__tags {
+  margin: 0 0 15px 0;
+
   font-weight: 400;
   line-height: 18px;
+  text-align: center;
 
   color: $color-twilightGray;
 }
@@ -102,36 +193,52 @@
 .companions__transport-list {
   @include listStyle;
   display: flex;
+  justify-content: flex-start;
+
 }
 
-.companions__transport-img {
-  display: block;
-  width: 24px;
-  height: 24px;
-
+.companions__transport-item {
   &--inactive {
     opacity: 0.15;
   }
 
   &--avia {
+    margin: 0 17px 0 0;
+
+    width: 19px;
+    height: 21px;
+
     background-image: url("../img/plane.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
 
   &--auto {
+    margin: 0 13px 0 0;
+
+    width: 17px;
+    height: 21px;
+
     background-image: url("../img/bus.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
 
   &--bike {
+    margin: 0 10px 0 0;
+
+    width: 24px;
+    height: 21px;
+
     background-image: url("../img/bike.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
 
   &--foot {
+    width: 20px;
+    height: 21px;
+
     background-image: url("../img/run.svg");
     background-repeat: no-repeat;
     background-position: center;
