@@ -368,7 +368,7 @@
     <h2 class="visually-hidden">Зарегестрируйтесь или напишите нам!</h2>
     <div class="contacts__container">
       <b class="contacts__title">Заинтересовались?</b>
-      <p class="contacts__description">Зарегистрируйтесь, это быстро и бесплатно!</p>
+      <p class="contacts__description">Зарегистрируйтесь,<br> это быстро и бесплатно!</p>
       <p class="contacts__description">Уже зарегистрированы? Тогда скорее
         <a href="#" class="contacts__link">авторизуйтесь</a>.
       </p>
@@ -376,26 +376,68 @@
         class="contacts__form"
         method="post"
         action="http://echo.htmlacademy.ru">
-        <label for="register-mail"></label>
-        <input
-          type="email"
-          id="register-mail"
-          name="register-mail"
-          placeholder="E-mail"
-          class="contacts__input">
-        <button type="submit" class="contacts__submit">Регистрация</button>
+        <label for="register-mail">
+          <input
+            type="email"
+            id="register-mail"
+            name="register-mail"
+            placeholder="E-mail"
+            class="contacts__input">
+        </label>
+        <button type="submit" class="contacts__submit button-arrow">
+          <span class="contacts__submit-caption">Регистрация</span>
+        </button>
       </form>
-      <p class="contacts__caption">Остались вопросы? Мы с радостью на них ответим!</p>
+      <p class="contacts__caption">Остались вопросы?<br> Мы с радостью на них ответим!</p>
       <ul class="contacts__list contact-list">
         <li class="contact-list__item">
           <a
             href="tel:88005558628"
-            class="contact-list__link contact-list__link--orange">8 800 555-86-28</a>
+            class="contact-list__link contact-list__link--orange">
+            <span class="contact-list__icon">
+            <svg
+              width="18"
+              height="18"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 36 36"
+              fill="#ffd74b">
+              <path
+                d="M18 0C11.6 0 5.2 1.1 2.8 3.4.9 5.3.2 8.7 0
+                10.8v.3c0 .8.7 1.5 1.5 1.5.1 0 3.7-.3 5.9-.5h.2c.8
+                0 1.5-.7 1.5-1.5v-3C9 6.7 9.7 6 10.7 6h14.7c.8
+                0 1.6.7 1.6 1.7v3c0 .8.7 1.5 1.5 1.5h.2c2.2.2
+                5.8.5 5.9.5.8 0 1.5-.7 1.5-1.5v-.3c-.2-2.1-.9-5.5-2.8-7.4C30.8
+                1.1 24.4 0 18 0zm0 19.5c-1.7 0-3 1.3-3 3s1.3 3 3
+                3 3-1.3 3-3-1.3-3-3-3zm-2.3-6.8v-1.9c0-1-.8-1.9-1.9-1.9s-1.8.9-1.8 2v1.9L1.9
+                23.6c-.7.7-1.1 1.6-1.1 2.7v3c0 1.7 1.3 3 3 3h.8v1.9c0 1 .8 1.9 1.9
+                1.9s1.9-.8 1.9-1.9v-1.9h19.5v1.9c0 1 .8 1.9 1.9 1.9 1 0 1.9-.8
+                1.9-1.9v-1.9h.8c1.7 0 3-1.3 3-3v-3c0-1.1-.4-2-1.1-2.7L24
+                12.7v-1.9c0-1-.8-1.9-1.9-1.9s-1.9.8-1.9 1.9v1.9h-4.5zm2.3
+                3.8c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6z"/>
+            </svg>
+          </span>8 800 555-86-28</a>
         </li>
         <li class="contact-list__item">
+
           <a
             href="mailto:mail@htmlacademy.ru"
-            class="contact-list__link contact-list__link--orange">mail@htmlacademy.ru</a>
+            class="contact-list__link contact-list__link--orange">
+            <span class="contact-list__icon">
+            <svg
+              width="18"
+              height="13"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 36 26"
+              fill="#ffd74b">
+              <path
+                d="M0 23c0 1.6 1.3 3 3 3h30c1.7 0 3-1.3 3-3V3c0-1.6-1.3-3-3-3H3C1.3
+                0 0 1.3 0 3v20zm11-10L4.2 6.2c-.6-.6-.6-1.5 0-2 .6-.6 1.5-.6 2.1 0l11
+                10.9c.4.4 1.2.4 1.6 0l11-10.9c.6-.6 1.5-.6 2.1 0 .6.6.6 1.5
+                0 2L25 13l6.9 6.8c.6.6.6 1.5 0 2-.6.6-1.5.6-2.1 0L22.9 15s-2.1
+                2.2-2.5 2.5c-.6.6-1.4 1-2.4 1-.9 0-1.8-.4-2.4-1L13.1 15l-6.9
+                6.8c-.6.6-1.5.6-2.1 0-.6-.6-.6-1.5 0-2L11 13z"/>
+            </svg>
+          </span>mail@htmlacademy.ru</a>
         </li>
       </ul>
     </div>
@@ -405,7 +447,17 @@
     <div class="map-block__header">
       <div class="map-block__container">
         <p class="map-block__title">ул. Большая Конюшенная, 19/8</p>
-        <a href="#" class="map-block__link">Проложить маршрут</a>
+        <a href="#" class="map-block__link">Проложить маршрут
+          <span class="map-block__arrow">
+            <svg
+              width="10"
+              height="14"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 10 14">
+              <path d="M0 14V.1l10 7z"/>
+            </svg>
+          </span>
+        </a>
       </div>
     </div>
     <div class="map-block__wrapper">
@@ -428,7 +480,7 @@
         width="100"
         height="19">
     </a>
-    <ul class="social-list">
+    <ul class="main-footer__list social-list">
       <li class="social-list__item">
         <a
           href="https://www.facebook.com/"

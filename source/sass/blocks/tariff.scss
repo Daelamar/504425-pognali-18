@@ -2,18 +2,28 @@
 @import "../global/variables";
 
 .tariff {
+  position: relative;
+  margin: 0 0 -60px 0;
+
   background-color: $color-grayishBlue;
   border-radius: 0 0 30px 30px;
+
+  z-index: 6;
 }
 
 .tariff__container {
   @include container;
-  padding: 0 25px;
+  padding: 111px 25px 35px;
 
+  background: url("../../img/rates@1x.png") no-repeat 195px 94px;
+  background-size: 99px 99px;
   outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .tariff__title {
+  margin: 0 0 44px 0;
+  padding: 0 100px 0 25px;
+
   font-size: 24px;
   font-weight: 700;
   line-height: 24px;
@@ -23,14 +33,67 @@
 
 .tariff__list {
   @include listStyle;
+  margin: 0 45px 27px 0;
+  padding: 0 0 0 25px;
+}
+
+.tariff__item {
+  position: relative;
+
+  padding: 10px 0 11px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 3px;
+    right: -44px;
+
+    width: 34px;
+    height: 34px;
+
+    font-weight: 400;
+    line-height: 34px;
+    text-align: center;
+
+    color: $color-white;
+
+    border-radius: 50%;
+  }
+
+  &:first-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+
+    &::after {
+      content: "1";
+      background-color: #ffa530;
+    }
+  }
+
+  &:nth-child(2) {
+    &::after {
+      content: "2";
+      background-color: #ffbd30;
+    }
+  }
+
+  &:nth-child(3) {
+    &::after {
+      content: "3";
+      background-color: #ffd74b;
+    }
+  }
 }
 
 .tariff__description,
 .tariff__price {
+  margin: 0;
   color: $color-twilightGray;
 }
 
 .tariff__button {
+  padding: 0 0 0 25px;
+
   font-weight: 700;
   line-height: 16px;
 
