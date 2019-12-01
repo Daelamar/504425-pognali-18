@@ -4,6 +4,14 @@
 .main-header {
   background-color: $color-header;
 
+  .main-header__logo {
+    display: block;
+
+    &--open {
+      display: none;
+    }
+  }
+
   &--form {
     border-radius: 0 0 20px 20px;
 
@@ -17,6 +25,25 @@
 
     .main-header__user-menu {
       display: none;
+    }
+  }
+
+  &--open {
+    background-color: $color-white;
+
+    .main-header__logo {
+      display: none;
+
+      &--open {
+        display: block;
+      }
+    }
+
+    .main-header__button {
+      &::after {
+        background-color: #cccccc;
+        box-shadow: 0 8px 0 0 #cccccc;
+      }
     }
   }
 }
@@ -68,12 +95,36 @@
 .main-header__submenu {
   display: none;
   position: absolute;
+  top: 73px;
+  left: 0;
 
-  padding: 25px;
-  background-color: $color-twilightGray;
+  width: 100vw;
+
+  background-color: $color-white;
+  z-index: 10;
+
+  &--open {
+    display: block;
+  }
+}
+
+.main-header__submenu-wrapper {
+  @include container;
+  padding: 44px 25px 28px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & .main-header__contact-list {
+    margin: 0 0 30px 0;
+    align-self: flex-start;
+  }
 }
 
 .main-header__about {
+  margin: 0 0 48px 0;
+
   font-size: 30px;
   font-weight: 500;
   line-height: 36px;
@@ -84,16 +135,19 @@
 }
 
 .main-header__login {
-  margin: 0 auto;
+  margin: 0 0 51px 0;
+  padding: 13px 15px 8px;
   display: block;
 
-  color: #161c35;
+  width: 100%;
 
   font-size: 17px;
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
   text-align: center;
+
+  color: #161c35;
 
   border-radius: 25px;
   background-color: #ffd74b;

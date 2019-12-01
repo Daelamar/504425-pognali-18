@@ -12,6 +12,7 @@
 }
 
 .tariff__container {
+  position: relative;
   @include container;
   padding: 111px 25px 35px;
 
