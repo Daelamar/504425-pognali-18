@@ -27,3 +27,22 @@
     background-repeat: no-repeat;
   }
 }
+
+//Таблет
+
+@media (min-width: $tablet-width) {
+  .button-arrow {
+    padding: 30px 36px 28px 34px;
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
+
+    border-radius: 20px;
+
+    &::after {
+      top: 35px;
+      right: 36px;
+    }
+  }
+}

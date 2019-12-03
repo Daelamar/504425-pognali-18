@@ -14,12 +14,13 @@
   @include container;
   padding: 310px 25px 82px;
 
-  background: url("../img/about-mobile@1x.png") no-repeat 18px 279px, url("../img/blue_back_mobile.png") no-repeat -25px 278px;
+  background: url("../img/about-mobile@1x.png") no-repeat 18px 279px;
 
   outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .info__title {
+  position: relative;
   margin: 0 0 20px 0;
   padding: 0 0 0 24px;
 
@@ -28,11 +29,29 @@
   line-height: 24px;
 
   color: #ff8d30;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -33px;
+    left: -45px;
+
+    width: 132px;
+    height: 132px;
+    border-radius: 20px;
+    background-color: #141b3b;
+
+    z-index: -1;
+  }
 }
 
 .info__description {
   margin: 0 0 18px 0;
   padding: 0 34px 0 24px;
+
+  & br {
+    display: none;
+  }
 }
 
 .info__slogan {
@@ -44,15 +63,6 @@
 
 .info__link {
   display: none;
-
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 24px;
-
-  color: #1d2e5b;
-
-  background-color: #ffd74b;
-  border-radius: 20px;
 }
 
 //Таблет
@@ -63,11 +73,62 @@
   }
 
   .info__container {
-    height: 920px; //todo: Временно для сетки}
+    padding: 277px 392px 88px 40px;
+
+    background: url("../img/about-tablet@1x.png") no-repeat 384px 284px;
+  }
+
+  .info__title {
+    position: relative;
+    margin: 0 0 39px 0;
+    padding: 0 0 0 34px;
+
+    font-size: 45px;
+    line-height: 45px;
+
+    color: #ff8d30;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -42px;
+      left: 0;
+
+      width: 688px;
+      height: 213px;
+
+      background-color: #141b3b;
+      border-radius: 20px;
+      z-index: -1;
+    }
+  }
+
+  .info__description {
+    margin: 0 0 32px 0;
+    padding: 0 0 0 35px;
+
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 33px;
+
+    & br {
+      display: initial;
+    }
+  }
+
+  .info__slogan {
+    display: block;
+    margin: 0 0 50px 0;
+    padding: 0 0 0 35px;
+
+    font-size: 21px;
+    line-height: 25px;
   }
 
   .info__link {
+    margin: 0 0 0 35px;
     display: block;
+    width: 274px;
   }
 }
 

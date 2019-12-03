@@ -199,7 +199,6 @@
   @include listStyle;
   display: flex;
   justify-content: flex-start;
-
 }
 
 .companions__transport-item {
@@ -258,7 +257,7 @@
   }
 
   .companions__container {
-    height: 1334px; //todo: Временно для сетки
+    padding: 133px 40px 78px;
   }
 
   .companions__wrapper {

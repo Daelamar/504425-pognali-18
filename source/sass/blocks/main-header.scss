@@ -10,6 +10,14 @@
     &--open {
       display: none;
     }
+
+    &--tablet {
+      display: none;
+    }
+
+    &--tablet-open {
+      display: none;
+    }
   }
 
   &--form {
@@ -175,7 +183,23 @@
 
 @media (min-width: $tablet-width) {
   .main-header {
-    border-radius: 0 0 60px 60px;
+    background-color: $color-headerTablet;
+
+    .main-header__logo {
+      display: none;
+
+      &--open {
+        display: none;
+      }
+
+      &--tablet {
+        display: block;
+      }
+
+      &--tablet-open {
+        display: none;
+      }
+    }
 
     &--form {
       .main-header__user-menu {
@@ -184,10 +208,6 @@
 
       .main-header__title {
         width: 100%;
-      }
-
-      .main-header__container {
-        height: 351px; //todo: Временно для сетки
       }
     }
 
@@ -214,6 +234,18 @@
 
   .main-header__container {
     padding: 40px;
+    align-items: center;
+
+  }
+
+  .main-header__button {
+    width: 80px;
+    height: 40px;
+
+    &::after {
+      top: 16px;
+      left: 39px;
+    }
   }
 
   .main-header__user-menu {
