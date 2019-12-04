@@ -52,6 +52,10 @@
   & br {
     display: none;
   }
+
+  & br:first-of-type {
+    display: initial;
+  }
 }
 
 .info__slogan {
@@ -113,6 +117,10 @@
 
     & br {
       display: initial;
+    }
+
+    & br:first-of-type {
+      display: none;
     }
   }
 

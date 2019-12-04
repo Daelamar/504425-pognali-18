@@ -12,9 +12,9 @@
 }
 
 .tariff__container {
-  position: relative;
   @include container;
-  padding: 111px 25px 35px;
+  position: relative;
+  padding: 111px 25px 22px;
 
   background: url("../../img/rates@1x.png") no-repeat 195px 94px;
   background-size: 99px 99px;
@@ -34,8 +34,8 @@
 
 .tariff__list {
   @include listStyle;
-  margin: 0 45px 27px 0;
-  padding: 0 0 0 25px;
+  margin: 0 0 15px 0;
+  padding: 0 45px 0 25px;
 }
 
 .tariff__item {
@@ -93,7 +93,7 @@
 }
 
 .tariff__button {
-  padding: 0 0 0 25px;
+  padding: 15px 25px;
 
   font-weight: 700;
   line-height: 16px;
@@ -112,12 +112,107 @@
   }
 
   .tariff__container {
-    height: 644px; //todo: Временно для сетки
+    padding: 133px 40px 62px;
+    background-position: 584px 470px;
+  }
+
+  .tariff__title {
+    margin: 0 0 74px 0;
+    padding: 0 10px 0 0;
+
+    position: relative;
+
+    font-size: 45px;
+    line-height: 45px;
+
+    text-align: center;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 76px;
+      right: 0;
+
+      width: 198px;
+      height: 285px;
+
+      background-color: #e2e5f2;
+      border-radius: 20px;
+
+      z-index: -1;
+    }
+  }
+
+  .tariff__list {
+    margin: 0 0 35px 0;
+    padding: 0 34px 0 90px;
   }
 
   .tariff__item {
+    position: relative;
+
+    padding: 17px 0 15px;
+
     display: flex;
     justify-content: space-between;
+
+    &::after {
+      top: 0;
+      left: -90px;
+
+      width: 67px;
+      height: 67px;
+
+      font-size: 28px;
+      line-height: 67px;
+    }
+  }
+
+  .tariff__description,
+  .tariff__price {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .tariff__button {
+    padding: 0;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    color: #132576;
+  }
+
+  .tariff__button-icon {
+    margin: 0 23px 0 0;
+
+    position: relative;
+    display: block;
+
+    width: 67px;
+    height: 67px;
+
+    background-color: #e2e5f2;
+    border-radius: 50%;
+
+    &::before {
+      position: absolute;
+      content: "";
+
+      top: 48%;
+      left: 50%;
+
+      width: 17px;
+      height: 21px;
+
+      transform: translate(-50%, -50%);
+
+      background-image: url("../img/business.svg");
+    }
   }
 }
 
