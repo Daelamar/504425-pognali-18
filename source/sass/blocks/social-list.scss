@@ -3,6 +3,7 @@
 .social-list {
   @include listStyle;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .social-list__link {
@@ -15,5 +16,28 @@
 
   background-color: #ffd74b;
   border-radius: 50%;
+}
 
+//Таблет
+
+@media (min-width: $tablet-width) {
+  .social-list__link {
+    width: 60px;
+    height: 60px;
+
+    &--facebook svg {
+      width: 14px;
+      height: 28px;
+    }
+
+    &--vk svg {
+      width: 31px;
+      height: 16px;
+    }
+
+    &--instagram svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
 }

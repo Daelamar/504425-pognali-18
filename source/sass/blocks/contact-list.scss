@@ -35,10 +35,37 @@
   }
 }
 
-//Десктоп
+//Таблет
 
-@media (min-width: $desktop-width) {
+@media (min-width: $tablet-width) {
   .contact-list {
+    padding: 0 35px;
+  }
+
+  .contact-list__link {
     display: flex;
+    align-items: center;
+
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .contact-list__icon {
+    margin: 0 23px 0 0;
+    padding: 0 0 2px 0;
+
+    width: 68px;
+    height: 68px;
+
+    & svg {
+      width: 27px;
+      height: 27px;
+    }
+
+    &--mail {
+      & svg {
+        height: 20px;
+      }
+    }
   }
 }

@@ -98,8 +98,47 @@
     border-radius: 0 0 60px 60px;
   }
 
+  .map-block__container {
+    padding: 130px 40px 84px;
+  }
+
   .map-block__wrapper {
     height: 700px;
+  }
+
+  .map-block__title {
+    margin: 0 0 61px 0;
+    padding: 0 61px 0 61px;
+
+    font-size: 28px;
+    line-height: 28px;
+    text-align: center;
+
+    &::before {
+      top: -22px;
+      left: 35px;
+
+      width: 68px;
+      height: 68px;
+
+      background-size: 21px 32px;
+    }
+  }
+
+  .map-block__link {
+    margin: 0 35px;
+    padding: 27px 33px 24px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    border-radius: 20px;
+  }
+
+  .map-block__wrapper {
+    margin: -60px 0 -154px 0;
+
+    height: 677px;
   }
 }
 

@@ -98,7 +98,71 @@
   }
 
   .contacts__container {
-    height: 822px; //todo: Временно для сетки
+    padding: 138px 40px 57px;
+  }
+
+  .contacts__title {
+    margin: 0 0 56px 0;
+
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .contacts__description {
+    padding: 0 25px;
+    text-align: center;
+
+    font-size: 28px;
+    line-height: 33px;
+
+    & br {
+      display: none;
+    }
+  }
+
+  .contacts__form {
+    margin: 63px 35px 59px 35px;
+    position: relative;
+  }
+
+  .contacts__input {
+    padding: 30px 35px;
+
+    width: 100%;
+    height: 81px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    border-radius: 20px;
+  }
+
+  .contacts__submit {
+    top: 0;
+    right: 0;
+
+    width: 82px;
+    height: 81px;
+
+    background-color: #ffd74b;
+    border-radius: 0 20px 20px 0;
+  }
+
+  .contacts__link {
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .contacts__caption {
+    margin: 0 0 41px 0;
+    padding: 0 28px;
+
+    font-size: 28px;
+    line-height: 33px;
+
+    & br {
+      display: none;
+    }
   }
 }
 
