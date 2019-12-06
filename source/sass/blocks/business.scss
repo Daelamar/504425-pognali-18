@@ -48,7 +48,7 @@
 }
 
 .business__item {
-  padding: 10px 0 11px;
+  padding: 16px 0 20px;
   position: relative;
 
 
@@ -75,4 +75,46 @@
 
   border-radius: 0 0 20px 20px;
   border: none;
+}
+
+//Таблет
+
+@media (min-width: $tablet-width) {
+  .business {
+    width: 688px;
+
+    border-radius: 30px;
+  }
+
+  .business__title {
+    margin: 0 0 43px 0;
+
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .business__description,
+  .business__price {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .business__item {
+    padding: 13px 0 17px;
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .business__container {
+    padding: 54px 92px;
+
+    background-color: $color-white;
+  }
+
+  .business__button {
+    padding: 44px;
+
+    font-size: 24px;
+  }
 }
