@@ -5,18 +5,10 @@
   background-color: $color-header;
 
   .main-header__logo {
-    display: block;
+    display: none;
 
-    &--open {
-      display: none;
-    }
-
-    &--tablet {
-      display: none;
-    }
-
-    &--tablet-open {
-      display: none;
+    &--mobile {
+      display: block;
     }
   }
 
@@ -42,7 +34,7 @@
     .main-header__logo {
       display: none;
 
-      &--open {
+      &--mobile-open {
         display: block;
       }
     }
@@ -53,6 +45,10 @@
         box-shadow: 0 8px 0 0 #cccccc;
       }
     }
+  }
+
+  .main-header__nav {
+    display: none;
   }
 }
 
@@ -188,16 +184,8 @@
     .main-header__logo {
       display: none;
 
-      &--open {
-        display: none;
-      }
-
       &--tablet {
         display: block;
-      }
-
-      &--tablet-open {
-        display: none;
       }
     }
 
@@ -235,37 +223,35 @@
       background-color: $color-white;
 
       .main-header__logo {
-        &--tablet {
-          display: none;
-        }
+        display: none;
 
         &--tablet-open {
           display: block;
         }
       }
     }
+  }
+  .main-header__container {
+    padding: 40px;
+    align-items: center;
+  }
 
-    .main-header__container {
-      padding: 40px;
-      align-items: center;
-    }
+  .main-header__button {
+    width: 80px;
+    height: 40px;
 
-    .main-header__button {
-      width: 80px;
-      height: 40px;
-
-      &::after {
-        top: 16px;
-        left: 39px;
-      }
-    }
-
-    .main-header__user-menu {
-      position: inherit;
-      top: auto;
-      right: auto;
+    &::after {
+      top: 16px;
+      left: 39px;
     }
   }
+
+  .main-header__user-menu {
+    position: inherit;
+    top: auto;
+    right: auto;
+  }
+
 
   .main-header__submenu {
     top: 130px;
@@ -305,8 +291,41 @@
 //Десктоп
 
 @media (min-width: $desktop-width) {
+  .main-header {
+    background-color: $color-header;
+
+    .main-header__logo {
+      margin: 0 145px 0 0;
+      display: none;
+
+      &--desktop {
+        display: block;
+      }
+    }
+
+    .main-header__nav {
+      margin: 7px 0 0 0;
+      position: relative;
+
+      display: initial;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 12px;
+        left: -105px;
+
+        width: 60px;
+        height: 2px;
+
+        background-color: $color-white;
+        border-radius: 1px;
+      }
+    }
+  }
+
   .main-header__container {
-    padding: 45px;
+    padding: 47px 60px 10px;
     justify-content: flex-start;
   }
 
@@ -315,6 +334,7 @@
   }
 
   .main-header__user-menu {
+    max-width: none;
     margin-left: auto;
   }
 }

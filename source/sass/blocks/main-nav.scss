@@ -2,15 +2,21 @@
 @import "../global/variables";
 
 .main-nav {
-  display: none;
+  display: flex;
 
   outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .main-nav__list {
   @include listStyle;
+
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  width: 390px;
 }
+
 
 .main-nav__link {
   font-size: 20px;
@@ -19,12 +25,4 @@
   text-transform: uppercase;
 
   color: $color-white;
-}
-
-//Десктоп
-
-@media (min-width: $desktop-width) {
-  .main-nav {
-    display: block;
-  }
 }
