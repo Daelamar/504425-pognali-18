@@ -421,6 +421,64 @@
 
 @media (min-width: $desktop-width) {
   .companions__container {
-    height: 840px; //todo: Временно для сетки
+    padding: 190px 40px 132px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    background-position: 548px 195px, 190px 447px;
+  }
+
+  .companions__wrapper {
+    margin: 0 0 0 auto;
+    padding: 5px 20px 0 0;
+
+    width: 650px;
+    order: 2;
+  }
+
+  .companions__inner {
+    margin: 0 auto 85px 0;
+    padding: 0 0 0 89px;
+
+    width: 538px;
+    order: 1;
+  }
+
+  .companions__title {
+    margin: 0 0 56px 0;
+    padding: 0;
+
+    &::before {
+      left: -68px;
+    }
+  }
+
+  .companions__info {
+    margin: 0 0 40px 0;
+    padding: 0 0 0 2px;
+  }
+
+  .companions__slogan {
+    margin: 0 0 0 0;
+    padding: 0 0 0 2px;
+  }
+
+  .companions__all {
+    margin: -82px 0 0 90px;
+
+    width: 280px;
+
+    order: 3;
+  }
+
+  .companions__level {
+    padding: 8px 0 0 0;
+
+    top: 22px;
+    left: 22px;
   }
 }

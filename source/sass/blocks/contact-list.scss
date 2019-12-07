@@ -69,3 +69,40 @@
     }
   }
 }
+
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .contact-list {
+    padding: 0 228px 0 223px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .contact-list__item {
+    &:nth-child(3n+1) {
+      margin: 0 auto 0 0;
+    }
+  }
+
+  .contact-list__icon {
+    margin: 0 31px 0 0;
+    padding: 0;
+
+    width: 90px;
+    height: 90px;
+
+    & svg {
+      width: 36px;
+      height: 36px;
+    }
+
+    &--mail {
+      & svg {
+        height: 26px;
+      }
+    }
+  }
+}

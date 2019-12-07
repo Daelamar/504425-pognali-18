@@ -40,10 +40,10 @@
 }
 
 .main-footer__logo {
-  display: block;
+  display: none;
 
-  &--tablet {
-    display: none;
+  &--mobile {
+    display: block;
   }
 }
 
@@ -74,9 +74,7 @@
   }
 
   .main-footer__logo {
-    &--mobile {
-      display: none;
-    }
+    display: none;
 
     &--tablet {
       display: block;
@@ -107,3 +105,22 @@
   }
 }
 
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .main-footer__container {
+    padding: 48px 60px;
+  }
+
+  .main-footer__logo {
+    display: none;
+
+    &--desktop {
+      display: block;
+    }
+  }
+
+  .main-footer__logo-link {
+    margin: 0 368px 0 0;
+  }
+}

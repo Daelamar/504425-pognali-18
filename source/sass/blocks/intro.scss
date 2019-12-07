@@ -81,7 +81,6 @@
 
   &:nth-child(3) {
     background-color: #ffbd30;
-
   }
 
   &:last-child {
@@ -207,7 +206,8 @@
 
     .intro__point {
       position: absolute;
-      top: 88px;
+      top: auto;
+      bottom: 30px;
       left: 34px;
 
       width: 15px;
@@ -226,10 +226,139 @@
 
 @media (min-width: $desktop-width) {
   .intro {
+    margin: 0 0 -60px 0;
+
+    position: relative;
+    background: $color-header;
+
     border-radius: 0 0 60px 60px;
+
+    overflow: hidden;
+    z-index: 15;
   }
 
   .intro__container {
-    height: 640px; //todo: Временно для сетки}
+    padding: 100px 60px 123px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    background: url("../img/traveller-illustration-desktop@1x.png") no-repeat 604px 1px, url("../img/globe-back-desktop@1x.jpg") no-repeat -179px -108px;
+  }
+
+  .intro__slogan {
+    margin: 0;
+    padding: 0 160px 0 67px;
+
+    text-align: left;
+
+    width: 50%;
+  }
+
+  .intro__wrapper {
+    margin: 0;
+    padding: 11px 27px 0 345px;
+
+    width: 50%;
+  }
+
+  .intro__blockquote {
+    margin: 0;
+    padding: 0;
+
+    text-align: right;
+  }
+
+  .intro__description {
+    margin: 0 0 43px 0;
+
+    & span {
+      padding: 0 5px 0 0;
+      display: block;
+    }
+  }
+
+  .intro__cite {
+    padding: 0 0 0 29px;
+
+    text-align: left;
+  }
+
+  .intro__list {
+    margin: 100px 0 0 0;
+    padding: 0;
+    position: initial;
+
+    width: 100%;
+  }
+
+  .intro__item {
+    margin: 0;
+    padding: 0;
+
+    width: 375px;
+    min-height: 107px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    color: #161c35;
+
+    border-radius: 0;
+
+    &:nth-child(4n+1) {
+      margin: 0;
+      padding: 30px 110px 30px 34px;
+      border-radius: 20px;
+
+      .intro__point {
+        left: 268px;
+      }
+    }
+
+    &:nth-child(4n+2) {
+      margin: 0 0 0 -60px;
+      padding: 30px 110px 30px 31px;
+      width: 400px;
+      border-radius: 20px;
+
+      .intro__point {
+        left: 300px;
+      }
+    }
+
+    &:nth-child(4n+3) {
+      margin: 0 0 0 -56px;
+      padding: 30px 110px 30px 32px;
+      border-radius: 20px;
+
+      .intro__point {
+        left: 302px;
+      }
+    }
+
+    &:nth-child(4n+4) {
+      margin: 0 0 0 -29px;
+      padding: 30px 110px 30px 31px;
+      width: 315px;
+      border-radius: 20px;
+
+      .intro__point {
+        left: 270px;
+      }
+    }
+
+    .intro__point {
+      top: 30px;
+      bottom: auto;
+
+      width: 11px;
+      height: 18px;
+
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 }

@@ -270,6 +270,65 @@
 
 @media (min-width: $desktop-width) {
   .destinations__container {
-    height: 840px; //todo: Временно для сетки
+    padding: 221px 40px 101px;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    background: url("../img/flags-back@1x.png") no-repeat 1092px 148px;
+  }
+
+  .destinations__wrapper {
+    margin: 0 auto 0 0;
+    padding: 0 0 0 92px;
+
+    width: 650px;
+    order: 1;
+  }
+
+  .destinations__inner {
+    margin: 0 0 120px auto;
+    padding: 5px 195px 0 0;
+
+    width: 538px;
+    order: 2;
+  }
+
+  .destinations__title {
+    margin: 0 0 58px 0;
+    padding: 0 0 0 0;
+
+    &::before {
+      top: -78px;
+      left: -802px;
+    }
+  }
+
+  .destinations__caption {
+    padding: 24px 30px 16px;
+  }
+
+  .destinations__description {
+    margin: 0 0 22px 0;
+  }
+
+  .destinations__flag {
+    top: 23px;
+    left: 337px;
+  }
+
+  .destinations__info {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+  }
+
+  .destinations__all {
+    margin: -118px 262px 0 0;
+
+    width: 274px;
+
+    order: 3;
   }
 }

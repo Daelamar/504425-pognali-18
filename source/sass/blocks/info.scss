@@ -63,6 +63,10 @@
   padding: 0 34px 0 24px;
 
   font-weight: 700;
+
+  & br {
+    display: none;
+  }
 }
 
 .info__link {
@@ -144,6 +148,43 @@
 
 @media (min-width: $desktop-width) {
   .info__container {
-    height: 840px; //todo: Временно для сетки}
+    padding: 193px 690px 162px 60px;
+
+    background: url("../img/about-desktop@1x.png") no-repeat 750px 145px;
+  }
+
+  .info__title {
+    margin: 0 0 56px 0;
+    padding: 0 0 0 70px;
+
+    &::before {
+      top: -62px;
+      left: 0;
+
+      width: 213px;
+      height: 213px;
+    }
+  }
+
+  .info__description {
+    margin: 0 0 39px 0;
+    padding: 0 0 0 72px;
+
+    & br {
+      display: none;
+    }
+  }
+
+  .info__slogan {
+    margin: 0 0 84px 0;
+    padding: 0 0 0 72px;
+
+    & br {
+      display: initial;
+    }
+  }
+
+  .info__link {
+    margin: 0 0 0 71px;
   }
 }

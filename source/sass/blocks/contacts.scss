@@ -170,6 +170,28 @@
 
 @media (min-width: $desktop-width) {
   .contacts__container {
-    height: 840px; //todo: Временно для сетки
+    padding: 168px 60px 102px;
+  }
+
+  .contacts__form {
+    margin: 58px 74px 68px 72px;
+  }
+
+  .contacts__submit {
+    padding: 30px 36px 28px 36px;
+
+    top: 0;
+    right: 0;
+
+    width: 325px;
+
+    .contacts__submit-caption {
+      display: block;
+      text-align: left;
+    }
+  }
+
+  .contacts__caption {
+    margin: 0 0 44px 0;
   }
 }

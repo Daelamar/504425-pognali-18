@@ -220,6 +220,30 @@
 
 @media (min-width: $desktop-width) {
   .tariff__container {
-    height: 830px; //todo: Временно для сетки
+    padding: 168px 40px 162px;
+
+    background-size: 198px, 198px;
+    background-position: 1108px 347px;
+  }
+
+  .tariff__title {
+    margin: 0 0 134px 0;
+
+    &::after {
+      top: 126px;
+      right: 206px;
+
+      width: 444px;
+      height: 300px;
+    }
+  }
+
+  .tariff__list {
+    margin: 0 0 35px 0;
+    padding: 0 365px 0 181px;
+  }
+
+  .tariff__button {
+    margin: 0 0 0 90px;
   }
 }
