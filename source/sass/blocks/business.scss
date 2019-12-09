@@ -108,13 +108,23 @@
 
   .business__container {
     padding: 54px 92px;
-
-    background-color: $color-white;
   }
 
   .business__button {
     padding: 44px;
 
     font-size: 24px;
+  }
+}
+
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .business {
+    width: 750px;
+  }
+
+  .business__container {
+    padding: 52px 59px;
   }
 }

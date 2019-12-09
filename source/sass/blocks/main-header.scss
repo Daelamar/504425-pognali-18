@@ -21,10 +21,23 @@
   }
 
   &--catalog {
+    position: relative;
+    margin: 0 0 -60px 0;
+
     border-radius: 0 0 20px 20px;
+
+    z-index: 10;
 
     .main-header__user-menu {
       display: none;
+    }
+
+    .main-header__container {
+      padding: 19px 25px 10px;
+    }
+
+    .main-header__logo-link {
+      margin: 0 0 56px 0;
     }
   }
 
@@ -231,6 +244,7 @@
       }
     }
   }
+
   .main-header__container {
     padding: 40px;
     align-items: center;
@@ -321,6 +335,22 @@
         background-color: $color-white;
         border-radius: 1px;
       }
+    }
+
+    &--open {
+      background-color: $color-white;
+
+      .main-header__logo {
+        display: none;
+
+        &--desktop-open {
+          display: block;
+        }
+      }
+    }
+
+    .main-header__submenu {
+      display: none;
     }
   }
 

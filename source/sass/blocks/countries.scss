@@ -2,23 +2,123 @@
 @import "../global/variables";
 
 .countries {
+  position: relative;
+  margin: 0 0 -60px 0;
+
   background-color: #e2e5f2;
   border-radius: 0 0 20px 20px;
+
+  z-index: 9;
+
+  &--open {
+    .countries__nav {
+      display: block;
+    }
+
+    .countries__wrapper {
+      display: block;
+    }
+
+    .countries__roll {
+      &::after {
+        top: 4px;
+        left: 21px;
+
+        width: 12px;
+        height: 12px;
+
+        background: url("../img/filter-close.svg") no-repeat;
+        box-shadow: none;
+      }
+    }
+  }
 }
 
 .countries__container {
-  @include container;
-  padding: 0 25px;
+  padding: 75px 0 0;
 
   outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
+.countries__header {
+  @include container;
+  padding: 0 25px 14px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.countries__nav {
+  margin: 31px 0 0;
+  padding: 0 0 0 25px;
+
+  display: none;
+}
+
+.countries__roll {
+  position: relative;
+
+  width: 40px;
+  height: 22px;
+
+  background-color: transparent;
+  border: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 26px;
+
+    width: 3px;
+    height: 3px;
+
+    background-color: $color-darkBlue;
+    box-shadow: 8px 0 0 0 $color-darkBlue, -8px 0 0 0 $color-darkBlue;
+  }
+}
+
+.countries__wrapper {
+  padding: 25px 25px 27px;
+
+  position: absolute;
+  display: none;
+  top: 225px;
+  left: 0;
+
+
+  width: 100vw;
+  background-color: #e2e5f2;
+  border-radius: 0 0 20px 20px;
+}
+
+.countries__inner {
+  @include container;
+  padding: 0 25px;
+}
+
 .countries__title {
+  position: relative;
+  padding: 0 0 0 28px;
+
   font-size: 16px;
   font-weight: 700;
   color: #192144;
 
   text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+
+    width: 15px;
+    height: 10px;
+
+    background-image: url("../img/filter.svg");
+  }
 }
 
 .countries__list,
@@ -27,6 +127,9 @@
 }
 
 .countries__nav-link {
+  margin: 0 0 5px 0;
+  display: block;
+
   font-weight: 700;
   text-transform: uppercase;
 
@@ -40,35 +143,45 @@
 }
 
 .countries__table {
+  margin: 0 auto 48px;
+
   background-color: #ffffff;
   border: 1px solid #cbced9;
   border-collapse: collapse;
 }
 
 .countries__cell {
+  padding: 0;
   width: 44px;
-  height: 42px;
-
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 18px;
-  text-transform: uppercase;
-  letter-spacing: 1.4px;
-  text-align: center;
-
-  color: #1d2e5b;
+  height: 41px;
 
   border: 1px solid #cbced9;
 
-  &--active {
-    color: #ffffff;
-    background-color: #1d2e5b;
-  }
-}
+  & button {
+    padding: 2px 0 0 2px;
+    width: 100%;
+    height: 100%;
 
-.countries__wrapper {
-  background-color: #e2e5f2;
-  border-radius: 0 0 20px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    text-align: center;
+
+    color: #1d2e5b;
+
+    border: none;
+    background-color: transparent;
+  }
+
+  &--active {
+    background-color: #1d2e5b;
+
+    & button {
+      color: #ffffff;
+    }
+  }
 }
 
 .countries__link {
@@ -76,11 +189,27 @@
   color: $color-twilightGray;
 }
 
+.countries__item {
+  &--title {
+    display: none;
+  }
+}
+
+.countries__list-container {
+  padding: 0 0 37px 26px;
+}
+
 .countries__close {
+  position: relative;
+  padding: 7px 20px 3px 45px;
+
+  width: 100%;
+
   font-size: 17px;
   font-weight: 700;
-  line-height: 29.45px;
+  line-height: 30px;
   text-transform: uppercase;
+  text-align: center;
 
   color: #161c35;
 
@@ -88,6 +217,19 @@
   background-color: #d6daed;
   border-radius: 20px;
   border: none;
+
+  & .countries__close-icon {
+    position: absolute;
+    display: block;
+
+    top: 14px;
+    left: 85px;
+
+    width: 12px;
+    height: 12px;
+
+    background: url("../img/filter-close.svg") no-repeat;
+  }
 }
 
 //Таблетка
