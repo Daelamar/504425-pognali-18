@@ -2,6 +2,11 @@
 @import "../global/variables";
 
 .card {
+  padding: 15px 18px 22px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+
   background-color: #ffffff;
   border-radius: 20px;
 
@@ -9,36 +14,89 @@
 }
 
 .card__img {
+  margin: 0 16px 0 0;
+  display: block;
   border-radius: 50%;
 }
 
 .card__title {
+  position: relative;
+  padding: 0 40px 0 0;
+
+  width: 130px;
+
   font-size: 20px;
   font-weight: 700;
   line-height: 20px;
   color: #1d2e5b;
 }
 
-.card__like-icon {
+.card__status {
+  position: absolute;
+  top: 8px;
+  right: -14px;
+
+  width: 6px;
+  height: 6px;
+  border-radius: 4px;
+
+  &--offline {
+    background-color: #f97676;
+  }
+
+  &--online {
+    background-color: #81e31e;
+  }
+}
+
+.card__like-button {
+  margin: 0 6px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 31px;
   height: 31px;
 
   background-color: #edeff6;
-
-  background-image: url("../img/heart.svg");
-  background-size: 13px 11px;
-  background-repeat: no-repeat;
-  background-position: center;
-
   border-radius: 16px;
   border: none;
 
+  .card__like-icon {
+    display: block;
+
+    width: 13px;
+    height: 11px;
+
+    background-image: url("../img/heart.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+
+    opacity: 0.3;
+  }
+
   &--active {
-    background-image: url("../img/heart-active.svg");
+    .card__like-icon {
+      background-image: url("../img/heart-active.svg");
+
+      opacity: 1;
+    }
   }
 }
 
+.card__like-wrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+
+  top: 54px;
+  left: 67px;
+}
+
 .card__like-sum {
+  margin: 0;
+  padding: 3px 0 0 0;
+
   font-size: 14px;
   font-weight: 700;
   line-height: 21px;

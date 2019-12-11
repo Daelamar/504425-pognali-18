@@ -33,7 +33,22 @@
     }
 
     .main-header__container {
+      position: relative;
       padding: 19px 25px 10px;
+
+      &::after {
+        content: "";
+        position: absolute;
+
+        bottom: -1px;
+        left: 25px;
+
+        width: 173px;
+        height: 5px;
+
+        background-color: #ff8d30;
+        border-radius: 2px;
+      }
     }
 
     .main-header__logo-link {

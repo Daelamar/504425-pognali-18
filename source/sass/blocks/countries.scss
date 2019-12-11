@@ -173,6 +173,8 @@
 
     border: none;
     background-color: transparent;
+
+    cursor: pointer;
   }
 
   &--active {
@@ -187,6 +189,8 @@
 .countries__link {
   font-weight: 400;
   color: $color-twilightGray;
+
+  cursor: pointer;
 }
 
 .countries__item {

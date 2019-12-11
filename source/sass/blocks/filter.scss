@@ -5,11 +5,16 @@
 }
 
 .filter__form {
+  padding: 27px 23px 22px;
+
   background-color: #ffd74b;
   border-radius: 20px;
 }
 
 .filter__title {
+  margin: 0 0 21px 0;
+  padding: 0 70px 0 3px;
+
   font-size: 22px;
   font-weight: 700;
   line-height: 22.49px;
@@ -17,24 +22,142 @@
   color: #1d2e5b;
 }
 
+.filter__list {
+  @include listStyle;
+  padding: 4px 0 9px;
+}
+
 .filter__fieldset {
+  margin: 0;
+  padding: 0 1px 0 3px;
   border: none;
+
+  &--closed {
+    .filter__list {
+      display: none;
+    }
+
+    .filter__wrapper {
+      display: none;
+    }
+
+    .legend-btn {
+      &::after {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &--music,
+  &--hobby,
+  &--food {
+    .filter__label {
+      margin: 0 0 11px 0;
+      padding: 4px 4px 0 27px;
+      position: relative;
+      display: block;
+
+      &::after {
+        position: absolute;
+        content: "";
+
+        top: 0;
+        left: 0;
+
+        width: 18px;
+        height: 18px;
+
+        background-color: $color-white;
+        border-radius: 4px;
+
+        transition-duration: 0.22s;
+      }
+    }
+
+    .filter__input:checked + .filter__label {
+      &::after {
+        background-image: url("../img/tick.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 9px 9px;
+      }
+    }
+  }
+
+  &--transport {
+    .filter__list {
+      padding: 4px 0 19px 0;
+
+      display: flex;
+      flex-direction: row;
+    }
+
+    .filter__label {
+      margin: 0 -1px 0 0;
+      padding: 0 3px 0 0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 33px;
+      height: 33px;
+
+      background-color: $color-white;
+
+      border-radius: 50%;
+    }
+  }
 }
 
 .filter__legend {
+  padding: 5px 0 4px;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
   text-transform: uppercase;
 
   color: #1d2e5b;
+
+  border-top: 1px solid #f3c72b;
 }
 
-.filter__list {
-  @include listStyle;
+.legend-btn {
+  position: relative;
+  margin: 0 0 0 auto;
+
+  width: 40px;
+  height: 30px;
+
+  background: transparent;
+  border: none;
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    top: 13px;
+    right: 0;
+
+    transform: rotate(180deg);
+
+    width: 8px;
+    height: 4px;
+
+    background: url("../img/dropdown.svg") no-repeat;
+  }
 }
 
 .filter__label {
+  padding: 0 0 0 0;
+  position: relative;
+
   font-size: 15px;
   font-weight: 400;
   line-height: 15px;
@@ -43,6 +166,9 @@
 }
 
 .filter__submit {
+  padding: 7px 10px 3px;
+
+  width: 100%;
 
   font-size: 17px;
   font-weight: 700;
@@ -67,4 +193,104 @@
   text-transform: uppercase;
 
   color: #1d2e5b;
+}
+
+.filter__level {
+  margin: 0 0 24px 0;
+  padding: 2px 0 0 0;
+  display: flex;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+
+    top: 14px;
+    left: 105px;
+
+    width: 7px;
+    height: 11px;
+
+    background-color: $color-white;
+  }
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+
+    top: 19px;
+    right: 103px;
+
+    width: 16px;
+    height: 1px;
+
+    background-color: #cbced9;
+
+    z-index: 2;
+  }
+
+  .filter__input {
+    padding: 6px 4px 0 4px;
+    display: block;
+
+    width: 110px;
+    height: 35px;
+
+    background-color: #ffffff;
+    border: 1px solid #cbced9;
+
+    &--start-level {
+      border-radius: 4px 0 0 4px;
+    }
+
+    &--end-level {
+      margin: 0 0 0 -1px;
+      width: 110px;
+      border-radius: 0 4px 4px 0;
+    }
+  }
+}
+
+.filter__slide-wrapper {
+  margin: 0 0 26px 0;
+  width: 220px;
+  height: 2px;
+
+  background-color: #d2b54e;
+  border-radius: 1px;
+}
+
+.filter_slide {
+  margin: 0 0 0 auto;
+  position: relative;
+
+  width: 154px;
+  height: 2px;
+
+  background-color: #1d2e5b;
+  border-radius: 1px;
+}
+
+.filter__slide-button {
+  padding: 0;
+  position: absolute;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: #1d2e5b;
+  border-radius: 50%;
+  border: none;
+
+  &--left {
+    top: -4px;
+    left: 0;
+  }
+
+  &--right {
+    top: -4px;
+    right: 1px;
+  }
 }
