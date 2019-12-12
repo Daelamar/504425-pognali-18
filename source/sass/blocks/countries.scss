@@ -11,6 +11,8 @@
   z-index: 9;
 
   &--open {
+    margin: 0 0 -198px 0;
+
     .countries__nav {
       display: block;
     }
