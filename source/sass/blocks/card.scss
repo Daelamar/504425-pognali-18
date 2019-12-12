@@ -11,10 +11,32 @@
   border-radius: 20px;
 
   outline: 1px solid yellowgreen; //todo: Временно для сетки
+
+  overflow: hidden;
+
+  &:nth-child(2) {
+    .card__flags-list {
+      margin: 0 0 8px 0;
+    }
+  }
+
+  &:nth-child(3) {
+    padding: 15px 18px 22px;
+
+    .card__flags-list {
+      margin: 0 0 8px 0;
+    }
+  }
+
+  &:nth-child(4) {
+    .card__flags-list {
+      margin: 0 0 9px 0;
+    }
+  }
 }
 
 .card__img {
-  margin: 0 16px 0 0;
+  margin: 0 16px 14px 0;
   display: block;
   border-radius: 50%;
 }
@@ -33,7 +55,7 @@
 
 .card__status {
   position: absolute;
-  top: 8px;
+  top: 7px;
   right: -14px;
 
   width: 6px;
@@ -106,6 +128,9 @@
 }
 
 .card__tags {
+  margin: 0 0 13px 0;
+  padding: 0 58px 0 8px;
+
   font-size: 15px;
   font-weight: 400;
   line-height: 18px;
@@ -115,7 +140,10 @@
 
 .card__flags-title,
 .card__transport-title,
-.card__level-caption {
+.card__level-caption,
+.card__level-title {
+  margin: 0;
+  padding: 0;
   font-size: 15px;
   font-weight: 400;
   line-height: 18px;
@@ -123,17 +151,78 @@
   color: $color-twilightGray;
 }
 
-.card__flags-list {
-  @include listStyle;
+.card__flags-title {
+  margin: 0 0 18px 0;
+  padding: 0 130px 0 8px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    top: 45%;
+    left: -18px;
+
+    width: 15px;
+    height: 1px;
+
+    background-color: #edeff6;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    top: 45%;
+    right: -18px;
+
+    width: 140px;
+    height: 1px;
+
+    background-color: #edeff6;
+  }
 }
 
-.card__flags-caption {
+.card__flags-list {
+  @include listStyle;
+  margin: 0 0 4px 0;
+  padding: 0 0 0 47px;
+
+  width: 100%;
+}
+
+.card__flags-item {
+  margin: 0 0 9px 0;
+  position: relative;
+
   font-size: 15px;
   font-weight: 500;
   line-height: 18px;
   text-transform: uppercase;
 
   color: #1d2e5b;
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    top: 35%;
+    left: -40px;
+
+    width: 26px;
+    height: 18px;
+
+    background-color: #4758a9;
+    border-radius: 4px;
+
+    transform: translateY(-50%);
+  }
+}
+
+.card__transport-wrapper {
+  margin: 0 auto 0 0;
+  padding: 0 0 0 8px;
+  width: 170px;
 }
 
 .card__transport-list {
@@ -141,10 +230,48 @@
   display: flex;
 }
 
+.card__transport-title {
+  position: relative;
+  margin: 0 0 14px 0;
+  padding: 0 96px 0 0;
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    top: 8px;
+    left: -26px;
+
+    width: 15px;
+    height: 1px;
+
+    background-color: #edeff6;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    top: 8px;
+    right: -10px;
+
+    width: 92px;
+    height: 1px;
+
+    background-color: #edeff6;
+  }
+}
+
+.card__transport-item {
+  margin: 0 0 0 -1px;
+  background-color: #edeff6;
+  border-radius: 50%;
+}
+
 .card__transport-img {
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 33px;
+  height: 32px;
 
   &--inactive {
     opacity: 0.15;
@@ -153,40 +280,74 @@
   &--avia {
     background-image: url("../img/plane.svg");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 8px 8px;
+    background-size: 14px 16px;
   }
 
   &--auto {
     background-image: url("../img/bus.svg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 13px 16px;
   }
 
   &--bike {
     background-image: url("../img/bike.svg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 19px 17px;
   }
 
   &--foot {
     background-image: url("../img/run.svg");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 15px 17px;
   }
 }
 
+.card__level-title {
+  margin: 0 0 9px 0;
+  padding: 0 5px 0 0;
+  text-align: end;
+}
+
+.card__level-caption {
+  margin: 0 0 9px 0;
+  display: none;
+}
+
 .card__level-value {
+  margin: 0 2px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  width: 45px;
+  height: 45px;
+
   font-size: 24px;
   font-weight: 700;
   line-height: 18px;
+
+
   color: #1d2e5b;
+  background-color: #edeff6;
+
+  border-radius: 50%;
 }
 
 .card__call {
+  margin: 12px 0 0 0;
+  padding: 7px 20px 3px;
+  width: 100%;
+
   font-size: 17px;
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
+  text-align: center;
 
   color: #161c35;
 
