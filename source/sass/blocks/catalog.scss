@@ -8,12 +8,13 @@
 
 .catalog__container {
   @include container;
-  padding: 84px 25px;
+  padding: 84px 25px 46px;
 
   outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .catalog__show {
+  margin: 0 0 9px 0;
   padding: 10px 49px 10px 80px;
   position: relative;
 
@@ -44,18 +45,55 @@
   }
 }
 
-.catalog__left,
-.catalog__right {
-  background-color: #ffffff;
-  border-radius: 20px;
-  border: none;
+.catalog__button-wrapper {
+  display: flex;
+  justify-content: space-between;
 }
 
-.catalog__crumbs {
-  display: flex;
+.catalog__button {
+  position: relative;
+  height: 50px;
 
-  background-color: $color-white;
-  border-radius: 20px;
+  background-color: #ffffff;
+  border: none;
+
+  &--left {
+    width: 135px;
+    border-radius: 20px 0 0 20px;
+
+    &::after {
+      position: absolute;
+      content: "";
+
+      top: 18px;
+      left: 63px;
+
+      width: 10px;
+      height: 20px;
+
+      background-image: url("../img/triangle-arrow-left.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--right {
+    width: 134px;
+    border-radius: 0 20px 20px 0;
+
+    &::after {
+      position: absolute;
+      content: "";
+
+      top: 18px;
+      right: 62px;
+
+      width: 10px;
+      height: 20px;
+
+      background-image: url("../img/triangle-arrow-right.svg");
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 .catalog__crumbs-list {
