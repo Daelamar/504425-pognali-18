@@ -14,15 +14,34 @@
 }
 
 .catalog__show {
+  padding: 10px 49px 10px 80px;
+  position: relative;
+
+  width: 100%;
+
   font-size: 17px;
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
+  text-align: center;
 
   color: #1d2e5b;
 
   background-color: transparent;
   border: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    top: 14px;
+    left: 60px;
+
+    width: 18px;
+    height: 18px;
+
+    background-image: url("../../img/show-more-plus.svg");
+  }
 }
 
 .catalog__left,
@@ -61,6 +80,7 @@
 .catalog__item {
   margin: 0 0 10px 0;
 }
+
 
 //Таблетка
 
