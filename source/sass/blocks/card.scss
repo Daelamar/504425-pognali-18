@@ -36,9 +36,13 @@
 }
 
 .card__img {
-  margin: 0 16px 14px 0;
-  display: block;
-  border-radius: 50%;
+  display: none;
+
+  &--mobile {
+    margin: 0 16px 14px 0;
+    display: block;
+    border-radius: 50%;
+  }
 }
 
 .card__title {
@@ -266,10 +270,13 @@
   margin: 0 0 0 -1px;
   background-color: #edeff6;
   border-radius: 50%;
+
+  width: 33px;
+  height: 32px;
 }
 
 .card__transport-img {
-  display: block;
+  display: inline-block;
   width: 33px;
   height: 32px;
 
@@ -307,9 +314,24 @@
 }
 
 .card__level-title {
+  position: relative;
+
   margin: 0 0 9px 0;
   padding: 0 5px 0 0;
   text-align: end;
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    top: 8px;
+    right: -19px;
+
+    width: 15px;
+    height: 1px;
+
+    background-color: #edeff6;
+  }
 }
 
 .card__level-caption {
@@ -317,25 +339,26 @@
   display: none;
 }
 
-.card__level-value {
+.card__level-wrapper {
   margin: 0 2px 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
 
-
   width: 45px;
   height: 45px;
 
+  background-color: #edeff6;
+
+  border-radius: 50%;
+}
+
+.card__level-value {
   font-size: 24px;
   font-weight: 700;
   line-height: 18px;
 
-
   color: #1d2e5b;
-  background-color: #edeff6;
-
-  border-radius: 50%;
 }
 
 .card__call {
@@ -359,9 +382,39 @@
 
 @media (min-width: $tablet-width) {
   .card {
-    display: flex;
+    padding: 35px 25px 25px 35px;
+    align-items: flex-start;
+  }
 
-    height: 332px; //todo: Временно для сетки
+  .card__img {
+    display: none;
+
+    &--tablet {
+      margin: 0 33px 0 0;
+      display: block;
+      border-radius: 10px;
+    }
+
+    order: 1;
+  }
+
+  .card__title {
+    padding: 0;
+
+    width: 260px;
+
+    font-size: 30px;
+    line-height: 30px;
+
+    order: 2;
+  }
+
+  .card__status {
+    top: 10px;
+    right: 43px;
+
+    width: 7px;
+    height: 7px;
   }
 }
 

@@ -81,8 +81,21 @@
   }
 }
 
+.countries__roll-show,
+.countries__roll-close {
+  display: none;
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+
+  color: #192144;
+
+  text-transform: uppercase;
+}
+
 .countries__wrapper {
-  padding: 25px 25px 27px;
+  padding: 25px 0 27px;
 
   position: absolute;
   display: none;
@@ -199,6 +212,10 @@
   &--title {
     display: none;
   }
+
+  &--tablet {
+    display: none;
+  }
 }
 
 .countries__list-container {
@@ -206,8 +223,10 @@
 }
 
 .countries__close {
+  padding: 7px 75px 3px 100px;
   position: relative;
-  padding: 7px 20px 3px 45px;
+  display: flex;
+  justify-content: center;
 
   width: 100%;
 
@@ -219,14 +238,13 @@
 
   color: #161c35;
 
-
   background-color: #d6daed;
   border-radius: 20px;
   border: none;
 
-  & .countries__close-icon {
+  &::after {
     position: absolute;
-    display: block;
+    content: "";
 
     top: 14px;
     left: 85px;
@@ -243,10 +261,217 @@
 @media (min-width: $tablet-width) {
   .countries {
     border-radius: 0 0 60px 60px;
+
+    &--open {
+      margin: 0 0 -198px 0;
+
+      .countries__wrapper {
+        display: block;
+      }
+
+      .countries__roll-show {
+        display: none;
+      }
+
+      .countries__roll-close {
+        margin: 0 63px 0 0;
+        display: block;
+      }
+
+      .countries__roll {
+        &::after {
+          top: -1px;
+          right: 3px;
+          left: auto;
+
+          width: 22px;
+          height: 22px;
+
+          background: url("../img/filter-close.svg") no-repeat;
+          box-shadow: none;
+          background-size: 100%;
+        }
+      }
+    }
+  }
+
+  .countries__wrapper {
+    padding: 50px 0 75px;
+
+    top: 140px;
+
+    border-radius: 0 0 60px 60px;
+  }
+
+  .countries__table {
+    margin: 0;
+
+    background-color: transparent;
+    border: none;
+  }
+
+  .countries__cell {
+    padding: 0;
+
+    width: 77px;
+    height: 77px;
+
+    border: none;
+
+    & button {
+      padding: 13px 0 10px 0;
+
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 60px;
+
+      color: #192144;
+
+      opacity: 0.2;
+    }
+
+    &--active {
+      background-color: transparent;
+
+      & button {
+        opacity: 1;
+      }
+    }
+  }
+
+  .countries__inner {
+    padding: 0 54px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .countries__roll-show {
+    margin: 0 28px 0 0;
+    display: block;
+  }
+
+  .countries__roll-close {
+    display: none;
   }
 
   .countries__container {
-    height: 932px; //todo: Временно для сетки
+    padding: 119px 0 0;
+
+    outline: 1px solid yellowgreen; //todo: Временно для сетки
+  }
+
+  .countries__list-container {
+    padding: 9px 0 0 0;
+
+    width: 196px;
+
+    text-align: left;
+  }
+
+  .countries__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .countries__item {
+    order: 0;
+
+    &--tablet {
+      display: block;
+    }
+
+    &:nth-child(2) {
+      order: 1;
+    }
+
+    &:nth-child(10) {
+      order: -3;
+    }
+
+    &:nth-child(11) {
+      order: -2;
+    }
+
+    &:nth-child(12) {
+      order: -1;
+    }
+  }
+
+  .countries__link {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .countries__title {
+    display: none;
+  }
+
+  .countries__header {
+    padding: 0 73px 50px;
+  }
+
+  .countries__nav {
+    margin: 0;
+    padding: 0;
+    display: block;
+    order: 1;
+  }
+
+  .countries__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 365px;
+  }
+
+  .countries__nav-item {
+    margin: 0;
+    padding: 0;
+  }
+
+  .countries__roll {
+    width: 200px;
+    height: auto;
+    order: 2;
+
+    &::after {
+      top: 7px;
+      left: auto;
+      right: 13px;
+
+      width: 5px;
+      height: 5px;
+
+      box-shadow: 11px 0 0 0 $color-darkBlue, -11px 0 0 0 $color-darkBlue;
+
+      border-radius: 50%;
+    }
+  }
+
+  .countries__nav-link {
+    margin: 0;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .countries__close {
+    margin: 52px 21px 0;
+    padding: 38px 230px 32px 265px;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    &::after {
+      top: 42px;
+      left: 243px;
+
+      width: 18px;
+      height: 18px;
+    }
   }
 }
 

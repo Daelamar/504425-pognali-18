@@ -65,14 +65,15 @@
       position: absolute;
       content: "";
 
-      top: 18px;
+      top: 15px;
       left: 63px;
 
-      width: 10px;
-      height: 20px;
+      width: 0;
+      height: 0;
 
-      background-image: url("../img/triangle-arrow-left.svg");
-      background-repeat: no-repeat;
+      border-top: 10px solid transparent;
+      border-right: 10px solid #192144;
+      border-bottom: 10px solid transparent;
     }
   }
 
@@ -84,14 +85,15 @@
       position: absolute;
       content: "";
 
-      top: 18px;
+      top: 15px;
       right: 62px;
 
-      width: 10px;
-      height: 20px;
+      width: 0;
+      height: 0;
 
-      background-image: url("../img/triangle-arrow-right.svg");
-      background-repeat: no-repeat;
+      border-top: 10px solid transparent;
+      border-left: 10px solid #192144;
+      border-bottom: 10px solid transparent;
     }
   }
 }
@@ -123,8 +125,18 @@
 //Таблетка
 
 @media (min-width: $tablet-width) {
+  .catalog__container {
+    padding: 107px 40px 46px;
+
+    outline: 1px solid yellowgreen; //todo: Временно для сетки
+  }
+
   .catalog__crumbs-list {
     display: flex;
+  }
+
+  .catalog__filter {
+    margin: 0 0 39px 0;
   }
 }
 

@@ -73,6 +73,10 @@
         box-shadow: 0 8px 0 0 #cccccc;
       }
     }
+
+    .main-header__title {
+      color: #192144;
+    }
   }
 
   .main-header__nav {
@@ -80,8 +84,7 @@
   }
 }
 
-.main-header--catalog .main-header__title,
-.main-header--form .main-header__title {
+.main-header__title {
   font-size: 36px;
   font-weight: 700;
   line-height: 40px;
@@ -233,17 +236,61 @@
       }
 
       .main-header__title {
+        padding: 0 34px;
+
         display: flex;
         justify-content: space-between;
+        align-items: center;
+
         width: 100%;
+
+        font-size: 60px;
+        line-height: 70px;
       }
 
       .main-header__container {
-        height: 351px; //todo: Временно для сетки
+        padding: 40px 40px 62px;
+        align-items: flex-start;
+
+        &::after {
+          bottom: -4px;
+          left: 76px;
+
+          width: 287px;
+          height: 8px;
+
+          background-color: #ff8d30;
+          border-radius: 4px;
+        }
       }
 
       .main-header__title-link {
+        padding: 5px 62px 0 0;
         display: block;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+
+          bottom: 8px;
+          right: 0;
+
+          width: 32px;
+          height: 16px;
+
+          background-image: url("../img/return.svg");
+        }
+      }
+
+      .main-header__logo-link {
+        margin: 5px 0 132px 0;
+      }
+
+      .main-header__button {
+        &::after {
+          top: 20px;
+        }
       }
     }
 
