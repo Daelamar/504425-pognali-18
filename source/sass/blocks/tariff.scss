@@ -18,7 +18,6 @@
 
   background: url("../../img/rates@1x.png") no-repeat 195px 94px;
   background-size: 99px 99px;
-  outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .tariff__title {
@@ -154,7 +153,6 @@
     padding: 17px 0 15px;
 
     display: flex;
-    justify-content: space-between;
 
     &::after {
       top: 0;
@@ -172,6 +170,10 @@
   .tariff__price {
     font-size: 28px;
     line-height: 33px;
+  }
+
+  .tariff__description {
+    margin: 0 auto 0 0;
   }
 
   .tariff__button {

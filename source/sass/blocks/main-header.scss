@@ -100,8 +100,6 @@
   justify-content: space-between;
 
   padding: 27px 25px;
-
-  outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .main-header__button {
@@ -231,6 +229,9 @@
     }
 
     &--catalog {
+      background-color: $color-header;
+      border-radius: 0 0 60px 60px;
+
       .main-header__user-menu {
         display: flex;
       }
@@ -328,7 +329,6 @@
     right: auto;
   }
 
-
   .main-header__submenu {
     top: 130px;
 
@@ -371,12 +371,15 @@
     background-color: $color-header;
 
     .main-header__logo {
-      margin: 0 145px 0 0;
       display: none;
 
       &--desktop {
         display: block;
       }
+    }
+
+    .main-header__logo-link {
+      margin: 0 145px 0 0;
     }
 
     .main-header__nav {
@@ -413,6 +416,28 @@
 
     .main-header__submenu {
       display: none;
+    }
+
+    &--catalog {
+      .main-header__container {
+        padding: 48px 60px 63px;
+
+        &::after {
+          left: 126px;
+        }
+      }
+
+      .main-header__nav {
+        margin: 15px 0 0 0;
+      }
+
+      .main-header__logo-link {
+        margin: 0 145px 118px 0;
+      }
+
+      .main-header__title {
+        padding: 0 62px 0 67px;
+      }
     }
   }
 

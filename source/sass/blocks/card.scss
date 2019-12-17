@@ -72,7 +72,7 @@
   height: 31px;
 
   background-color: #edeff6;
-  border-radius: 16px;
+  border-radius: 50%;
   border: none;
 
   .card__like-icon {
@@ -395,13 +395,16 @@
 
 @media (min-width: $tablet-width) {
   .card {
-    padding: 34px 25px 25px 35px;
+    padding: 33px 25px 20px 35px;
 
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .card__link-image {
-    position: initial;
+    position: relative;
+
+    top: auto;
+    left: auto;
   }
 
   .card__img {
@@ -428,15 +431,15 @@
     margin: 0 0 18px 0;
     padding: 0;
 
-    width: 100%;
+    display: inline-block;
 
     font-size: 30px;
     line-height: 30px;
   }
 
   .card__status {
-    top: 10px;
-    right: 43px;
+    top: 12px;
+    right: -29px;
 
     width: 7px;
     height: 7px;
@@ -453,12 +456,14 @@
   }
 
   .card__flags {
+    padding: 19px 0 0 0;
+
     width: 100%;
     order: 6;
   }
 
   .card__flags-title {
-    margin: 0 0 18px 0;
+    margin: 0 0 17px 0;
     padding: 0 480px 0 48px;
     position: relative;
 
@@ -466,26 +471,43 @@
     justify-content: flex-start;
 
     &::before {
-      top: 45%;
-      left: -18px;
+      left: -36px;
 
       width: 72px;
       height: 1px;
-
-      background-color: #edeff6;
     }
 
     &::after {
-      position: absolute;
-      content: "";
-
       top: 45%;
-      right: -18px;
+      right: -26px;
 
       width: 500px;
       height: 1px;
+    }
+  }
 
-      background-color: #edeff6;
+  .card__flags-list {
+    padding: 0 0 0 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    width: 100%;
+  }
+
+  .card__flags-item {
+    padding: 0 0 0 46px;
+    margin: 0 28px 0 0;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    &::before {
+      top: 39%;
+      left: 0;
+
+      width: 35px;
+      height: 24px;
     }
   }
 
@@ -593,7 +615,7 @@
   .card__level-caption {
     margin: 0;
     padding: 5px 0 0 0;
-    display: initial;
+    display: block;
 
     font-size: 14px;
     font-weight: 400;
@@ -607,17 +629,49 @@
   }
 
   .card__buttons {
+    margin: -54px 0 4px 220px;
+
     width: 260px;
 
     order: 4;
   }
 
   .card__call {
+    margin: 0;
+    padding: 11px 20px 9px;
+
     width: 148px;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    border-radius: 25px;
   }
 
   .card__like-wrapper {
-    position: initial;
+    position: relative;
+
+    top: auto;
+    left: auto;
+  }
+
+  .card__like-button {
+    margin: 0 7px 0 0;
+
+    width: 50px;
+    height: 50px;
+
+    .card__like-icon {
+      width: 20px;
+      height: 17px;
+    }
+  }
+
+  .card__like-sum {
+    padding: 2px 0 0 0;
+
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
@@ -625,6 +679,5 @@
 
 @media (min-width: $desktop-width) {
   .card {
-    height: 285px; //todo: Временно для сетки
   }
 }

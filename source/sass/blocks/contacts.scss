@@ -14,8 +14,6 @@
 .contacts__container {
   @include container;
   padding: 132px 25px 29px;
-
-  outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .contacts__title {

@@ -14,8 +14,6 @@
 .destinations__container {
   @include container;
   padding: 130px 25px 30px;
-
-  outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .destinations__title {
@@ -275,7 +273,7 @@
     padding: 221px 40px 101px;
 
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
 
@@ -327,7 +325,7 @@
   }
 
   .destinations__all {
-    margin: -118px 262px 0 0;
+    margin: -118px 262px 0 auto;
 
     width: 274px;
 

@@ -2,15 +2,15 @@
 @import "../global/variables";
 
 .catalog {
+  margin: 0 0 -60px 0;
+
   position: relative;
   background-color: #edeff6;
 }
 
 .catalog__container {
   @include container;
-  padding: 84px 25px 46px;
-
-  outline: 1px solid yellowgreen; //todo: Временно для сетки
+  padding: 84px 25px 107px;
 }
 
 .catalog__show {
@@ -105,10 +105,13 @@
 }
 
 .catalog__crumbs-link {
+  display: block;
+
   font-size: 20px;
   font-weight: 700;
-  line-height: 30px;
+  line-height: 50px;
   text-transform: uppercase;
+  text-align: center;
 
   color: #161c35;
 }
@@ -126,17 +129,92 @@
 
 @media (min-width: $tablet-width) {
   .catalog__container {
-    padding: 107px 40px 46px;
+    padding: 107px 40px 123px;
+  }
 
-    outline: 1px solid yellowgreen; //todo: Временно для сетки
+  .catalog__crumbs {
+    display: flex;
+
+    background-color: $color-white;
+    border-radius: 20px;
+  }
+
+  .catalog__button-wrapper {
+    width: 126px;
+  }
+
+  .catalog__button {
+    height: 100px;
+
+    &--left {
+      width: 63px;
+
+      &::after {
+        top: 40px;
+        left: 38px;
+      }
+    }
+
+    &--right {
+      width: 63px;
+
+      &::after {
+        top: 40px;
+        right: 35px;
+      }
+    }
   }
 
   .catalog__crumbs-list {
+    margin: 0 auto 0 0;
+    padding: 0 0 0 28px;
     display: flex;
+
+    align-items: center;
   }
 
   .catalog__filter {
     margin: 0 0 39px 0;
+  }
+
+  .catalog__item {
+    margin: 0 0 40px 0;
+  }
+
+  .catalog__show {
+    margin: 0 auto 40px;
+    padding: 7px 40px 7px 82px;
+
+    display: block;
+
+    width: 300px;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    &::after {
+      top: 6px;
+      left: 53px;
+
+      width: 27px;
+      height: 27px;
+    }
+  }
+
+  .catalog__crumbs-item {
+    background-color: $color-white;
+    border-radius: 50%;
+
+    &--active {
+      background-color: #ffd74b;
+    }
+  }
+
+  .catalog__crumbs-link {
+    padding: 2px 0 0 0;
+
+    width: 50px;
+    height: 50px;
   }
 }
 

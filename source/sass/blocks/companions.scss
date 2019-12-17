@@ -17,8 +17,6 @@
 
   background: url("../img/smolov-back-desktop@1x.png") no-repeat, url("../img/rogovaya-back-mobile@1x.png") no-repeat;
   background-position: 152px 98px, -11px 370px;
-
-  outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .companions__wrapper {
@@ -407,6 +405,8 @@
 
   .companions__tags {
     margin: 0 0 24px 0;
+
+    width: 100%;
 
     font-size: 20px;
     line-height: 24px;

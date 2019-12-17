@@ -14,8 +14,6 @@
   align-items: center;
   display: flex;
   padding: 38px 25px 0;
-
-  outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .main-footer__wrapper {
@@ -91,7 +89,7 @@
     margin: 0 0 0 auto;
     padding: 0;
 
-    width: initial;
+    width: auto;
 
     border-top: none;
   }

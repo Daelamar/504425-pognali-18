@@ -38,8 +38,6 @@
 
 .countries__container {
   padding: 75px 0 0;
-
-  outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .countries__header {
@@ -134,11 +132,25 @@
 
     background-image: url("../img/filter.svg");
   }
+
+  & .countries__title-dot {
+    display: none;
+  }
 }
 
 .countries__list,
 .countries__nav-list {
   @include listStyle;
+}
+
+.countries__list {
+  display: none;
+  flex-direction: column;
+
+  &--active {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .countries__nav-link {
@@ -228,7 +240,7 @@
   display: flex;
   justify-content: center;
 
-  width: 100%;
+  width: 270px;
 
   font-size: 17px;
   font-weight: 700;
@@ -263,7 +275,7 @@
     border-radius: 0 0 60px 60px;
 
     &--open {
-      margin: 0 0 -198px 0;
+      margin: 0 0 -60px 0;
 
       .countries__wrapper {
         display: block;
@@ -358,8 +370,6 @@
 
   .countries__container {
     padding: 119px 0 0;
-
-    outline: 1px solid yellowgreen; //todo: Временно для сетки
   }
 
   .countries__list-container {
@@ -371,31 +381,38 @@
   }
 
   .countries__list {
-    display: flex;
-    flex-direction: column;
-  }
+    display: none;
 
-  .countries__item {
-    order: 0;
+    &--active {
+      display: flex;
 
-    &--tablet {
-      display: block;
-    }
+      .countries__item {
+        order: 0;
 
-    &:nth-child(2) {
-      order: 1;
-    }
+        &--tablet {
+          display: block;
+        }
 
-    &:nth-child(10) {
-      order: -3;
-    }
+        &:nth-child(2) {
+          order: 1;
+        }
 
-    &:nth-child(11) {
-      order: -2;
-    }
+        &:nth-child(10) {
+          order: -3;
+        }
 
-    &:nth-child(12) {
-      order: -1;
+        &:nth-child(11) {
+          order: -2;
+        }
+
+        &:nth-child(12) {
+          order: -1;
+        }
+
+        &--title {
+          order: -4;
+        }
+      }
     }
   }
 
@@ -462,6 +479,8 @@
     margin: 52px 21px 0;
     padding: 38px 230px 32px 265px;
 
+    width: 618px;
+
     font-size: 20px;
     line-height: 30px;
 
@@ -479,6 +498,126 @@
 
 @media (min-width: $desktop-width) {
   .countries {
-    border-radius: 0;
+    border-radius: 0 0 60px 60px;
+
+    &--open {
+      margin: 0;
+      border-radius: 0;
+
+      .countries__wrapper {
+        padding: 0 0 75px;
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        border-radius: 0;
+      }
+    }
+  }
+
+  .countries__inner {
+    padding: 0 60px;
+
+    display: block;
+  }
+
+  .countries__header {
+    padding: 0 122px 50px 96px;
+    justify-content: flex-start;
+  }
+
+  .countries__title {
+    margin: 0 32px 0 0;
+    display: block;
+
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+
+    &::before {
+      top: 2px;
+      left: -16px;
+
+      width: 23px;
+      height: 15px;
+    }
+
+    & .countries__title-dot {
+      display: inline-block;
+    }
+  }
+
+  .countries__roll {
+    margin: 0 0 0 auto;
+  }
+
+  .countries__roll-show {
+    margin: 0 25px 0 0;
+    display: block;
+  }
+
+  .countries__table {
+    display: none;
+  }
+
+  .countries__item {
+    &--title {
+      margin: 0 0 29px -2px;
+      display: block;
+
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 60px;
+      text-transform: uppercase;
+
+      color: #192144;
+
+    }
+  }
+
+  .countries__list-container {
+    padding: 21px 36px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    width: auto;
+  }
+
+  //Ниже такое полотно в силу того, что макет НЕ ОЧЕНЬ =)
+
+  .countries__list {
+    margin-right: 13px;
+    margin-top: 51px;
+    display: flex;
+
+    min-width: 240px;
+
+    &:nth-child(3) {
+      margin-right: 12px;
+    }
+
+    &:nth-child(4) {
+      margin-right: 3px;
+    }
+
+    &:nth-child(5n) {
+      margin-right: 0;
+
+      .countries__item {
+        &--title {
+          margin: 0 0 29px 2px;
+        }
+      }
+    }
+
+    &:nth-child(8) {
+      margin-right: 10px;
+    }
+
+    &:nth-child(9) {
+      margin-right: 9px;
+    }
   }
 }
