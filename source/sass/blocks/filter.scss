@@ -352,7 +352,7 @@
 
     border-top: none;
 
-    & .legend-btn {
+    .legend-btn {
       display: none;
     }
   }
@@ -564,5 +564,131 @@
     line-height: 30px;
 
     border-radius: 25px;
+  }
+}
+
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .filter__form {
+    padding: 48px 47px 47px;
+  }
+
+  .filter__fieldset-flex {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .filter__fieldset {
+    padding: 10px 0 10px 0;
+
+    border: none;
+
+    &--closed {
+      .filter__list {
+        display: none;
+        //todo: До подключения JS
+      }
+
+      .filter__wrapper {
+        display: none;
+        //todo: До подключения JS
+      }
+    }
+
+    &--music,
+    &--hobby,
+    &--food {
+      .filter__legend {
+        width: 100%;
+      }
+
+      .filter__label {
+
+        width: auto;
+      }
+    }
+
+    &--transport {
+      justify-content: flex-start;
+
+      .filter__fieldset-flex {
+        justify-content: flex-start;
+      }
+
+      .filter__legend {
+        width: 105px;
+      }
+
+      .filter__list {
+        padding: 0 0 0 15px;
+        justify-content: flex-start;
+      }
+
+      .filter__label {
+        margin: 0 1px 0 0;
+
+        width: 43px;
+        height: 43px;
+
+        &--flight svg {
+          width: 19px;
+          height: 21px;
+        }
+
+        &--transport svg {
+          width: 17px;
+          height: 21px;
+        }
+
+        &--bicycle svg {
+          width: 24px;
+          height: 21px;
+        }
+
+        &--afoot svg {
+          width: 20px;
+          height: 21px;
+        }
+      }
+    }
+
+    &--level {
+      margin: 0 0 36px 0;
+      padding: 0 0 37px 0;
+      border-bottom: 1px solid #f3c72b;
+
+      .filter__fieldset-flex {
+        align-items: flex-start;
+      }
+
+      .filter__legend {
+        padding: 13px 0 0 0;
+        width: auto;
+      }
+    }
+  }
+
+  .filter__list {
+    padding: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: auto;
+  }
+
+  .filter__legend {
+    padding: 0 0 0 0;
+    display: flex;
+
+    width: 100%;
+
+    justify-content: space-between;
+
+    .legend-btn {
+      display: block;
+    }
   }
 }

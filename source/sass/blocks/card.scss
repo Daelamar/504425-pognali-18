@@ -116,6 +116,10 @@
   text-transform: uppercase;
 
   color: #161c35;
+
+  &--tablet {
+    display: none;
+  }
 }
 
 .card__tags {
@@ -405,6 +409,8 @@
 
     top: auto;
     left: auto;
+
+    order: 1;
   }
 
   .card__img {
@@ -415,8 +421,6 @@
       display: block;
       border-radius: 20px;
     }
-
-    order: 1;
   }
 
   .card__header {
@@ -487,7 +491,7 @@
   }
 
   .card__flags-list {
-    padding: 0 0 0 0;
+    padding: 0;
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
@@ -669,9 +673,14 @@
 
   .card__like-sum {
     padding: 2px 0 0 0;
+    display: none;
 
     font-size: 20px;
     line-height: 30px;
+
+    &--tablet {
+      display: block;
+    }
   }
 }
 
@@ -679,5 +688,124 @@
 
 @media (min-width: $desktop-width) {
   .card {
+    padding: 0 44px 0 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      top: 49px;
+      left: 630px;
+
+      width: 1px;
+      height: 187px;
+
+      background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(255,255,255,1) 100%);
+
+      opacity: 0.1;
+    }
+  }
+
+  .card__img {
+    display: none;
+
+    &--desktop {
+      margin: 0 60px 0 0;
+      display: block;
+      border-radius: 20px 0 0 20px;
+    }
+  }
+
+  .card__header {
+    padding: 47px 0 0 0;
+  }
+
+  .card__title {
+    margin: 0 0 18px 0;
+  }
+
+  .card__status {
+    top: 11px;
+    right: auto;
+    left: -26px;
+
+    width: 7px;
+    height: 7px;
+  }
+
+  .card__flags {
+    margin: 0 0 0 auto;
+    padding: 49px 0 0 0;
+
+    width: 250px;
+    order: 3;
+  }
+
+  .card__flags-title {
+    display: none;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .card__flags-list {
+    margin: 0 0 120px 0;
+    padding: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: 250px;
+  }
+
+  .card__flags-item {
+    margin: 0 0 7px 0;
+    padding: 0 0 0 72px;
+
+    &::before {
+      left: 18px;
+    }
+  }
+
+  .card__inner {
+    margin: -152px 0 0 auto;
+    padding: 0;
+
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 232px;
+
+    order: 5;
+  }
+
+  .card__transport-list {
+    padding: 8px 0 0 0;
+    flex-direction: row;
+  }
+
+  .card__buttons {
+    margin: -97px 0 47px 341px;
+  }
+
+  .card__level-wrapper {
+    margin: 5px 2px 0 0;
+  }
+
+  .card__transport-item {
+    margin: 0 9px 0 0;
+  }
+
+  .card__like-sum {
+    display: block;
+
+    &--tablet {
+      display: none;
+    }
   }
 }

@@ -222,11 +222,21 @@
 
 @media (min-width: $desktop-width) {
   .catalog__container {
+    padding: 76px 60px 123px;
     display: flex;
+    justify-content: space-between;
+  }
+
+  .catalog__users {
+    width: 950px;
   }
 
   .catalog__filter {
+    width: 285px;
     order: 2;
   }
 
+  .catalog__item {
+    margin: 0 0 30px 0;
+  }
 }
