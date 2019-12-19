@@ -222,7 +222,7 @@
 
 @media (min-width: $desktop-width) {
   .catalog__container {
-    padding: 76px 60px 123px;
+    padding: 76px 60px 138px;
     display: flex;
     justify-content: space-between;
   }
@@ -238,5 +238,36 @@
 
   .catalog__item {
     margin: 0 0 30px 0;
+  }
+
+  .catalog__show {
+    margin: 60px auto 58px;
+    padding: 7px 40px 7px 18px;
+
+    &::after {
+      top: 5px;
+      left: 20px;
+    }
+  }
+
+  .catalog__button {
+    height: 100px;
+
+    &--left {
+      width: 80px;
+
+      &::after {
+        left: 29px;
+      }
+    }
+
+    &--right {
+      width: 80px;
+
+      &::after {
+        top: 40px;
+        right: 35px;
+      }
+    }
   }
 }
