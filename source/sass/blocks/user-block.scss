@@ -1,17 +1,56 @@
 @import "../global/mixins";
 
 .user-block {
+  margin: 0 0 -60px 0;
+  position: relative;
+
   background-color: #edeff6;
 }
 
 .user-block__container {
   @include container;
-  padding: 0 25px;
+  padding: 80px 25px 69px;
+}
 
-  outline: 1px solid yellowgreen; //todo: Временно для сетки
+.user-block__form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.user-block__level {
+  margin: 0 0 0 19px;
+  padding: 15px 0 4px 2px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100px;
+  height: 100px;
+
+  border: 3px solid #ff8d30;
+
+  border-radius: 50%;
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    top: 57px;
+    left: 22px;
+
+    width: 49px;
+    height: 2px;
+
+    background-color: #cbced9;
+  }
 }
 
 .user-block__value {
+  margin: 0;
+
   font-size: 38px;
   font-weight: 700;
   line-height: 38px;
@@ -20,6 +59,8 @@
 }
 
 .user-block__caption {
+  margin: 0;
+
   font-size: 18px;
   font-weight: 400;
   line-height: 22.17px;
@@ -28,14 +69,23 @@
 }
 
 .user-block__img {
+  margin: 2px 17px 0 auto;
+
+  display: block;
   border-radius: 50%;
 }
 
 .user-block__button {
+  margin: 19px 0 33px 0;
+  padding: 7px 70px 3px;
+
   font-size: 17px;
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
+  text-align: center;
+
+  width: 270px;
 
   color: #161c35;
 
@@ -44,22 +94,86 @@
   border: none;
 }
 
-.user-block__fieldset {
+.user-block__tags,
+.user-block__transport {
+  margin: 0 0 25px 0;
+  width: 100%;
+
   background-color: #edeff6;
 
   border-radius: 10px;
   border: 1px solid #cbced9;
 }
 
-.user-block__legend {
+.user-block__label {
+  margin: -8px auto 0;
+  display: block;
+
+  width: 70px;
+
+  font-size: 16px;
   font-weight: 700;
   line-height: 18px;
   text-transform: uppercase;
+  text-align: center;
 
   color: #1d2e5b;
+  background-color: #edeff6;
+}
+
+.user-block__title {
+  margin: -8px auto 0;
+
+  width: 110px;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+
+  color: #1d2e5b;
+  background-color: #edeff6;
+}
+
+.user-block__transport {
+  padding: 0 15px 10px;
+
+  min-height: 63px;
+
+  .user-block__label {
+    margin: 0;
+    padding: 0 3px 0 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 33px;
+    height: 33px;
+
+    background-color: $color-white;
+
+    border-radius: 50%;
+
+    & svg {
+      opacity: 0.15;
+    }
+  }
+
+  .user-block__input:checked + .user-block__label {
+    & svg {
+      opacity: 1;
+    }
+  }
 }
 
 .user-block__textarea {
+  padding: 12px 25px;
+
+  width: 270px;
+  min-height: 70px;
+
   font-size: 16px;
   font-weight: 400;
   line-height: 22px;
@@ -74,7 +188,13 @@
 
 .user-block__list {
   @include listStyle;
+  margin: 0 0 0 54px;
+  padding: 4px 0;
+
   display: flex;
+  flex-wrap: wrap;
+
+  width: 140px;
 }
 
 //Таблетка
