@@ -12,8 +12,6 @@
 .plans__container {
   @include container;
   padding: 28px 25px 82px;
-
-  outline: 1px solid yellowgreen; //todo: Временно для сетки
 }
 
 .plans__title {

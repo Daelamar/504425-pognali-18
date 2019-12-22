@@ -1,10 +1,18 @@
 @import "../global/mixins";
 
 .first-step {
-  outline: 1px solid yellowgreen; //todo: Временно для сетки
+  margin: 0;
+  padding: 0;
+}
+
+.first-step__container {
+  padding: 24px 20px;
 }
 
 .first-step__title {
+  margin: 0 0 15px 0;
+  padding: 0 0 0 5px;
+
   font-size: 20px;
   font-weight: 700;
   line-height: 20px;
@@ -13,22 +21,17 @@
 }
 
 .first-step__description {
+  margin: 0 0 21px 0;
+  padding: 0 0 0 5px;
+
   font-weight: 400;
 
   color: $color-twilightGray;
 }
 
-.first-step__legend {
-  font-weight: 500;
-  line-height: 16px;
-  text-transform: uppercase;
-
-  color: #1d2e5b;
-
-  letter-spacing: 2.15px;
-}
-
 .first-step__caption {
+  padding: 0 2px 0 0;
+
   font-weight: 500;
   line-height: 16px;
   text-transform: uppercase;
@@ -40,6 +43,12 @@
 }
 
 .first-step__input {
+  margin: 0 auto;
+  padding: 4px 50px 0 53px;
+
+  width: 220px;
+  height: 43px;
+
   font-size: 15px;
   font-weight: 500;
   line-height: 13.37px;
@@ -55,18 +64,142 @@
   border: 1px solid #cbced9;
 }
 
-.first-step__label {
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 15px;
+.first-step__wrapper {
+  margin: 0 0 21px 0;
 
-  color: $color-twilightGray;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .first-step__minus {
+    position: absolute;
+
+    top: 26px;
+    left: 6px;
+
+    width: 41px;
+    height: 41px;
+
+    border: none;
+    background-image: url("../img/qty-minus-mobile.svg");
+
+    background-color: transparent;
+    background-size: 14px 2px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 10px;
+
+    opacity: 0.3;
+  }
+
+  .first-step__plus {
+    position: absolute;
+
+    top: 26px;
+    right: 6px;
+
+    width: 41px;
+    height: 41px;
+
+    border: none;
+    background-image: url("../img/qty-plus-mobile.svg");
+
+    background-color: transparent;
+    background-size: 14px 14px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 10px;
+
+    opacity: 0.3;
+  }
+
+  &--duration {
+    margin: 0 0 28px 0;
+  }
+
+  &--children {
+    margin: 0 0 25px 0;
+    justify-content: left;
+    align-items: center;
+
+    .first-step__label {
+      margin: 0;
+      padding: 0 0 0 44px;
+      position: relative;
+
+
+      font-size: 15px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+
+      line-height: 1;
+      letter-spacing: normal;
+
+      text-transform: none;
+
+      color: #444444;
+
+      &::before {
+        position: absolute;
+        content: "";
+
+        top: -7px;
+        left: 5px;
+
+        width: 26px;
+        height: 26px;
+
+        background-color: #ffffff;
+
+        border-radius: 4px;
+        border: solid 1px #cbced9;
+      }
+    }
+  }
+}
+
+.first-step__label {
+  margin: 0 0 8px 0;
+  padding: 0 0 0 5px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+
+  color: #1d2e5b;
+}
+
+.first-step__calendar-header {
+  margin: 0 5px;
+  padding: 12px 50px 10px 52px;
+  position: relative;
+
+  border-top: 1px solid #cbced9;
+  border-bottom: 1px solid #cbced9;
+
+  .first-step__left-arrow {
+    position: absolute;
+  }
+
+  .first-step__right-arrow {
+    position: absolute;
+  }
 }
 
 .first-step__date {
+  margin: 0;
+
   font-size: 20px;
   font-weight: 700;
   line-height: 20px;
+
+  text-align: center;
 
   color: #1d2e5b;
 }

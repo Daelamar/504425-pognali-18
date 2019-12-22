@@ -459,48 +459,68 @@
       </div>
       <fieldset class="form__fieldset first-step">
         <div class="first-step__container">
-          <h3 class="first-step__title">Шаг 1. Даты пребывания</h3>
+          <h3 class="first-step__title">Шаг 1.<br>Даты пребывания</h3>
           <p class="first-step__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы
             позвать
             в поездку и ее предполагаемую длительность.
           </p>
-          <p class="first-step__legend">Ищу попутчиков:</p>
-          <span class="first-step__caption">Чел.</span>
-          <label for="companions" class="first-step__label">
-            <span class="first-step__minus">-</span>
-            <span class="first-step__plus">+</span>
+          <div class="first-step__wrapper first-step__wrapper--companions">
+            <label for="companions" class="first-step__label">Ищу попутчиков:</label>
+            <span class="first-step__caption">Чел.</span>
             <input
               class="first-step__input"
               type="text"
               id="companions"
               name="companions"
               value="2">
-          </label>
-          <p class="first-step__legend">Ищу попутчиков:</p>
-          <span class="first-step__caption">Чел.</span>
-          <label for="days" class="first-step__label">
-            <span class="first-step__minus">-</span>
-            <span class="first-step__plus">+</span>
+            <button
+              class="first-step__minus"
+              type="button"
+              aria-label="Уменьшить колличество"></button>
+            <button
+              class="first-step__plus"
+              type="button"
+              aria-label="Уменьшить колличество"></button>
+          </div>
+          <div class="first-step__wrapper first-step__wrapper--duration">
+            <label for="days" class="first-step__label">Длительность:</label>
+            <span class="first-step__caption">Дн.</span>
             <input
               class="first-step__input"
               type="text"
               id="days"
               name="days"
               value="2">
-          </label>
-          <input
-            class="first-step__input"
-            type="checkbox"
-            id="children"
-            name="children"
-            value="2">
-          <label for="children" class="first-step__label">Можно с детьми</label>
-          <div class="first-step__date-block">
-            <button type="button" aria-label="Предыдущий месяц"></button>
-            <p class="first-step__date">Март 2019</p>
-            <button type="button" aria-label="Следующий месяц"></button>
+            <button
+              class="first-step__minus"
+              type="button"
+              aria-label="Уменьшить колличество"></button>
+            <button
+              class="first-step__plus"
+              type="button"
+              aria-label="Уменьшить колличество"></button>
+          </div>
+          <div class="first-step__wrapper first-step__wrapper--children">
+            <input
+              class="first-step__input visually-hidden"
+              type="checkbox"
+              id="children"
+              name="children"
+              value="2">
+            <label for="children" class="first-step__label">Можно с детьми</label>
           </div>
           <div class="first-step__calendar">
+            <div class="first-step__calendar-header">
+              <button
+                class="first-step__left-arrow"
+                type="button"
+                aria-label="Предыдущий месяц"></button>
+              <p class="first-step__date">Март 2019</p>
+              <button
+                class="first-step__right-arrow"
+                type="button"
+                aria-label="Следующий месяц"></button>
+            </div>
             <table class="first-step__table">
               <tbody>
               <tr class="first-step__row">
