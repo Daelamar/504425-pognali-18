@@ -6,7 +6,7 @@
 }
 
 .first-step__container {
-  padding: 24px 20px;
+  padding: 24px 20px 22px;
 }
 
 .first-step__title {
@@ -176,19 +176,43 @@
 }
 
 .first-step__calendar-header {
-  margin: 0 5px;
+  margin: 0 5px 21px;
   padding: 12px 50px 10px 52px;
   position: relative;
 
   border-top: 1px solid #cbced9;
   border-bottom: 1px solid #cbced9;
 
-  .first-step__left-arrow {
+  .first-step__arrow {
     position: absolute;
-  }
 
-  .first-step__right-arrow {
-    position: absolute;
+    width: 24px;
+    height: 42px;
+
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 9px 17px;
+
+
+    border: none;
+
+    opacity: 0.3;
+
+    &--left {
+      top: 0;
+      left: 0;
+
+      background-image: url("../../img/month-arrow-left.svg");
+      background-position: 0 12px;
+    }
+
+    &--right {
+      top: 0;
+      right: 0;
+
+      background-image: url("../../img/month-arrow-right.svg");
+      background-position: 15px 13px;
+    }
   }
 }
 
@@ -205,12 +229,18 @@
 }
 
 .first-step__table {
+  margin: 0 auto 22px;
+
+  width: 221px;
+
   border-collapse: collapse;
 }
 
 .first-step__cell {
-  width: 30px;
-  height: 30px;
+  padding: 3px 3px 0 3px;
+
+  width: 31px;
+  height: 31px;
 
   font-size: 14px;
   font-weight: 400;
@@ -238,6 +268,16 @@
   }
 }
 
+.first-step__row {
+  &--days {
+    height: 26px;
+
+    .first-step__day {
+      padding: 0 0 3px 2px;
+    }
+  }
+}
+
 .first-step__day {
   font-size: 14px;
   font-weight: 400;
@@ -253,11 +293,14 @@
 }
 
 .first-step__next {
+  padding: 8px 40px 2px;
   display: block;
+
   font-size: 17px;
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
+  text-align: center;
 
   color: #161c35;
 
