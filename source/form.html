@@ -598,144 +598,165 @@
         </div>
       </fieldset>
       <fieldset class="form__fieldset second-step">
-        <h3 class="second-step__title">Шаг 2. Маршрут</h3>
-        <p class="second-step__description">Укажите страны, которые вы хотели по посетить.
-          Это может быть одна или сразу несколько.
-        </p>
-        <label for="1-country" class="second-step__label">
-          <input
-            class="second-step__input"
-            type="text"
-            id="1-country"
-            name="1-country"
-            value="Босния и Герцегов">
-          <span class="second-step__delete"></span>
-        </label>
-        <label for="2-country" class="second-step__label">
-          <input
-            class="second-step__input"
-            type="text"
-            id="2-country"
-            name="2-country"
-            value="Чехия">
-          <span class="second-step__delete"></span>
-        </label>
-        <div class="second-step__wrapper">
-          <label for="3-country" class="second-step__label">
+        <div class="second-step__container">
+          <h3 class="second-step__title">Шаг 2.<br>Маршрут</h3>
+          <p class="second-step__description">Укажите страны, которые вы хотели по посетить.
+            Это может быть одна или сразу несколько.
+          </p>
+          <label for="1-country" class="second-step__label second-step__label--active">
+            <input
+              class="second-step__input second-step__input--active"
+              type="text"
+              id="1-country"
+              name="1-country"
+              value="Босния и Герцегов">
+            <button type="button" class="second-step__fade">
+              <span class="second-step__fade-icon"></span>
+            </button>
+            <span class="second-step__flag"></span>
+            <button type="button" class="second-step__delete">
+              <span class="second-step__delete-icon"></span>
+            </button>
+          </label>
+          <label for="2-country" class="second-step__label second-step__label--active">
             <input
               class="second-step__input"
               type="text"
-              id="3-country"
-              name="3-country"
-              placeholder="Выберите страну">
-            <span class="second-step__delete"></span>
+              id="2-country"
+              name="2-country"
+              value="Чехия">
+            <button type="button" class="second-step__fade">
+              <span class="second-step__fade-icon"></span>
+            </button>
+            <span class="second-step__flag"></span>
+            <button type="button" class="second-step__delete">
+              <span class="second-step__delete-icon"></span>
+            </button>
           </label>
-          <div class="second-step__dropdown dropdown">
-            <div class="dropdown__header">
-              <h3 class="dropdown__title">Выберите страну</h3>
-              <button class="dropdown__close" aria-label="Кнопка закрыть окно"></button>
-            </div>
-            <table class="dropdown__table">
-              <tbody>
-              <tr class="dropdown__row">
-                <td class="dropdown__cell dropdown__cell--active">А</td>
-                <td class="dropdown__cell">Б</td>
-                <td class="dropdown__cell">В</td>
-                <td class="dropdown__cell">Г</td>
-                <td class="dropdown__cell">Д</td>
-              </tr>
-              <tr>
-                <td class="dropdown__cell">Е</td>
-                <td class="dropdown__cell">З</td>
-                <td class="dropdown__cell">И</td>
-                <td class="dropdown__cell">К</td>
-                <td class="dropdown__cell">Л</td>
-              </tr>
-              <tr class="dropdown__row">
-                <td class="dropdown__cell">М</td>
-                <td class="dropdown__cell">Н</td>
-                <td class="dropdown__cell">О</td>
-                <td class="dropdown__cell">П</td>
-                <td class="dropdown__cell">Р</td>
-              </tr>
-              <tr class="dropdown__row">
-                <td class="dropdown__cell">С</td>
-                <td class="dropdown__cell">Т</td>
-                <td class="dropdown__cell">У</td>
-                <td class="dropdown__cell">Ф</td>
-                <td class="dropdown__cell">Х</td>
-              </tr>
-              <tr class="dropdown__row">
-                <td class="dropdown__cell">Ч</td>
-                <td class="dropdown__cell">Ш</td>
-                <td class="dropdown__cell">Э</td>
-                <td class="dropdown__cell">Ю</td>
-                <td class="dropdown__cell">Я</td>
-              </tr>
-              </tbody>
-            </table>
-            <div class="dropdown__list-container">
-              <ul class="dropdown__list">
-                <li class="dropdown__item">
-                  <a class="dropdown__link" href="#">Афганистан</a>
-                </li>
-                <li class="dropdown__item">
-                  <a class="dropdown__link" href="#">Албания</a>
-                </li>
-                <li class="dropdown__item">
-                  <a class="dropdown__link" href="#">Алжир</a>
-                </li>
-                <li class="dropdown__item">
-                  <a class="dropdown__link" href="#">Андорра</a>
-                </li>
-                <li class="dropdown__item">
-                  <a class=dropdown__link" href="#">Аргентина</a>
-                </li>
-                <li class=dropdown__item">
-                  <a class="dropdown__link" href="#">Армения</a>
-                </li>
-                <li class="dropdown__item">
-                  <a class="dropdown__link" href="#">Австралия</a>
-                </li>
-                <li class="dropdown__item">
-                  <a class="dropdown__link" href="#">Австрия</a>
-                </li>
-                <li class="dropdown__item">
-                  <a class="dropdown__link" href="#">Азербайджан</a>
-                </li>
-              </ul>
+          <div class="second-step__wrapper">
+            <label for="3-country" class="second-step__label">
+              <input
+                class="second-step__input"
+                type="text"
+                id="3-country"
+                name="3-country"
+                placeholder="Выберите страну">
+              <button type="button" class="second-step__fade">
+                <span class="second-step__fade-icon"></span>
+              </button>
+              <span class="second-step__flag"></span>
+              <button type="button" class="second-step__delete">
+                <span class="second-step__delete-icon"></span>
+              </button>
+            </label>
+            <div class="second-step__dropdown dropdown">
+              <div class="dropdown__header">
+                <h3 class="dropdown__title">Выберите страну</h3>
+                <button class="dropdown__close" aria-label="Кнопка закрыть окно"></button>
+              </div>
+              <table class="dropdown__table">
+                <tbody>
+                <tr class="dropdown__row">
+                  <td class="dropdown__cell dropdown__cell--active">А</td>
+                  <td class="dropdown__cell">Б</td>
+                  <td class="dropdown__cell">В</td>
+                  <td class="dropdown__cell">Г</td>
+                  <td class="dropdown__cell">Д</td>
+                </tr>
+                <tr>
+                  <td class="dropdown__cell">Е</td>
+                  <td class="dropdown__cell">З</td>
+                  <td class="dropdown__cell">И</td>
+                  <td class="dropdown__cell">К</td>
+                  <td class="dropdown__cell">Л</td>
+                </tr>
+                <tr class="dropdown__row">
+                  <td class="dropdown__cell">М</td>
+                  <td class="dropdown__cell">Н</td>
+                  <td class="dropdown__cell">О</td>
+                  <td class="dropdown__cell">П</td>
+                  <td class="dropdown__cell">Р</td>
+                </tr>
+                <tr class="dropdown__row">
+                  <td class="dropdown__cell">С</td>
+                  <td class="dropdown__cell">Т</td>
+                  <td class="dropdown__cell">У</td>
+                  <td class="dropdown__cell">Ф</td>
+                  <td class="dropdown__cell">Х</td>
+                </tr>
+                <tr class="dropdown__row">
+                  <td class="dropdown__cell">Ч</td>
+                  <td class="dropdown__cell">Ш</td>
+                  <td class="dropdown__cell">Э</td>
+                  <td class="dropdown__cell">Ю</td>
+                  <td class="dropdown__cell">Я</td>
+                </tr>
+                </tbody>
+              </table>
+              <div class="dropdown__list-container">
+                <ul class="dropdown__list">
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">Афганистан</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">Албания</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">Алжир</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">Андорра</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class=dropdown__link" href="#">Аргентина</a>
+                  </li>
+                  <li class=dropdown__item">
+                    <a class="dropdown__link" href="#">Армения</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">Австралия</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">Австрия</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown__link" href="#">Азербайджан</a>
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
+          <button type="button" class="second-step__add">Добавить страну</button>
+          <!-- Тут позже будет якоря -->
+          <a href="#" class="second-step__next">Следующий шаг</a>
+          <a href="#" class="second-step__previous">На шаг назад</a>
         </div>
-        <button type="button" class="second-step__add">Добавить страну</button>
-        <!-- Тут позже будет якоря -->
-        <a href="#" class="second-step__next">Следующий шаг</a>
-        <a href="#" class="second-step__previous">На шаг назад</a>
       </fieldset>
       <fieldset class="form__fieldset third-step">
-        <h3 class="third-step__title">Шаг 3. Развлечения</h3>
-        <p class="third-step__description">Укажите страны, которые вы хотели по посетить.
-          Это может быть одна или сразу несколько.
-        </p>
-        <label for="1-comment" class="third-step__label">Босния и герцегови
-          <span class="third-step__flag"></span>
-        </label>
-        <textarea
-          type="text"
-          id="1-comment"
-          name="1-comment"
-          placeholder="План действий"
-          class="third-step__input"></textarea>
-        <label for="2-comment" class="third-step__label">Чехия
-          <span class="third-step__flag"></span>
-        </label>
-        <textarea
-          id="2-comment"
-          name="2-comment"
-          class="third-step__input">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
-        <!-- Тут позже будет якоря -->
-        <button type="submit" class="third-step__submit">Отправить</button>
-        <a href="#" class="third-step__previous">На шаг назад</a>
+        <div class="third-step__container">
+          <h3 class="third-step__title">Шаг 3.<br>Развлечения</h3>
+          <p class="third-step__description">Наконец, расскажите о своих планах времяпровождения.
+            Можно писать в свободной форме и ставить тэги.</p>
+          <label for="1-comment" class="third-step__label">Босния и герцеговина
+            <span class="third-step__flag"></span>
+          </label>
+          <textarea
+            type="text"
+            id="1-comment"
+            name="1-comment"
+            placeholder="План действий"
+            class="third-step__input"></textarea>
+          <label for="2-comment" class="third-step__label">Чехия
+            <span class="third-step__flag"></span>
+          </label>
+          <textarea
+            id="2-comment"
+            name="2-comment"
+            class="third-step__input">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+          <button type="submit" class="third-step__submit">Отправить</button>
+          <!-- Тут позже будет якоря -->
+          <a href="#" class="third-step__previous">На шаг назад</a>
+        </div>
       </fieldset>
     </div>
   </form>
