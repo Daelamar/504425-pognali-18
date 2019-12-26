@@ -1,11 +1,36 @@
 @import "../global/mixins";
+@import "../global/variables";
+
+.dropdown {
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+
+  width: 220px;
+
+  transform: translate(-50%, -50%);
+
+  background-color: $color-white;
+  z-index: 4;
+
+  box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
+  border: solid 1px #cbced9;
+
+}
 
 .dropdown__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   background-color: #1d2e5b;
   border-radius: 4px 4px 0 0;
 }
 
 .dropdown__title {
+  padding: 0 0 0 13px;
+
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
@@ -24,7 +49,7 @@
 
 .dropdown__cell {
   width: 44px;
-  height: 42px;
+  height: 41px;
 
   font-size: 14px;
   font-weight: 500;
@@ -50,5 +75,50 @@
 }
 
 .dropdown__list-container {
+  padding: 55px 20px 16px;
   border-radius: 0 0 10px 10px;
+}
+
+.dropdown__list {
+  @include listStyle;
+}
+
+.dropdown__close {
+  position: relative;
+
+  width: 49px;
+  height: 42px;
+
+  background-color: transparent;
+  border: none;
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    top: 20px;
+    right: 16px;
+
+    width: 13px;
+    height: 1px;
+
+    background-color: #ffffff;
+
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    top: 20px;
+    right: 16px;
+
+    width: 13px;
+    height: 1px;
+
+    background-color: #ffffff;
+
+    transform: rotate(-45deg);
+  }
 }

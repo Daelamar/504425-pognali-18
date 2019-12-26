@@ -8,6 +8,21 @@
 
 .third-step__container {
   padding: 24px 20px 1px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    top: 198px;
+    left: 11px;
+
+    width: 15px;
+    height: 283px;
+
+    border: 2px solid #1d2e5b;
+    border-right: none;
+  }
 }
 
 .third-step__title {
@@ -30,8 +45,9 @@
 }
 
 .third-step__label {
-  margin: 0 auto;
+  margin: 0 auto 16px;
   padding: 2px 0 0 11px;
+
   position: relative;
   display: block;
 
@@ -47,7 +63,7 @@
     position: absolute;
     content: "";
 
-    top: -4px;
+    top: -7px;
     right: 36px;
 
     width: 49px;
@@ -55,13 +71,27 @@
 
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%);
   }
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    top: 8px;
+    left: -3px;
+
+    width: 6px;
+    height: 6px;
+
+    background-color: #1d2e5b;
+    border-radius: 50%;
+  }
 }
 
 .third-step__flag {
   position: absolute;
 
-  top: 1px;
-  right: 1px;
+  top: -2px;
+  right: 0;
 
   width: 35px;
   height: 24px;
@@ -71,7 +101,8 @@
 }
 
 .third-step__input {
-  margin: 0 auto;
+  margin: 0 auto 22px;
+  padding: 9px 13px;
   display: block;
 
   width: 220px;
@@ -87,13 +118,28 @@
   border: 1px solid #cbced9;
   border-radius: 4px;
   resize: none;
+
+  &--first {
+    margin: 0 auto 25px;
+  }
+
+  &::placeholder {
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
 
 .third-step__submit {
+  margin: 0 0 5px 0;
+  padding: 8px 40px 2px;
+  display: block;
+
+  width: 100%;
+
   font-size: 17px;
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
+  text-align: center;
 
   color: #161c35;
 
@@ -103,12 +149,19 @@
 }
 
 .third-step__previous {
+  padding: 8px 40px 8px;
   display: block;
+
+  width: 100%;
+
   font-size: 17px;
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
+  text-align: center;
 
   color: #161c35;
+
+  border-radius: 20px;
   border: none;
 }

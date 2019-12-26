@@ -633,99 +633,21 @@
               <span class="second-step__delete-icon"></span>
             </button>
           </label>
-          <div class="second-step__wrapper">
-            <label for="3-country" class="second-step__label">
-              <input
-                class="second-step__input"
-                type="text"
-                id="3-country"
-                name="3-country"
-                placeholder="Выберите страну">
-              <button type="button" class="second-step__fade">
-                <span class="second-step__fade-icon"></span>
-              </button>
-              <span class="second-step__flag"></span>
-              <button type="button" class="second-step__delete">
-                <span class="second-step__delete-icon"></span>
-              </button>
-            </label>
-            <div class="second-step__dropdown dropdown">
-              <div class="dropdown__header">
-                <h3 class="dropdown__title">Выберите страну</h3>
-                <button class="dropdown__close" aria-label="Кнопка закрыть окно"></button>
-              </div>
-              <table class="dropdown__table">
-                <tbody>
-                <tr class="dropdown__row">
-                  <td class="dropdown__cell dropdown__cell--active">А</td>
-                  <td class="dropdown__cell">Б</td>
-                  <td class="dropdown__cell">В</td>
-                  <td class="dropdown__cell">Г</td>
-                  <td class="dropdown__cell">Д</td>
-                </tr>
-                <tr>
-                  <td class="dropdown__cell">Е</td>
-                  <td class="dropdown__cell">З</td>
-                  <td class="dropdown__cell">И</td>
-                  <td class="dropdown__cell">К</td>
-                  <td class="dropdown__cell">Л</td>
-                </tr>
-                <tr class="dropdown__row">
-                  <td class="dropdown__cell">М</td>
-                  <td class="dropdown__cell">Н</td>
-                  <td class="dropdown__cell">О</td>
-                  <td class="dropdown__cell">П</td>
-                  <td class="dropdown__cell">Р</td>
-                </tr>
-                <tr class="dropdown__row">
-                  <td class="dropdown__cell">С</td>
-                  <td class="dropdown__cell">Т</td>
-                  <td class="dropdown__cell">У</td>
-                  <td class="dropdown__cell">Ф</td>
-                  <td class="dropdown__cell">Х</td>
-                </tr>
-                <tr class="dropdown__row">
-                  <td class="dropdown__cell">Ч</td>
-                  <td class="dropdown__cell">Ш</td>
-                  <td class="dropdown__cell">Э</td>
-                  <td class="dropdown__cell">Ю</td>
-                  <td class="dropdown__cell">Я</td>
-                </tr>
-                </tbody>
-              </table>
-              <div class="dropdown__list-container">
-                <ul class="dropdown__list">
-                  <li class="dropdown__item">
-                    <a class="dropdown__link" href="#">Афганистан</a>
-                  </li>
-                  <li class="dropdown__item">
-                    <a class="dropdown__link" href="#">Албания</a>
-                  </li>
-                  <li class="dropdown__item">
-                    <a class="dropdown__link" href="#">Алжир</a>
-                  </li>
-                  <li class="dropdown__item">
-                    <a class="dropdown__link" href="#">Андорра</a>
-                  </li>
-                  <li class="dropdown__item">
-                    <a class=dropdown__link" href="#">Аргентина</a>
-                  </li>
-                  <li class=dropdown__item">
-                    <a class="dropdown__link" href="#">Армения</a>
-                  </li>
-                  <li class="dropdown__item">
-                    <a class="dropdown__link" href="#">Австралия</a>
-                  </li>
-                  <li class="dropdown__item">
-                    <a class="dropdown__link" href="#">Австрия</a>
-                  </li>
-                  <li class="dropdown__item">
-                    <a class="dropdown__link" href="#">Азербайджан</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <label for="3-country" class="second-step__label">
+            <input
+              class="second-step__input"
+              type="text"
+              id="3-country"
+              name="3-country"
+              placeholder="Выберите страну">
+            <button type="button" class="second-step__fade">
+              <span class="second-step__fade-icon"></span>
+            </button>
+            <span class="second-step__flag"></span>
+            <button type="button" class="second-step__delete">
+              <span class="second-step__delete-icon"></span>
+            </button>
+          </label>
           <button type="button" class="second-step__add">Добавить страну</button>
           <!-- Тут позже будет якоря -->
           <a href="#" class="second-step__next">Следующий шаг</a>
@@ -745,7 +667,7 @@
             id="1-comment"
             name="1-comment"
             placeholder="План действий"
-            class="third-step__input"></textarea>
+            class="third-step__input third-step__input--first"></textarea>
           <label for="2-comment" class="third-step__label">Чехия
             <span class="third-step__flag"></span>
           </label>
@@ -763,64 +685,193 @@
 </main>
 <footer class="main-footer">
   <div class="main-footer__container">
-    <a class="main-footer__logo-link">
+    <a href="index.html" class="main-footer__logo-link">
       <img
-        class="main-footer__logo"
+        class="main-footer__logo main-footer__logo--mobile"
         src="img/logo-mobile-blue@1x.png"
         alt="Логотип сайта Погнали!"
         width="100"
         height="19">
+      <img
+        class="main-footer__logo main-footer__logo--tablet"
+        src="img/logo-tablet-blue@1x.png"
+        alt="Логотип сайта Погнали!"
+        width="166"
+        height="42">
+      <img
+        class="main-footer__logo main-footer__logo--desktop"
+        src="img/logo-desktop-blue@1x.png"
+        alt="Логотип сайта Погнали!"
+        width="200"
+        height="52">
     </a>
-    <ul class="social-list">
+    <ul class="main-footer__list social-list">
       <li class="social-list__item">
         <a
           href="https://www.facebook.com/"
-          class="social-list__link social-list__link--facebook"
+          class="social-list__link social-list__link--facebook social-list__link--footer"
           aria-label="Наша страница на Фейсбук">
-          <img
-            src="img/facebook.svg"
-            alt="Наша страница на Фейсбук"
+          <svg
             width="11"
-            height="21">
+            height="21"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 11 21">
+            <path
+              d="M7.8 21H2.2v-9.8H0V6.4h2.1c-.1-2.2.3-3.8
+              1.3-4.9C4.2.6 5.5.1 7.1 0H11v4.7H7.9c-.1.2-.2.8-.2 1.7H11v4.8H7.8V21zm-4.4-1.1h3.1v-9.8h3.2V7.5H6.5v-.6c0-1.5
+              0-2.9.8-3.4l.2-.1h2.3V1.1H7.1c-1.2.1-2.2.5-2.8 1.2-.8.9-1.1 2.5-.9 4.6l.1.6H1.2v2.6h2.2v9.8z"/>
+          </svg>
         </a>
       </li>
       <li class="social-list__item">
         <a
           href="https://vk.com/"
-          class="social-list__link"
+          class="social-list__link social-list__link--vk social-list__link--footer"
           aria-label="Наша страница во Вконтакте">
-          <img
-            src="img/vk.svg"
-            alt="Наша страница во Вконтакте"
+          <svg
             width="23"
-            height="12">
+            height="12"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 30 15.8">
+            <path
+              d="M23.9 15.8c-.4 0-1.2-.1-2.1-.6-.6-.4-1.2-1-1.8-1.5-.4-.4-1.2-1.2-1.4-1.2-.3.1-.5.9-.5 1.6
+              0 .1 0 .8-.5 1.2-.4.4-1.1.5-1.2.5h-1.9c-1 0-4.4-.2-7.4-3C3.4
+              9.4.3 3 .1 2.7 0 2.2-.1 1.5.3 1.1.7.7 1.4.6 1.7.6H5.9c.1
+              0 .6.1 1 .3.4.2.6.7.6.7S8.1 3 9 4.3c1.3 2 1.9 2.5 2.1 2.6.2-.4.3-1.7.2-2.9
+              0-.5-.1-1.1-.3-1.3-.1-.1-.4-.3-.8-.3l-.7-.6c-.1-.7.6-1.2 1.1-1.4.7-.3
+              1.8-.4 3.1-.4h.7c1.2 0 1.6.1 2.1.2 1.7.4 1.6 1.7 1.6 3.3v2.1c0 .4 0
+              1 .1 1.3.2-.1.9-.7 2.1-2.5.8-1.2 1.4-2.5 1.5-2.8.2-.4.6-.9 1.6-.9h4.7c1
+              0 1.6.3 1.8.9.3.6.2 1.7-2.4 4.6-.4.4-.7.8-1 1.1-.6.7-1.2 1.4-1.2 1.6.1.1.7.6 1.3
+              1.1 1.5 1.2 2.5 2.3 3 3.1.5.8.4 1.3.3 1.7-.4.9-1.6 1-1.9 1h-4.1zm-5.3-4.9c.9 0
+              1.7.8 2.5 1.6.5.5 1 1 1.5 1.3.7.4 1.3.4 1.4.4h3.9c.2 0 .4-.1.5-.1 0 0
+              0-.1-.1-.2-.4-.7-1.4-1.7-2.7-2.7-1.2-1-1.8-1.5-1.9-2.2-.1-.8.5-1.4
+              1.6-2.7.3-.3.6-.7 1-1.1 1.6-1.8 2-2.6 2.1-3H23.1c-.2.4-.8 1.8-1.6
+              3-1.9 2.8-2.8 3.2-3.4 3.2-.2 0-.4 0-.6-.1-1-.6-1-1.8-.9-2.8v-.4-1.7c.1-1.7
+              0-1.7-.4-1.8-.4-.1-.7-.1-1.9-.2h-.7c-.6 0-1.3 0-1.9.1l.3.3c.6.7.6 2 .6 2.2.1
+              1.6.1 3.8-1 4.3-.2.1-.4.1-.6.1-.9 0-1.9-.9-3.4-3.3-.8-1.2-1.5-2.7-1.5-2.8L6
+              2.2c-.1 0-.2-.1-.3-.1h-4-.1c.6 1.2 3.4 6.6 6.5 9.5 2.7 2.5 5.8 2.6 6.4
+              2.6h1.9s.2-.1.3-.1V14c0-.3 0-2.6 1.6-3 .1-.1.2-.1.3-.1z"/>
+          </svg>
         </a>
       </li>
       <li class="social-list__item">
         <a
           href="https://www.instagram.com/"
-          class="social-list__link"
+          class="social-list__link social-list__link--instagram social-list__link--footer"
           aria-label="Наша страница в Инстаграм">
-          <img
-            src="img/instagram.svg"
-            alt="Наша страница во Вконтакте"
-            width="23"
-            height="12">
+          <svg
+            width="18"
+            height="18"
+            fill="#231f20"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 23 23">
+            <path d="M17 1.5c2.5 0 4.5 2 4.5 4.5v11c0 2.5-2 4.5-4.5 4.5H6c-2.5
+            0-4.5-2-4.5-4.5V6c0-2.5 2-4.5 4.5-4.5h11M17 0H6C2.7 0 0 2.7
+            0 6v11c0 3.3 2.7 6 6 6h11c3.3 0 6-2.7 6-6V6c0-3.3-2.7-6-6-6z"/>
+            <path d="M11.5 7.1c2.4 0 4.4 2 4.4 4.4 0 2.4-2 4.4-4.4
+            4.4-2.4 0-4.4-2-4.4-4.4 0-2.4 2-4.4 4.4-4.4m0-1.5c-3.3
+            0-5.9 2.7-5.9 5.9s2.7 5.9 5.9 5.9 5.9-2.7 5.9-5.9-2.6-5.9-5.9-5.9z"/>
+            <circle class="st0" cx="17.6" cy="5.4" r="1.3"/>
+          </svg>
         </a>
       </li>
     </ul>
     <div class="main-footer__wrapper">
       <p class="main-footer__copyright">Разработано</p>
       <a href="https://htmlacademy.ru/" class="main-footer__academy-link">
-        <img
-          class="main-footer__logo-academy"
-          src="img/htmlacademy.svg"
-          alt="Логотип HTMLAcademy"
+        <svg
           width="27"
-          height="34">
+          height="34"
+          fill="#231f20"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 27 34">
+          <path
+            d="M13.6 0h-.2L0 1.4V26l13.5 8L27 26V1.4L13.6
+            0zm5.7 16.8l-.9.5-5-3v1.4l3.8 2.3-.8.5-3-1.8v1.4l1.9
+            1.1-1.8 1.1L2 13.6l11.4-6.8L25 13.5l-4.5 2.6-7.1-4.2v1.4l5.9
+            3.5zM1.9 15.1l11.4 6.8v1l-8-4.7v1.4l8 4.8v1.1l-8-4.7v1.4l8
+            4.8 8.2-4.9V17l3.4-2v10l-11.6 6.9-11.4-7v-9.8zm0-3v-9l11.6-1.2
+            11.6 1.2v9L13.5 5.3v-.1h-.2v.1L1.9 12.1z"/>
+        </svg>
       </a>
     </div>
   </div>
 </footer>
+<div class="dropdown">
+  <div class="dropdown__header">
+    <h3 class="dropdown__title">Выберите страну</h3>
+    <button class="dropdown__close" aria-label="Кнопка закрыть окно"></button>
+  </div>
+  <table class="dropdown__table">
+    <tbody>
+    <tr class="dropdown__row">
+      <td class="dropdown__cell dropdown__cell--active">А</td>
+      <td class="dropdown__cell">Б</td>
+      <td class="dropdown__cell">В</td>
+      <td class="dropdown__cell">Г</td>
+      <td class="dropdown__cell">Д</td>
+    </tr>
+    <tr>
+      <td class="dropdown__cell">Е</td>
+      <td class="dropdown__cell">З</td>
+      <td class="dropdown__cell">И</td>
+      <td class="dropdown__cell">К</td>
+      <td class="dropdown__cell">Л</td>
+    </tr>
+    <tr class="dropdown__row">
+      <td class="dropdown__cell">М</td>
+      <td class="dropdown__cell">Н</td>
+      <td class="dropdown__cell">О</td>
+      <td class="dropdown__cell">П</td>
+      <td class="dropdown__cell">Р</td>
+    </tr>
+    <tr class="dropdown__row">
+      <td class="dropdown__cell">С</td>
+      <td class="dropdown__cell">Т</td>
+      <td class="dropdown__cell">У</td>
+      <td class="dropdown__cell">Ф</td>
+      <td class="dropdown__cell">Х</td>
+    </tr>
+    <tr class="dropdown__row">
+      <td class="dropdown__cell">Ч</td>
+      <td class="dropdown__cell">Ш</td>
+      <td class="dropdown__cell">Э</td>
+      <td class="dropdown__cell">Ю</td>
+      <td class="dropdown__cell">Я</td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="dropdown__list-container">
+    <ul class="dropdown__list">
+      <li class="dropdown__item">
+        <a class="dropdown__link" href="#">Афганистан</a>
+      </li>
+      <li class="dropdown__item">
+        <a class="dropdown__link" href="#">Албания</a>
+      </li>
+      <li class="dropdown__item">
+        <a class="dropdown__link" href="#">Алжир</a>
+      </li>
+      <li class="dropdown__item">
+        <a class="dropdown__link" href="#">Андорра</a>
+      </li>
+      <li class="dropdown__item">
+        <a class="dropdown__link" href="#">Аргентина</a>
+      </li>
+      <li class=dropdown__item">
+        <a class="dropdown__link" href="#">Армения</a>
+      </li>
+      <li class="dropdown__item">
+        <a class="dropdown__link" href="#">Австралия</a>
+      </li>
+      <li class="dropdown__item">
+        <a class="dropdown__link" href="#">Австрия</a>
+      </li>
+      <li class="dropdown__item">
+        <a class="dropdown__link" href="#">Азербайджан</a>
+      </li>
+    </ul>
+  </div>
+</div>
 </body>
 </html>
