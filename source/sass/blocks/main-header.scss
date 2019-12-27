@@ -246,12 +246,53 @@
     }
 
     &--form {
+      border-radius: 0 0 60px 60px;
+
       .main-header__user-menu {
         display: flex;
       }
 
+      .main-header__container {
+        padding: 40px 40px 62px;
+        align-items: flex-start;
+
+        &::after {
+          bottom: -4px;
+          left: 76px;
+
+          width: 355px;
+          height: 8px;
+
+          background-color: #ff8d30;
+          border-radius: 4px;
+        }
+      }
+
       .main-header__title {
+        padding: 0 34px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
         width: 100%;
+
+        font-size: 60px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.17;
+        letter-spacing: normal;
+      }
+
+      .main-header__logo-link {
+        margin: 5px 0 132px 0;
+      }
+
+      .main-header__button {
+        &::after {
+          top: 20px;
+        }
       }
     }
 

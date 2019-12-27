@@ -2,6 +2,7 @@
 @import "../global/variables";
 
 .dropdown {
+  display: none;
   position: fixed;
 
   top: 50%;
@@ -15,8 +16,9 @@
   z-index: 4;
 
   box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
-  border: solid 1px #cbced9;
+  border-radius: 4px 4px 10px 10px;
 
+  overflow: hidden;
 }
 
 .dropdown__header {
@@ -43,7 +45,7 @@
 
 .dropdown__table {
   background-color: #ffffff;
-  border: 1px solid #cbced9;
+
   border-collapse: collapse;
 }
 
@@ -77,6 +79,9 @@
 .dropdown__list-container {
   padding: 55px 20px 16px;
   border-radius: 0 0 10px 10px;
+
+  border: 1px solid #cbced9;
+  border-top: none;
 }
 
 .dropdown__list {

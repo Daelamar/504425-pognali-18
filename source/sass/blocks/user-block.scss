@@ -1,4 +1,5 @@
 @import "../global/mixins";
+@import "../global/variables";
 
 .user-block {
   margin: 0 0 -60px 0;
@@ -157,6 +158,7 @@
     border-radius: 50%;
 
     & svg {
+      transition-duration: 0.2s;
       opacity: 0.15;
     }
   }
@@ -201,9 +203,157 @@
 
 @media (min-width: $tablet-width) {
   .user-block__container {
+    padding: 124px 75px 120px;
+    display: flex;
+  }
+
+  .user-block__level {
+    margin: 0 60px 0 0;
+    padding: 12px 0 4px 1px;
+
+    width: 94px;
+    height: 94px;
+
+    order: -2;
+
+    &::after {
+      top: 53px;
+      left: 19px;
+    }
+  }
+
+  .user-block__transport {
+    margin: 0;
+    padding: 0;
+
     display: flex;
     flex-direction: column;
-    height: 600px; //todo: Временно для сетки
+    justify-content: space-between;
+
+    width: 308px;
+    min-height: 94px;
+
+    border-radius: 10px;
+
+    order: -1;
+
+    .user-block__label {
+      margin: 0 8px 5px 0;
+      padding: 0;
+
+      width: 43px;
+      height: 43px;
+
+      &--flight svg {
+        margin: 0 5px 0 0;
+
+        width: 19px;
+        height: 21px;
+      }
+
+      &--transport svg {
+        width: 17px;
+        height: 21px;
+      }
+
+      &--bicycle svg {
+        width: 24px;
+        height: 21px;
+      }
+
+      &--afoot svg {
+        width: 20px;
+        height: 21px;
+      }
+    }
+  }
+
+  .user-block__list {
+    margin: 24px 0 9px 55px;
+    padding: 0;
+
+    width: auto;
+  }
+
+  .user-block__title {
+    margin: 0 auto -9px;
+
+    width: 153px;
+    height: 16px;
+
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.9;
+    letter-spacing: 2px;
+    text-align: center;
+
+    order: 1;
+  }
+
+  .user-block__img {
+    margin: 0 0 0 auto;
+
+    width: 94px;
+    height: 94px;
+
+    border-radius: 10px;
+  }
+
+  .user-block__button {
+    margin: 52px 0 51px 0;
+    padding: 22px 200px 20px;
+
+    width: 618px;
+
+    font-size: 20px;
+    font-weight: 500;
+
+    line-height: 0.9;
+    letter-spacing: 2px;
+
+    border-radius: 10px;
+  }
+
+  .user-block__tags {
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 618px;
+    min-height: 94px;
+
+    border-radius: 10px;
+
+    .user-block__label {
+      margin: 0 auto -12px;
+
+      width: 83px;
+
+      font-size: 20px;
+      font-weight: 500;
+
+      line-height: 0.9;
+      letter-spacing: 2px;
+      text-align: center;
+
+      order: 1;
+    }
+  }
+
+  .user-block__textarea {
+    padding: 34px 40px 0px;
+
+    width: 100%;
+
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
   }
 }
 
