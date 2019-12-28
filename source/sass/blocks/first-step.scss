@@ -76,7 +76,7 @@
   .first-step__minus {
     position: absolute;
 
-    top: 26px;
+    bottom: 1px;
     left: 6px;
 
     width: 41px;
@@ -98,7 +98,7 @@
   .first-step__plus {
     position: absolute;
 
-    top: 26px;
+    bottom: 1px;
     right: 6px;
 
     width: 41px;
@@ -142,7 +142,7 @@
 
       text-transform: none;
 
-      color: #444444;
+      color: #1d2e5b;
 
       &::before {
         position: absolute;
@@ -301,6 +301,10 @@
   &--red {
     color: #ff5c23;
   }
+
+  & span {
+    display: none;
+  }
 }
 
 .first-step__next {
@@ -319,4 +323,225 @@
 
   background-color: #ffd74b;
   border-radius: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .first-step__container {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 43px 55px;
+  }
+
+  .first-step__title {
+    margin: 0 0 35px 0;
+    padding: 0;
+
+    font-size: 36px;
+    line-height: 1;
+    text-align: left;
+
+    order: -4;
+  }
+
+  .first-step__description {
+    margin: 0 0 37px 0;
+    padding: 0 15px 0 0;
+
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.2;
+    text-align: left;
+
+    order: -3;
+  }
+
+  .first-step__wrapper {
+    .first-step__minus {
+      bottom: 0;
+      left: 2px;
+
+      width: 66px;
+      height: 70px;
+
+      background-size: 20px 20px;
+    }
+
+    .first-step__plus {
+      bottom: 0;
+      right: 2px;
+
+      width: 66px;
+      height: 70px;
+
+      background-size: 20px 20px;
+      background-position: 28px center;
+    }
+
+    &--companions {
+      margin: 0 0 34px 0;
+
+      border-top: 1px solid #cbced9;
+      order: -2;
+    }
+
+    &--duration {
+      margin: 0 0 59px 0;
+      border-top: 1px solid #cbced9;
+    }
+
+    &--children {
+      margin: 0 0 33px 0;
+      justify-content: left;
+      align-items: center;
+
+      order: -1;
+
+      .first-step__label {
+        padding: 0 0 0 59px;
+
+        font-size: 20px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        &::before {
+          top: -9px;
+          left: 1px;
+
+          width: 36px;
+          height: 36px;
+        }
+      }
+
+      .first-step__input:checked + .first-step__label {
+        &::before {
+          background-size: 12px 12px;
+        }
+      }
+    }
+  }
+
+  .first-step__input {
+    margin: 0 auto;
+    padding: 4px 60px 0 63px;
+
+    width: 531px;
+    height: 70px;
+
+    font-size: 20px;
+    line-height: 0.9;
+  }
+
+  .first-step__label {
+    margin: 0;
+    padding: 24px 0 25px 0;
+
+    font-size: 20px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+    text-align: left;
+  }
+
+  .first-step__caption {
+    margin: 0;
+    padding: 24px 0 25px 0;
+
+    font-size: 20px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+  }
+
+  .first-step__calendar-header {
+    margin: 0 0 21px;
+    padding: 27px 52px 19px 50px;
+
+    .first-step__arrow {
+      width: 45px;
+      height: 85px;
+
+      background-size: 30px 35px;
+
+      border: none;
+
+      &--left {
+        background-position: 12px 26px;
+      }
+
+      &--right {
+        background-position: 4px 25px;
+      }
+    }
+  }
+
+  .first-step__date {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: normal;
+  }
+
+  .first-step__table {
+    margin: 0 0 46px 0;
+
+    width: 530px;
+  }
+
+  .first-step__cell {
+    padding: 3px 2px 0 7px;
+
+    width: 75px;
+    height: 69px;
+
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+
+  .first-step__row {
+    &--days {
+      height: 44px;
+
+      .first-step__day {
+        padding: 11px 0 0 8px;
+      }
+    }
+  }
+
+  .first-step__day {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.67;
+    letter-spacing: 1.8px;
+
+    & span {
+      display: inline;
+      text-transform: none;
+    }
+  }
+
+  .first-step__next {
+    padding: 30px 52px 27px 34px;
+    position: relative;
+
+    width: 285px;
+
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    text-align: left;
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      top: 34px;
+      right: 35px;
+
+      width: 10px;
+      height: 14px;
+      background-image: url("../img/triangle-arrow-right.svg");
+      background-repeat: no-repeat;
+    }
+  }
 }

@@ -94,7 +94,84 @@
 
 @media (min-width: $tablet-width) {
   .plans__container {
-    height: 600px; //todo: Временно для сетки
+    padding: 50px 75px 129px;
+  }
+
+  .plans__title {
+    margin: 0 0 41px 0;
+
+    font-size: 36px;
+    line-height: 1.39;
+  }
+
+  .plans__item {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    background-color: #ffffff;
+  }
+
+  .plans__item-title {
+    margin: 0;
+    padding: 28px 28px 20px 36px;
+
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+
+    font-size: 24px;
+    line-height: 2.08;
+
+    border-bottom: solid 1px rgba(203, 206, 217, 0.3);
+  }
+
+  .plans__number {
+    margin: 0 0 0 50px;
+    padding: 5px 0 0 0;
+
+    font-size: 20px;
+    line-height: 2.08;
+    letter-spacing: 2px;
+
+    order: 1;
+  }
+
+  .plans__traveler {
+    margin: 0;
+    padding: 18px 0 14px 33px;
+
+    width: 206px;
+
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    text-align: left;
+  }
+
+  .plans__dates {
+    margin: 0;
+    padding: 18px 8px 14px 6px;
+
+    width: 206px;
+
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    text-align: center;
+  }
+
+  .plans__change {
+    margin: 0;
+    padding: 18px 33px 14px 0;
+
+    width: 206px;
+
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 1.1;
+    text-align: right;
   }
 }
 

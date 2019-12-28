@@ -8,7 +8,7 @@
   background-color: #d4d9eb;
   border-radius: 30px 30px 0 0;
 
-  z-index: 3;
+  z-index: 4;
 
   .form__fieldset {
     margin: 0 0 10px 0;
@@ -70,8 +70,31 @@
 //Таблетка
 
 @media (min-width: $tablet-width) {
+  .form__container {
+    padding: 46px 75px 94px;
+  }
+
+  .form__header {
+    margin: 0 0 49px 0;
+  }
+
   .form__fieldset {
     border-radius: 30px;
+  }
+
+  .form__main-title {
+
+    width: auto;
+
+    font-size: 36px;
+    line-height: 1.39;
+    letter-spacing: normal;
+    text-align: left;
+  }
+
+  .form__crumbs {
+    margin: 0 0 5px 0;
+    width: 73px;
   }
 }
 
