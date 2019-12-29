@@ -279,3 +279,136 @@
   border-radius: 20px;
   border: none;
 }
+
+@media (min-width: $tablet-width) {
+  .second-step__container {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 43px 55px;
+  }
+
+  .second-step__title {
+    margin: 0 0 35px 0;
+    padding: 0;
+
+    font-size: 36px;
+    line-height: 1;
+    text-align: left;
+  }
+
+  .second-step__description {
+    position: relative;
+    margin: 0 0 74px 0;
+    padding: 0 120px 0 0;
+
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.2;
+    text-align: left;
+
+    &::before {
+      position: absolute;
+      content: "";
+
+      bottom: -33px;
+      left: 0;
+
+      width: 529px;
+      height: 1px;
+
+      background-color: #cbced9;
+    }
+  }
+
+  .second-step__label {
+    margin: 0 0 15px 0;
+    justify-content: space-between;
+
+    width: 529px;
+
+    &::before {
+      top: 26px;
+      right: 126px;
+
+      width: 15px;
+      height: 15px;
+
+      border: solid 1px #cbced9;
+      background-color: $color-white;
+    }
+
+    &--active {
+      .second-step__input {
+        width: 369px;
+        height: 70px;
+      }
+
+      .second-step__fade {
+        top: 1px;
+        left: auto;
+        right: 161px;
+
+        width: 70px;
+        height: 68px;
+
+        background: transparent;
+      }
+
+      &::before {
+        border: none;
+        background-color: #1d2e5b;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+
+      top: -41px;
+      right: 133px;
+
+      width: 1px;
+      height: 140px;
+
+      background: #cbced9;
+      opacity: 1;
+    }
+  }
+
+  .second-step__input {
+    margin: 0;
+    padding: 27px 80px 24px 24px;
+
+    width: 369px;
+    height: 70px;
+
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.9;
+    letter-spacing: 2px;
+    text-align: left;
+  }
+
+  .second-step__fade-icon {
+    width: 17px;
+    height: 9px;
+
+    background-image: url("../img/dropdown-form.svg");
+    background-repeat: no-repeat;
+
+    opacity: 0.3;
+  }
+
+  .second-step__fade {
+    top: 1px;
+    left: auto;
+    right: 161px;
+
+    width: 70px;
+    height: 68px;
+
+    background: transparent;
+  }
+}

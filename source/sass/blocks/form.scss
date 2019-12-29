@@ -70,6 +70,12 @@
 //Таблетка
 
 @media (min-width: $tablet-width) {
+  .form {
+    .form__fieldset {
+      margin: 0 0 40px 0;
+    }
+  }
+
   .form__container {
     padding: 46px 75px 94px;
   }
