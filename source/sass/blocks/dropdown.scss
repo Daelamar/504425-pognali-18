@@ -2,7 +2,7 @@
 @import "../global/variables";
 
 .dropdown {
-  display: none;
+  display: block;
   position: fixed;
 
   top: 50%;
@@ -12,7 +12,6 @@
 
   transform: translate(-50%, -50%);
 
-  background-color: $color-white;
   z-index: 10;
 
   box-shadow: 0 20px 50px 0 rgba(29, 46, 91, 0.1);
@@ -44,7 +43,7 @@
 }
 
 .dropdown__table {
-  background-color: #ffffff;
+  background-color: $color-white;
 
   border-collapse: collapse;
 }
@@ -79,6 +78,8 @@
 .dropdown__list-container {
   padding: 55px 20px 16px;
   border-radius: 0 0 10px 10px;
+
+  background-color: $color-white;
 
   border: 1px solid #cbced9;
   border-top: none;
@@ -125,5 +126,49 @@
     background-color: #ffffff;
 
     transform: rotate(-45deg);
+  }
+}
+
+//Таблетка
+
+@media (min-width: $tablet-width) {
+  .dropdown {
+    width: 575px;
+
+    transform: translate(-50%, -50%);
+
+    z-index: 10;
+
+    background-color: transparent;
+
+    box-shadow: none;
+  }
+
+  .dropdown__container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 575px;
+
+    box-shadow: 0 20px 50px -20px rgba(29, 46, 91, 0.1);
+  }
+
+  .dropdown__header {
+    width: 370px;
+  }
+
+  .dropdown__table {
+    width: 370px;
+  }
+
+  .dropdown__list-container {
+    width: 205px;
+
+    border: none;
+    border-left: 1px solid #cbced9;
+
+    border-radius: 0 0 10px 0;
   }
 }

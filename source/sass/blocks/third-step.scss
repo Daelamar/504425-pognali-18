@@ -165,3 +165,181 @@
   border-radius: 20px;
   border: none;
 }
+
+//Таблетка
+
+@media (min-width: $tablet-width) {
+  .third-step__container {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 43px 47px;
+
+    &::before {
+      top: 288px;
+      left: auto;
+      right: 46px;
+
+      width: 3px;
+      height: 260px;
+
+      background-color: #1d2e5b;
+      border: none;
+    }
+  }
+
+  .third-step__title {
+    margin: 0 0 35px 0;
+    padding: 0;
+
+    font-size: 36px;
+    line-height: 1;
+    text-align: left;
+  }
+
+  .third-step__description {
+    position: relative;
+    margin: 0 0 70px 0;
+    padding: 0 5px 5px 0;
+
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.2;
+    text-align: left;
+
+    &::before {
+      position: absolute;
+      content: "";
+
+      bottom: -28px;
+      left: 2px;
+
+      width: 527px;
+      height: 1px;
+
+      background-color: #cbced9;
+    }
+  }
+
+  .third-step__label {
+    margin: 0 0 43px 0;
+    padding: 0;
+
+    width: 527px;
+
+    font-size: 30px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.6;
+    letter-spacing: normal;
+
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      top: 2px;
+      left: auto;
+      right: -8px;
+
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .third-step__input {
+    margin: 0 0 47px 2px;
+    padding: 17px;
+    display: block;
+
+    width: 499px;
+    height: 142px;
+
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.2;
+    letter-spacing: normal;
+
+    &--first {
+      margin-bottom: 58px;
+    }
+
+    &--second {
+      padding: 17px 40px 17px 17px;
+    }
+  }
+
+  .third-step__flag {
+    top: -15px;
+    right: 27px;
+
+    width: 70px;
+    height: 47px;
+
+    border-radius: 6px;
+  }
+
+  .third-step__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .third-step__submit {
+    padding: 30px 52px 27px 34px;
+    position: relative;
+
+    width: 285px;
+
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    text-align: left;
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      top: 34px;
+      right: 35px;
+
+      width: 10px;
+      height: 14px;
+      background-image: url("../img/triangle-arrow-right.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .third-step__previous {
+    padding: 23px 0 27px 5px;
+    position: relative;
+
+    width: 200px;
+
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    text-align: right;
+
+    color: #1d2e5b;
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      top: 27px;
+      left: 22px;
+
+      width: 10px;
+      height: 14px;
+      background-image: url("../img/triangle-arrow-left.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}

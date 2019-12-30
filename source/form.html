@@ -676,10 +676,12 @@
           <textarea
             id="2-comment"
             name="2-comment"
-            class="third-step__input">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
-          <button type="submit" class="third-step__submit">Отправить</button>
-          <!-- Тут позже будет якоря -->
-          <a href="#" class="third-step__previous">На шаг назад</a>
+            class="third-step__input third-step__input--second">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+          <div class="third-step__buttons">
+            <button type="submit" class="third-step__submit">Отправить</button>
+            <!-- Тут позже будет якоря -->
+            <a href="#" class="third-step__previous">На шаг назад</a>
+          </div>
         </div>
       </fieldset>
     </div>
@@ -804,75 +806,77 @@
     <h3 class="dropdown__title">Выберите страну</h3>
     <button class="dropdown__close" aria-label="Кнопка закрыть окно"></button>
   </div>
-  <table class="dropdown__table">
-    <tbody>
-    <tr class="dropdown__row">
-      <td class="dropdown__cell dropdown__cell--active">А</td>
-      <td class="dropdown__cell">Б</td>
-      <td class="dropdown__cell">В</td>
-      <td class="dropdown__cell">Г</td>
-      <td class="dropdown__cell">Д</td>
-    </tr>
-    <tr>
-      <td class="dropdown__cell">Е</td>
-      <td class="dropdown__cell">З</td>
-      <td class="dropdown__cell">И</td>
-      <td class="dropdown__cell">К</td>
-      <td class="dropdown__cell">Л</td>
-    </tr>
-    <tr class="dropdown__row">
-      <td class="dropdown__cell">М</td>
-      <td class="dropdown__cell">Н</td>
-      <td class="dropdown__cell">О</td>
-      <td class="dropdown__cell">П</td>
-      <td class="dropdown__cell">Р</td>
-    </tr>
-    <tr class="dropdown__row">
-      <td class="dropdown__cell">С</td>
-      <td class="dropdown__cell">Т</td>
-      <td class="dropdown__cell">У</td>
-      <td class="dropdown__cell">Ф</td>
-      <td class="dropdown__cell">Х</td>
-    </tr>
-    <tr class="dropdown__row">
-      <td class="dropdown__cell">Ч</td>
-      <td class="dropdown__cell">Ш</td>
-      <td class="dropdown__cell">Э</td>
-      <td class="dropdown__cell">Ю</td>
-      <td class="dropdown__cell">Я</td>
-    </tr>
-    </tbody>
-  </table>
-  <div class="dropdown__list-container">
-    <ul class="dropdown__list">
-      <li class="dropdown__item">
-        <a class="dropdown__link" href="#">Афганистан</a>
-      </li>
-      <li class="dropdown__item">
-        <a class="dropdown__link" href="#">Албания</a>
-      </li>
-      <li class="dropdown__item">
-        <a class="dropdown__link" href="#">Алжир</a>
-      </li>
-      <li class="dropdown__item">
-        <a class="dropdown__link" href="#">Андорра</a>
-      </li>
-      <li class="dropdown__item">
-        <a class="dropdown__link" href="#">Аргентина</a>
-      </li>
-      <li class=dropdown__item">
-        <a class="dropdown__link" href="#">Армения</a>
-      </li>
-      <li class="dropdown__item">
-        <a class="dropdown__link" href="#">Австралия</a>
-      </li>
-      <li class="dropdown__item">
-        <a class="dropdown__link" href="#">Австрия</a>
-      </li>
-      <li class="dropdown__item">
-        <a class="dropdown__link" href="#">Азербайджан</a>
-      </li>
-    </ul>
+  <div class="dropdown__container">
+    <table class="dropdown__table">
+      <tbody>
+      <tr class="dropdown__row">
+        <td class="dropdown__cell dropdown__cell--active">А</td>
+        <td class="dropdown__cell">Б</td>
+        <td class="dropdown__cell">В</td>
+        <td class="dropdown__cell">Г</td>
+        <td class="dropdown__cell">Д</td>
+      </tr>
+      <tr>
+        <td class="dropdown__cell">Е</td>
+        <td class="dropdown__cell">З</td>
+        <td class="dropdown__cell">И</td>
+        <td class="dropdown__cell">К</td>
+        <td class="dropdown__cell">Л</td>
+      </tr>
+      <tr class="dropdown__row">
+        <td class="dropdown__cell">М</td>
+        <td class="dropdown__cell">Н</td>
+        <td class="dropdown__cell">О</td>
+        <td class="dropdown__cell">П</td>
+        <td class="dropdown__cell">Р</td>
+      </tr>
+      <tr class="dropdown__row">
+        <td class="dropdown__cell">С</td>
+        <td class="dropdown__cell">Т</td>
+        <td class="dropdown__cell">У</td>
+        <td class="dropdown__cell">Ф</td>
+        <td class="dropdown__cell">Х</td>
+      </tr>
+      <tr class="dropdown__row">
+        <td class="dropdown__cell">Ч</td>
+        <td class="dropdown__cell">Ш</td>
+        <td class="dropdown__cell">Э</td>
+        <td class="dropdown__cell">Ю</td>
+        <td class="dropdown__cell">Я</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="dropdown__list-container">
+      <ul class="dropdown__list">
+        <li class="dropdown__item">
+          <a class="dropdown__link" href="#">Афганистан</a>
+        </li>
+        <li class="dropdown__item">
+          <a class="dropdown__link" href="#">Албания</a>
+        </li>
+        <li class="dropdown__item">
+          <a class="dropdown__link" href="#">Алжир</a>
+        </li>
+        <li class="dropdown__item">
+          <a class="dropdown__link" href="#">Андорра</a>
+        </li>
+        <li class="dropdown__item">
+          <a class="dropdown__link" href="#">Аргентина</a>
+        </li>
+        <li class=dropdown__item">
+          <a class="dropdown__link" href="#">Армения</a>
+        </li>
+        <li class="dropdown__item">
+          <a class="dropdown__link" href="#">Австралия</a>
+        </li>
+        <li class="dropdown__item">
+          <a class="dropdown__link" href="#">Австрия</a>
+        </li>
+        <li class="dropdown__item">
+          <a class="dropdown__link" href="#">Азербайджан</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </div>
 </body>
