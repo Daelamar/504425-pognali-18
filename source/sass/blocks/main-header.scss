@@ -19,6 +19,8 @@
 
     z-index: 10;
 
+    background-color: #161c35;
+
     .main-header__user-menu {
       display: none;
     }
@@ -247,6 +249,8 @@
 
     &--form {
       border-radius: 0 0 60px 60px;
+
+      background-color: #161c35;
 
       .main-header__user-menu {
         display: flex;
@@ -487,6 +491,28 @@
     }
 
     &--catalog {
+      .main-header__container {
+        padding: 48px 60px 63px;
+
+        &::after {
+          left: 126px;
+        }
+      }
+
+      .main-header__nav {
+        margin: 15px 0 0 0;
+      }
+
+      .main-header__logo-link {
+        margin: 0 145px 118px 0;
+      }
+
+      .main-header__title {
+        padding: 0 62px 0 67px;
+      }
+    }
+
+    &--form {
       .main-header__container {
         padding: 48px 60px 63px;
 

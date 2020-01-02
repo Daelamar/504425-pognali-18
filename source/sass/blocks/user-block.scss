@@ -21,7 +21,6 @@
 .user-block__level {
   margin: 0 0 0 19px;
   padding: 15px 0 4px 2px;
-  position: relative;
 
   display: flex;
   flex-direction: column;
@@ -34,29 +33,31 @@
   border: 3px solid #ff8d30;
 
   border-radius: 50%;
-
-  &::after {
-    position: absolute;
-    content: "";
-
-    top: 57px;
-    left: 22px;
-
-    width: 49px;
-    height: 2px;
-
-    background-color: #cbced9;
-  }
 }
 
 .user-block__value {
   margin: 0;
+  position: relative;
+
 
   font-size: 38px;
   font-weight: 700;
   line-height: 38px;
 
   color: #161c35;
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    top: 35px;
+    left: -4px;
+
+    width: 49px;
+    height: 2px;
+
+    background-color: #cbced9;
+  }
 }
 
 .user-block__caption {
@@ -215,11 +216,6 @@
     height: 94px;
 
     order: -2;
-
-    &::after {
-      top: 53px;
-      left: 19px;
-    }
   }
 
   .user-block__transport {
@@ -346,7 +342,7 @@
   }
 
   .user-block__textarea {
-    padding: 34px 40px 0px;
+    padding: 34px 40px 0;
 
     width: 100%;
 
@@ -361,7 +357,72 @@
 
 @media (min-width: $desktop-width) {
   .user-block__container {
-    flex-direction: row;
-    height: 360px; //todo: Временно для сетки
+    padding: 124px 60px 125px;
+  }
+
+  .user-block__level {
+    margin: -211px 46px 0 895px;
+
+    z-index: 10;
+  }
+
+  .user-block__value {
+    color: $color-white;
+  }
+
+  .user-block__caption {
+    color: $color-white;
+  }
+
+  .user-block__transport {
+    margin: 0 0 0 auto;
+
+    width: 384px;
+
+    order: 0;
+
+    .user-block__label {
+      margin: 0 0 5px 0;
+      padding: 0 1px 0 0;
+    }
+  }
+
+  .user-block__img {
+    margin: -254px auto 0 0;
+
+    width: 190px;
+    height: 190px;
+
+    order: -1;
+
+    border-radius: 10px 10px 0 0;
+    z-index: 10;
+  }
+
+  .user-block__button {
+    margin: -65px 0 26px 1036px;
+    padding: 16px 65px 14px;
+
+    width: 190px;
+
+    border-radius: 0 0 10px 10px;
+
+    .user-block__button-fade {
+      display: none;
+    }
+  }
+
+  .user-block__list {
+    margin: 24px 0 9px 108px;
+  }
+
+  .user-block__tags {
+    margin: 0 0 0 64px;
+
+    width: 730px;
+
+    .user-block__label {
+      margin: 0 0 -12px 21px;
+    }
   }
 }

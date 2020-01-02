@@ -2,7 +2,7 @@
 @import "../global/variables";
 
 .dropdown {
-  display: block;
+  display: none;
   position: fixed;
 
   top: 50%;
@@ -133,42 +133,97 @@
 
 @media (min-width: $tablet-width) {
   .dropdown {
+    //display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    left: 52%;
+
     width: 575px;
 
     transform: translate(-50%, -50%);
 
     z-index: 10;
-
     background-color: transparent;
-
-    box-shadow: none;
-  }
-
-  .dropdown__container {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    width: 575px;
-
-    box-shadow: 0 20px 50px -20px rgba(29, 46, 91, 0.1);
+    box-shadow: 0 20px 50px -50px rgba(29, 46, 91, 1);
   }
 
   .dropdown__header {
     width: 370px;
   }
 
-  .dropdown__table {
-    width: 370px;
-  }
-
   .dropdown__list-container {
+    padding: 35px 25px 15px;
+
     width: 205px;
 
     border: none;
     border-left: 1px solid #cbced9;
 
     border-radius: 0 0 10px 0;
+  }
+
+  .dropdown__title {
+    padding: 0 0 0 27px;
+
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.9;
+    letter-spacing: 2px;
+  }
+
+  .dropdown__close {
+    width: 69px;
+    height: 69px;
+
+    &::after {
+      top: 32px;
+      right: 25px;
+
+      width: 24px;
+      height: 2px;
+    }
+
+    &::before {
+      top: 32px;
+      right: 25px;
+
+      width: 24px;
+      height: 2px;
+    }
+  }
+
+  .dropdown__table-container {
+    padding: 34px 82px 88px 27px;
+
+    background-color: $color-white;
+  }
+
+  .dropdown__cell {
+    width: 52px;
+    height: 70px;
+
+    font-size: 20px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.9;
+
+    &--active {
+      color: $color-white;
+
+      background-color: #1d2e5b;
+    }
+  }
+
+  .dropdown__link {
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
   }
 }
