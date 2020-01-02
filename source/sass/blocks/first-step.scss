@@ -28,6 +28,15 @@
   font-weight: 400;
 
   color: $color-twilightGray;
+
+  br {
+    display: none;
+  }
+}
+
+.first-step__crumbs-list {
+  @include listStyle;
+  display: none;
 }
 
 .first-step__caption {
@@ -279,6 +288,14 @@
   }
 }
 
+.first-step__check-in-out {
+  display: none;
+}
+
+.first-step__cell-month {
+  display: none;
+}
+
 .first-step__row {
   &--days {
     height: 26px;
@@ -332,6 +349,10 @@
     padding: 48px 43px 55px;
   }
 
+  .first-step__header {
+    order: -5;
+  }
+
   .first-step__title {
     margin: 0 0 35px 0;
     padding: 0;
@@ -339,8 +360,6 @@
     font-size: 36px;
     line-height: 1;
     text-align: left;
-
-    order: -4;
   }
 
   .first-step__description {
@@ -545,5 +564,242 @@
       background-image: url("../img/triangle-arrow-right.svg");
       background-repeat: no-repeat;
     }
+  }
+}
+
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .first-step__container {
+    padding: 99px 160px 105px;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .first-step__header {
+    margin: 0 0 48px 0;
+    padding: 0 150px 0 0;
+    position: relative;
+
+    width: 750px;
+
+    order: -5;
+
+    &::after {
+      position: absolute;
+      content: "";
+
+      bottom: -18px;
+      left: 1px;
+
+      width: 1000px;
+      height: 1px;
+
+      background-color: #d4d9eb;
+    }
+  }
+
+  .first-step__title {
+    margin: 0 0 34px 0;
+
+    br {
+      display: none;
+    }
+  }
+
+  .first-step__description {
+    br {
+      display: block;
+    }
+  }
+
+  .first-step__crumbs-list {
+    margin: 0 0 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 230px;
+
+    order: -4;
+  }
+
+  .first-step__crumbs-item {
+    margin: 0 0 9px 0;
+    padding: 9px 5px 6px 45px;
+    position: relative;
+
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-align: left;
+    text-transform: uppercase;
+
+    color: #1d2e5b;
+
+    opacity: 0.6;
+
+    &::before {
+      position: absolute;
+      content: "";
+
+      top: 16px;
+      left: 1px;
+
+      width: 6px;
+      height: 6px;
+
+      background-color: #1d2e5b;
+
+      border-radius: 50%;
+    }
+
+    &--active {
+      opacity: 1;
+    }
+  }
+
+  .first-step__input {
+    margin: 0 37px 0 5px;
+
+    width: 181px;
+    height: 70px;
+  }
+
+  .first-step__label {
+    padding: 27px 0 23px 0;
+
+    width: 215px;
+  }
+
+  .first-step__caption {
+    margin: 0;
+    padding: 27px 0 23px 0;
+
+    opacity: 1;
+    order: 1;
+  }
+
+  .first-step__wrapper {
+    justify-content: left;
+
+    .first-step__minus {
+      left: 221px;
+    }
+
+    .first-step__plus {
+      right: 100px;
+    }
+
+    &--companions {
+      margin: 0 0 14px 0;
+
+      min-width: 500px;
+
+      border-top: none;
+      order: -3;
+    }
+
+    &--duration {
+      margin: 0 0 32px 0;
+
+      min-width: 500px;
+
+      border-top: none;
+      order: -1;
+    }
+
+    &--children {
+      margin: 0 0 12px auto;
+
+      order: -2;
+
+      .first-step__label {
+        padding: 0 0 0 59px;
+
+        min-width: 245px;
+
+        text-align: right;
+      }
+    }
+  }
+
+  .first-step__table {
+    margin: 0 0 56px 0;
+
+    width: 1000px;
+  }
+
+  .first-step__calendar-header {
+    margin: 0;
+    padding: 27px 62px 19px 60px;
+
+    .first-step__arrow {
+      width: 60px;
+
+      &--left {
+        background-position: -6px 26px;
+      }
+
+      &--right {
+        background-position: 34px 26px;
+      }
+    }
+  }
+
+  .first-step__row {
+    &--days {
+      height: 55px;
+
+      .first-step__day {
+        padding: 0 0 0 16px;
+        text-align: left;
+      }
+    }
+  }
+
+  .first-step__cell {
+    padding: 7px 2px 32px 14px;
+
+    width: 144px;
+    height: 71px;
+
+
+    font-size: 18px;
+    font-weight: normal;
+
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: 1.8px;
+    text-align: left;
+
+    &--check-in-out {
+      padding: 7px 2px 11px 16px;
+    }
+  }
+
+  .first-step__check-in-out {
+    display: block;
+    margin: 0 0 0 0;
+
+    font-size: 18px;
+    font-weight: normal;
+
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 1.8px;
+    text-align: left;
+    text-transform: none;
+
+    color: $color-white;
+  }
+
+  .first-step__cell-month {
+    display: inline;
+
+    text-transform: none;
   }
 }

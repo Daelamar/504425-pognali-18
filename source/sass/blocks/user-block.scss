@@ -358,6 +358,8 @@
 @media (min-width: $desktop-width) {
   .user-block__container {
     padding: 124px 60px 125px;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 
   .user-block__level {

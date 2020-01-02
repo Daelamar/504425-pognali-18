@@ -181,7 +181,59 @@
   .plans {
     border-radius: 60px;
   }
+
   .plans__container {
-    height: 523px; //todo: Временно для сетки
+    padding: 50px 60px 108px 124px;
+  }
+
+  .plans__title {
+    margin: 0 0 40px 7px;
+  }
+
+  .plans__list {
+    width: auto;
+    align-items: center;
+  }
+
+  .plans__item {
+    margin: 0 0 15px 0;
+  }
+
+  .plans__item-title {
+    margin: 0 16px 0 0;
+    padding: 25px 28px 22px 43px;
+
+    justify-content: left;
+    align-items: center;
+
+    width: 600px;
+  }
+
+  .plans__traveler {
+    margin: 0;
+    padding: 39px 10px 35px 10px;
+
+    width: 180px;
+  }
+
+  .plans__dates {
+    margin: 0;
+    padding: 39px 10px 35px 3px;
+
+    width: 200px;
+  }
+
+  .plans__change {
+    margin: 0 0 0 auto;
+    padding: 39px 39px 35px 10px;
+
+    width: 180px;
+  }
+
+  .plans__number {
+    margin: 0 33px 0 0;
+    padding: 0;
+
+    order: 0;
   }
 }

@@ -461,11 +461,18 @@
       </div>
       <fieldset class="form__fieldset first-step">
         <div class="first-step__container">
-          <h3 class="first-step__title">Шаг 1.<br>Даты пребывания</h3>
-          <p class="first-step__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы
-            позвать
-            в поездку и ее предполагаемую длительность.
-          </p>
+          <div class="first-step__header">
+            <h3 class="first-step__title">Шаг 1. <br>Даты пребывания</h3>
+            <p class="first-step__description">Укажите предпочтительное количество попутчиков, которых <br>вы хотели бы
+              позвать
+              в поездку и ее предполагаемую длительность.
+            </p>
+          </div>
+          <ul class="first-step__crumbs-list">
+            <li class="first-step__crumbs-item first-step__crumbs-item--active">Даты</li>
+            <li class="first-step__crumbs-item">Маршрут</li>
+            <li class="first-step__crumbs-item">Развлечения</li>
+          </ul>
           <div class="first-step__wrapper first-step__wrapper--companions">
             <label for="companions" class="first-step__label">Ищу попутчиков:</label>
             <span class="first-step__caption">Чел.</span>
@@ -577,16 +584,24 @@
                 <td
                   class="first-step__cell
                 first-step__cell--selected
-                first-step__cell--active">26
+                first-step__cell--active
+                first-step__cell--check-in-out">26
+                  <span class="first-step__check-in-out">Заезд</span>
                 </td>
                 <td class="first-step__cell first-step__cell--selected">27</td>
-                <td class="first-step__cell first-step__cell--selected">28</td>
+                <td
+                  class="first-step__cell
+                  first-step__cell--selected
+                  first-step__cell--check-in-out">28
+                  <span class="first-step__check-in-out">Выезд</span>
+                </td>
                 <td class="first-step__cell">29</td>
               </tr>
               <tr class="first-step__row">
                 <td class="first-step__cell">30</td>
                 <td class="first-step__cell">31</td>
-                <td class="first-step__cell">1</td>
+                <td class="first-step__cell">1
+                  <span class="first-step__cell-month">апр</span></td>
                 <td class="first-step__cell">2</td>
                 <td class="first-step__cell">3</td>
                 <td class="first-step__cell">4</td>
@@ -601,8 +616,8 @@
       </fieldset>
       <fieldset class="form__fieldset second-step">
         <div class="second-step__container">
-          <h3 class="second-step__title">Шаг 2.<br>Маршрут</h3>
-          <p class="second-step__description">Укажите страны, которые вы хотели посетить.
+          <h3 class="second-step__title">Шаг 2. <br>Маршрут</h3>
+          <p class="second-step__description">Укажите страны, которые <br>вы хотели посетить.
             Это может быть одна или сразу несколько.
           </p>
           <label for="1-country" class="second-step__label second-step__label--active">
