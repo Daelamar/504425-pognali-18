@@ -2,40 +2,100 @@
 @import "../global/variables";
 
 .catalog {
+  margin: 0 0 -60px 0;
+
+  position: relative;
   background-color: #edeff6;
 }
 
 .catalog__container {
   @include container;
-  padding: 0 25px;
-
-  outline: 1px solid yellowgreen; //todo: Временно для сетки
+  padding: 84px 25px 107px;
 }
 
 .catalog__show {
+  margin: 0 0 9px 0;
+  padding: 10px 49px 10px 80px;
+  position: relative;
+
+  width: 100%;
+
   font-size: 17px;
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
+  text-align: center;
 
   color: #1d2e5b;
 
   background-color: transparent;
   border: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    top: 14px;
+    left: 60px;
+
+    width: 18px;
+    height: 18px;
+
+    background-image: url("../../img/show-more-plus.svg");
+  }
 }
 
-.catalog__left,
-.catalog__right {
-  background-color: #ffffff;
-  border-radius: 20px;
-  border: none;
-}
-
-.catalog__crumbs {
+.catalog__button-wrapper {
   display: flex;
+  justify-content: space-between;
+}
 
-  background-color: $color-white;
-  border-radius: 20px;
+.catalog__button {
+  position: relative;
+  height: 50px;
+
+  background-color: #ffffff;
+  border: none;
+
+  &--left {
+    width: 135px;
+    border-radius: 20px 0 0 20px;
+
+    &::after {
+      position: absolute;
+      content: "";
+
+      top: 15px;
+      left: 63px;
+
+      width: 0;
+      height: 0;
+
+      border-top: 10px solid transparent;
+      border-right: 10px solid #192144;
+      border-bottom: 10px solid transparent;
+    }
+  }
+
+  &--right {
+    width: 134px;
+    border-radius: 0 20px 20px 0;
+
+    &::after {
+      position: absolute;
+      content: "";
+
+      top: 15px;
+      right: 62px;
+
+      width: 0;
+      height: 0;
+
+      border-top: 10px solid transparent;
+      border-left: 10px solid #192144;
+      border-bottom: 10px solid transparent;
+    }
+  }
 }
 
 .catalog__crumbs-list {
@@ -45,23 +105,116 @@
 }
 
 .catalog__crumbs-link {
+  display: block;
+
   font-size: 20px;
   font-weight: 700;
-  line-height: 30px;
+  line-height: 50px;
   text-transform: uppercase;
+  text-align: center;
 
   color: #161c35;
 }
 
+.catalog__filter {
+  margin: 0 0 28px 0;
+}
+
+.catalog__item {
+  margin: 0 0 10px 0;
+}
+
+
 //Таблетка
 
 @media (min-width: $tablet-width) {
-  .catalog__crumbs-list {
-    display: flex;
+  .catalog__container {
+    padding: 107px 40px 123px;
   }
 
-  .countries__container {
-    height: 932px; //todo: Временно для сетки
+  .catalog__crumbs {
+    display: flex;
+
+    background-color: $color-white;
+    border-radius: 20px;
+  }
+
+  .catalog__button-wrapper {
+    width: 126px;
+  }
+
+  .catalog__button {
+    height: 100px;
+
+    &--left {
+      width: 63px;
+
+      &::after {
+        top: 40px;
+        left: 38px;
+      }
+    }
+
+    &--right {
+      width: 63px;
+
+      &::after {
+        top: 40px;
+        right: 35px;
+      }
+    }
+  }
+
+  .catalog__crumbs-list {
+    margin: 0 auto 0 0;
+    padding: 0 0 0 28px;
+    display: flex;
+
+    align-items: center;
+  }
+
+  .catalog__filter {
+    margin: 0 0 39px 0;
+  }
+
+  .catalog__item {
+    margin: 0 0 40px 0;
+  }
+
+  .catalog__show {
+    margin: 0 auto 40px;
+    padding: 7px 40px 7px 82px;
+
+    display: block;
+
+    width: 300px;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    &::after {
+      top: 6px;
+      left: 53px;
+
+      width: 27px;
+      height: 27px;
+    }
+  }
+
+  .catalog__crumbs-item {
+    background-color: $color-white;
+    border-radius: 50%;
+
+    &--active {
+      background-color: #ffd74b;
+    }
+  }
+
+  .catalog__crumbs-link {
+    padding: 2px 0 0 0;
+
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -69,11 +222,52 @@
 
 @media (min-width: $desktop-width) {
   .catalog__container {
+    padding: 76px 60px 138px;
     display: flex;
+    justify-content: space-between;
+  }
+
+  .catalog__users {
+    width: 950px;
   }
 
   .catalog__filter {
+    width: 285px;
     order: 2;
   }
 
+  .catalog__item {
+    margin: 0 0 30px 0;
+  }
+
+  .catalog__show {
+    margin: 60px auto 58px;
+    padding: 7px 40px 7px 18px;
+
+    &::after {
+      top: 5px;
+      left: 20px;
+    }
+  }
+
+  .catalog__button {
+    height: 100px;
+
+    &--left {
+      width: 80px;
+
+      &::after {
+        left: 29px;
+      }
+    }
+
+    &--right {
+      width: 80px;
+
+      &::after {
+        top: 40px;
+        right: 35px;
+      }
+    }
+  }
 }

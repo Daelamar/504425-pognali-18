@@ -1,10 +1,23 @@
 @import "../global/mixins";
+@import "../global/variables";
 
 .first-step {
-  outline: 1px solid yellowgreen; //todo: Временно для сетки
+  margin: 0;
+  padding: 0;
+}
+
+.first-step__container {
+  padding: 24px 20px 22px;
+}
+
+.first-step__header {
+  margin: 0 0 21px 0;
 }
 
 .first-step__title {
+  margin: 0 0 15px 0;
+  padding: 0 0 0 5px;
+
   font-size: 20px;
   font-weight: 700;
   line-height: 20px;
@@ -13,22 +26,25 @@
 }
 
 .first-step__description {
+  padding: 0 0 0 5px;
+
   font-weight: 400;
 
   color: $color-twilightGray;
+
+  br {
+    display: none;
+  }
 }
 
-.first-step__legend {
-  font-weight: 500;
-  line-height: 16px;
-  text-transform: uppercase;
-
-  color: #1d2e5b;
-
-  letter-spacing: 2.15px;
+.first-step__crumbs-list {
+  @include listStyle;
+  display: none;
 }
 
 .first-step__caption {
+  padding: 0 2px 0 0;
+
   font-weight: 500;
   line-height: 16px;
   text-transform: uppercase;
@@ -40,6 +56,12 @@
 }
 
 .first-step__input {
+  margin: 0 auto;
+  padding: 4px 50px 0 53px;
+
+  width: 220px;
+  height: 43px;
+
   font-size: 15px;
   font-weight: 500;
   line-height: 13.37px;
@@ -55,29 +77,193 @@
   border: 1px solid #cbced9;
 }
 
-.first-step__label {
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 15px;
+.first-step__wrapper {
+  margin: 0 0 21px 0;
 
-  color: $color-twilightGray;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .first-step__minus {
+    position: absolute;
+
+    bottom: 1px;
+    left: 6px;
+
+    width: 41px;
+    height: 41px;
+
+    border: none;
+    background-image: url("../img/qty-minus-mobile.svg");
+
+    background-color: transparent;
+    background-size: 14px 2px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 10px;
+
+    opacity: 0.3;
+  }
+
+  .first-step__plus {
+    position: absolute;
+
+    bottom: 1px;
+    right: 6px;
+
+    width: 41px;
+    height: 41px;
+
+    border: none;
+    background-image: url("../img/qty-plus-mobile.svg");
+
+    background-color: transparent;
+    background-size: 14px 14px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-radius: 10px;
+
+    opacity: 0.3;
+  }
+
+  &--duration {
+    margin: 0 0 28px 0;
+  }
+
+  &--children {
+    margin: 0 0 25px 0;
+    justify-content: left;
+    align-items: center;
+
+    .first-step__label {
+      margin: 0;
+      padding: 0 0 0 44px;
+      position: relative;
+
+
+      font-size: 15px;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+
+      line-height: 1;
+      letter-spacing: normal;
+
+      text-transform: none;
+
+      color: #1d2e5b;
+
+      &::before {
+        position: absolute;
+        content: "";
+
+        top: -7px;
+        left: 5px;
+
+        width: 26px;
+        height: 26px;
+
+        background-color: #ffffff;
+
+        border-radius: 4px;
+        border: solid 1px #cbced9;
+        transition-duration: 0.22s;
+      }
+    }
+
+    .first-step__input:checked + .first-step__label {
+      &::before {
+        background-image: url("../img/tick.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 9px 9px;
+      }
+    }
+  }
+}
+
+.first-step__label {
+  margin: 0 0 8px 0;
+  padding: 0 0 0 5px;
+
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+
+  color: #1d2e5b;
+}
+
+.first-step__calendar-header {
+  margin: 0 5px 21px;
+  padding: 12px 50px 10px 52px;
+  position: relative;
+
+  border-top: 1px solid #cbced9;
+  border-bottom: 1px solid #cbced9;
+
+  .first-step__arrow {
+    position: absolute;
+
+    width: 24px;
+    height: 42px;
+
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: 9px 17px;
+
+
+    border: none;
+
+    opacity: 0.3;
+
+    &--left {
+      top: 0;
+      left: 0;
+
+      background-image: url("../../img/month-arrow-left.svg");
+      background-position: 0 12px;
+    }
+
+    &--right {
+      top: 0;
+      right: 0;
+
+      background-image: url("../../img/month-arrow-right.svg");
+      background-position: 15px 13px;
+    }
+  }
 }
 
 .first-step__date {
+  margin: 0;
+
   font-size: 20px;
   font-weight: 700;
   line-height: 20px;
+
+  text-align: center;
 
   color: #1d2e5b;
 }
 
 .first-step__table {
+  margin: 0 auto 22px;
+
+  width: 221px;
+
   border-collapse: collapse;
 }
 
 .first-step__cell {
-  width: 30px;
-  height: 30px;
+  padding: 3px 3px 0 3px;
+
+  width: 31px;
+  height: 31px;
 
   font-size: 14px;
   font-weight: 400;
@@ -105,6 +291,24 @@
   }
 }
 
+.first-step__check-in-out {
+  display: none;
+}
+
+.first-step__cell-month {
+  display: none;
+}
+
+.first-step__row {
+  &--days {
+    height: 26px;
+
+    .first-step__day {
+      padding: 0 0 3px 2px;
+    }
+  }
+}
+
 .first-step__day {
   font-size: 14px;
   font-weight: 400;
@@ -117,17 +321,491 @@
   &--red {
     color: #ff5c23;
   }
+
+  & span {
+    display: none;
+  }
 }
 
 .first-step__next {
+  padding: 8px 40px 2px;
   display: block;
+
+  width: 100%;
+
   font-size: 17px;
   font-weight: 700;
   line-height: 30px;
   text-transform: uppercase;
+  text-align: center;
 
   color: #161c35;
 
   background-color: #ffd74b;
   border-radius: 20px;
+}
+
+//Таблетка
+
+@media (min-width: $tablet-width) {
+  .first-step__container {
+    display: flex;
+    flex-direction: column;
+    padding: 48px 43px 55px;
+  }
+
+  .first-step__header {
+    margin: 0 0 37px 0;
+    order: -5;
+  }
+
+  .first-step__title {
+    margin: 0 0 35px 0;
+    padding: 0;
+
+    font-size: 36px;
+    line-height: 1;
+    text-align: left;
+  }
+
+  .first-step__description {
+    margin: 0;
+    padding: 0 15px 0 0;
+
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.2;
+    text-align: left;
+
+    order: -3;
+  }
+
+  .first-step__wrapper {
+    .first-step__minus {
+      bottom: 0;
+      left: 2px;
+
+      width: 66px;
+      height: 70px;
+
+      background-image: url("../img/qty-minus.svg");
+      background-size: 20px 20px;
+    }
+
+    .first-step__plus {
+      bottom: 0;
+      right: 2px;
+
+      width: 66px;
+      height: 70px;
+
+      background-image: url("../img/qty-plus.svg");
+      background-size: 20px 20px;
+      background-position: 28px center;
+    }
+
+    &--companions {
+      margin: 0 0 34px 0;
+
+      border-top: 1px solid #cbced9;
+      order: -2;
+    }
+
+    &--duration {
+      margin: 0 0 59px 0;
+      border-top: 1px solid #cbced9;
+    }
+
+    &--children {
+      margin: 0 0 33px 0;
+      justify-content: left;
+      align-items: center;
+
+      order: -1;
+
+      .first-step__label {
+        padding: 0 0 0 59px;
+
+        font-size: 20px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+
+        &::before {
+          top: -9px;
+          left: 1px;
+
+          width: 36px;
+          height: 36px;
+        }
+      }
+
+      .first-step__input:checked + .first-step__label {
+        &::before {
+          background-size: 12px 12px;
+        }
+      }
+    }
+  }
+
+  .first-step__input {
+    margin: 0 auto;
+    padding: 4px 60px 0 63px;
+
+    width: 531px;
+    height: 70px;
+
+    font-size: 20px;
+    line-height: 0.9;
+  }
+
+  .first-step__label {
+    margin: 0;
+    padding: 24px 0 25px 0;
+
+    font-size: 20px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+    text-align: left;
+  }
+
+  .first-step__caption {
+    margin: 0;
+    padding: 24px 0 25px 0;
+
+    font-size: 20px;
+    line-height: 0.9;
+    letter-spacing: 2px;
+  }
+
+  .first-step__calendar-header {
+    margin: 0 0 21px;
+    padding: 27px 52px 19px 50px;
+
+    .first-step__arrow {
+      width: 45px;
+      height: 85px;
+
+      background-size: 30px 35px;
+
+      border: none;
+
+      &--left {
+        background-position: 12px 26px;
+      }
+
+      &--right {
+        background-position: 4px 25px;
+      }
+    }
+  }
+
+  .first-step__date {
+    font-size: 36px;
+    font-weight: bold;
+    line-height: normal;
+  }
+
+  .first-step__table {
+    margin: 0 0 46px 0;
+
+    width: 530px;
+  }
+
+  .first-step__cell {
+    padding: 3px 2px 0 7px;
+
+    width: 75px;
+    height: 69px;
+
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+
+  .first-step__row {
+    &--days {
+      height: 44px;
+
+      .first-step__day {
+        padding: 11px 0 0 8px;
+      }
+    }
+  }
+
+  .first-step__day {
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1.67;
+    letter-spacing: 1.8px;
+
+    & span {
+      display: inline;
+      text-transform: none;
+    }
+  }
+
+  .first-step__next {
+    padding: 30px 52px 27px 34px;
+    position: relative;
+
+    width: 285px;
+
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    text-align: left;
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      top: 34px;
+      right: 35px;
+
+      width: 10px;
+      height: 14px;
+      background-image: url("../img/triangle-arrow-right.svg");
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .first-step__container {
+    padding: 99px 160px 105px;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .first-step__header {
+    margin: 0 0 85px 0;
+    padding: 0 150px 0 0;
+    position: relative;
+
+    width: 750px;
+
+    order: -5;
+
+    &::after {
+      position: absolute;
+      content: "";
+
+      bottom: -55px;
+      left: 1px;
+
+      width: 1000px;
+      height: 1px;
+
+      background-color: #d4d9eb;
+    }
+  }
+
+  .first-step__title {
+    margin: 0 0 34px 0;
+
+    br {
+      display: none;
+    }
+  }
+
+  .first-step__description {
+    br {
+      display: block;
+    }
+  }
+
+  .first-step__crumbs-list {
+    margin: 0 0 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 230px;
+
+    order: -4;
+  }
+
+  .first-step__crumbs-item {
+    margin: 0 0 9px 0;
+    padding: 9px 5px 6px 45px;
+    position: relative;
+
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-align: left;
+    text-transform: uppercase;
+
+    color: #1d2e5b;
+
+    opacity: 0.6;
+
+    &::before {
+      position: absolute;
+      content: "";
+
+      top: 16px;
+      left: 1px;
+
+      width: 6px;
+      height: 6px;
+
+      background-color: #1d2e5b;
+
+      border-radius: 50%;
+    }
+
+    &--active {
+      opacity: 1;
+    }
+  }
+
+  .first-step__input {
+    margin: 0 37px 0 5px;
+
+    width: 181px;
+    height: 70px;
+  }
+
+  .first-step__label {
+    padding: 27px 0 23px 0;
+
+    width: 215px;
+  }
+
+  .first-step__caption {
+    margin: 0;
+    padding: 27px 0 23px 0;
+
+    opacity: 1;
+    order: 1;
+  }
+
+  .first-step__wrapper {
+    justify-content: left;
+
+    .first-step__minus {
+      left: 221px;
+    }
+
+    .first-step__plus {
+      right: 100px;
+    }
+
+    &--companions {
+      margin: 0 0 14px 0;
+
+      min-width: 500px;
+
+      border-top: none;
+      order: -3;
+    }
+
+    &--duration {
+      margin: 0 0 32px 0;
+
+      min-width: 500px;
+
+      border-top: none;
+      order: -1;
+    }
+
+    &--children {
+      margin: 0 0 12px auto;
+
+      order: -2;
+
+      .first-step__label {
+        padding: 0 0 0 59px;
+
+        min-width: 245px;
+
+        text-align: right;
+      }
+    }
+  }
+
+  .first-step__table {
+    margin: 0 0 56px 0;
+
+    width: 1000px;
+  }
+
+  .first-step__calendar-header {
+    margin: 0;
+    padding: 27px 62px 19px 60px;
+
+    .first-step__arrow {
+      width: 60px;
+
+      &--left {
+        background-position: -6px 26px;
+      }
+
+      &--right {
+        background-position: 34px 26px;
+      }
+    }
+  }
+
+  .first-step__row {
+    &--days {
+      height: 55px;
+
+      .first-step__day {
+        padding: 0 0 0 16px;
+        text-align: left;
+      }
+    }
+  }
+
+  .first-step__cell {
+    padding: 7px 2px 32px 14px;
+
+    width: 144px;
+    height: 71px;
+
+
+    font-size: 18px;
+    font-weight: normal;
+
+    font-style: normal;
+    line-height: 1.67;
+    letter-spacing: 1.8px;
+    text-align: left;
+
+    &--check-in-out {
+      padding: 7px 2px 11px 16px;
+    }
+  }
+
+  .first-step__check-in-out {
+    display: block;
+    margin: 0 0 0 0;
+
+    font-size: 18px;
+    font-weight: normal;
+
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 1.8px;
+    text-align: left;
+    text-transform: none;
+
+    color: $color-white;
+  }
+
+  .first-step__cell-month {
+    display: inline;
+
+    text-transform: none;
+  }
 }

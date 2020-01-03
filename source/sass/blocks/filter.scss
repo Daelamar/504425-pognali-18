@@ -1,15 +1,21 @@
 @import "../global/mixins";
+@import "../global/variables";
 
 .filter {
   background-color: #edeff6;
 }
 
 .filter__form {
+  padding: 27px 23px 22px;
+
   background-color: #ffd74b;
   border-radius: 20px;
 }
 
 .filter__title {
+  margin: 0 0 21px 0;
+  padding: 0 70px 0 3px;
+
   font-size: 22px;
   font-weight: 700;
   line-height: 22.49px;
@@ -17,24 +23,155 @@
   color: #1d2e5b;
 }
 
+.filter__list {
+  @include listStyle;
+  padding: 4px 0 9px;
+}
+
 .filter__fieldset {
+  margin: 0;
+  padding: 0 1px 0 3px;
   border: none;
+
+  &--closed {
+    .filter__list {
+      display: none;
+    }
+
+    .filter__wrapper {
+      display: none;
+    }
+
+    .legend-btn {
+      &::after {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  &--music,
+  &--hobby,
+  &--food {
+    .filter__label {
+      margin: 0 0 11px 0;
+      padding: 4px 4px 0 27px;
+      position: relative;
+      display: block;
+
+      &::after {
+        position: absolute;
+        content: "";
+
+        top: 0;
+        left: 0;
+
+        width: 18px;
+        height: 18px;
+
+        background-color: $color-white;
+        border-radius: 4px;
+
+        transition-duration: 0.22s;
+      }
+    }
+
+    .filter__input:checked + .filter__label {
+      &::after {
+        background-image: url("../img/tick.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 9px 9px;
+      }
+    }
+  }
+
+  &--transport {
+    .filter__list {
+      padding: 4px 0 19px 0;
+
+      display: flex;
+      flex-direction: row;
+    }
+
+    .filter__label {
+      margin: 0 -1px 0 0;
+      padding: 0 3px 0 0;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 33px;
+      height: 33px;
+
+      background-color: $color-white;
+
+      border-radius: 50%;
+
+      & svg {
+        opacity: 0.15;
+      }
+    }
+
+    .filter__input:checked + .filter__label {
+      & svg {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .filter__legend {
+  padding: 5px 0 4px;
+
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+
   font-size: 16px;
   font-weight: 700;
   line-height: 18px;
   text-transform: uppercase;
 
   color: #1d2e5b;
+
+  border-top: 1px solid #f3c72b;
 }
 
-.filter__list {
-  @include listStyle;
+.filter__legend-dot {
+  display: none;
+}
+
+.legend-btn {
+  position: relative;
+  margin: 0 0 0 auto;
+
+  width: 40px;
+  height: 30px;
+
+  background: transparent;
+  border: none;
+
+  &::after {
+    position: absolute;
+    content: "";
+
+    top: 13px;
+    right: 0;
+
+    transform: rotate(180deg);
+
+    width: 8px;
+    height: 4px;
+
+    background: url("../img/dropdown.svg") no-repeat;
+  }
 }
 
 .filter__label {
+  position: relative;
+
   font-size: 15px;
   font-weight: 400;
   line-height: 15px;
@@ -43,6 +180,9 @@
 }
 
 .filter__submit {
+  padding: 7px 10px 3px;
+
+  width: 100%;
 
   font-size: 17px;
   font-weight: 700;
@@ -67,4 +207,533 @@
   text-transform: uppercase;
 
   color: #1d2e5b;
+}
+
+.filter__level {
+  margin: 0 0 24px 0;
+  padding: 2px 0 0 0;
+  display: flex;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+
+    top: 14px;
+    left: 105px;
+
+    width: 7px;
+    height: 11px;
+
+    background-color: $color-white;
+  }
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+
+    top: 19px;
+    right: 103px;
+
+    width: 16px;
+    height: 1px;
+
+    background-color: #cbced9;
+
+    z-index: 2;
+  }
+
+  .filter__input {
+    padding: 6px 4px 0 4px;
+    display: block;
+
+    width: 110px;
+    height: 35px;
+
+    background-color: #ffffff;
+    border: 1px solid #cbced9;
+
+    &--start-level {
+      border-radius: 4px 0 0 4px;
+    }
+
+    &--end-level {
+      margin: 0 0 0 -1px;
+      width: 110px;
+      border-radius: 0 4px 4px 0;
+    }
+  }
+}
+
+.filter__slide-wrapper {
+  margin: 0 0 26px 0;
+  width: 220px;
+  height: 2px;
+
+  background-color: #d2b54e;
+  border-radius: 1px;
+}
+
+.filter_slide {
+  margin: 0 0 0 auto;
+  position: relative;
+
+  width: 154px;
+  height: 2px;
+
+  background-color: #1d2e5b;
+  border-radius: 1px;
+}
+
+.filter__slide-button {
+  padding: 0;
+  position: absolute;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: #1d2e5b;
+  border-radius: 50%;
+  border: none;
+
+  &--left {
+    top: -4px;
+    left: 0;
+  }
+
+  &--right {
+    top: -4px;
+    right: 1px;
+  }
+}
+
+//Таблетка
+
+@media (min-width: $tablet-width) {
+  .filter__form {
+    padding: 36px 35px 38px;
+  }
+
+  .filter__title {
+    margin: 0 0 37px 0;
+    padding: 0;
+
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: start;
+  }
+
+  .filter__list {
+    padding: 0 0 0 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 492px;
+  }
+
+  .filter__label {
+    position: initial;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .filter__legend {
+    padding: 0 0 0 0;
+    display: block;
+
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+
+    border-top: none;
+
+    .legend-btn {
+      display: none;
+    }
+  }
+
+  .filter__legend-dot {
+    display: initial;
+  }
+
+  .filter__fieldset-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .filter__fieldset {
+    padding: 10px 0 10px 0;
+
+    &--closed {
+      .filter__list {
+        display: flex;
+        //todo: До подключения JS
+      }
+
+      .filter__wrapper {
+        display: flex;
+        //todo: До подключения JS
+      }
+    }
+
+    &--hobby {
+      padding: 33px 0 10px 0;
+      border-top: 1px solid #f3c72b;
+    }
+
+    &--music,
+    &--hobby,
+    &--food {
+      .filter__legend {
+        width: 95px;
+      }
+
+      .filter__label {
+        margin: 0;
+        padding: 0 0 0 35px;
+        width: 150px;
+
+        &::after {
+          top: -3px;
+          left: -1px;
+
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    &--transport {
+      justify-content: flex-start;
+
+      .filter__fieldset-flex {
+        justify-content: flex-start;
+      }
+
+      .filter__legend {
+        width: 105px;
+      }
+
+      .filter__list {
+        padding: 0 0 0 15px;
+        justify-content: flex-start;
+      }
+
+      .filter__label {
+        margin: 0 1px 0 0;
+
+        width: 43px;
+        height: 43px;
+
+        &--flight svg {
+          width: 19px;
+          height: 21px;
+        }
+
+        &--transport svg {
+          width: 17px;
+          height: 21px;
+        }
+
+        &--bicycle svg {
+          width: 24px;
+          height: 21px;
+        }
+
+        &--afoot svg {
+          width: 20px;
+          height: 21px;
+        }
+      }
+    }
+
+    &--level {
+      margin: 0 0 36px 0;
+      padding: 0 0 37px 0;
+      border-bottom: 1px solid #f3c72b;
+
+      .filter__fieldset-flex {
+        align-items: flex-start;
+      }
+
+      .filter__legend {
+        padding: 13px 0 0 0;
+        width: auto;
+      }
+    }
+  }
+
+  .filter__wrapper {
+    display: flex;
+  }
+
+  .filter__toggle {
+    padding: 23px 0 0 0;
+    height: 46px;
+
+    order: -1;
+  }
+
+  .filter__level {
+    margin: 0 0 0 62px;
+    padding: 2px 0 0 0;
+
+    &::after {
+      top: 17px;
+      left: 70px;
+
+      width: 9px;
+      height: 15px;
+    }
+
+    &::before {
+      top: 24px;
+      right: 63px;
+
+      width: 21px;
+    }
+
+    .filter__input {
+      padding: 6px 4px 0 4px;
+
+      width: 75px;
+      height: 46px;
+
+      border-radius: 4px 0 0 4px;
+      border: 1px solid #cbced9;
+
+      &--start-level {
+        border-radius: 4px 0 0 4px;
+      }
+
+      &--end-level {
+        margin: 0 0 0 -1px;
+        width: 74px;
+        border-radius: 0 4px 4px 0;
+      }
+    }
+  }
+
+  .filter__input--start-level,
+  .filter__input--end-level {
+    font-size: 20px;
+    line-height: 18px;
+  }
+
+  .filter__slide-wrapper {
+    margin: 0 0 26px 0;
+
+    width: 282px;
+    height: 3px;
+
+    border-radius: 2px;
+  }
+
+  .filter_slide {
+    width: 213px;
+    height: 3px;
+
+    border-radius: 2px;
+  }
+
+  .filter__slide-button {
+    width: 13px;
+    height: 13px;
+
+    &--left {
+      top: -5px;
+    }
+
+    &--right {
+      top: -5px;
+      right: 0;
+    }
+  }
+
+  .filter__submit {
+    padding: 12px 15px 8px 11px;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    border-radius: 25px;
+  }
+}
+
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .filter__form {
+    padding: 48px 47px 47px;
+  }
+
+  .filter__fieldset-flex {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .filter__fieldset {
+    padding: 6px 0 6px 0;
+
+    border: none;
+
+    &--closed {
+      .filter__list {
+        display: none;
+        //todo: До подключения JS
+      }
+
+      .filter__wrapper {
+        display: none;
+        //todo: До подключения JS
+      }
+    }
+
+    &--music,
+    &--hobby,
+    &--food {
+      .filter__legend {
+        width: 100%;
+      }
+
+      .filter__label {
+        margin: 0 0 10px 0;
+        padding: 5px 0 5px 37px;
+        width: auto;
+
+        &::after {
+          top: 0;
+          left: 0;
+        }
+      }
+    }
+
+    &--transport {
+      justify-content: flex-start;
+
+      .filter__fieldset-flex {
+        justify-content: flex-start;
+      }
+
+      .filter__legend {
+        margin: 0 0 13px 0;
+        width: 100%;
+      }
+
+      .filter__list {
+        margin: 0 0 0 -2px;
+        padding: 0;
+        justify-content: flex-start;
+      }
+
+      .filter__label {
+        margin: 0;
+      }
+    }
+
+    &--level {
+      margin: 0 0 19px 0;
+      padding: 0 0 19px 0;
+      border-bottom: none;
+
+      .filter__fieldset-flex {
+        align-items: flex-start;
+      }
+
+      .filter__legend {
+        padding: 24px 0 10px 0;
+        width: 100%;
+      }
+    }
+  }
+
+  .filter__list {
+    padding: 18px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    width: auto;
+  }
+
+  .filter__legend {
+    padding: 0 0 0 0;
+    display: flex;
+
+    width: 100%;
+
+    justify-content: space-between;
+
+    .legend-btn {
+      display: block;
+
+      &::after {
+        top: 10px;
+        right: -1px;
+
+        width: 10px;
+        height: 5px;
+      }
+    }
+  }
+
+  .filter__title {
+    margin: 0 0 23px 0;
+    padding: 0;
+  }
+
+  .filter__wrapper {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .filter__slide-wrapper {
+    margin: 0 0 26px 0;
+    width: 191px;
+  }
+
+  .filter_slide {
+    width: 125px;
+  }
+
+  .filter__level {
+    margin: 0 auto 0 auto;
+    padding: 2px 0 0 0;
+
+    &::after {
+      left: 91px;
+    }
+
+    &::before {
+      right: 84px;
+    }
+
+    .filter__input {
+      width: 96px;
+      height: 46px;
+
+      &--end-level {
+        width: 95px;
+      }
+    }
+  }
+
+  .filter__slide-button {
+    &--left {
+      left: -7px;
+    }
+  }
+
+  .filter__toggle {
+    padding: 37px 0 0 0;
+  }
 }

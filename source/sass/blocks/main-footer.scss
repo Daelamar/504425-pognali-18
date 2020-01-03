@@ -1,34 +1,126 @@
 @import "../global/mixins";
+@import "../global/variables";
 
 .main-footer {
+  position: relative;
   background-color: $color-white;
   border-radius: 30px 30px 0 0;
+
+  z-index: 4;
 }
 
 .main-footer__container {
   @include container;
-  padding: 0 25px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  padding: 38px 25px 0;
+}
 
-  outline: 1px solid yellowgreen; //todo: Временно для сетки
+.main-footer__wrapper {
+  display: flex;
+  padding: 14px 0;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .main-footer__copyright {
+  margin: 0;
+  padding: 0 0 3px 0;
   font-weight: 400;
   color: $color-twilightGray;
 }
 
+.main-footer__logo-link {
+  margin: 0 0 39px 0;
+}
+
+.main-footer__logo {
+  display: none;
+
+  &--mobile {
+    display: block;
+  }
+}
+
+.main-footer__academy-link {
+  display: block;
+  line-height: 0;
+}
+
+.main-footer__list {
+  margin: 0 0 37px 0;
+}
 
 //Таблет
 
 @media (min-width: $tablet-width) {
   .main-footer {
-    border-radius: 0 0 60px 60px;
+    border-radius: 60px 60px 0 0;
   }
 
   .main-footer__container {
-    display: flex;
-    justify-content: space-between;
-    height: 154px; //todo: Временно для сетки
+    padding: 46px 40px 48px;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .main-footer__logo-link {
+    margin: 0 87px 0 0;
+  }
+
+  .main-footer__logo {
+    display: none;
+
+    &--tablet {
+      display: block;
+    }
+  }
+
+  .main-footer__list {
+    margin: 0;
+    width: 180px;
+  }
+
+  .main-footer__wrapper {
+    margin: 0 0 0 auto;
+    padding: 0;
+
+    width: auto;
+
+    border-top: none;
+  }
+
+  .main-footer__copyright {
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .main-footer__academy-link {
+    margin: 0 0 0 25px;
   }
 }
 
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .main-footer__container {
+    padding: 48px 60px;
+  }
+
+  .main-footer__logo {
+    display: none;
+
+    &--desktop {
+      display: block;
+    }
+  }
+
+  .main-footer__logo-link {
+    margin: 0 368px 0 0;
+  }
+}

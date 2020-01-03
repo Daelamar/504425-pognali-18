@@ -2,22 +2,39 @@
 @import "../global/variables";
 
 .intro {
-  background-color: $color-header;
+  background: $color-header;
 }
 
 .intro__container {
   @include container;
-  padding: 0 25px;
-  height: 980px; //todo: Временно для сетки
 
-  background: url("../img/traveller-illustration-mobile@1x.png") no-repeat, url("../img/globe-back-mobile@1x.jpg") no-repeat;
-  outline: 1px solid yellowgreen; //todo: Временно для сетки
+  display: flex;
+  flex-direction: column;
+
+  background: url("../img/traveller-illustration-mobile@1x.png") no-repeat 80px 150px, url("../img/globe-back-mobile@1x.jpg") no-repeat 0 -80px;
+}
+
+.intro__wrapper {
+  padding: 47px 25px 0;
+  background: $color-header;
 }
 
 .intro__slogan {
+  margin: 0 0 264px 0;
+  padding: 21px 30px 0;
   font-size: 36px;
   font-weight: 700;
   line-height: 40px;
+  text-align: center;
+}
+
+.intro__blockquote {
+  margin: 0 0 30px 0;
+  padding: 0 90px 0 25px;
+}
+
+.intro__description {
+  margin: 0 0 18px 0;
 }
 
 .intro__cite {
@@ -26,41 +43,180 @@
 
 .intro__list {
   @include listStyle;
+  margin: 0 0 -238px 0;
+  padding: 0 25px;
+
+  z-index: 10;
 }
 
 .intro__item {
+  position: relative;
+  padding: 22px 60px 22px 25px;
+
+  min-height: 160px;
+
   font-size: 18px;
   font-weight: 700;
   line-height: 18px;
 
   color: #161c35;
 
+  border-radius: 10px;
+
+  background-color: #ff8d30;
+
+  &:not(:first-child) {
+    margin: -80px 0 0 0;
+  }
+
   &:first-child {
     background-color: #ff8d30;
-    border-radius: 10px 10px 0 0;
   }
 
   &:nth-child(2) {
     background-color: #ffa530;
-    border-radius: 10px 10px 0 0;
   }
 
   &:nth-child(3) {
     background-color: #ffbd30;
-    border-radius: 10px 10px 0 0;
   }
 
   &:last-child {
+    min-height: 80px;
     background-color: #ffd74b;
-    border-radius: 10px;
+  }
+
+  .intro__point {
+    position: absolute;
+    top: 22px;
+    right: 20px;
+
+    width: 10px;
+    height: 18px;
+
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+    text-align: center;
+
+    color: $color-white;
   }
 }
 
 //Таблет
 
 @media (min-width: $tablet-width) {
+  .intro {
+    background: $color-headerTablet;
+  }
+
   .intro__container {
-    height: 980px; //todo: Временно для сетки}
+    background: url("../img/traveller-illustration-tablet@1x.png") no-repeat 284px 273px, url("../img/globe-back-tablet@1x.jpg") no-repeat -356px 252px;
+  }
+
+  .intro__wrapper {
+    margin: 0 0 211px 0;
+    padding: 0;
+    align-self: flex-start;
+
+    width: 370px;
+
+    background: transparent;
+  }
+
+  .intro__blockquote {
+    margin: 0;
+    padding: 0 0 0 75px;
+  }
+
+  .intro__slogan {
+    margin: 0 0 85px 0;
+    padding: 33px 165px 0;
+
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .intro__description {
+    margin: 0 0 44px 0;
+
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 33px;
+  }
+
+  .intro__cite {
+    padding: 0 15px 0 0;
+    display: block;
+    font-size: 21px;
+    line-height: 25px;
+  }
+
+  .intro__list {
+    margin: 0 0 -139px 0;
+    padding: 0 40px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .intro__item {
+    padding: 31px 110px 60px 33px;
+
+    width: 380px;
+    min-height: 140px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    color: #161c35;
+
+    border-radius: initial;
+
+    &:not(:first-child) {
+      margin: 0;
+    }
+
+    &:first-child {
+      background-color: #ff8d30;
+      border-radius: 20px 0 0 0;
+    }
+
+    &:nth-child(2) {
+      background-color: #ffa530;
+      border-radius: 20px 20px 0 0;
+    }
+
+    &:nth-last-child(2) {
+      background-color: #ffbd30;
+      border-radius: 0 0 0 20px;
+    }
+
+    &:last-child {
+      background-color: #ffd74b;
+      border-radius: 0 0 20px 20px;
+    }
+
+    &:nth-child(2n) {
+      margin: 0 0 0 -36px;
+      width: 344px;
+    }
+
+    .intro__point {
+      position: absolute;
+      top: auto;
+      bottom: 30px;
+      left: 34px;
+
+      width: 15px;
+      height: 22px;
+
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 30px;
+      text-align: center;
+      color: $color-white;
+    }
   }
 }
 
@@ -68,10 +224,139 @@
 
 @media (min-width: $desktop-width) {
   .intro {
+    margin: 0 0 -60px 0;
+
+    position: relative;
+    background: $color-header;
+
     border-radius: 0 0 60px 60px;
+
+    overflow: hidden;
+    z-index: 15;
   }
 
   .intro__container {
-    height: 640px; //todo: Временно для сетки}
+    padding: 100px 60px 123px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    background: url("../img/traveller-illustration-desktop@1x.png") no-repeat 604px 1px, url("../img/globe-back-desktop@1x.jpg") no-repeat -179px -108px;
+  }
+
+  .intro__slogan {
+    margin: 0;
+    padding: 0 160px 0 67px;
+
+    text-align: left;
+
+    width: 50%;
+  }
+
+  .intro__wrapper {
+    margin: 0;
+    padding: 11px 27px 0 345px;
+
+    width: 50%;
+  }
+
+  .intro__blockquote {
+    margin: 0;
+    padding: 0;
+
+    text-align: right;
+  }
+
+  .intro__description {
+    margin: 0 0 43px 0;
+
+    & span {
+      padding: 0 5px 0 0;
+      display: block;
+    }
+  }
+
+  .intro__cite {
+    padding: 0 0 0 29px;
+
+    text-align: left;
+  }
+
+  .intro__list {
+    margin: 100px 0 0 0;
+    padding: 0;
+    position: initial;
+
+    width: 100%;
+  }
+
+  .intro__item {
+    margin: 0;
+    padding: 0;
+
+    width: 375px;
+    min-height: 107px;
+
+    font-size: 24px;
+    line-height: 24px;
+
+    color: #161c35;
+
+    border-radius: 0;
+
+    &:nth-child(4n+1) {
+      margin: 0;
+      padding: 30px 110px 30px 34px;
+      border-radius: 20px;
+
+      .intro__point {
+        left: 268px;
+      }
+    }
+
+    &:nth-child(4n+2) {
+      margin: 0 0 0 -60px;
+      padding: 30px 110px 30px 31px;
+      width: 400px;
+      border-radius: 20px;
+
+      .intro__point {
+        left: 300px;
+      }
+    }
+
+    &:nth-child(4n+3) {
+      margin: 0 0 0 -56px;
+      padding: 30px 110px 30px 32px;
+      border-radius: 20px;
+
+      .intro__point {
+        left: 302px;
+      }
+    }
+
+    &:nth-child(4n+4) {
+      margin: 0 0 0 -29px;
+      padding: 30px 110px 30px 31px;
+      width: 314px;
+      border-radius: 20px;
+
+      .intro__point {
+        left: 270px;
+      }
+    }
+
+    .intro__point {
+      top: 30px;
+      bottom: auto;
+
+      width: 11px;
+      height: 18px;
+
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 }

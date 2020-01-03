@@ -3,11 +3,26 @@
 
 .contact-list {
   @include listStyle;
+}
 
-  outline: 1px solid yellowgreen; //todo: Временно для сетки
+.contact-list__icon {
+  margin: 0 16px 0 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 45px;
+  height: 45px;
+
+  background-color: #121936;
+  border-radius: 50%;
 }
 
 .contact-list__link {
+  display: flex;
+  align-items: center;
+
   font-weight: 700;
   text-transform: uppercase;
 
@@ -18,10 +33,74 @@
   }
 }
 
+//Таблет
+
+@media (min-width: $tablet-width) {
+  .contact-list {
+    padding: 0 35px;
+  }
+
+  .contact-list__link {
+    display: flex;
+    align-items: center;
+
+    font-size: 28px;
+    line-height: 28px;
+  }
+
+  .contact-list__icon {
+    margin: 0 23px 0 0;
+    padding: 0 0 2px 0;
+
+    width: 68px;
+    height: 68px;
+
+    & svg {
+      width: 27px;
+      height: 27px;
+    }
+
+    &--mail {
+      & svg {
+        height: 20px;
+      }
+    }
+  }
+}
+
 //Десктоп
 
 @media (min-width: $desktop-width) {
   .contact-list {
+    padding: 0 228px 0 223px;
+
     display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .contact-list__item {
+    &:nth-child(3n+1) {
+      margin: 0 auto 0 0;
+    }
+  }
+
+  .contact-list__icon {
+    margin: 0 31px 0 0;
+    padding: 0;
+
+    width: 90px;
+    height: 90px;
+
+    & svg {
+      width: 36px;
+      height: 36px;
+    }
+
+    &--mail {
+      & svg {
+        height: 26px;
+      }
+    }
   }
 }

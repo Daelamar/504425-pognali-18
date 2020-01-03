@@ -2,49 +2,160 @@
 @import "../global/variables";
 
 .companions {
+  position: relative;
+  margin: 0 0 -60px 0;
+
   background-color: $color-darkBlue;
   border-radius: 0 0 30px 30px;
+
+  z-index: 7;
 }
 
 .companions__container {
   @include container;
-  padding: 0 25px;
+  padding: 131px 25px 30px;
 
   background: url("../img/smolov-back-desktop@1x.png") no-repeat, url("../img/rogovaya-back-mobile@1x.png") no-repeat;
-  outline: 1px solid yellowgreen; //todo: Временно для сетки
+  background-position: 152px 98px, -11px 370px;
+}
+
+.companions__wrapper {
+  padding: 0 0 19px 0;
+}
+
+.companions__link {
+  display: block;
+  line-height: 0;
 }
 
 .companions__title {
+  margin: 0 0 19px 0;
+  padding: 0 0 0 24px;
+
+  position: relative;
+
   font-size: 24px;
   font-weight: 700;
   line-height: 24px;
 
   color: #ff8d30;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -33px;
+    left: -43px;
+
+    width: 132px;
+    height: 132px;
+
+    background-color: #141b3b;
+    border-radius: 20px;
+
+    z-index: -1;
+  }
+}
+
+.companions__info {
+  margin: 0 0 21px 0;
+  padding: 0 25px 0 24px;
+
+  & br {
+    display: none;
+  }
 }
 
 .companions__slogan {
+  margin: 0 0 56px 0;
+  padding: 0 34px 0 24px;
+
+  display: block;
+
   font-weight: 700;
+
+  & br {
+    display: none;
+  }
 }
 
 .companions__item {
-  background-color: #ffffff;
+  position: relative;
+
   border-radius: 10px;
+
+  overflow: hidden;
+
+  &:not(:last-of-type) {
+    margin: 0 0 9px 0;
+  }
+
+  &:last-of-type {
+    .companions__tags {
+      padding: 0 0 0 15px;
+    }
+  }
+}
+
+.companions__img {
+  &--desktop {
+    display: none;
+  }
+}
+
+.companions__caption {
+  padding: 26px 45px 23px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: $color-white;
 }
 
 .companions__level {
+  position: absolute;
+  top: 16px;
+  left: 17px;
+
+  padding: 6px 0 0 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 60px;
   height: 60px;
 
   border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .companions__level-value {
+  margin: 0;
+  position: relative;
   font-size: 24px;
   font-weight: 700;
   line-height: 24px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 21px;
+    left: -2px;
+
+    width: 31px;
+    height: 1px;
+
+    background-color: $color-white;
+    opacity: 0.4;
+  }
 }
 
 .companions__level-caption {
+  margin: 0;
+
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
@@ -52,15 +163,32 @@
 
 .companions__flag-list {
   @include listStyle;
+  position: absolute;
+  top: -12px;
+  left: 50%;
+
   display: flex;
+
+  transform: translateX(-50%);
 }
 
 .companions__flag-item {
   width: 35px;
   height: 24px;
+
+  background-color: #4758a9; //todo: Временно до нарезки флажков
+  border-radius: 4px;
+
+  &:not(:last-of-type) {
+    margin: 0 19px 0 0;
+  }
 }
 
 .companions__name {
+  position: relative;
+
+  margin: 0 0 16px 0;
+
   font-size: 21px;
   font-weight: 700;
   line-height: 21px;
@@ -68,9 +196,30 @@
   color: #1d2e5b;
 }
 
+.companions__status {
+  position: absolute;
+  top: 7px;
+  left: -16px;
+
+  width: 5px;
+  height: 5px;
+  border-radius: 3px;
+
+  &--offline {
+    background-color: #f97676;
+  }
+
+  &--online {
+    background-color: #81e31e;
+  }
+}
+
 .companions__tags {
+  margin: 0 0 15px 0;
+
   font-weight: 400;
   line-height: 18px;
+  text-align: center;
 
   color: $color-twilightGray;
 }
@@ -78,50 +227,55 @@
 .companions__transport-list {
   @include listStyle;
   display: flex;
+  justify-content: flex-start;
 }
 
-.companions__transport-img {
-  display: block;
-  width: 24px;
-  height: 24px;
-
+.companions__transport-item {
   &--inactive {
     opacity: 0.15;
   }
 
   &--avia {
+    margin: 0 17px 0 0;
+
+    width: 19px;
+    height: 21px;
+
     background-image: url("../img/plane.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
 
   &--auto {
+    margin: 0 13px 0 0;
+
+    width: 17px;
+    height: 21px;
+
     background-image: url("../img/bus.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
 
   &--bike {
+    margin: 0 10px 0 0;
+
+    width: 24px;
+    height: 21px;
+
     background-image: url("../img/bike.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
 
   &--foot {
+    width: 20px;
+    height: 21px;
+
     background-image: url("../img/run.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
-}
-
-.companions__all {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 18px;
-  color: #1d2e5b;
-
-  background-color: #ffd74b;
-  border-radius: 10px;
 }
 
 //Таблет
@@ -132,11 +286,134 @@
   }
 
   .companions__container {
-    height: 1334px; //todo: Временно для сетки
+    padding: 202px 40px 87px;
+
+    background: url("../img/smolov-back-desktop@1x.png") no-repeat, url("../img/rogovaya-back-desktop@1x.png") no-repeat;
+    background-position: 40px 486px, 408px 142px;
+  }
+
+  .companions__title {
+    margin: 0 0 57px 0;
+    padding: 0 0 0 33px;
+
+    font-size: 45px;
+    line-height: 45px;
+
+    border-radius: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -60px;
+      left: 0;
+
+      width: 213px;
+      height: 213px;
+
+      background-color: #141b3b;
+      border-radius: 20px;
+
+      z-index: -1;
+    }
+  }
+
+  .companions__info {
+    margin: 0 0 39px 0;
+    padding: 0 194px 0 36px;
+
+    font-size: 28px;
+    line-height: 33px;
+
+    & br {
+      display: initial;
+    }
+  }
+
+  .companions__slogan {
+    margin: 0 0 58px 0;
+    padding: 0 390px 0 35px;
+
+    font-size: 21px;
+    line-height: 25px;
+
+    & br {
+      display: initial;
+    }
+  }
+
+  .companions__img {
+    &--mobile {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
   }
 
   .companions__wrapper {
+    padding: 0 35px 80px 35px;
     display: flex;
+    justify-content: space-between;
+  }
+
+  .companions__item {
+    position: relative;
+
+    max-width: 285px;
+
+    border-radius: 20px;
+
+    &:not(:last-of-type) {
+      margin: 0;
+    }
+
+    &:last-of-type {
+      .companions__tags {
+        padding: 0;
+      }
+    }
+  }
+
+  .companions__level {
+    padding: 9px 0 0 0;
+
+    top: 19px;
+    left: 19px;
+  }
+
+  .companions__caption {
+    padding: 31px 30px 29px;
+    position: relative;
+  }
+
+  .companions__name {
+    margin: 0 0 21px 0;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .companions__status {
+    top: 8px;
+    left: -22px;
+
+    width: 7px;
+    height: 7px;
+    border-radius: 4px;
+  }
+
+  .companions__tags {
+    margin: 0 0 24px 0;
+
+    width: 100%;
+
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .companions__all {
+    margin: 0 35px;
   }
 }
 
@@ -144,6 +421,64 @@
 
 @media (min-width: $desktop-width) {
   .companions__container {
-    height: 840px; //todo: Временно для сетки
+    padding: 190px 40px 132px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    background-position: 548px 195px, 190px 447px;
+  }
+
+  .companions__wrapper {
+    margin: 0 0 0 auto;
+    padding: 5px 20px 0 0;
+
+    width: 650px;
+    order: 2;
+  }
+
+  .companions__inner {
+    margin: 0 auto 85px 0;
+    padding: 0 0 0 89px;
+
+    width: 538px;
+    order: 1;
+  }
+
+  .companions__title {
+    margin: 0 0 56px 0;
+    padding: 0;
+
+    &::before {
+      left: -68px;
+    }
+  }
+
+  .companions__info {
+    margin: 0 0 40px 0;
+    padding: 0 0 0 2px;
+  }
+
+  .companions__slogan {
+    margin: 0 0 0 0;
+    padding: 0 0 0 2px;
+  }
+
+  .companions__all {
+    margin: -82px 0 0 90px;
+
+    width: 280px;
+
+    order: 3;
+  }
+
+  .companions__level {
+    padding: 8px 0 0 0;
+
+    top: 22px;
+    left: 22px;
   }
 }
