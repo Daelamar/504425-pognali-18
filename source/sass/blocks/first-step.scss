@@ -10,6 +10,10 @@
   padding: 24px 20px 22px;
 }
 
+.first-step__header {
+  margin: 0 0 21px 0;
+}
+
 .first-step__title {
   margin: 0 0 15px 0;
   padding: 0 0 0 5px;
@@ -22,7 +26,6 @@
 }
 
 .first-step__description {
-  margin: 0 0 21px 0;
   padding: 0 0 0 5px;
 
   font-weight: 400;
@@ -342,6 +345,8 @@
   border-radius: 20px;
 }
 
+//Таблетка
+
 @media (min-width: $tablet-width) {
   .first-step__container {
     display: flex;
@@ -350,6 +355,7 @@
   }
 
   .first-step__header {
+    margin: 0 0 37px 0;
     order: -5;
   }
 
@@ -363,7 +369,7 @@
   }
 
   .first-step__description {
-    margin: 0 0 37px 0;
+    margin: 0;
     padding: 0 15px 0 0;
 
     font-size: 20px;
@@ -578,7 +584,7 @@
   }
 
   .first-step__header {
-    margin: 0 0 48px 0;
+    margin: 0 0 85px 0;
     padding: 0 150px 0 0;
     position: relative;
 
@@ -590,7 +596,7 @@
       position: absolute;
       content: "";
 
-      bottom: -18px;
+      bottom: -55px;
       left: 1px;
 
       width: 1000px;

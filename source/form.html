@@ -616,10 +616,17 @@
       </fieldset>
       <fieldset class="form__fieldset second-step">
         <div class="second-step__container">
-          <h3 class="second-step__title">Шаг 2. <br>Маршрут</h3>
-          <p class="second-step__description">Укажите страны, которые <br>вы хотели посетить.
-            Это может быть одна или сразу несколько.
-          </p>
+          <div class="second-step__header">
+            <h3 class="second-step__title">Шаг 2. <br>Маршрут</h3>
+            <p class="second-step__description">Укажите страны, которые вы хотели посетить.
+              Это может быть одна или сразу несколько.
+            </p>
+          </div>
+          <ul class="second-step__crumbs-list">
+            <li class="second-step__crumbs-item">Даты</li>
+            <li class="second-step__crumbs-item second-step__crumbs-item--active">Маршрут</li>
+            <li class="second-step__crumbs-item">Развлечения</li>
+          </ul>
           <label for="1-country" class="second-step__label second-step__label--active">
             <input
               class="second-step__input second-step__input--active"
@@ -675,9 +682,16 @@
       </fieldset>
       <fieldset class="form__fieldset third-step">
         <div class="third-step__container">
-          <h3 class="third-step__title">Шаг 3.<br>Развлечения</h3>
-          <p class="third-step__description">Наконец, расскажите о своих планах времяпровождения.
-            Можно писать в свободной форме и ставить тэги.</p>
+          <div class="third-step__header">
+            <h3 class="third-step__title">Шаг 3. <br>Развлечения</h3>
+            <p class="third-step__description">Наконец, расскажите о своих планах времяпровождения.
+              Можно писать в свободной форме и ставить тэги.</p>
+          </div>
+          <ul class="third-step__crumbs-list">
+            <li class="third-step__crumbs-item">Даты</li>
+            <li class="third-step__crumbs-item">Маршрут</li>
+            <li class="third-step__crumbs-item third-step__crumbs-item--active">Развлечения</li>
+          </ul>
           <label for="1-comment" class="third-step__label">Босния и герцеговина
             <span class="third-step__flag"></span>
           </label>

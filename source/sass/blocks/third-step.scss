@@ -25,6 +25,15 @@
   }
 }
 
+.third-step__crumbs-list {
+  @include listStyle;
+  display: none;
+}
+
+.third-step__header {
+  margin: 0 0 21px 0;
+}
+
 .third-step__title {
   margin: 0 0 15px 0;
   padding: 0 0 0 5px;
@@ -37,7 +46,7 @@
 }
 
 .third-step__description {
-  margin: 0 0 21px 0;
+  margin: 0;
   padding: 0 5px 0 5px;
 
   font-weight: 400;
@@ -106,7 +115,7 @@
   display: block;
 
   width: 220px;
-  height: 220px;
+  min-height: 220px;
 
   font-size: 16px;
   font-weight: 400;
@@ -196,15 +205,9 @@
     text-align: left;
   }
 
-  .third-step__description {
-    position: relative;
+  .third-step__header {
     margin: 0 0 70px 0;
-    padding: 0 5px 5px 0;
-
-    font-size: 20px;
-    font-weight: normal;
-    line-height: 1.2;
-    text-align: left;
+    position: relative;
 
     &::before {
       position: absolute;
@@ -218,6 +221,16 @@
 
       background-color: #cbced9;
     }
+  }
+
+  .third-step__description {
+    position: relative;
+    padding: 0 5px 5px 0;
+
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 1.2;
+    text-align: left;
   }
 
   .third-step__label {
@@ -253,7 +266,7 @@
     display: block;
 
     width: 499px;
-    height: 142px;
+    min-height: 142px;
 
     font-size: 20px;
     font-weight: normal;
@@ -340,6 +353,140 @@
       height: 14px;
       background-image: url("../img/triangle-arrow-left.svg");
       background-repeat: no-repeat;
+    }
+  }
+}
+
+//Десктоп
+
+@media (min-width: $desktop-width) {
+  .third-step__container {
+    padding: 99px 160px 100px;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &::before {
+      top: 368px;
+      right: 384px;
+    }
+  }
+
+  .third-step__header {
+    margin: 0 0 141px 0;
+    padding: 0 270px 0 0;
+    position: relative;
+
+    width: 750px;
+
+    &::before {
+      bottom: -55px;
+      left: 0;
+
+      width: 997px;
+    }
+  }
+
+  .third-step__crumbs-list {
+    margin: 0 0 0 auto;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 230px;
+  }
+
+  .third-step__crumbs-item {
+    margin: 0 0 9px 0;
+    padding: 9px 5px 6px 45px;
+    position: relative;
+
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: 2px;
+    text-align: left;
+    text-transform: uppercase;
+
+    color: #1d2e5b;
+
+    opacity: 0.6;
+
+    &::before {
+      position: absolute;
+      content: "";
+
+      top: 16px;
+      left: 1px;
+
+      width: 6px;
+      height: 6px;
+
+      background-color: #1d2e5b;
+
+      border-radius: 50%;
+    }
+
+    &--active {
+      opacity: 1;
+    }
+  }
+
+  .third-step__title {
+    margin: 0 0 34px 0;
+
+    br {
+      display: none;
+    }
+  }
+
+  .third-step__description {
+    position: relative;
+    padding: 0;
+  }
+
+  .third-step__label {
+    margin: 0 0 43px 0;
+
+    width: 997px;
+
+    &::after {
+      right: 215px;
+    }
+  }
+
+  .third-step__input {
+    margin: 0 0 56px 0;
+    padding: 24px;
+
+    width: 730px;
+
+    &--first {
+      margin-bottom: 58px;
+    }
+
+    &--second {
+      padding: 24px 5px 24px 24px;
+    }
+  }
+
+  .third-step__flag {
+    top: -12px;
+    right: 112px;
+
+  }
+
+  .third-step__buttons {
+    width: 100%;
+  }
+
+  .third-step__previous {
+    padding: 23px 3px 27px 5px;
+
+    &::after {
+      top: 28px;
+      left: 18px;
     }
   }
 }
