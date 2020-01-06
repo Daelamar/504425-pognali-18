@@ -88,6 +88,17 @@
 
   letter-spacing: 1.4px;
   opacity: 0.3;
+
+  transition-duration: 0.2s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 //Таблетка

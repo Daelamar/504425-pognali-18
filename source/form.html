@@ -181,13 +181,13 @@
     <nav class="main-header__nav main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link">О сервисе</a>
+          <a href="index.html" class="main-nav__link" data-hover="О&nbsp;сервисе">О сервисе</a>
         </li>
         <li class="main-nav__item">
-          <a href="form.html" class="main-nav__link">Направления</a>
+          <a class="main-nav__link" data-hover="Направления">Направления</a>
         </li>
         <li class="main-nav__item">
-          <a href="catalog.html" class="main-nav__link">Попутчики</a>
+          <a href="catalog.html" class="main-nav__link" data-hover="Попутчики">Попутчики</a>
         </li>
       </ul>
     </nav>
@@ -215,7 +215,9 @@
       </a>
       <a
         href="#"
-        class="user-menu__item user-menu__item--enter">Авторизация</a>
+        class="user-menu__item user-menu__item--enter">
+        <span>Авторизация</span>
+      </a>
     </div>
     <h2 class="main-header__title">Направления
       <a href="index.html" class="main-header__title-link">На главную</a>
@@ -302,6 +304,8 @@
           <textarea
             class="user-block__textarea"
             name="user-tags"
+            spellcheck="false"
+            placeholder="Коротко о себе в виде 5-8 хештэгов"
             id="user-tags">#бургер #бар #футбол #концерт #крафт</textarea>
         </div>
         <div class="user-block__transport">
@@ -910,5 +914,6 @@
     </ul>
   </div>
 </div>
+<script src="js/user-label-active.js"></script>
 </body>
 </html>
