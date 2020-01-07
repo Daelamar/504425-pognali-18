@@ -75,6 +75,18 @@
   background-color: #ffffff;
   border-radius: 4px;
   border: 1px solid #cbced9;
+
+  outline: none;
+  transition-duration: 0.2s;
+
+  &:hover {
+    border: solid 1px #959bb2;
+  }
+
+  &:focus,
+  &:active {
+    border: solid 1px #161c35;
+  }
 }
 
 .first-step__wrapper {
@@ -105,6 +117,20 @@
     border-radius: 10px;
 
     opacity: 0.3;
+    outline: none;
+
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
   }
 
   .first-step__plus {
@@ -127,6 +153,20 @@
     border-radius: 10px;
 
     opacity: 0.3;
+    outline: none;
+
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+
+    &:hover,
+    &:focus {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
   }
 
   &--duration {
@@ -156,6 +196,8 @@
 
       color: #1d2e5b;
 
+      transition-duration: 0.2s;
+
       &::before {
         position: absolute;
         content: "";
@@ -170,16 +212,47 @@
 
         border-radius: 4px;
         border: solid 1px #cbced9;
-        transition-duration: 0.22s;
+        transition-duration: 0.2s;
       }
     }
 
-    .first-step__input:checked + .first-step__label {
-      &::before {
-        background-image: url("../img/tick.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 9px 9px;
+    .first-step__input {
+      &:hover {
+        + .first-step__label {
+          &::before {
+            border: solid 1px #959bb2;
+          }
+        }
+      }
+
+      &:focus,
+      &:active {
+        + .first-step__label {
+          &::before {
+            background-color: #e2e5f1;
+            border: none;
+          }
+        }
+      }
+    }
+
+    .first-step__input:checked {
+      + .first-step__label {
+        &::before {
+          background-image: url("../img/tick.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 9px 9px;
+        }
+      }
+
+      &:focus,
+      &:active {
+        + .first-step__label {
+          &::before {
+            opacity: 0.4;
+          }
+        }
       }
     }
   }
@@ -218,8 +291,19 @@
 
 
     border: none;
+    outline: none;
 
+    transition-duration: 0.2s;
     opacity: 0.3;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
 
     &--left {
       top: 0;
@@ -275,6 +359,8 @@
 
   background-color: #edeff6;
   border: 1px solid #cbced9;
+
+  cursor: pointer;
 
   &--selected {
     color: #ffffff;
@@ -343,6 +429,22 @@
 
   background-color: #ffd74b;
   border-radius: 20px;
+
+  outline: none;
+  transition-duration: 0.2s;
+
+  &:hover,
+  &:focus {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
 }
 
 //Таблетка
@@ -557,6 +659,8 @@
     letter-spacing: normal;
     text-transform: none;
     text-align: left;
+
+    color: #1d2e5b;
 
     &::after {
       content: "";

@@ -155,6 +155,22 @@
   background-color: #ffd74b;
   border-radius: 20px;
   border: none;
+
+  outline: none;
+  transition-duration: 0.2s;
+
+  &:hover,
+  &:focus {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
 }
 
 .third-step__previous {
@@ -312,6 +328,8 @@
     letter-spacing: normal;
     text-transform: none;
     text-align: left;
+
+    color: #1d2e5b;
 
     &::after {
       content: "";

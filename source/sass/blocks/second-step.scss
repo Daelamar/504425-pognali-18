@@ -127,6 +127,30 @@
 
   width: 220px;
   height: 42px;
+
+  outline: none;
+  transition-duration: 0.2s;
+
+  &:hover {
+    border: solid 1px #959bb2;
+
+    + .second-step__fade {
+      .second-step__fade-icon {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &:focus,
+  &:active {
+    border: solid 1px #161c35;
+
+    + .second-step__fade {
+      .second-step__fade-icon {
+        opacity: 1;
+      }
+    }
+  }
 }
 
 .second-step__flag {
@@ -153,6 +177,15 @@
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 50%);
 
   border: none;
+
+  outline: none;
+  transition-duration: 0.2s;
+
+  &:hover {
+    .second-step__fade-icon {
+      opacity: 0.5;
+    }
+  }
 }
 
 .second-step__fade-icon {
@@ -183,6 +216,23 @@
 
   border-radius: 50%;
   border: none;
+
+  outline: none;
+  cursor: pointer;
+  transition-duration: 0.2s;
+
+  &:hover,
+  &:focus {
+    .second-step__delete-icon {
+      opacity: 0.5;
+    }
+  }
+
+  &:active {
+    .second-step__delete-icon {
+      opacity: 0.1;
+    }
+  }
 }
 
 .second-step__delete-icon {
@@ -193,6 +243,7 @@
   background-repeat: no-repeat;
 
   opacity: 0.3;
+  transition-duration: 0.2s;
 }
 
 .second-step__add {
@@ -270,6 +321,22 @@
   background-color: #ffd74b;
   border-radius: 20px;
   border: none;
+
+  outline: none;
+  transition-duration: 0.2s;
+
+  &:hover,
+  &:focus {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
 }
 
 .second-step__previous {
@@ -288,6 +355,8 @@
 
   border-radius: 20px;
   border: none;
+
+  outline: none;
 }
 
 //Таблетка
@@ -518,6 +587,8 @@
     letter-spacing: normal;
     text-transform: none;
     text-align: left;
+
+    color: #1d2e5b;
 
     &::after {
       content: "";
