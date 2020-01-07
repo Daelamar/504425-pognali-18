@@ -269,6 +269,28 @@
   border-radius: 4px;
   border: none;
 
+  outline: none;
+  transition-duration: 0.2s;
+
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: #dfe3f0;
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+
+  &:active {
+    background-color: #dfe3f0;
+
+    &::after {
+      opacity: 0.1;
+    }
+  }
+
   &::before {
     position: absolute;
     content: "";
@@ -299,7 +321,7 @@
 
     background-image: url("../../img/qty-plus-mobile.svg");
     background-repeat: no-repeat;
-    opacity: 0.3;
+    opacity: 0.2;
   }
 }
 
@@ -355,8 +377,18 @@
 
   border-radius: 20px;
   border: none;
-
   outline: none;
+
+  transition-duration: 0.2s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 //Таблетка

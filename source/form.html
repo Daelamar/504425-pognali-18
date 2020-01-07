@@ -697,19 +697,27 @@
           <label for="1-comment" class="third-step__label">Босния и герцеговина
             <span class="third-step__flag"></span>
           </label>
-          <textarea
-            type="text"
-            id="1-comment"
-            name="1-comment"
-            placeholder="План действий"
-            class="third-step__input third-step__input--first"></textarea>
+          <div class="third-step__input-wrapper">
+            <textarea
+              type="text"
+              id="1-comment"
+              name="1-comment"
+              placeholder="План действий"
+              class="third-step__input third-step__input--first"
+              required></textarea>
+            <span class="third-step__input-warning">Это поле должно быть заполнено</span>
+          </div>
           <label for="2-comment" class="third-step__label">Чехия
             <span class="third-step__flag"></span>
           </label>
+          <div class="third-step__input-wrapper">
           <textarea
             id="2-comment"
             name="2-comment"
-            class="third-step__input third-step__input--second">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+            class="third-step__input third-step__input--second"
+            required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+            <span class="third-step__input-warning">Это поле должно быть заполнено</span>
+          </div>
           <div class="third-step__buttons">
             <button type="submit" class="third-step__submit">Отправить</button>
             <a href="#second-step" class="third-step__previous js-scroll">На шаг назад</a>
