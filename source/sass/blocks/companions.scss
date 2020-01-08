@@ -81,21 +81,22 @@
 .companions__item {
   position: relative;
 
-  border-radius: 10px;
-
-  overflow: hidden;
   transition-duration: 0.1s;
+
+  z-index: 2;
 
   &:hover {
     transform: scale(1.03);
     box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.08);
   }
 
-  &:not(:last-of-type) {
+  &:nth-of-type(3n + 1) {
     margin: 0 0 9px 0;
   }
 
   &:last-of-type {
+    z-index: 1;
+
     .companions__tags {
       padding: 0 0 0 15px;
     }
@@ -103,6 +104,8 @@
 }
 
 .companions__img {
+  border-radius: 10px 10px 0 0;
+
   &--desktop {
     display: none;
   }
@@ -118,6 +121,7 @@
   align-items: center;
 
   background-color: $color-white;
+  border-radius: 0 0 10px 10px;
 }
 
 .companions__level {
@@ -192,16 +196,24 @@
   &:not(:last-of-type) {
     margin: 0 19px 0 0;
   }
+
+  &:hover {
+    .companions__flag-tooltip {
+      display: block;
+    }
+  }
 }
 
-.companions__flag-tooltip {
-  display: inline;
+.companions__flag-tooltip,
+.companions__transport-tooltip {
   padding: 5px 10px;
   position: absolute;
+  display: none;
 
   top: 40px;
   left: 50%;
 
+  white-space: nowrap;
   color: $color-white;
 
   background-color: #101d41;
@@ -276,6 +288,8 @@
 .companions__tags {
   margin: 0 0 15px 0;
 
+  width: 180px;
+
   font-weight: 400;
   line-height: 18px;
   text-align: center;
@@ -287,53 +301,81 @@
   @include listStyle;
   display: flex;
   justify-content: flex-start;
+
+  z-index: 10;
 }
 
 .companions__transport-item {
+  position: relative;
+
   &--inactive {
-    opacity: 0.15;
+    .companions__transport-icon {
+      opacity: 0.15;
+    }
   }
 
   &--avia {
     margin: 0 17px 0 0;
 
-    width: 19px;
-    height: 21px;
+    .companions__transport-icon {
+      display: block;
 
-    background-image: url("../img/plane.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+      width: 19px;
+      height: 21px;
+
+      background-image: url("../img/plane.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 
   &--auto {
     margin: 0 13px 0 0;
 
-    width: 17px;
-    height: 21px;
+    .companions__transport-icon {
+      display: block;
 
-    background-image: url("../img/bus.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+      width: 17px;
+      height: 21px;
+
+      background-image: url("../img/bus.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 
   &--bike {
     margin: 0 10px 0 0;
 
-    width: 24px;
-    height: 21px;
+    .companions__transport-icon {
+      display: block;
 
-    background-image: url("../img/bike.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+      width: 24px;
+      height: 21px;
+
+      background-image: url("../img/bike.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
   }
 
   &--foot {
-    width: 20px;
-    height: 21px;
+    .companions__transport-icon {
+      display: block;
 
-    background-image: url("../img/run.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+      width: 20px;
+      height: 21px;
+
+      background-image: url("../img/run.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  &:hover {
+    .companions__transport-tooltip {
+      display: block;
+    }
   }
 }
 
@@ -401,6 +443,8 @@
   }
 
   .companions__img {
+    border-radius: 20px 20px 0 0;
+
     &--mobile {
       display: none;
     }
@@ -413,7 +457,8 @@
   .companions__wrapper {
     padding: 0 35px 80px 35px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   .companions__item {
@@ -421,10 +466,9 @@
 
     max-width: 285px;
 
-    border-radius: 20px;
 
-    &:not(:last-of-type) {
-      margin: 0;
+    &:nth-of-type(3n + 1) {
+      margin: 0 48px 0 0;
     }
 
     &:last-of-type {
@@ -444,6 +488,10 @@
   .companions__caption {
     padding: 31px 30px 29px;
     position: relative;
+
+    max-width: 285px;
+
+    border-radius: 0 0 20px 20px;
   }
 
   .companions__name {
@@ -480,7 +528,7 @@
 
 @media (min-width: $desktop-width) {
   .companions__container {
-    padding: 190px 40px 132px;
+    padding: 190px 40px 133px;
 
     display: flex;
     flex-direction: row;
@@ -497,6 +545,12 @@
 
     width: 650px;
     order: 2;
+  }
+
+  .companions__item {
+    &:nth-of-type(3n + 1) {
+      margin: 0 60px 0 0;
+    }
   }
 
   .companions__inner {

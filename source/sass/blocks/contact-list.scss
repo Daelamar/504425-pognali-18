@@ -28,8 +28,31 @@
 
   color: #192144;
 
+  outline: none;
+  cursor: pointer;
+
+  transition-duration: 0.2s;
+
   &--orange {
     color: #ffd74b;
+  }
+
+  &:hover,
+  &:focus {
+    color: #ffbd30;
+
+    svg {
+      transition-duration: 0.2s;
+      fill: #ffbd30;
+    }
+  }
+
+  &:active {
+    color: rgba(255, 189, 48, 0.3);
+
+    svg {
+      fill: rgba(255, 189, 48, 0.3);
+    }
   }
 }
 

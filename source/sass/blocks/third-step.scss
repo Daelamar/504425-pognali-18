@@ -525,7 +525,7 @@
     &--error {
       border: solid 1px #f47e7e;
 
-      .third-step__input-warning {
+      + .third-step__input-warning {
         display: block;
       }
     }
