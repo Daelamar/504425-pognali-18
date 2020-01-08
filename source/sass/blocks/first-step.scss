@@ -442,6 +442,7 @@
     color: rgba(29, 46, 91, 0.3);
 
     &::after {
+      transition-duration: 0.2s;
       opacity: 0.3;
     }
   }

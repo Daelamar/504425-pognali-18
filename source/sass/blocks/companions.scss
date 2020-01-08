@@ -84,6 +84,12 @@
   border-radius: 10px;
 
   overflow: hidden;
+  transition-duration: 0.1s;
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.08);
+  }
 
   &:not(:last-of-type) {
     margin: 0 0 9px 0;
@@ -170,9 +176,13 @@
   display: flex;
 
   transform: translateX(-50%);
+
+  z-index: 10;
 }
 
 .companions__flag-item {
+  position: relative;
+
   width: 35px;
   height: 24px;
 
@@ -181,6 +191,40 @@
 
   &:not(:last-of-type) {
     margin: 0 19px 0 0;
+  }
+}
+
+.companions__flag-tooltip {
+  display: inline;
+  padding: 5px 10px;
+  position: absolute;
+
+  top: 40px;
+  left: 50%;
+
+  color: $color-white;
+
+  background-color: #101d41;
+  border-radius: 4px;
+
+  transform: translateX(-50%);
+  z-index: 11;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    bottom: 98%;
+    left: 50%;
+
+    width: 0;
+    height: 0;
+
+    border-bottom: 8px solid #101d41;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+
+    transform: translateX(-50%);
   }
 }
 
@@ -194,6 +238,21 @@
   line-height: 21px;
 
   color: #1d2e5b;
+
+  cursor: pointer;
+  outline: none;
+  transition-duration: 0.2s;
+
+  z-index: 5;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .companions__status {
