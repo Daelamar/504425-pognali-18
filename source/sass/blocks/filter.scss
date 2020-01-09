@@ -33,6 +33,8 @@
   padding: 0 1px 0 3px;
   border: none;
 
+  cursor: pointer;
+
   &--closed {
     .filter__list {
       display: none;
@@ -58,6 +60,8 @@
       position: relative;
       display: block;
 
+      cursor: pointer;
+
       &::after {
         position: absolute;
         content: "";
@@ -75,17 +79,49 @@
       }
     }
 
-    .filter__input:checked + .filter__label {
-      &::after {
-        background-image: url("../img/tick.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 9px 9px;
+    .filter__input {
+      &:hover {
+        + .filter__label {
+          opacity: 0.6;
+        }
+      }
+
+      &:focus,
+      &:active {
+        + .filter__label {
+          opacity: 0.3;
+        }
+      }
+    }
+
+    .filter__input:checked {
+      + .filter__label {
+        &::after {
+          background-image: url("../img/tick.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 9px 9px;
+        }
+      }
+    }
+
+    &:hover {
+      + .filter__label {
+        opacity: 0.6;
+      }
+    }
+
+    &:focus,
+    &:active {
+      + .filter__label {
+        opacity: 0.3;
       }
     }
   }
 
   &--transport {
+    cursor: pointer;
+
     .filter__list {
       padding: 4px 0 19px 0;
 
@@ -108,14 +144,64 @@
 
       border-radius: 50%;
 
-      & svg {
-        opacity: 0.15;
+      cursor: pointer;
+    }
+
+    .filter__input {
+      transition-duration: 0.2s;
+
+      + .filter__label {
+        svg {
+          opacity: 0.15;
+        }
+      }
+
+      &:hover {
+        + .filter__label {
+          box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+
+          svg {
+            opacity: 0.3;
+          }
+        }
+      }
+
+      &:focus,
+      &:active {
+        + .filter__label {
+          background-color: #e2e5f1;
+
+          svg {
+            opacity: 0.1;
+          }
+        }
       }
     }
 
-    .filter__input:checked + .filter__label {
-      & svg {
-        opacity: 1;
+    .filter__input:checked {
+      + .filter__label {
+        svg {
+          opacity: 1;
+        }
+      }
+
+      &:hover {
+        + .filter__label {
+          svg {
+            opacity: 0.7;
+            fill: #101e44;
+          }
+        }
+      }
+
+      &:focus,
+      &:active {
+        + .filter__label {
+          svg {
+            opacity: 0.3;
+            fill: #101e44;
+          }
+        }
       }
     }
   }
@@ -135,15 +221,30 @@
   text-transform: uppercase;
 
   color: #1d2e5b;
+  background-color: transparent;
 
+  border: none;
   border-top: 1px solid #f3c72b;
+
+  outline: none;
+  cursor: pointer;
+  transition-duration: 0.2s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .filter__legend-dot {
   display: none;
 }
 
-.legend-btn {
+.legend-icon {
   position: relative;
   margin: 0 0 0 auto;
 
@@ -194,6 +295,21 @@
   background-color: #ffffff;
   border-radius: 20px;
   border: none;
+
+  outline: none;
+  cursor: pointer;
+  transition-duration: 0.2s;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  &:active {
+    color: rgba(22, 28, 53, 0.3);
+    background-color: #f3c72b;
+    box-shadow: none;
+  }
 }
 
 .filter__input--start-level,
@@ -255,6 +371,18 @@
     background-color: #ffffff;
     border: 1px solid #cbced9;
 
+    outline: none;
+    transition-duration: 0.2s;
+
+    &:hover {
+      border: solid 1px #959bb2;
+    }
+
+    &:focus,
+    &:active {
+      border: solid 1px #161c35;
+    }
+
     &--start-level {
       border-radius: 4px 0 0 4px;
     }
@@ -297,6 +425,19 @@
   background-color: #1d2e5b;
   border-radius: 50%;
   border: none;
+
+  outline: none;
+  cursor: pointer;
+  transition-duration: 0.2s;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.8);
+  }
+
+  &:active {
+    box-shadow: 0 3px 7px 0 rgba(29, 46, 91, 0.35);
+  }
 
   &--left {
     top: -4px;
@@ -350,16 +491,17 @@
     font-size: 20px;
     font-weight: 500;
     line-height: 30px;
+    text-align: left;
 
     border-top: none;
 
-    .legend-btn {
+    .legend-icon {
       display: none;
     }
   }
 
   .filter__legend-dot {
-    display: initial;
+    display: inline;
   }
 
   .filter__fieldset-flex {
@@ -572,7 +714,7 @@
 
 @media (min-width: $desktop-width) {
   .filter__form {
-    padding: 48px 47px 47px;
+    padding: 48px 43px 47px 47px;
   }
 
   .filter__fieldset-flex {
@@ -673,7 +815,12 @@
 
     justify-content: space-between;
 
-    .legend-btn {
+    .filter__legend-dot {
+      display: none;
+    }
+
+    .legend-icon {
+      margin: 0 5px 0 0;
       display: block;
 
       &::after {
