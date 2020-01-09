@@ -17,6 +17,8 @@
 
   color: #161c35;
 
+  outline: none;
+
   &--tel {
     width: 40px;
     height: 40px;
@@ -24,6 +26,21 @@
     background-color: #ff8d30;
 
     border-radius: 50%;
+
+    transition-duration: 0.2s;
+
+    &:hover,
+    &:focus {
+      background-color: #f26926;
+    }
+
+    &:active {
+      background-color: #f26926;
+
+      .user-menu__img {
+        opacity: 0.3;
+      }
+    }
   }
 
   &--mail {
@@ -33,16 +50,42 @@
     background-color: #ffbd30;
 
     border-radius: 50%;
+
+    &:hover,
+    &:focus {
+      background-color: #ff8d30;
+    }
+
+    &:active {
+      background-color: #ff8d30;
+
+      .user-menu__img {
+        opacity: 0.3;
+      }
+    }
   }
 
   &--enter {
-    padding: 5px 10px;
+    padding: 7px 10px 3px;
     width: 189px;
 
     text-align: center;
 
     background-color: #ffd74b;
     border-radius: 25px;
+
+    &:hover,
+    &:focus {
+      background-color: #ffbd30;
+    }
+
+    &:active {
+      background-color: #ffbd30;
+
+      span {
+        opacity: 0.3;
+      }
+    }
   }
 }
 

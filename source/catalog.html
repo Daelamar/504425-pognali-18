@@ -69,7 +69,7 @@
         <li class="social-list__item">
           <a
             href="https://www.facebook.com/"
-            class="social-list__link social-list__link--facebook social-list__link--footer"
+            class="social-list__link social-list__link--facebook"
             aria-label="Наша страница на Фейсбук">
             <svg
               width="11"
@@ -86,7 +86,7 @@
         <li class="social-list__item">
           <a
             href="https://vk.com/"
-            class="social-list__link social-list__link--vk social-list__link--footer"
+            class="social-list__link social-list__link--vk"
             aria-label="Наша страница во Вконтакте">
             <svg
               width="23"
@@ -117,7 +117,7 @@
         <li class="social-list__item">
           <a
             href="https://www.instagram.com/"
-            class="social-list__link social-list__link--instagram social-list__link--footer"
+            class="social-list__link social-list__link--instagram"
             aria-label="Наша страница в Инстаграм">
             <svg
               width="18"
@@ -181,13 +181,13 @@
     <nav class="main-header__nav main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link">О сервисе</a>
+          <a href="index.html" class="main-nav__link" data-hover="О&nbsp;сервисе">О сервисе</a>
         </li>
         <li class="main-nav__item">
-          <a href="form.html" class="main-nav__link">Направления</a>
+          <a href="form.html" class="main-nav__link" data-hover="Направления">Направления</a>
         </li>
         <li class="main-nav__item">
-          <a href="catalog.html" class="main-nav__link">Попутчики</a>
+          <a class="main-nav__link" data-hover="Попутчики">Попутчики</a>
         </li>
       </ul>
     </nav>
@@ -215,7 +215,9 @@
       </a>
       <a
         href="#"
-        class="user-menu__item user-menu__item--enter">Авторизация</a>
+        class="user-menu__item user-menu__item--enter">
+        <span>Авторизация</span>
+      </a>
     </div>
     <h2 class="main-header__title">Попутчики
       <a href="index.html" class="main-header__title-link">На главную</a>
@@ -278,7 +280,7 @@
 </header>
 <main>
   <h1 class="visually-hidden">Страница выбора попутчиков</h1>
-  <section class="countries countries--open">
+  <section class="countries">
     <div class="countries__container">
       <div class="countries__header">
         <h2 class="countries__title">Фильтрация по странам<span class="countries__title-dot">:</span>
@@ -978,12 +980,12 @@
             <h2 class="filter__title">Подберите идеального попутчика</h2>
             <fieldset class="filter__fieldset filter__fieldset--hobby filter__fieldset--closed">
               <div class="filter__fieldset-flex">
-                <h3 class="filter__legend">Хобби
-                  <button
-                    type="button"
-                    class="legend-btn"
-                    aria-label="Показать или закрыть фильтр"></button>
-                </h3>
+                <button
+                  type="button"
+                  class="filter__legend"
+                  aria-label="Показать или закрыть фильтр">Хобби<span class="filter__legend-dot">:</span>
+                  <span class="legend-icon"></span>
+                </button>
                 <ul class="filter__list">
                   <li class="filter__item">
                     <input
@@ -1014,12 +1016,12 @@
             </fieldset>
             <fieldset class="filter__fieldset filter__fieldset--music">
               <div class="filter__fieldset-flex">
-                <h3 class="filter__legend">Музыка
-                  <button
-                    type="button"
-                    class="legend-btn"
-                    aria-label="Показать или закрыть фильтр"></button>
-                </h3>
+                <button
+                  type="button"
+                  class="filter__legend"
+                  aria-label="Показать или закрыть фильтр">Музыка<span class="filter__legend-dot">:</span>
+                  <span class="legend-icon"></span>
+                </button>
                 <ul class="filter__list">
                   <li class="filter__item">
                     <input
@@ -1051,12 +1053,12 @@
             </fieldset>
             <fieldset class="filter__fieldset filter__fieldset--food filter__fieldset--closed">
               <div class="filter__fieldset-flex">
-                <h3 class="filter__legend">Еда
-                  <button
-                    type="button"
-                    class="legend-btn"
-                    aria-label="Показать или закрыть фильтр"></button>
-                </h3>
+                <button
+                  type="button"
+                  class="filter__legend"
+                  aria-label="Показать или закрыть фильтр">Еда<span class="filter__legend-dot">:</span>
+                  <span class="legend-icon"></span>
+                </button>
                 <ul class="filter__list">
                   <li class="filter__item">
                     <input
@@ -1088,12 +1090,12 @@
             </fieldset>
             <fieldset class="filter__fieldset filter__fieldset--transport">
               <div class="filter__fieldset-flex">
-                <h3 class="filter__legend">Транспорт<span class="filter__legend-dot">:</span>
-                  <button
-                    type="button"
-                    class="legend-btn"
-                    aria-label="Показать или закрыть фильтр"></button>
-                </h3>
+                <button
+                  type="button"
+                  class="filter__legend"
+                  aria-label="Показать или закрыть фильтр">Транспорт<span class="filter__legend-dot">:</span>
+                  <span class="legend-icon"></span>
+                </button>
                 <ul class="filter__list">
                   <li class="filter__item">
                     <input
@@ -1208,12 +1210,12 @@
             </fieldset>
             <fieldset class="filter__fieldset filter__fieldset--level">
               <div class="filter__fieldset-flex">
-                <h3 class="filter__legend">Левел
-                  <button
-                    type="button"
-                    class="legend-btn"
-                    aria-label="Показать или закрыть фильтр"></button>
-                </h3>
+                <button
+                  type="button"
+                  class="filter__legend"
+                  aria-label="Показать или закрыть фильтр">Левел<span class="filter__legend-dot">:</span>
+                  <span class="legend-icon"></span>
+                </button>
                 <div class="filter__wrapper">
                   <div class="filter__level">
                     <label class="filter__label" for="filter-start-level">
@@ -1303,6 +1305,7 @@
                   class="card__transport-img
                   card__transport-img--avia"
                   aria-label="Авиаперелет"></span>
+                  <span class="card__transport-tooltip">Авиаперелет</span>
                 </li>
                 <li class="card__transport-item">
                 <span
@@ -1310,6 +1313,7 @@
                   card__transport-img--auto
                   card__transport-img--inactive"
                   aria-label="Автотранспорт"></span>
+                  <span class="card__transport-tooltip">Автотранспорт</span>
                 </li>
                 <li class="card__transport-item">
                 <span
@@ -1317,6 +1321,7 @@
                   card__transport-img--bike
                   card__transport-img--inactive"
                   aria-label="Велосипед"></span>
+                  <span class="card__transport-tooltip">Велосипед</span>
                 </li>
                 <li class="card__transport-item">
                 <span
@@ -1324,6 +1329,7 @@
                   card__transport-img--foot
                   card__transport-img--inactive"
                   aria-label="Пешком"></span>
+                  <span class="card__transport-tooltip">Пешком</span>
                 </li>
               </ul>
             </div>
@@ -1392,12 +1398,14 @@
                   class="card__transport-img
                   card__transport-img--avia"
                   aria-label="Авиаперелет"></span>
+                  <span class="card__transport-tooltip">Авиаперелет</span>
                 </li>
                 <li class="card__transport-item">
                 <span
                   class="card__transport-img
                   card__transport-img--auto"
                   aria-label="Автотранспорт"></span>
+                  <span class="card__transport-tooltip">Автотранспорт</span>
                 </li>
                 <li class="card__transport-item">
                 <span
@@ -1405,12 +1413,14 @@
                   card__transport-img--bike
                   card__transport-img--inactive"
                   aria-label="Велосипед"></span>
+                  <span class="card__transport-tooltip">Велосипед</span>
                 </li>
                 <li class="card__transport-item">
                 <span
                   class="card__transport-img
                   card__transport-img--foot"
                   aria-label="Пешком"></span>
+                  <span class="card__transport-tooltip">Пешком</span>
                 </li>
               </ul>
             </div>
@@ -1479,6 +1489,7 @@
                   class="card__transport-img
                   card__transport-img--avia"
                   aria-label="Авиаперелет"></span>
+                  <span class="card__transport-tooltip">Авиаперелет</span>
                 </li>
                 <li class="card__transport-item">
                 <span
@@ -1486,12 +1497,14 @@
                   card__transport-img--auto
                   card__transport-img--inactive"
                   aria-label="Автотранспорт"></span>
+                  <span class="card__transport-tooltip">Автотранспорт</span>
                 </li>
                 <li class="card__transport-item">
                 <span
                   class="card__transport-img
                   card__transport-img--bike"
                   aria-label="Велосипед"></span>
+                  <span class="card__transport-tooltip">Велосипед</span>
                 </li>
                 <li class="card__transport-item">
                 <span
@@ -1499,6 +1512,7 @@
                   card__transport-img--foot
                   card__transport-img--inactive"
                   aria-label="Пешком"></span>
+                  <span class="card__transport-tooltip">Пешком</span>
                 </li>
               </ul>
             </div>
@@ -1567,12 +1581,14 @@
                   class="card__transport-img
                   card__transport-img--avia"
                   aria-label="Авиаперелет"></span>
+                  <span class="card__transport-tooltip">Авиаперелет</span>
                 </li>
                 <li class="card__transport-item">
                 <span
                   class="card__transport-img
                   card__transport-img--auto"
                   aria-label="Автотранспорт"></span>
+                  <span class="card__transport-tooltip">Автотранспорт</span>
                 </li>
                 <li class="card__transport-item">
                 <span
@@ -1580,6 +1596,7 @@
                   card__transport-img--bike
                   card__transport-img--inactive"
                   aria-label="Велосипед"></span>
+                  <span class="card__transport-tooltip">Велосипед</span>
                 </li>
                 <li class="card__transport-item">
                 <span
@@ -1587,6 +1604,7 @@
                   card__transport-img--foot
                   card__transport-img--inactive"
                   aria-label="Пешком"></span>
+                  <span class="card__transport-tooltip">Пешком</span>
                 </li>
               </ul>
             </div>
@@ -1612,8 +1630,8 @@
         <button type="button" class="catalog__show">Показать еще</button>
         <div class="catalog__crumbs">
           <ul class="catalog__crumbs-list">
-            <li class="catalog__crumbs-item catalog__crumbs-item--active">
-              <a href="#" class="catalog__crumbs-link">1</a>
+            <li class="catalog__crumbs-item">
+              <a href="#" class="catalog__crumbs-link catalog__crumbs-link--active">1</a>
             </li>
             <li class="catalog__crumbs-item">
               <a href="#" class="catalog__crumbs-link">2</a>
@@ -1733,9 +1751,8 @@
         </a>
       </li>
     </ul>
-    <div class="main-footer__wrapper">
-      <p class="main-footer__copyright">Разработано</p>
-      <a href="https://htmlacademy.ru/" class="main-footer__academy-link">
+    <a href="https://htmlacademy.ru/" class="main-footer__copyright">Разработано
+      <span class="main-footer__academy-icon">
         <svg
           width="27"
           height="34"
@@ -1750,8 +1767,8 @@
             4.8 8.2-4.9V17l3.4-2v10l-11.6 6.9-11.4-7v-9.8zm0-3v-9l11.6-1.2
             11.6 1.2v9L13.5 5.3v-.1h-.2v.1L1.9 12.1z"/>
         </svg>
-      </a>
-    </div>
+      </span>
+    </a>
   </div>
 </footer>
 </body>

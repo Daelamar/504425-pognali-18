@@ -10,7 +10,12 @@
   background-color: #ffffff;
   border-radius: 20px;
 
-  overflow: hidden;
+  transition-duration: 0.2s;
+
+  &:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 21px 0 rgba(0, 0, 0, 0.08);
+  }
 }
 
 .card__header {
@@ -42,6 +47,20 @@
   font-weight: 700;
   line-height: 20px;
   color: #1d2e5b;
+
+  outline: none;
+  cursor: pointer;
+
+  transition-duration: 0.2s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .card__status {
@@ -75,6 +94,27 @@
   border-radius: 50%;
   border: none;
 
+  outline: none;
+  cursor: pointer;
+
+  transition-duration: 0.2s;
+
+  &:hover,
+  &:focus {
+    background-color: #e2e5f2;
+
+    .card__like-icon {
+      transition-duration: 0.2s;
+      opacity: 0.5;
+    }
+  }
+
+  &:active {
+    .card__like-icon {
+      opacity: 0.1;
+    }
+  }
+
   .card__like-icon {
     display: block;
 
@@ -89,10 +129,26 @@
   }
 
   &--active {
+    background-color: #f9eaea;
+
     .card__like-icon {
       background-image: url("../img/heart-active.svg");
-
       opacity: 1;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: #f9d8d8;
+
+      .card__like-icon {
+        opacity: 1;
+      }
+    }
+
+    &:active {
+      .card__like-icon {
+        opacity: 0.6;
+      }
     }
   }
 }
@@ -279,11 +335,21 @@
 
 .card__transport-item {
   margin: 0 0 0 -1px;
+  position: relative;
+
   background-color: #edeff6;
   border-radius: 50%;
 
   width: 33px;
   height: 32px;
+
+  cursor: pointer;
+
+  &:hover {
+    .card__transport-tooltip {
+      display: block;
+    }
+  }
 }
 
 .card__transport-img {
@@ -321,6 +387,41 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 15px 17px;
+  }
+}
+
+.card__transport-tooltip {
+  padding: 5px 10px;
+  position: absolute;
+  display: none;
+
+  top: 40px;
+  left: 50%;
+
+  white-space: nowrap;
+  color: $color-white;
+
+  background-color: #101d41;
+  border-radius: 4px;
+
+  transform: translateX(-50%);
+  z-index: 11;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    bottom: 98%;
+    left: 50%;
+
+    width: 0;
+    height: 0;
+
+    border-bottom: 8px solid #101d41;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+
+    transform: translateX(-50%);
   }
 }
 
@@ -393,6 +494,20 @@
 
   background-color: #ffd74b;
   border-radius: 20px;
+
+  outline: none;
+  cursor: pointer;
+
+  transition-duration: 0.2s;
+
+  &:hover,
+  &:focus {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    color: rgba(22, 28, 53, 0.3);
+  }
 }
 
 //Таблетка
@@ -700,7 +815,7 @@
       width: 1px;
       height: 187px;
 
-      background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 75%, rgba(255,255,255,1) 100%);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 75%, rgba(255, 255, 255, 1) 100%);
 
       opacity: 0.1;
     }

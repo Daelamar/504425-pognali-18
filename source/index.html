@@ -69,7 +69,7 @@
         <li class="social-list__item">
           <a
             href="https://www.facebook.com/"
-            class="social-list__link social-list__link--facebook social-list__link--footer"
+            class="social-list__link social-list__link--facebook"
             aria-label="Наша страница на Фейсбук">
             <svg
               width="11"
@@ -86,7 +86,7 @@
         <li class="social-list__item">
           <a
             href="https://vk.com/"
-            class="social-list__link social-list__link--vk social-list__link--footer"
+            class="social-list__link social-list__link--vk"
             aria-label="Наша страница во Вконтакте">
             <svg
               width="23"
@@ -117,7 +117,7 @@
         <li class="social-list__item">
           <a
             href="https://www.instagram.com/"
-            class="social-list__link social-list__link--instagram social-list__link--footer"
+            class="social-list__link social-list__link--instagram"
             aria-label="Наша страница в Инстаграм">
             <svg
               width="18"
@@ -185,13 +185,13 @@
     <nav class="main-header__nav main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link">О сервисе</a>
+          <a class="main-nav__link" data-hover="О&nbsp;сервисе">О сервисе</a>
         </li>
         <li class="main-nav__item">
-          <a href="form.html" class="main-nav__link">Направления</a>
+          <a href="form.html" class="main-nav__link" data-hover="Направления">Направления</a>
         </li>
         <li class="main-nav__item">
-          <a href="catalog.html" class="main-nav__link">Попутчики</a>
+          <a href="catalog.html" class="main-nav__link" data-hover="Попутчики">Попутчики</a>
         </li>
       </ul>
     </nav>
@@ -219,7 +219,9 @@
       </a>
       <a
         href="#"
-        class="user-menu__item user-menu__item--enter">Авторизация</a>
+        class="user-menu__item user-menu__item--enter">
+        <span>Авторизация</span>
+      </a>
     </div>
   </div>
 </header>
@@ -376,13 +378,13 @@
           <div class="companions__caption">
             <ul class="companions__flag-list">
               <li class="companions__flag-item" aria-label="Флаг Тайланда">
-                <span></span>
+                <span class="companions__flag-tooltip">Тайланд</span>
               </li>
               <li class="companions__flag-item" aria-label="Флаг Шри-Ланки">
-                <span></span>
+                <span class="companions__flag-tooltip">Шри-Ланка</span>
               </li>
               <li class="companions__flag-item" aria-label="Флаг Сейшел">
-                <span></span>
+                <span class="companions__flag-tooltip">Сейшелы</span>
               </li>
             </ul>
             <a href="#" class="companions__link">
@@ -396,26 +398,30 @@
                 class="companions__transport-item
                 companions__transport-item--avia"
                 aria-label="Авиаперелет">
-                <span></span>
+                <span class="companions__transport-icon"></span>
+                <span class="companions__transport-tooltip">Авиаперелет</span>
               </li>
               <li
                 class="companions__transport-item
                 companions__transport-item--auto
                 companions__transport-item--inactive"
                 aria-label="Автотранспорт">
-                <span></span>
+                <span class="companions__transport-icon"></span>
+                <span class="companions__transport-tooltip">Автотранспорт</span>
               </li>
               <li class="companions__transport-item
               companions__transport-item--bike
               companions__transport-item--inactive"
                   aria-label="Велосипед">
-                <span></span>
+                <span class="companions__transport-icon"></span>
+                <span class="companions__transport-tooltip">Велосипед</span>
               </li>
               <li class="companions__transport-item
               companions__transport-item--foot
               companions__transport-item--inactive"
                   aria-label="Пешком">
-                <span></span>
+                <span class="companions__transport-icon"></span>
+                <span class="companions__transport-tooltip">Пешком</span>
               </li>
             </ul>
           </div>
@@ -442,10 +448,10 @@
           <div class="companions__caption">
             <ul class="companions__flag-list">
               <li class="companions__flag-item" aria-label="Флаг Бельгии">
-                <span></span>
+                <span class="companions__flag-tooltip">Бельгия</span>
               </li>
               <li class="companions__flag-item" aria-label="Флаг Чехии">
-                <span></span>
+                <span class="companions__flag-tooltip">Чехия</span>
               </li>
             </ul>
             <a href="#" class="companions__link">
@@ -459,24 +465,28 @@
                 class="companions__transport-item
                 companions__transport-item--avia"
                 aria-label="Авиаперелет">
-                <span></span>
+                <span class="companions__transport-icon"></span>
+                <span class="companions__transport-tooltip">Авиаперелет</span>
               </li>
               <li
                 class="companions__transport-item
                 companions__transport-item--auto"
                 aria-label="Автотранспорт">
-                <span></span>
+                <span class="companions__transport-icon"></span>
+                <span class="companions__transport-tooltip">Автотранспорт</span>
               </li>
               <li class="companions__transport-item
               companions__transport-item--bike
               companions__transport-item--inactive"
                   aria-label="Велосипед">
-                <span></span>
+                <span class="companions__transport-icon"></span>
+                <span class="companions__transport-tooltip">Велосипед</span>
               </li>
               <li class="companions__transport-item
               companions__transport-item--foot"
                   aria-label="Пешком">
-                <span></span>
+                <span class="companions__transport-icon"></span>
+                <span class="companions__transport-tooltip">Пешком</span>
               </li>
             </ul>
           </div>
@@ -528,7 +538,8 @@
             id="register-mail"
             name="register-mail"
             placeholder="E-mail"
-            class="contacts__input">
+            class="contacts__input"
+            required>
         </label>
         <button type="submit" class="contacts__submit button-arrow">
           <span class="contacts__submit-caption">Регистрация</span>
@@ -708,9 +719,8 @@
         </a>
       </li>
     </ul>
-    <div class="main-footer__wrapper">
-      <p class="main-footer__copyright">Разработано</p>
-      <a href="https://htmlacademy.ru/" class="main-footer__academy-link">
+    <a href="https://htmlacademy.ru/" class="main-footer__copyright">Разработано
+      <span class="main-footer__academy-icon">
         <svg
           width="27"
           height="34"
@@ -725,8 +735,8 @@
             4.8 8.2-4.9V17l3.4-2v10l-11.6 6.9-11.4-7v-9.8zm0-3v-9l11.6-1.2
             11.6 1.2v9L13.5 5.3v-.1h-.2v.1L1.9 12.1z"/>
         </svg>
-      </a>
-    </div>
+      </span>
+    </a>
   </div>
 </footer>
 <div class="business">

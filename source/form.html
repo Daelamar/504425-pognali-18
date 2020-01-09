@@ -69,7 +69,7 @@
         <li class="social-list__item">
           <a
             href="https://www.facebook.com/"
-            class="social-list__link social-list__link--facebook social-list__link--footer"
+            class="social-list__link social-list__link--facebook"
             aria-label="Наша страница на Фейсбук">
             <svg
               width="11"
@@ -86,7 +86,7 @@
         <li class="social-list__item">
           <a
             href="https://vk.com/"
-            class="social-list__link social-list__link--vk social-list__link--footer"
+            class="social-list__link social-list__link--vk"
             aria-label="Наша страница во Вконтакте">
             <svg
               width="23"
@@ -117,7 +117,7 @@
         <li class="social-list__item">
           <a
             href="https://www.instagram.com/"
-            class="social-list__link social-list__link--instagram social-list__link--footer"
+            class="social-list__link social-list__link--instagram"
             aria-label="Наша страница в Инстаграм">
             <svg
               width="18"
@@ -181,13 +181,13 @@
     <nav class="main-header__nav main-nav">
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a class="main-nav__link">О сервисе</a>
+          <a href="index.html" class="main-nav__link" data-hover="О&nbsp;сервисе">О сервисе</a>
         </li>
         <li class="main-nav__item">
-          <a href="form.html" class="main-nav__link">Направления</a>
+          <a class="main-nav__link" data-hover="Направления">Направления</a>
         </li>
         <li class="main-nav__item">
-          <a href="catalog.html" class="main-nav__link">Попутчики</a>
+          <a href="catalog.html" class="main-nav__link" data-hover="Попутчики">Попутчики</a>
         </li>
       </ul>
     </nav>
@@ -215,7 +215,9 @@
       </a>
       <a
         href="#"
-        class="user-menu__item user-menu__item--enter">Авторизация</a>
+        class="user-menu__item user-menu__item--enter">
+        <span>Авторизация</span>
+      </a>
     </div>
     <h2 class="main-header__title">Направления
       <a href="index.html" class="main-header__title-link">На главную</a>
@@ -302,6 +304,8 @@
           <textarea
             class="user-block__textarea"
             name="user-tags"
+            spellcheck="false"
+            placeholder="Коротко о себе в виде 5-8 хештэгов"
             id="user-tags">#бургер #бар #футбол #концерт #крафт</textarea>
         </div>
         <div class="user-block__transport">
@@ -459,7 +463,7 @@
           <span class="form__dot"></span>
         </div>
       </div>
-      <fieldset class="form__fieldset first-step">
+      <fieldset id="first-step" class="form__fieldset first-step">
         <div class="first-step__container">
           <div class="first-step__header">
             <h3 class="first-step__title">Шаг 1. <br>Даты пребывания</h3>
@@ -610,11 +614,10 @@
               </tbody>
             </table>
           </div>
-          <!-- Тут позже будет якорь -->
-          <a href="#" class="first-step__next">Следующий шаг</a>
+          <a href="#second-step" class="first-step__next js-scroll">Следующий шаг</a>
         </div>
       </fieldset>
-      <fieldset class="form__fieldset second-step">
+      <fieldset id="second-step" class="form__fieldset second-step">
         <div class="second-step__container">
           <div class="second-step__header">
             <h3 class="second-step__title">Шаг 2. <br>Маршрут</h3>
@@ -673,14 +676,13 @@
             </button>
           </label>
           <button type="button" class="second-step__add">Добавить страну</button>
-          <!-- Тут позже будет якоря -->
           <div class="second-step__buttons">
-            <a href="#" class="second-step__next">Следующий шаг</a>
-            <a href="#" class="second-step__previous">На шаг назад</a>
+            <a href="#third-step" class="second-step__next js-scroll">Следующий шаг</a>
+            <a href="#first-step" class="second-step__previous js-scroll">На шаг назад</a>
           </div>
         </div>
       </fieldset>
-      <fieldset class="form__fieldset third-step">
+      <fieldset id="third-step" class="form__fieldset third-step">
         <div class="third-step__container">
           <div class="third-step__header">
             <h3 class="third-step__title">Шаг 3. <br>Развлечения</h3>
@@ -695,23 +697,30 @@
           <label for="1-comment" class="third-step__label">Босния и герцеговина
             <span class="third-step__flag"></span>
           </label>
-          <textarea
-            type="text"
-            id="1-comment"
-            name="1-comment"
-            placeholder="План действий"
-            class="third-step__input third-step__input--first"></textarea>
+          <div class="third-step__input-wrapper">
+            <textarea
+              type="text"
+              id="1-comment"
+              name="1-comment"
+              placeholder="План действий"
+              class="third-step__input third-step__input--first"
+              required></textarea>
+            <span class="third-step__input-warning">Это поле должно быть заполнено</span>
+          </div>
           <label for="2-comment" class="third-step__label">Чехия
             <span class="third-step__flag"></span>
           </label>
+          <div class="third-step__input-wrapper">
           <textarea
             id="2-comment"
             name="2-comment"
-            class="third-step__input third-step__input--second">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+            class="third-step__input third-step__input--second"
+            required>Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+            <span class="third-step__input-warning">Это поле должно быть заполнено</span>
+          </div>
           <div class="third-step__buttons">
             <button type="submit" class="third-step__submit">Отправить</button>
-            <!-- Тут позже будет якоря -->
-            <a href="#" class="third-step__previous">На шаг назад</a>
+            <a href="#second-step" class="third-step__previous js-scroll">На шаг назад</a>
           </div>
         </div>
       </fieldset>
@@ -811,9 +820,8 @@
         </a>
       </li>
     </ul>
-    <div class="main-footer__wrapper">
-      <p class="main-footer__copyright">Разработано</p>
-      <a href="https://htmlacademy.ru/" class="main-footer__academy-link">
+    <a href="https://htmlacademy.ru/" class="main-footer__copyright">Разработано
+      <span class="main-footer__academy-icon">
         <svg
           width="27"
           height="34"
@@ -828,8 +836,8 @@
             4.8 8.2-4.9V17l3.4-2v10l-11.6 6.9-11.4-7v-9.8zm0-3v-9l11.6-1.2
             11.6 1.2v9L13.5 5.3v-.1h-.2v.1L1.9 12.1z"/>
         </svg>
-      </a>
-    </div>
+      </span>
+    </a>
   </div>
 </footer>
 <div class="dropdown">
@@ -910,5 +918,7 @@
     </ul>
   </div>
 </div>
+<script src="js/user-label-active.js"></script>
+<script src="js/anchor-scroll.js"></script>
 </body>
 </html>

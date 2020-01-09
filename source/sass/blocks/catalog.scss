@@ -31,6 +31,10 @@
   background-color: transparent;
   border: none;
 
+  outline: none;
+  cursor: pointer;
+  transition-duration: 0.2s;
+
   &::after {
     content: "";
     position: absolute;
@@ -42,6 +46,15 @@
     height: 18px;
 
     background-image: url("../../img/show-more-plus.svg");
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -56,6 +69,23 @@
 
   background-color: #ffffff;
   border: none;
+
+  outline: none;
+  cursor: pointer;
+  transition-duration: 0.2s;
+
+  &:hover,
+  &:focus {
+    &::after {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    &::after {
+      opacity: 0.3;
+    }
+  }
 
   &--left {
     width: 135px;
@@ -114,6 +144,15 @@
   text-align: center;
 
   color: #161c35;
+
+  outline: none;
+  cursor: pointer;
+  transition-duration: 0.2s;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
 }
 
 .catalog__filter {
@@ -201,20 +240,18 @@
     }
   }
 
-  .catalog__crumbs-item {
+  .catalog__crumbs-link {
+    padding: 2px 0 0 0;
+
+    width: 50px;
+    height: 50px;
+
     background-color: $color-white;
     border-radius: 50%;
 
     &--active {
       background-color: #ffd74b;
     }
-  }
-
-  .catalog__crumbs-link {
-    padding: 2px 0 0 0;
-
-    width: 50px;
-    height: 50px;
   }
 }
 
@@ -266,7 +303,7 @@
 
       &::after {
         top: 40px;
-        right: 35px;
+        right: 44px;
       }
     }
   }

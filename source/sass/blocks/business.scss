@@ -19,6 +19,10 @@
   overflow: hidden;
 
   z-index: 15;
+
+  &--show {
+    display: block;
+  }
 }
 
 .business__container {
@@ -75,6 +79,20 @@
 
   border-radius: 0 0 20px 20px;
   border: none;
+
+  outline: none;
+  cursor: pointer;
+  transition-duration: 0.2s;
+
+  &:hover,
+  &:focus {
+    background-color: #edeff6;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+    background-color: #edeff6;
+  }
 }
 
 //Таблет

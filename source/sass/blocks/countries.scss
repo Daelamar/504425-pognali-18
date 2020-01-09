@@ -100,8 +100,9 @@
   top: 225px;
   left: 0;
 
-
   width: 100vw;
+  max-width: 100%;
+
   background-color: #e2e5f2;
   border-radius: 0 0 20px 20px;
 }
@@ -162,9 +163,20 @@
 
   color: #192144;
 
+  outline: none;
+  cursor: pointer;
+
+  transition-duration: 0.2s;
+
   opacity: 0.3;
 
-  &--active {
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &--active,
+  &:active {
     opacity: 1;
   }
 }
@@ -217,7 +229,19 @@
   font-weight: 400;
   color: $color-twilightGray;
 
+  outline: none;
   cursor: pointer;
+
+  transition-duration: 0.2s;
+
+  &:hover,
+  &focus {
+    color: #1d2e5b;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+  }
 }
 
 .countries__item {
@@ -253,6 +277,25 @@
   background-color: #d6daed;
   border-radius: 20px;
   border: none;
+
+  outline: none;
+  cursor: pointer;
+
+  transition-duration: 0.2s;
+
+  &:hover,
+  &:focus {
+    background-color: #c8cee8;
+  }
+
+  &:active {
+    color: rgba(29, 46, 91, 0.3);
+
+    &::after {
+      opacity: 0.3;
+      transition-duration: 0.2s;
+    }
+  }
 
   &::after {
     position: absolute;
@@ -552,6 +595,20 @@
 
   .countries__roll {
     margin: 0 0 0 auto;
+
+    outline: none;
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .countries__roll-show {

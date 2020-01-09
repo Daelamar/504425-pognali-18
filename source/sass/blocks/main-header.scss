@@ -342,6 +342,9 @@
         display: block;
         position: relative;
 
+        outline: none;
+        transition-duration: 0.2s;
+
         &::before {
           content: "";
           position: absolute;
@@ -353,6 +356,15 @@
           height: 16px;
 
           background-image: url("../img/return.svg");
+        }
+
+        &:hover,
+        &:focus {
+          opacity: 0.6;
+        }
+
+        &:active {
+          opacity: 0.3;
         }
       }
 

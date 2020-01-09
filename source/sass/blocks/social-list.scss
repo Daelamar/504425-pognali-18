@@ -16,6 +16,40 @@
 
   background-color: #ffd74b;
   border-radius: 50%;
+
+  outline: none;
+  cursor: pointer;
+
+  transition-duration: 0.2s;
+
+  &:hover,
+  &:focus {
+    background-color: #ffbd30;
+  }
+
+  &:active {
+    svg {
+      opacity: 0.3;
+    }
+  }
+
+  &--footer {
+    &:hover,
+    &:focus {
+      background-color: #192144;
+
+      svg {
+        transition-duration: 0.2s;
+        fill: $color-white;
+      }
+    }
+
+    &:active {
+      svg {
+        opacity: 0.3;
+      }
+    }
+  }
 }
 
 //Таблет
