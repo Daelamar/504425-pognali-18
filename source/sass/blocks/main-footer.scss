@@ -48,14 +48,8 @@
 
 .main-footer__logo-link {
   margin: 0 0 39px 0;
-}
 
-.main-footer__logo {
-  display: none;
-
-  &--mobile {
-    display: block;
-  }
+  line-height: 0;
 }
 
 .main-footer__academy-icon {
@@ -85,11 +79,8 @@
   }
 
   .main-footer__logo {
-    display: none;
-
-    &--tablet {
-      display: block;
-    }
+    width: 166px;
+    height: auto;
   }
 
   .main-footer__list {
@@ -122,11 +113,7 @@
   }
 
   .main-footer__logo {
-    display: none;
-
-    &--desktop {
-      display: block;
-    }
+    width: 200px;
   }
 
   .main-footer__logo-link {

@@ -27,15 +27,12 @@
   position: absolute;
   top: 15px;
   left: 18px;
+
+  line-height: 0;
 }
 
 .card__img {
-  display: none;
-
-  &--mobile {
-    display: block;
-    border-radius: 50%;
-  }
+  border-radius: 50%;
 }
 
 .card__title {
@@ -529,13 +526,12 @@
   }
 
   .card__img {
-    display: none;
+    margin: 2px 33px 0 0;
 
-    &--tablet {
-      margin: 2px 33px 0 0;
-      display: block;
-      border-radius: 20px;
-    }
+    width: 190px;
+    height: auto;
+
+    border-radius: 20px;
   }
 
   .card__header {
@@ -822,13 +818,12 @@
   }
 
   .card__img {
-    display: none;
+    margin: 0 60px 0 0;
 
-    &--desktop {
-      margin: 0 60px 0 0;
-      display: block;
-      border-radius: 20px 0 0 20px;
-    }
+    width: 285px;
+    height: auto;
+
+    border-radius: 20px 0 0 20px;
   }
 
   .card__header {

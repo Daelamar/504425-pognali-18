@@ -71,7 +71,7 @@
 }
 
 .user-block__img {
-  margin: 2px 17px 0 auto;
+  margin: 2px 17px 0 34px;
 
   display: block;
   border-radius: 50%;
@@ -370,7 +370,7 @@
   }
 
   .user-block__img {
-    margin: 0 0 0 auto;
+    margin: 0 0 0 61px;
 
     width: 94px;
     height: 94px;
@@ -441,6 +441,10 @@
     padding: 124px 60px 125px;
     flex-direction: column;
     flex-wrap: wrap;
+
+    picture {
+      z-index: 11;
+    }
   }
 
   .user-block__level {
@@ -479,7 +483,7 @@
     order: -1;
 
     border-radius: 10px 10px 0 0;
-    z-index: 10;
+    z-index: 11;
   }
 
   .user-block__button {

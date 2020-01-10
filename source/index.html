@@ -587,7 +587,7 @@
     <div class="map-block__wrapper">
       <iframe
         class="map-block__map"
-        src="https://yandex.ru/map-widget/v1/-/CGXyJB2x"
+        src="https://yandex.ru/map-widget/v1/-/CGx-MQ9B"
         width="100%"
         height="100%"
         allowfullscreen="true"></iframe>
@@ -597,25 +597,18 @@
 <footer class="main-footer">
   <div class="main-footer__container">
     <a class="main-footer__logo-link">
-      <img
-        class="main-footer__logo main-footer__logo--mobile"
-        src="img/logo-mobile-blue@1x.png"
-        alt="Логотип сайта Погнали!"
-        width="100"
-        height="19">
-      <img
-        class="main-footer__logo main-footer__logo--tablet"
-        src="img/logo-tablet-blue@1x.png"
-        alt="Логотип сайта Погнали!"
-        width="166"
-        height="42">
-      <img
-        class="main-footer__logo main-footer__logo--desktop"
-        src="img/logo-desktop-blue@1x.png"
-        alt="Логотип сайта Погнали!"
-        width="200"
-        height="52">
-    </a>
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x,img/logo-desktop-blue@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+        <img
+          class="main-footer__logo"
+          src="img/logo-mobile-blue@1x.png"
+          srcset="img/logo-mobile-blue@2x.png 2x"
+          alt="Логотип сайта Погнали!"
+          width="100"
+          height="19">
+      </picture>
+      < </a>
     <ul class="main-footer__list social-list">
       <li class="social-list__item">
         <a
