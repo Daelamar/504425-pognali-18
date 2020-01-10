@@ -5,10 +5,8 @@
   background-color: $color-header;
 
   .main-header__logo {
-    display: none;
-
-    &--mobile {
-      display: block;
+    &--open {
+      display: none;
     }
   }
 
@@ -45,7 +43,9 @@
     }
 
     .main-header__logo-link {
-      margin: 0 0 56px 0;
+      margin: 0 0 49px 0;
+
+      line-height: 0;
     }
   }
 
@@ -82,6 +82,8 @@
 
     .main-header__logo-link {
       margin: 0 0 56px 0;
+
+      line-height: 0;
     }
   }
 
@@ -91,20 +93,42 @@
     .main-header__logo {
       display: none;
 
-      &--mobile-open {
+      &--open {
         display: block;
       }
     }
 
     .main-header__button {
       &::after {
+        transform: rotate(45deg);
+
         background-color: #cccccc;
-        box-shadow: 0 8px 0 0 #cccccc;
+        box-shadow: none;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 15px;
+
+        width: 25px;
+        height: 3px;
+
+        background-color: #cccccc;
+        transform: rotate(-45deg);
       }
     }
 
     .main-header__title {
       color: #192144;
+    }
+  }
+
+  &--scroll {
+    &::after {
+      background-color: #cccccc;
+      box-shadow: 0 8px 0 0 #cccccc;
     }
   }
 
@@ -139,6 +163,8 @@
 
   background-color: transparent;
   border: none;
+
+  cursor: pointer;
 
   &::after {
     content: "";
@@ -240,11 +266,8 @@
     background-color: $color-headerTablet;
 
     .main-header__logo {
-      display: none;
-
-      &--tablet {
-        display: block;
-      }
+      width: 166px;
+      height: auto;
     }
 
     &--form {
@@ -385,7 +408,7 @@
       .main-header__logo {
         display: none;
 
-        &--tablet-open {
+        &--open {
           display: block;
         }
       }
@@ -455,11 +478,7 @@
     background-color: $color-header;
 
     .main-header__logo {
-      display: none;
-
-      &--desktop {
-        display: block;
-      }
+      width: 200px;
     }
 
     .main-header__logo-link {
@@ -492,7 +511,7 @@
       .main-header__logo {
         display: none;
 
-        &--desktop-open {
+        &--open {
           display: block;
         }
       }

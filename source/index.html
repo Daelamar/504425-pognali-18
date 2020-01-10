@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
         content="Интернет-сервис и сайт для путешественников Погнали!">
-  <link rel="preload" href="fonts/bloggersans.woff" as="font">
+  <link rel="preload" href="fonts/bloggersans.woff2" as="font">
   <link rel="stylesheet" href="css/style.css">
   <title>Погнали!-Главная</title>
 </head>
@@ -140,47 +140,31 @@
   </div>
   <div class="main-header__container">
     <a class="main-header__logo-link">
-      <img
-        class="main-header__logo main-header__logo--mobile"
-        src="img/logo-mobile-white@1x.png"
-        alt="Логотип сайта Погнали!"
-        width="100"
-        height="19">
-      <img
-        class="main-header__logo main-header__logo--mobile-open"
-        src="img/logo-mobile-blue@1x.png"
-        alt="Логотип сайта Погнали!"
-        width="100"
-        height="19">
-      <img
-        class="main-header__logo main-header__logo--tablet"
-        src="img/logo-tablet-white@1x.png"
-        alt="Логотип сайта Погнали!"
-        width="166"
-        height="42">
-      <img
-        class="main-header__logo main-header__logo--tablet-open"
-        src="img/logo-tablet-blue@1x.png"
-        alt="Логотип сайта Погнали!"
-        width="166"
-        height="42">
-      <img
-        class="main-header__logo main-header__logo--desktop"
-        src="img/logo-desktop-white@1x.png"
-        alt="Логотип сайта Погнали!"
-        width="200"
-        height="52">
-      <img
-        class="main-header__logo main-header__logo--desktop-open"
-        src="img/logo-desktop-blue@1x.png"
-        alt="Логотип сайта Погнали!"
-        width="200"
-        height="52">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x,img/logo-desktop-white@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png 1x, img/logo-tablet-white@2x.png 2x">
+        <img
+          class="main-header__logo"
+          src="img/logo-mobile-white@1x.png"
+          srcset="img/logo-mobile-white@2x.png 2x"
+          alt="Логотип сайта Погнали!"
+          width="100"
+          height="19">
+      </picture>
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x,img/logo-desktop-blue@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+        <img
+          class="main-header__logo main-header__logo--open"
+          src="img/logo-mobile-blue@1x.png"
+          srcset="img/logo-mobile-blue@2x.png 2x"
+          alt="Логотип сайта Погнали!"
+          width="100"
+          height="19">
+      </picture>
     </a>
     <button
-      class="main-header__button
-      main-header__button--open
-      main-header__button--scroll"
+      class="main-header__button"
       aria-label="Кнопка меню"></button>
     <nav class="main-header__nav main-nav">
       <ul class="main-nav__list">
@@ -275,18 +259,16 @@
       </div>
       <div class="destinations__wrapper">
         <div class="destinations__item">
-          <img
-            class="destinations__img destinations__img--mobile"
-            src="img/thailand-mobile@1x.jpg"
-            alt="Фото Тайланда"
-            width="270"
-            height="110">
-          <img
-            class="destinations__img destinations__img--desktop"
-            src="img/thailand-desktop@1x.jpg"
-            alt="Фото Тайланда"
-            width="186"
-            height="140">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.jpg 1x, img/thailand-desktop@2x.jpg 2x">
+            <img
+              class="destinations__img"
+              src="img/thailand-mobile@1x.jpg"
+              srcset="img/thailand-mobile@2x.jpg 2x"
+              alt="Фото Тайланда"
+              width="270"
+              height="110">
+          </picture>
           <div class="destinations__caption">
             <span
               class="destinations__flag destinations__flag--thai"
@@ -297,18 +279,16 @@
           </div>
         </div>
         <div class="destinations__item">
-          <img
-            class="destinations__img destinations__img--mobile"
-            src="img/france-mobile@1x.jpg"
-            alt="Фото Франции"
-            width="270"
-            height="110">
-          <img
-            class="destinations__img destinations__img--desktop"
-            src="img/france-desktop@1x.jpg"
-            alt="Фото Франции"
-            width="186"
-            height="140">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/france-desktop@1x.jpg 1x, img/france-desktop@2x.jpg 2x">
+            <img
+              class="destinations__img"
+              src="img/france-mobile@1x.jpg"
+              srcset="img/france-mobile@2x.jpg 2x"
+              alt="Фото Франции"
+              width="270"
+              height="110">
+          </picture>
           <div class="destinations__caption">
             <span
               class="destinations__flag destinations__flag--france"
@@ -319,18 +299,16 @@
           </div>
         </div>
         <div class="destinations__item">
-          <img
-            class="destinations__img destinations__img--mobile"
-            src="img/czech-mobile@1x.jpg"
-            alt="Фото Чехии"
-            width="270"
-            height="110">
-          <img
-            class="destinations__img destinations__img--desktop"
-            src="img/czech-desktop@1x.jpg"
-            alt="Фото Чехии"
-            width="186"
-            height="140">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/czech-desktop@1x.jpg 1x, img/czech-desktop@2x.jpg 2x">
+            <img
+              class="destinations__img"
+              src="img/czech-mobile@1x.jpg"
+              srcset="img/czech-mobile@2x.jpg 2x"
+              alt="Фото Чехии"
+              width="270"
+              height="110">
+          </picture>
           <div class="destinations__caption">
             <span
               class="destinations__flag destinations__flag--czech"
@@ -363,17 +341,12 @@
           </div>
           <a href="#" class="companions__link">
             <img
-              class="companions__img companions__img--mobile"
-              src="img/firsova-mobile.jpg"
+              class="companions__img"
+              src="img/firsova-desktop@1x.jpg"
+              srcset="img/firsova-destop@2x.jpg 2x"
               alt="Фото пользователя"
               width="270"
               height="270">
-            <img
-              class="companions__img companions__img--desktop"
-              src="img/firsova-desktop@1x.jpg"
-              alt="Фото пользователя"
-              width="285"
-              height="285">
           </a>
           <div class="companions__caption">
             <ul class="companions__flag-list">
@@ -433,17 +406,12 @@
           </div>
           <a href="#" class="companions__link">
             <img
-              class="companions__img companions__img--mobile"
-              src="img/demin-mobile.jpg"
+              class="companions__img"
+              src="img/demin-desktop@1x.jpg"
+              srcset="img/demin-desktop@2x.jpg"
               alt="Фото пользователя"
               width="270"
               height="270">
-            <img
-              class="companions__img companions__img--desktop"
-              src="img/demin-desktop@1x.jpg"
-              alt="Фото пользователя"
-              width="285"
-              height="285">
           </a>
           <div class="companions__caption">
             <ul class="companions__flag-list">
@@ -619,7 +587,7 @@
     <div class="map-block__wrapper">
       <iframe
         class="map-block__map"
-        src="https://yandex.ru/map-widget/v1/-/CGXyJB2x"
+        src="https://yandex.ru/map-widget/v1/-/CGx-MQ9B"
         width="100%"
         height="100%"
         allowfullscreen="true"></iframe>
@@ -629,25 +597,18 @@
 <footer class="main-footer">
   <div class="main-footer__container">
     <a class="main-footer__logo-link">
-      <img
-        class="main-footer__logo main-footer__logo--mobile"
-        src="img/logo-mobile-blue@1x.png"
-        alt="Логотип сайта Погнали!"
-        width="100"
-        height="19">
-      <img
-        class="main-footer__logo main-footer__logo--tablet"
-        src="img/logo-tablet-blue@1x.png"
-        alt="Логотип сайта Погнали!"
-        width="166"
-        height="42">
-      <img
-        class="main-footer__logo main-footer__logo--desktop"
-        src="img/logo-desktop-blue@1x.png"
-        alt="Логотип сайта Погнали!"
-        width="200"
-        height="52">
-    </a>
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png 1x,img/logo-desktop-blue@2x.png 2x">
+        <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png 1x, img/logo-tablet-blue@2x.png 2x">
+        <img
+          class="main-footer__logo"
+          src="img/logo-mobile-blue@1x.png"
+          srcset="img/logo-mobile-blue@2x.png 2x"
+          alt="Логотип сайта Погнали!"
+          width="100"
+          height="19">
+      </picture>
+      < </a>
     <ul class="main-footer__list social-list">
       <li class="social-list__item">
         <a

@@ -61,15 +61,8 @@
 }
 
 .destinations__img {
+  display: block;
   border-radius: 10px 10px 0 0;
-
-  &--mobile {
-    display: block;
-  }
-
-  &--desktop {
-    display: none;
-  }
 }
 
 .destinations__caption {
@@ -156,6 +149,11 @@
     padding: 133px 40px 78px;
 
     background: url("../img/flags-back@1x.png") no-repeat 439px 139px;
+
+    @media (min-resolution: $retina-dppx) {
+      background: url("../img/flags-back@2x.png") no-repeat 439px 139px;
+      background-size: 289px auto;
+    }
   }
 
   .destinations__title {
@@ -196,15 +194,8 @@
   .destinations__img {
     border-radius: 0 20px 20px 0;
 
-    order: 2;
-
-    &--mobile {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-    }
+    width: 186px;
+    height: auto;
   }
 
   .destinations__item {
@@ -227,6 +218,8 @@
     flex-grow: 1;
 
     border-radius: 20px 0 0 20px;
+
+    order: -1;
   }
 
   .destinations__name {
