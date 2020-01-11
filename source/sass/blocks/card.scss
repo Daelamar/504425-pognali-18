@@ -259,10 +259,68 @@
     width: 26px;
     height: 18px;
 
-    background-color: #4758a9;
-    border-radius: 4px;
-
+    background-size: 26px 18px;
     transform: translateY(-50%);
+  }
+
+  &--sri-lanka {
+    &::before {
+      background-image: url("../img/flag-sri-lanka.svg");
+    }
+  }
+
+  &--thai {
+    &::before {
+      background-image: url("../img/flag-thailand.svg");
+    }
+  }
+
+  &--seychelles {
+    &::before {
+      background-image: url("../img/flag-seychelles.svg");
+    }
+  }
+
+  &--belgium {
+    &::before {
+      background-image: url("../img/flag-belgium.svg");
+    }
+  }
+
+  &--czech {
+    &::before {
+      background-image: url("../img/flag-czech.svg");
+    }
+  }
+
+  &--usa {
+    &::before {
+      background-image: url("../img/flag-usa.svg");
+    }
+  }
+
+  &--australia {
+    &::before {
+      background-image: url("../img/flag-australia.svg");
+    }
+  }
+
+  &--dominica {
+    &::before {
+      background-image: url("../img/flag-dominica.svg");
+    }
+  }
+
+  &--united-kingdom {
+    &::before {
+      background-image: url("../img/flag-united-kingdom.svg");
+    }
+  }
+
+  &--germany {
+    &::before {
+      background-image: url("../img/flag-germany.png");
+    }
   }
 }
 
@@ -455,6 +513,7 @@
 }
 
 .card__level-wrapper {
+  position: relative;
   margin: 0 2px 0 0;
   display: flex;
   justify-content: center;
@@ -463,9 +522,37 @@
   width: 45px;
   height: 45px;
 
-  background-color: #edeff6;
-
   border-radius: 50%;
+}
+
+.card__level-round {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 45px;
+  height: 45px;
+
+  transform: rotate(-90deg);
+  transform-origin: center;
+  stroke-dasharray: 358;
+
+  &--99 {
+    stroke-dashoffset: 12;
+  }
+
+  &--80 {
+    stroke-dashoffset: 62;
+  }
+
+  &--25 {
+    stroke-dashoffset: 282;
+  }
+
+  &--50 {
+    stroke-dashoffset: 179;
+  }
 }
 
 .card__level-value {
@@ -623,6 +710,8 @@
 
       width: 35px;
       height: 24px;
+
+      background-size: 35px 24px;
     }
   }
 
@@ -725,6 +814,11 @@
       background-color: #1d2e5b;
       opacity: 0.1;
     }
+  }
+
+  .card__level-round {
+    width: 60px;
+    height: 60px;
   }
 
   .card__level-caption {
