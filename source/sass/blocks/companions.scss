@@ -126,6 +126,7 @@
 
 .companions__level {
   position: absolute;
+
   top: 16px;
   left: 17px;
 
@@ -163,6 +164,28 @@
   }
 }
 
+.companions__level-round {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 60px;
+  height: 60px;
+
+  transform: rotate(-90deg);
+  transform-origin: center;
+  stroke-dasharray: 358;
+
+  &--99 {
+    stroke-dashoffset: 12;
+  }
+
+  &--80 {
+    stroke-dashoffset: 62;
+  }
+}
+
 .companions__level-caption {
   margin: 0;
 
@@ -190,8 +213,8 @@
   width: 35px;
   height: 24px;
 
-  background-color: #4758a9; //todo: Временно до нарезки флажков
-  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-size: 35px 24px;
 
   &:not(:last-of-type) {
     margin: 0 19px 0 0;
@@ -201,6 +224,26 @@
     .companions__flag-tooltip {
       display: block;
     }
+  }
+
+  &--thai {
+    background-image: url("../img/flag-thailand.svg");
+  }
+
+  &--sri-lanka {
+    background-image: url("../img/flag-sri-lanka.svg");
+  }
+
+  &--seychelles {
+    background-image: url("../img/flag-seychelles.svg");
+  }
+
+  &--belgium {
+    background-image: url("../img/flag-belgium.svg");
+  }
+
+  &--czech {
+    background-image: url("../img/flag-czech.svg");
   }
 }
 

@@ -21,6 +21,7 @@
 .user-block__level {
   margin: 0 0 0 19px;
   padding: 15px 0 4px 2px;
+  position: relative;
 
   display: flex;
   flex-direction: column;
@@ -30,9 +31,22 @@
   width: 100px;
   height: 100px;
 
-  border: 3px solid #ff8d30;
-
   border-radius: 50%;
+}
+
+.user-block__level-round {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100px;
+  height: 100px;
+
+  transform: rotate(-90deg);
+  transform-origin: center;
+  stroke-dasharray: 358;
+  stroke-dashoffset: 62;
 }
 
 .user-block__value {
@@ -297,6 +311,11 @@
     height: 94px;
 
     order: -2;
+  }
+
+  .user-block__level-round {
+    width: 94px;
+    height: 94px;
   }
 
   .user-block__transport {
