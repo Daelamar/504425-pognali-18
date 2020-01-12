@@ -194,6 +194,11 @@
   &--open {
     display: block;
   }
+
+  &--no-js {
+    display: block;
+    position: inherit;
+  }
 }
 
 .main-header__submenu-wrapper {
