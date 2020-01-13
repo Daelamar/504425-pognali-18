@@ -137,6 +137,8 @@
   }
 
   .map-block__wrapper {
+    margin: -60px 0 -154px 0;
+
     height: 700px;
 
     background-image: url("../img/map-tablet@1x.jpg");
@@ -174,12 +176,6 @@
     line-height: 24px;
 
     border-radius: 20px;
-  }
-
-  .map-block__wrapper {
-    margin: -60px 0 -154px 0;
-
-    height: 677px;
   }
 }
 
