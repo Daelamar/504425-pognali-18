@@ -12,6 +12,8 @@ var svgstore = require('gulp-svgstore');
 var svgmin = require('gulp-svgmin');
 var path = require('path');
 
+var webp = require("gulp-webp");
+
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -56,5 +58,11 @@ gulp.task("svgstore", function () {
     .pipe(gulp.dest("source/img/sprite"));
 });
 
+gulp.task("webp", function () {
+  return gulp.src("source/img/**/*.{png,jpg}")
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("source/img"));
+});
+
 gulp.task("start", gulp.series("css", "server"));
-// gulp.task("start", gulp.series("svgstore"));
+// gulp.task("start", gulp.series("webp"));
