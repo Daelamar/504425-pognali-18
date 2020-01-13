@@ -64,5 +64,11 @@ gulp.task("webp", function () {
     .pipe(gulp.dest("source/img"));
 });
 
+gulp.task("svgmin", function () {
+  return gulp.src("source/img/**/*.svg")
+    .pipe(svgmin())
+    .pipe(gulp.dest('source/img/svg'));
+});
+
 gulp.task("start", gulp.series("css", "server"));
-// gulp.task("start", gulp.series("webp"));
+// gulp.task("start", gulp.series("svgmin"));

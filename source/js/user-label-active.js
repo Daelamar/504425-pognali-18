@@ -18,5 +18,3 @@
   userBlockInput.addEventListener("focusin", focusHandler);
   userBlockInput.addEventListener("focusout", unFocusHandler);
 }());
-
-
