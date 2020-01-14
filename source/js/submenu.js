@@ -1,7 +1,6 @@
 "use strict";
 
-(
-  function () {
+(function () {
     var header = document.querySelector(".main-header");
     var openButton = header.querySelector(".main-header__button");
 

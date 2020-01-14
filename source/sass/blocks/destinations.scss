@@ -158,7 +158,7 @@
   }
 
   .destinations__container {
-    padding: 133px 40px 78px;
+    padding: 131px 40px 80px;
 
     background: url("../img/flags-back@1x.png") no-repeat 439px 139px;
 
@@ -192,7 +192,7 @@
   }
 
   .destinations__info {
-    margin: 0 0 105px 0;
+    margin: 0 0 107px 0;
     padding: 0 310px 0 35px;
 
     font-size: 28px;
@@ -295,7 +295,7 @@
 
 @media (min-width: $desktop-width) {
   .destinations__container {
-    padding: 222px 40px 100px;
+    padding: 222px 40px 101px;
 
     display: flex;
     justify-content: flex-start;
@@ -319,7 +319,7 @@
 
   .destinations__inner {
     margin: 0 0 120px auto;
-    padding: 5px 195px 0 0;
+    padding: 0 195px 0 0;
 
     width: 538px;
     order: 2;
@@ -354,7 +354,7 @@
   }
 
   .destinations__all {
-    margin: -118px 262px 0 auto;
+    margin: -120px 262px 0 auto;
 
     width: 274px;
 

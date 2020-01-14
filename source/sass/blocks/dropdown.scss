@@ -19,7 +19,7 @@
 
   overflow: hidden;
 
-  &--show {
+  &--open {
     display: block;
   }
 }
@@ -187,7 +187,7 @@
     background-color: transparent;
     box-shadow: 0 20px 50px -50px rgba(29, 46, 91, 1);
 
-    &--show {
+    &--open {
       display: flex;
     }
   }
@@ -283,7 +283,7 @@
 
     width: 730px;
 
-    &--show {
+    &--open {
       display: flex;
     }
   }
