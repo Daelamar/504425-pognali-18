@@ -454,11 +454,11 @@
   .first-step__container {
     display: flex;
     flex-direction: column;
-    padding: 48px 43px 55px;
+    padding: 45px 43px 55px;
   }
 
   .first-step__header {
-    margin: 0 0 37px 0;
+    margin: 0 0 40px 0;
     order: -5;
   }
 
@@ -553,7 +553,7 @@
 
   .first-step__input {
     margin: 0 auto;
-    padding: 4px 60px 0 63px;
+    padding: 0 60px 0 63px;
 
     width: 531px;
     height: 70px;
@@ -583,7 +583,7 @@
 
   .first-step__calendar-header {
     margin: 0 0 21px;
-    padding: 27px 52px 19px 50px;
+    padding: 21px 52px 21px 50px;
 
     .first-step__arrow {
       width: 45px;
@@ -846,7 +846,7 @@
 
   .first-step__calendar-header {
     margin: 0;
-    padding: 27px 62px 19px 60px;
+    padding: 21px 62px 21px 60px;
 
     .first-step__arrow {
       width: 60px;

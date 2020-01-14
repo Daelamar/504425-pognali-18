@@ -135,13 +135,13 @@
   }
 
   .tariff__container {
-    padding: 133px 40px 62px;
+    padding: 132px 40px 65px;
     background-position: 584px 470px;
   }
 
   .tariff__title {
     margin: 0 0 74px 0;
-    padding: 0 10px 0 0;
+    padding: 0;
 
     position: relative;
 
@@ -246,15 +246,15 @@
 
 @media (min-width: $desktop-width) {
   .tariff__container {
-    padding: 168px 40px 164px;
+    padding: 165px 40px 164px;
 
     background-size: 198px, 198px;
     background-position: 1108px 347px;
   }
 
   .tariff__title {
-    padding: 0;
-    margin: 0 0 133px 0;
+    padding: 0 10px 0 0;
+    margin: 0 0 135px 0;
 
     &::after {
       top: 126px;
