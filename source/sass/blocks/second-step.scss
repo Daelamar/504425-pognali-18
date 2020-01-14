@@ -180,6 +180,10 @@
   padding: 0 0 0 27px;
   position: absolute;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   top: 3px;
   left: 167px;
 
@@ -193,7 +197,8 @@
   outline: none;
   transition-duration: 0.2s;
 
-  &:hover {
+  &:hover,
+  &:focus {
     .second-step__fade-icon {
       opacity: 0.5;
     }
@@ -216,7 +221,7 @@
   position: absolute;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 
   top: -10px;
   right: -10px;
@@ -645,7 +650,7 @@
 
       width: 10px;
       height: 14px;
-      background-image: url("../img/triangle-arrow-right.svg");
+      background-image: url("../img/icon-triangle-arrow-right.svg");
       background-repeat: no-repeat;
     }
   }
@@ -674,7 +679,7 @@
 
       width: 10px;
       height: 14px;
-      background-image: url("../img/triangle-arrow-left.svg");
+      background-image: url("../img/icon-triangle-arrow-left.svg");
       background-repeat: no-repeat;
     }
   }
